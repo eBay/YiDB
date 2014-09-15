@@ -1,0 +1,40 @@
+{ 
+	"name": "Volume",
+	"pluralName": "Volumes",
+	"parent": "Resource",	
+	"description": "Storage volume that NodeServer depends on, it repsents the accesspoint/interface between Storage and NodeServer, it supports various different types of storage.",
+	"fields": {
+		"storageType":{
+			"description":"The type of the storage",
+			"mandatory":true,
+			"enumValues": ["FiberChannelSAN","iSCSI","NAS","DirectAttached","DistributedStorage"],
+			"dataType":"enumeration",
+			"cardinality":"One"
+		},
+		"storageVirtualIP" : {
+			"description":"The VIP of this volume",
+			"refDataType": "StorageVirtualIP",
+			"relationType": "Reference",
+			"dataType": "relationship"
+		},
+        	"capacities":{
+			"description":"Enumeration of capability used for allocation",
+            		"refDataType": "ResourceCapacity",
+            		"relationType": "Embedded",
+            		"dataType": "relationship",
+            		"cardinality": "Many"
+        	},
+		"deviceName" : {
+		       "description" : "the disk name of this disk",
+			"mandatory": false,
+			"dataType":"string",
+			"cardinality":"One"	            
+		},
+		"path" : {
+		       "description" : "the volume path",
+			"mandatory": false,
+			"dataType":"string",
+			"cardinality":"One"	            
+		}
+	}	
+}

@@ -1,0 +1,44 @@
+{
+	"name": "meta-test1",
+	"repository": "raptor-paas",
+	"lastModified": 1344576149526,
+	"fields": {
+		"isMain": {
+			"name": "isMain",
+			"dataType": "boolean",
+			"cardinality": "One",
+			"mandatory": true,
+			"enumValues": []
+		},
+		"branchStatus": {
+			"name": "branchStatus",
+			"dataType": "enumeration",
+			"cardinality": "One",
+			"mandatory": true,
+			"enumValues": ["ACTIVE", "COMMITING", "COMMITTED", "ABORTED"]
+		},
+		"parentId": {
+			"name": "parentId",
+			"dataType": "string",
+			"cardinality": "One",
+			"mandatory": false,
+			"enumValues": []
+		},
+		"rootId": {
+			"name": "rootId",
+			"dataType": "string",
+			"cardinality": "One",
+			"mandatory": true,
+			"enumValues": []
+		}
+	}, 
+	"options": {
+		"indexes": {
+			"meta_test1_indexName":{
+					"indexName": "meta_test1_indexName",
+					"keyList": ["branchStatus"],
+					"indexOptions": []
+			}
+		}
+	}
+}

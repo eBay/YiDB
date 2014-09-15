@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <artifactId>cms-core</artifactId>
+        <groupId>com.ebay.cloud.cms</groupId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+    <artifactId>cms-metadata</artifactId>
+    <packaging>jar</packaging>
+    <name>cms-metadata</name>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <mongo.driver.version>2.11.2</mongo.driver.version>
+    </properties>
+
+    <dependencies>
+    	<dependency>
+			<groupId>com.ebay.cloud.cms</groupId>
+			<artifactId>cms-common</artifactId>
+			<version>${cmsVersion}</version>
+		</dependency>
+		<dependency>
+            <groupId>com.ebay.cloud.cms</groupId>
+            <artifactId>cms-expression</artifactId>
+            <version>${cmsVersion}</version>
+        </dependency>
+		<dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-mapper-asl</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.mongodb</groupId>
+			<artifactId>mongo-java-driver</artifactId>
+		</dependency>
+		
+
+		<!-- test scope -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+    		<groupId>com.ebay.cloud.cms</groupId>
+    		<artifactId>cms-common</artifactId>
+    		<version>${cmsVersion}</version>
+    		<type>test-jar</type>
+    		<scope>test</scope>
+    	</dependency>
+    	<dependency>
+			<groupId>de.flapdoodle.embedmongo</groupId>
+			<artifactId>de.flapdoodle.embedmongo</artifactId>
+			<scope>test</scope>
+		</dependency>
+    </dependencies>
+</project>

@@ -1,0 +1,5 @@
+{
+    "indexName": "manyStringIndex",
+    "keyList": ["manyString"],
+    "indexOptions": ["unique"]
+}

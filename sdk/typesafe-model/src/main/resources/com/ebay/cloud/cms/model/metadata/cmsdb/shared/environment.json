@@ -1,0 +1,32 @@
+{
+	"name": "Environment",
+	"pluralName": "Environments",
+	"parent": "Resource",
+	"description": "Houses a set of Resources that are tied to a single CosPolicy",
+	"fields": {
+		"classOfService": {
+			"description": "the cos this environment is bound to",
+			"dataType": "relationship",
+			"relationType": "Reference",
+			"consistencyType" : "Strong",
+			"refDataType": "ClassOfService",
+			"mandatory": true
+		},
+		"policyGroup": {
+			"description": "the policy group this environment is bound to",
+			"dataType": "relationship",
+			"relationType": "Reference",
+			"consistencyType" : "Strong",
+			"refDataType": "PolicyGroup",
+			"mandatory": false
+		},
+		"account": {
+			"description": "the Account that owns this environment",
+			"dataType": "relationship",
+			"consistencyType" : "Strong",
+			"relationType": "Reference",
+			"refDataType": "Account",
+            		"mandatory": true
+		}		
+	}
+}

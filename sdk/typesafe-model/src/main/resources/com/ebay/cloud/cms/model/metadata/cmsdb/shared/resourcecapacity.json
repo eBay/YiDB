@@ -1,0 +1,59 @@
+{
+	"description":"Defines available and used resources",
+	"name" : "ResourceCapacity",
+	"pluralName":"ResourceCapacities",
+        "embed":true,
+	"parent": "Base",
+	"fields":{
+	        "resourceId": {
+                        "description": "The name id of this resource",
+                        "dataType": "string",
+                        "mandatory": true
+                },
+		"type":{
+			"mandatory":true,
+			"dataType":"enumeration",
+			"enumValues": ["cpu","memory","disk","bandwidth","slot"],
+			"cardinality":"One"	            
+		},
+		"total":{
+			"mandatory":true,
+			"dataType":"long",
+			"defaultValue" : 1,
+			"cardinality":"One"	            
+		},
+		"used":{
+			"mandatory":true,
+			"dataType":"long",
+			"defaultValue" : 0,
+			"cardinality":"One"	            
+		},
+		"reserved":{
+			"mandatory":true,
+			"dataType":"long",
+			"defaultValue" : 1,
+			"cardinality":"One"	            
+		},
+		"available":{
+		        "mandatory":false,
+		        "dataType":"long",
+		        "expression": "$total - $used - $reserved",
+		        "cardinality" : "One"
+		},
+		"unit":{
+			"mandatory":true,
+			"dataType":"enumeration",
+			"enumValues": ["unit","MB","GB","TB","Byte","bit","Mb","Gb","Tb"],
+			"cardinality":"One"	            
+		}
+	},
+        "options": {
+                "indexes": {
+                        "resourceIdIndex":{
+                                "indexName": "resourceIdIndex",
+                                "keyList": ["resourceId"]
+                        }
+                }
+        }
+
+}

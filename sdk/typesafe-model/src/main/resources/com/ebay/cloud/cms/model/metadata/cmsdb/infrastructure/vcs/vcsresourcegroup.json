@@ -1,0 +1,38 @@
+{
+	"description":"A resoruce group for vcs",
+	"name" : "VCSResourceGroup",
+	"pluralName":"VCSResourceGroups",
+	"parent": "Resource",
+	"fields" : {
+		"vcsService":{
+			"description":"The VCS service for this group",
+			"mandatory":true,
+			"refDataType": "VCSService",
+			"relationType": "Reference",
+			"dataType": "relationship",
+			"cardinality": "One"
+		},
+		"vcsMembers":{
+			"description":"The VCS members for this group",
+			"mandatory":true,
+			"refDataType": "VCSMember",
+			"relationType": "Reference",
+			"dataType": "relationship",
+			"cardinality": "Many"
+		},
+                "opsState":{
+                        "description":"States used to drive provisioning and remediation transitions",
+	      	        "mandatory":false,
+			"enumValues":["vcs-thawed","vcs-all-offline","vcs-decommed","vcs-tfrozen","vcs-frozen","unknown"],
+			"dataType":"enumeration",
+			"cardinality":"One"
+		},
+                "drStatus":{
+                        "description":"disaster recover status",
+	      	        "mandatory":false,
+			"enumValues":["lgstby","unknown","prod","shplx","stdby","sstdby","mprod"],
+			"dataType":"enumeration",
+			"cardinality":"One"
+		}
+	}
+}

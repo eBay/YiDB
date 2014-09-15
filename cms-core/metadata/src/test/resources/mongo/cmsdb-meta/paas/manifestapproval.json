@@ -1,0 +1,42 @@
+{
+	"name": "ManifestApproval",
+	"pluralName": "ManifestApprovals",
+        "embed":true,
+	"description": "an approval for a manifest to be installed in a given class of service",
+	"parent": "Base",
+	"fields": {
+		"resourceId": {
+                        "description": "The name id of this resource",
+                        "dataType": "string",
+                        "mandatory": true
+                },
+		"applicationId": {
+			"description": "applicationid this manifest is approved for, '*' for all",
+			"dataType": "string"
+		},
+		"policyGroup": {
+                        "description": "The policy group this manifest is approved for",
+                        "mandatory":true,
+                        "enumValues": ["DEV","Experimentation","Production","Pre-Production",
+                                      "Infrastructure","QA","LnP","Staging","Sandbox","MQA"],
+                        "dataType":"enumeration",
+                        "cardinality":"One"
+                },
+		"approver": {
+			"description": "approver of this manifest",
+			"dataType": "string"
+		}
+	},
+	"options": {
+		"indexes":{
+		    "applicationIdIndex":{
+		        "indexName": "applicationIdIndex",
+			    "keyList": ["applicationId"]
+		    },
+		    "resourceIdIndex":{
+                                "indexName": "resourceIdIndex",
+                                "keyList": ["resourceId"]
+		    }
+		}
+	}
+}

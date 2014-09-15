@@ -1,0 +1,22 @@
+{ 
+	"name": "StorageVirtualIP",
+	"pluralName": "SotrageVirtualIPs",
+	"parent": "Resource",	
+	"description": "Storage VIP that representing the entry point for individual storage devices",
+	"fields": {
+                "networkAddress":{
+			"description":"The IP address object corresponding to virtual IP",
+		      	"refDataType": "NetworkAddress",
+			"relationType": "Reference",
+			"dataType": "relationship",
+			"cardinality": "One"
+		},		  
+		"storageDevices" : {
+			"description":"The storage devices under this vip",
+			"refDataType": "StorageDevice",
+			"relationType": "Reference",
+			"dataType": "relationship",
+			"cardinality":"Many"
+		}
+	}	
+}

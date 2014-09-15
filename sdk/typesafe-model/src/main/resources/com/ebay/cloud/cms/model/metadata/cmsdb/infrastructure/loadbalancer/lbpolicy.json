@@ -1,0 +1,28 @@
+{
+	"description":"A load balancer policy",
+	"name" : "LBPolicy",
+	"pluralName":"LBPolicies",
+	"parent": "Resource",
+	"fields":{
+		"name":{
+			"description":"Policy name",
+			"mandatory":true,
+			"dataType":"string",
+			"cardinality":"One"
+		},
+		"definition":{
+			"description":"Policy definition",
+			"mandatory":true,
+			"dataType":"string",
+			"cardinality":"One"
+		}
+	},
+	"options": {
+		"indexes": {
+		        "nameIndex":{
+				"indexName": "nameIndex",
+				"keyList": ["name"]
+		        }
+	        }
+        }
+}

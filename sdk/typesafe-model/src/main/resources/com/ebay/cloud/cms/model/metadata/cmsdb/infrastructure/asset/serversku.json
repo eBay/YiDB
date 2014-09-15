@@ -1,0 +1,38 @@
+{
+	"description":"Server SKU class",
+	"name" : "ServerSku",
+	"pluralName":"ServerSkus",
+	"parent": "Resource",
+	"fields" : {
+		"physicalDiskCount":{
+			"description":"Physical disk count of the SKU",
+			"mandatory":false,
+			"dataType":"integer",
+			"cardinality":"One"
+		},
+		"nicCount":{
+			"description":"Network Controller Counts",
+			"mandatory":false,
+			"dataType":"integer",
+			"cardinality":"One"
+		},
+		"phyProcessorCount":{
+			"description":"Physical Processer Count",
+			"mandatory":false,
+			"dataType":"integer",
+			"cardinality":"One"
+		},
+		"processorCount":{
+			"description":"Processor count",
+			"mandatory":false,
+			"dataType":"integer",
+			"cardinality":"One"
+		},
+		"memoryTotal":{
+			"description":"Total memory available",
+			"mandatory":false,
+			"dataType":"string",
+			"cardinality":"One"
+		}
+	}
+}

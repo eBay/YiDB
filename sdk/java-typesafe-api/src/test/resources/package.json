@@ -1,0 +1,14 @@
+{
+	"_branch": "main",
+	"_type": "Package",
+	"resourceId": "PkgCreationTest-1.0.0",
+	"status": "available",
+	"label": "PkgCreationTest",
+	"userData": {
+		"comments": "Created by SH-CMS tests",
+		"metaData": null
+	},
+	"externalId": "http://cronus-repo/link",
+	"version": "1.0.0"
+}
+

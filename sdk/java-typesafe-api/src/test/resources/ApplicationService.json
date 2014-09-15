@@ -1,0 +1,27 @@
+{
+            "name": "ApplicationService",
+            "pluralName": "ApplicationServices",
+            "fields": {
+              "name": {
+                    "defaultValue": "",
+                    "mandatory": false,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "name",
+                    "dataType": "string",
+                    "cardinality": "One"
+                },
+		"archTier": {
+                    "defaultValue": null,
+                    "mandatory": false,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "archTier",
+                    "dataType": "string",
+                   "cardinality": "One"
+                }
+
+	     }
+}

@@ -1,0 +1,29 @@
+{
+	"name": "PolicyGroup",
+	"pluralName": "PolicyGroups",
+	"parent": "Resource",
+	"description": "The class of service policy group that defines various constraints and conditions.",
+	"fields": {
+		"iaasPolicy": {
+			"description": "the policy managed by IaaS layer",
+			"dataType": "json",
+			"mandatory": false,
+			"cardinality": "One"
+		},
+		"paasPolicy": {
+			"description": "the policy managed by PaaS layer",
+			"dataType": "json",
+			"mandatory": false,
+			"cardinality": "One"
+		},
+		"compatibleCos": {
+			"description": "the classOfService this PolicyGroup compatible with",
+			"dataType": "relationship",
+			"relationType": "Reference",
+			"consistencyType" : "Strong",
+			"refDataType": "ClassOfService",
+			"mandatory": true,
+			"cardinality": "One"
+		}
+	}
+}

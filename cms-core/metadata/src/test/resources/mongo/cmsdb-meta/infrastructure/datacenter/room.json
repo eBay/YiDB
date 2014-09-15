@@ -1,0 +1,20 @@
+{ 
+	"name": "Room",
+	"pluralName": "Rooms",
+	"description": " A physical marked floor space within a datacenter that is divided into multiple rows",
+	"parent": "Resource",
+	"fields": {
+		"rows": {
+			"description":"downstream binding row series",
+			"mandatory":false,
+			"refDataType": "Row",
+            		"dataType": "relationship",
+            		"cardinality": "Many"
+		},
+		"owner":{
+			"description":"owner",
+	   		"mandatory":false,
+     	   		"dataType":"string"
+		}
+	}	
+}

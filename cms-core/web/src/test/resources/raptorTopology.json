@@ -1,0 +1,1450 @@
+{
+  "Environment": [
+    {
+      "_pversion":0,
+      "_branch": "main",
+      "_type": "Environment",
+      "_version": 0,
+      "_lastmodified": 1337667919414,
+      "_oid": "4fbb314fc681caf13e283a78",
+      "cos": {"_oid": "4fbb314fc681caf13e283a77"},
+      "name": "EnvRaptor",
+      "applications": [
+        {"_oid": "4fbb314fc681caf13e283a76"}
+      ],
+      "_status": "active"
+    }
+  ],
+  "ServiceInstance": [
+    {
+      "_pversion":0,
+      "port": "8080",
+      "https": false,
+      "_branch": "main",
+      "_type": "ServiceInstance",
+      "_version": 0,
+      "_lastmodified": 1337667919420,
+      "_oid": "4fbb314fc681caf13e283a7a",
+      "appService" : {"_oid":"4fbb314fc681caf13e283a76"},
+      "name": "srp-app:Raptor-00001",
+      "_status": "active",
+      "healthStatus":"up",
+      "activeManifestDiff": true,
+      "manifestRef": [
+        "manifest-1.0",
+        "manifest-2.0"
+      ]
+    },
+    {
+      "_pversion":0,
+      "port": "8080",
+      "https": false,
+      "_branch": "main",
+      "_type": "ServiceInstance",
+      "_version": 0,
+      "_lastmodified": 1337667919427,
+      "_oid": "4fbb314fc681caf13e283a7c",
+      "appService" : {"_oid":"4fbb314fc681caf13e283a76"},
+      "runsOn": {"_oid":"4fbb314fc681caf13e283a7b"},
+      "name": "srp-app:Raptor-00002",
+      "_status": "active",
+      "healthStatus":"up",
+      "activeManifestDiff": true,
+      "manifestRef": [
+        "manifest-1.0",
+        "manifest-2.0"
+      ]
+    },
+    {
+      "_pversion":0,
+      "port": "8080",
+      "https": false,
+      "_branch": "main",
+      "_type": "ServiceInstance",
+      "_version": 0,
+      "_lastmodified": 1337667919434,
+      "_oid": "4fbb314fc681caf13e283a7e",
+      "appService" : {"_oid":"4fbb314fc681caf13e283a76"},
+      "runsOn": {"_oid":"4fbb314fc681caf13e283a7d"},
+      "name": "srp-app:Raptor-00003",
+      "healthStatus":"up",
+      "_status": "active",
+      "activeManifestDiff": true,
+      "manifestRef": [
+        "manifest-1.0",
+        "manifest-2.0"
+      ]
+    },
+    {
+      "_pversion":0,
+      "port": "8080",
+      "https": false,
+      "_branch": "main",
+      "_type": "ServiceInstance",
+      "_version": 0,
+      "_lastmodified": 1337667919439,
+      "_oid": "4fbb314fc681caf13e283a80",
+      "appService" : {"_oid":"4fbb314fc681caf13e283a76"},
+      "runsOn": {"_oid":"4fbb314fc681caf13e283a7f"},
+      "name": "srp-app:Raptor-00004",
+      "healthStatus":"up",
+      "_status": "active",
+      "activeManifestDiff": true,
+      "manifestRef": [
+        "manifest-1.0",
+        "manifest-2.0"
+      ]
+    },
+    {
+      "_pversion":0,
+      "port": "8080",
+      "https": false,
+      "_branch": "main",
+      "_type": "ServiceInstance",
+      "_version": 0,
+      "_lastmodified": 1337667919444,
+      "_oid": "4fbb314fc681caf13e283a82",
+      "appService" : {"_oid":"4fbb314fc681caf13e283a76"},
+      "runsOn": {"_oid":"4fbb314fc681caf13e283a81"},
+      "name": "srp-app:Raptor-00005",
+      "healthStatus":"up",
+      "_status": "active",
+      "activeManifestDiff": true,
+      "manifestRef": [
+        "manifest-1.0",
+        "manifest-2.0"
+      ]
+    },
+    {
+      "_pversion":0,
+      "port": "8080",
+      "https": false,
+      "_branch": "main",
+      "_type": "ServiceInstance",
+      "_version": 0,
+      "_lastmodified": 1337667919456,
+      "_oid": "4fbb314fc681caf13e283a84",
+      "appService" : {"_oid":"4fbb314fc681caf13e283a76"},
+      "runsOn": {"_oid":"4fbb314fc681caf13e283a83"},
+      "healthStatus":"down",
+      "name": "srp-app:Raptor-00006",
+      "_status": "active",
+      "activeManifestDiff": true,
+      "manifestRef": [
+        "manifest-1.0",
+        "manifest-2.0"
+      ]
+    },
+    {
+      "_pversion":0,
+      "port": "8080",
+      "https": false,
+      "_branch": "main",
+      "_type": "ServiceInstance",
+      "_version": 0,
+      "_lastmodified": 1337667919461,
+      "_oid": "4fbb314fc681caf13e283a86",
+      "appService" : {"_oid":"4fbb314fc681caf13e283a76"},
+      "runsOn": {"_oid":"4fbb314fc681caf13e283a85"},
+      "name": "srp-app:Raptor-00007",
+      "healthStatus":"down",
+      "_status": "active",
+      "activeManifestDiff": true,
+      "manifestRef": [
+        "manifest-1.0",
+        "manifest-2.0"
+      ]
+    },
+    {
+      "_pversion":0,
+      "port": "8080",
+      "https": true,
+      "_branch": "main",
+      "_type": "ServiceInstance",
+      "_version": 0,
+      "_lastmodified": 1337667919465,
+      "_oid": "4fbb314fc681caf13e283a88",
+      "appService" : {"_oid":"4fbb314fc681caf13e283a76"},
+      "runsOn": {"_oid":"4fbb314fc681caf13e283a87"},
+      "name": "srp-app:Raptor-00008",
+      "healthStatus":"down",
+      "_status": "active",
+      "activeManifestDiff": true,
+      "manifestRef": [
+        "manifest-1.0",
+        "manifest-2.0"
+      ]
+    },
+    {
+      "_pversion":0,
+      "port": "8080",
+      "https": true,
+      "_branch": "main",
+      "_type": "ServiceInstance",
+      "_version": 0,
+      "_lastmodified": 1337667919470,
+      "_oid": "4fbb314fc681caf13e283a8a",
+      "appService" : {"_oid":"4fbb314fc681caf13e283a76"},
+      "runsOn": {"_oid":"4fbb314fc681caf13e283a89"},
+      "name": "srp-app:Raptor-00009",
+      "healthStatus":"unknown",
+      "_status": "active",
+      "activeManifestDiff": true,
+      "manifestRef": [
+        "manifest-1.0",
+        "manifest-2.0"
+      ],
+      "properties" : {
+  		"f1" : 1,
+  		"f2" : "a",
+  		"f3" : 1,
+  		"nestF1": {
+  			"nestFF1": {
+  				"fff1": 1337667919420,
+  				"fff2":[
+  					"nested-field-1",
+  					"nested-field-2"
+  				]
+  			}
+  		},
+  		"nestF2Array": [
+  			{
+  				"ff1": 1234563,
+  				"ff2":[
+  					"nested-field-1",
+  					"nested-field-2"
+  				]
+  			},
+  			{
+  				"ff3": 1234563
+  			}
+  		]
+   	  }
+    },
+    {
+      "_pversion":0,
+      "port": "8081",
+      "https": false,
+      "_branch": "main",
+      "_type": "ServiceInstance",
+      "_version": 0,
+      "_lastmodified": 1337667919474,
+      "_oid": "4fbb314fc681caf13e283a8c",
+      "appService" : {"_oid":"4fbb314fc681caf13e283a76"},
+      "runsOn": {"_oid":"4fbb314fc681caf13e283a8b"},
+      "name": "srp-app:Raptor-00010",
+      "healthStatus":"unknown",
+      "_status": "active",
+      "activeManifestDiff": true,
+      "manifestRef": [
+        "manifest-1.0",
+        "manifest-2.0",
+        "manifest-3.0"
+      ],
+      "properties" : {
+  		"f3" : 1,
+  		"f4" : "a",
+  		"f5" : 1
+   	  }
+    },
+   {
+      "_pversion":0,
+      "port": "8080",
+      "https": false,
+      "_branch": "main",
+      "_type": "ServiceInstance",
+      "_version": 0,
+      "_oid": "4fbb314fc681caf13e2bcdef",
+      "runsOn": {"_oid": "4fbb314fc681caf13e283a8e"},
+      "name": "Sample-ServiceInstance-001",
+      "healthStatus":"unknown",
+      "_status": "active",
+      "activeManifestDiff": true,
+      "manifestRef": [
+        "manifest-1.0"
+      ],
+      "properties" :
+      	{
+			"f1": 1234563,
+			"f2":[
+				"nested-field-1",
+				"nested-field-2"
+			],
+			"f3": 1234563,
+			"script": "cd c:\\temp; wget --quiet --no-check-certificate -O fp.pl https://source.com/pages/SCM/puppet/fp/fp.pl; perl fp.pl",
+			"name": "\\",
+			"newname": "\\\\"
+		}
+    },
+    {
+      "_pversion":0,
+      "port": "8080",
+      "https": false,
+      "_branch": "main",
+      "_type": "ServiceInstance",
+      "_version": 0,
+      "_lastmodified": 1337667919427,
+      "_oid": "4fbb314fc681caf13e289999",
+      "runsOn": {"_oid":"4fbb314fc681caf1-not-valid"},
+      "name": "dangle-check-srp-app:Raptor-00002",
+      "_status": "active",
+      "healthStatus":"up",
+      "activeManifestDiff": true,
+      "manifestRef": [
+        "manifest-1.0",
+        "manifest-2.0",
+        "manifest-3.0"
+      ]
+    }
+  ],
+  "ApplicationService": [
+    {
+      "_pversion":0,
+      "archTier": "app",
+      "services": [
+        {"_oid":"4fbb314fc681caf13e283a7a"},
+        {"_oid":"4fbb314fc681caf13e283a7c"},
+        {"_oid":"4fbb314fc681caf13e283a7e"},
+        {"_oid":"4fbb314fc681caf13e283a80"},
+        {"_oid":"4fbb314fc681caf13e283a82"},
+        {"_oid":"4fbb314fc681caf13e283a84"},
+        {"_oid":"4fbb314fc681caf13e283a86"}, 
+        {"_oid":"4fbb314fc681caf13e283a88"},
+        {"_oid":"4fbb314fc681caf13e283a8a"},
+        {"_oid":"4fbb314fc681caf13e283a8c"}
+      ],
+      "_lastmodified": 1337667919412,
+      "name": "srp-app:Raptor",
+      "label": "srp-app",
+      "architecture": "r1",
+      "nugget": "srp",
+      "activeManifestRef": [
+        "manifest-2.0"
+      ],
+      "activeManifestCur": "manifest-1.0",
+      "_type": "ApplicationService",
+      "_branch": "main",
+      "_version": 0,
+      "_oid": "4fbb314fc681caf13e283a76",
+      "updateStrategies": [
+        {"_oid":"4fbb314fc681caf13e283a74"},
+        {"_oid":"4fbb314fc681caf13e283a75"}
+      ],
+      "_status": "active",
+      "activeManifestDiff": true
+    },
+    {
+      "_pversion":0,
+      "archTier": "app",
+      "services": [
+        {"_oid":"4fbb314fc681caf13e2bcdef"},
+        {"_oid":"4fbb314fc681caf13e289999"}
+      ],
+      "_lastmodified": 1337667919412,
+      "name": "sample:Raptor",
+      "label": "srp-app",
+      "architecture": "r2",
+      "nugget": "srp",
+      "activeManifestRef": [
+        "manifest-2.0"
+      ],
+      "activeManifestCur": "manifest-1.0",
+      "_type": "ApplicationService",
+      "_branch": "main",
+      "_version": 0,
+      "_oid": "4fbb314fc681caf13e283a78",
+      "updateStrategies": [
+        {"_oid":"4fbb314fc681caf13e283a74"},
+        {"_oid":"4fbb314fc681caf13e283a75"}
+      ],
+      "_status": "active",
+      "activeManifestDiff": true
+    }
+  ],
+  "ClassOfService": [
+    {
+      "_pversion":0,
+      "_branch": "main",
+      "_type": "ClassOfService",
+      "_version": 0,
+      "_lastmodified": 1337667919413,
+      "_oid": "4fbb314fc681caf13e283a77",
+      "name": "Production",
+      "_status": "active"
+    }
+  ],
+  "UpdateStrategy": [
+    {
+      "_pversion":0,
+      "lastModifiedTime": 1337667919406,
+      "_branch": "main",
+      "_type": "UpdateStrategy",
+      "_version": 0,
+      "_lastmodified": 1337667919406,
+      "_oid": "4fbb314fc681caf13e283a74",
+      "name": "1-25-50-100",
+      "_status": "active"
+    },
+    {
+      "_pversion":0,
+      "lastModifiedTime": 1337667919408,
+      "_branch": "main",
+      "_type": "UpdateStrategy",
+      "_version": 0,
+      "_lastmodified": 1337667919408,
+      "_oid": "4fbb314fc681caf13e283a75",
+      "name": "1-100",
+      "_status": "active"
+    }
+  ],
+  "Cluster": [
+  	{
+      "_pversion":0,
+      "_branch": "main",
+      "_type": "Cluster",
+      "_version": 0,
+      "_lastmodified": 1337667919417,
+      "_oid": "4faa314fc681caf13e283a79",
+      "name": "cluster-00001",
+      "computes":  [
+        {"_oid":"4fbb314fc681caf13e283a79"},
+        {"_oid":"4fbb314fc681caf13e283a7b"},
+        {"_oid":"4fbb314fc681caf13e283a7d"},
+        {"_oid":"4fbb314fc681caf13e283a7f"},
+        {"_oid":"4fbb314fc681caf13e283a81"}
+      ]
+    },
+  	{
+      "_pversion":0,
+      "_branch": "main",
+      "_type": "Cluster",
+      "_version": 0,
+      "_lastmodified": 1337667919417,
+      "_oid": "4faa314fc681caf13e283a95",
+      "name": "cluster-00002",
+      "computes":  [
+        {"_oid":"4fbb314fc681caf13e283a83"},
+        {"_oid":"4fbb314fc681caf13e283a85"},
+        {"_oid":"4fbb314fc681caf13e283a87"},
+        {"_oid":"4fbb314fc681caf13e283a89"},
+        {"_oid":"4fbb314fc681caf13e283a8b"}
+      ]
+    }
+  ],
+  "Compute": [	
+  	{
+      "_pversion":0,
+      "_branch": "main",
+      "_type": "Compute",
+      "_version": 0,
+      "_lastmodified": 1337667919417,
+      "_oid": "4fbb314fc681caf13e283a79",
+      "location": "lvs",
+      "name": "compute-00001",
+      "label": "server",
+      "fqdn": "compute-00001.lvs.ebay.com",
+      "_status": "active",
+      "assetStatus": "normal"
+    },
+    {
+      "_pversion":0,
+      "_branch": "main",
+      "_type": "Compute",
+      "_version": 0,
+      "_lastmodified": 1337667919424,
+      "_oid": "4fbb314fc681caf13e283a7b",
+      "location": "lvs",
+      "name": "compute-00002",
+      "label": "server",
+      "fqdn": "compute-00002.lvs.ebay.com",
+      "_status": "active",
+      "assetStatus": "maintenance"
+    },
+    {
+      "_pversion":0,
+      "_branch": "main",
+      "_type": "Compute",
+      "_version": 0,
+      "_lastmodified": 1337667919431,
+      "_oid": "4fbb314fc681caf13e283a7d",
+      "location": "lvs",
+      "name": "compute-00003",
+      "label": "server",
+      "fqdn": "compute-00003.lvs.ebay.com",
+      "_status": "active",
+      "assetStatus": "normal"
+    },
+    {
+      "_pversion":0,
+      "_branch": "main",
+      "_type": "Compute",
+      "_version": 0,
+      "_lastmodified": 1337667919437,
+      "_oid": "4fbb314fc681caf13e283a7f",
+      "location": "phx",
+      "name": "compute-00004",
+      "label": "laptop",
+      "fqdn": "compute-00004.lvs.ebay.com",
+      "_status": "active",
+      "assetStatus": "deprecated"
+    },
+    {
+      "_pversion":0,
+      "_branch": "main",
+      "_type": "Compute",
+      "_version": 0,
+      "_lastmodified": 1337667919441,
+      "_oid": "4fbb314fc681caf13e283a81",
+      "location": "phx",
+      "name": "compute-00005",
+      "label": "laptop",
+      "fqdn": "compute-00005.lvs.ebay.com",
+      "_status": "active",
+      "assetStatus": "normal"
+    },
+    {
+      "_pversion":0,
+      "_branch": "main",
+      "_type": "Compute",
+      "_version": 0,
+      "_lastmodified": 1337667919453,
+      "_oid": "4fbb314fc681caf13e283a83",
+      "location": "lvs",
+      "name": "compute-00006",
+      "label": "laptop",
+      "fqdn": "compute-00006.lvs.ebay.com",
+      "_status": "active",
+      "assetStatus": "maintenance"
+    },
+    {
+      "_pversion":0,
+      "_branch": "main",
+      "_type": "Compute",
+      "_version": 0,
+      "_lastmodified": 1337667919459,
+      "_oid": "4fbb314fc681caf13e283a85",
+      "location": "lvs",
+      "name": "compute-00007",
+      "label": "laptop",
+      "fqdn": "compute-00007.lvs.ebay.com",
+      "_status": "active",
+      "assetStatus": "normal"
+    },
+    {
+      "_pversion":0,
+      "_branch": "main",
+      "_type": "Compute",
+      "_version": 0,
+      "_lastmodified": 1337667919463,
+      "_oid": "4fbb314fc681caf13e283a87",
+      "location": "pxc",
+      "name": "compute-00008",
+      "label": "laptop",
+      "fqdn": "compute-00008.lvs.ebay.com",
+      "_status": "active",
+      "assetStatus": "normal"
+    },
+    {
+      "_pversion":0,
+      "_branch": "main",
+      "_type": "Compute",
+      "_version": 0,
+      "_lastmodified": 1337667919468,
+      "_oid": "4fbb314fc681caf13e283a89",
+      "location": "pxc",
+      "name": "compute-00009",
+      "label": "workstation",
+      "_status": "active",
+      "assetStatus": "deprecated"
+    },
+    {
+      "_pversion":0,
+      "_branch": "main",
+      "_type": "Compute",
+      "_version": 0,
+      "_lastmodified": 1337667919472,
+      "_oid": "4fbb314fc681caf13e283a8b",
+      "location": "pxc",
+      "name": "compute-00010",
+      "label": "laptop",
+      "_status": "active",
+      "assetStatus": "deprecated"
+    },
+    {
+      "_pversion":0,
+      "_branch": "main",
+      "_type": "Compute",
+      "_version": 0,
+      "_lastmodified": 1337667919474,
+      "_oid": "4fbb314fc681caf13e283a8e",
+      "location": "pxc",
+      "name": "compute-00011",
+      "label": "laptop",
+      "_status": "active",
+      "assetStatus": "deprecated"
+    }
+  ],
+  "Employee": [
+    {
+      "_pversion":0,
+      "_branch": "main",
+      "_type": "Employee",
+      "_version": 0,
+      "_lastmodified": 1337667919420,
+      "_oid": "employ-id-000001",
+      "name": "Pierre Omidyar",
+      "_status": "active",
+      "company":"ebay"
+    }
+  ],
+  "Dep": [
+    {
+        "_oid": "dep000",
+        "_type" : "Dep",
+        "team": [
+            { 
+                "_oid":"Dep!dep000!team!team010",
+                "_type": "Team",
+                "name": "dev-team-010",
+                "person":[
+                    { 
+                        "_oid":"Dep!dep000!team!team010!person!person011",
+                        "_type" : "Person",
+                        "name":"dev-01",
+                        "label":"client-dev-01",
+                        "age":null,
+                        "addresss": null
+                    },
+                    { 
+                        "_oid":"Dep!dep000!team!team010!person!person012",
+                        "_type" : "Person",
+                        "name":"dev-02",
+                        "label":"cms-acl-dev-01",
+                        "address": ["aaa","bbb"]
+                    }
+                ]
+            },
+            { 
+                "_oid":"Dep!dep000!team!team020",
+                "_type": "Team",
+                "name": "dev-team-020",
+                "person":[
+                    { 
+                        "_oid":"Dep!dep000!team!team020!person!person021",
+                        "_type" : "Person",
+                        "name":"dev-03",
+                        "label":"query-dev-01",
+                        "address": []
+                    },
+                    { 
+                        "_oid":"Dep!dep000!team!team020!person!person022",
+                        "_type" : "Person",
+                        "name":"dev-04",
+                        "label":"query-dev-02",
+                        "age":"12"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "_oid": "dep001",
+        "_type" : "Dep",
+        "team": [
+            { 
+                "_oid":"Dep!dep001!team!team110",
+                "_type": "Team",
+                "person":[
+                    { 
+                        "_oid":"Dep!dep001!team!team110!person!person111",
+                        "_type" : "Person",
+                        "name":"dev-01",
+                        "label":"client-dev-01",
+                        "age":null
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "_oid": "dep002",
+        "_type" : "Dep",
+        "team": [
+            { 
+                "_oid":"Dep!dep002!team!team210",
+                "_type": "Team",
+                "person":[
+                    { 
+                        "_oid":"Dep!dep002!team!team210!person!person211",
+                        "_type" : "Person",
+                        "name":"dev-01",
+                        "label":"client-dev-01",
+                        "age":"15"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "_oid": "dep003",
+        "_type" : "Dep",
+        "team": [
+            { 
+                "_oid":"Dep!dep003!team!team310",
+                "_type": "Team",
+                "person":[
+                    { 
+                        "_oid":"Dep!dep003!team!team310!person!person311",
+                        "_type" : "Person",
+                        "name":"dev-01",
+                        "label":"client-dev-01"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "_oid": "dep004",
+        "_type" : "Dep",
+        "team": [
+            { 
+                "_oid":"Dep!dep004!team!team410",
+                "_type": "Team",
+                "person":[
+                    { 
+                        "_oid":"Dep!dep004!team!team410!person!person411",
+                        "_type" : "Person",
+                        "name":"dev-01",
+                        "label":"client-dev-01",
+                        "address":["ccc"]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "_oid": "dep005",
+        "_type" : "Dep",
+        "team": [
+            { 
+                "_oid":"Dep!dep005!team!team510",
+                "_type": "Team",
+                "person":[
+                    { 
+                        "_oid":"Dep!dep005!team!team510!person!person511",
+                        "_type" : "Person",
+                        "name":"dev-01",
+                        "label":"client-dev-01",
+                        "address":["ddd"]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "_oid": "dep006",
+        "_type" : "Dep",
+        "team": [
+            { 
+                "_oid":"Dep!dep006!team!team610",
+                "_type": "Team",
+                "person":[
+                    { 
+                        "_oid":"Dep!dep006!team!team610!person!person611",
+                        "_type" : "Person",
+                        "name":"dev-01",
+                        "label":"client-dev-01",
+                        "address":["eee"]
+                    },
+                    { 
+                        "_oid":"person612",
+                        "_type" : "Person",
+                        "name":"dev-01",
+                        "label":"client-dev-02",
+                        "address":["fff"]
+                    }
+                ]
+            },
+            { 
+                "_oid":"Dep!dep006!team!team620",
+                "_type": "Team",
+                "seat": ["123", "456"],
+                "person":[
+                    { 
+                        "_oid":"Dep!dep006!team!team620!person!person621",
+                        "_type" : "Person",
+                        "name":"dev-01",
+                        "label":"client-dev-03",
+                        "address":["ggg"]
+                    },
+                    { 
+                        "_oid":"Dep!dep006!team!team620!person!person622",
+                        "_type" : "Person",
+                        "name":"dev-01",
+                        "label":"client-dev-04",
+                        "address":["hhh"]
+                    }
+                ]
+            }
+		]
+    },
+    {
+        "_oid": "dep007",
+        "_type" : "Dep",
+        "team": [
+            { 
+                "_oid":"Dep!dep007!team!team710",
+                "_type": "Team",
+                "person":[
+                    { 
+                        "_oid":"Dep!dep007!team!team710!person!person711",
+                        "_type" : "Person",
+                        "name":"dev-01",
+                        "label":"client-dev-01",
+                        "address":["iii"]
+                    },
+                    { 
+                        "_oid":"Dep!dep007!team!team710!person!person712",
+                        "_type" : "Person",
+                        "name":"dev-01",
+                        "label":"client-dev-02",
+                        "address":["jjj"]
+                    }
+                ]
+            },
+            { 
+                "_oid":"Dep!dep007!team!team720",
+                "_type": "Team",
+                "person":[
+                    { 
+                        "_oid":"Dep!dep007!team!team720!person!person721",
+                        "_type" : "Person",
+                        "name":"dev-01",
+                        "label":"client-dev-03",
+                        "address":["kkk"]
+                    },
+                    { 
+                        "_oid":"Dep!dep007!team!team720!person!person722",
+                        "_type" : "Person",
+                        "name":"dev-01",
+                        "label":"client-dev-04",
+                        "address":["lll"]
+                    }
+                ]
+            }
+		]
+    },
+    {
+        "_oid": "dep008",
+        "_type" : "Dep",
+        "team": [
+            {
+                "_oid":"Dep!dep008!team!team810",
+                "_type": "Team",
+                "person":[
+                    { 
+                        "_oid":"Dep!dep008!team!team810!person!person811",
+                        "_type" : "Person",
+                        "name":"dev-01",
+                        "label":"cms-dev-01",
+                        "address":["mmm"]
+                    },
+                    { 
+                        "_oid":"Dep!dep008!team!team810!person!person812",
+                        "_type" : "Person",
+                        "name":"dev-01",
+                        "label":"cms-dev-02",
+                        "address":["nnn"]
+                    }
+                ]
+            },
+            { 
+                "_oid":"Dep!dep008!team!team820",
+                "_type": "Team",
+                "person":[
+                    { 
+                        "_oid":"Dep!dep008!team!team820!person!person821",
+                        "_type" : "Person",
+                        "name":"dev-01",
+                        "phone":{"a":1},
+                        "label":"cms-dev-03",
+                        "address":["ooo"]
+                    }
+                ]
+            }
+		]
+    },
+    {
+        "_oid": "dep009",
+        "_type" : "Dep",
+        "team": [
+            { 
+                "_oid":"Dep!dep009!team!team910",
+                "_type": "Team",
+                "person":[
+                    { 
+                        "_oid":"Dep!dep009!team!team910!person!person911",
+                        "_type" : "Person",
+                        "name":"qe-01",
+                        "label":"cms-qe-01"
+                    },
+                    { 
+                        "_oid":"Dep!dep009!team!team910!person!person912",
+                        "_type" : "Person",
+                        "name":"qe-02",
+                        "label":"cms-qe-02"
+                    }
+                ]
+            },
+            { 
+                "_oid":"Dep!dep009!team!team920",
+                "_type": "Team",
+                "person":[
+                    { 
+                        "_oid":"Dep!dep009!team!team920!person!person921",
+                        "_type" : "Person",
+                        "name":"qe-03",
+                        "label":"cms-qe-03"
+                    },
+                    { 
+                        "_oid":"Dep!dep009!team!team920!person!person922",
+                        "_type" : "Person",
+                        "name":"qe-04",
+                        "label":"cms-qe-04"
+                    }
+                ]
+            },
+            { 
+                "_oid":"Dep!dep009!team!team930",
+                "_type": "Team",
+                "person":[
+                    { 
+                        "_oid":"Dep!dep009!team!team930!person!person931",
+                        "_type" : "Person",
+                        "name":"qe-05",
+                        "label":"cms-qe-05"
+                    },
+                    { 
+                        "_oid":"Dep!dep009!team!team930!person!person932",
+                        "_type" : "Person",
+                        "name":"qe-06",
+                        "label":"cms-qe-06"
+                    }
+                ]
+            }
+		]
+    },
+    {
+        "_oid": "dep011",
+        "_type" : "Dep",
+        "team": [
+            { 
+                "_oid":"Dep!dep011!team!team1110",
+                "_type": "Team",
+                "person":[]
+            },
+            { 
+                "_oid":"Dep!dep011!team!team1120",
+                "_type": "Team"
+            }
+        ]
+    },
+    {
+        "_oid": "dep012",
+        "_type" : "Dep",
+        "team": []
+    },
+    {
+        "_oid": "dep013",
+        "_type" : "Dep"
+    }
+  ],
+  "Leader": [
+    {
+        "_oid": "leader01",
+        "name": "Tom",
+        "head": [
+            { 
+                "_oid":"dep000"
+            }
+        ]
+    },
+    {
+        "_oid": "leader02",
+        "name": "Tom",
+        "head": [
+            { 
+                "_oid":"dep000"
+            }
+        ]
+    }
+  ],
+  "Room": [
+    {
+        "_oid": "room01",
+        "name": "Tom"
+    },
+    {
+        "_oid": "room02",
+        "name": "Jerry",
+        "floor": "aaa"
+    },
+    {
+        "_oid": "room03",
+        "name": "Mike",
+        "floor": null
+    },
+    {
+        "_oid": "room04",
+        "name": "John"
+    },
+    {
+        "_oid": "room05",
+        "name": "sherry"
+    },
+    {
+        "_oid": "room06",
+        "name": "Monica",
+        "window": null
+    },
+    {
+        "_oid": "room07",
+        "name": "Brian",
+        "window": []
+    },
+    {
+        "_oid": "room08",
+        "name": "Frank",
+        "window": ["aaa","bbb"]
+    },
+    {
+        "_oid": "room09",
+        "name": "Eric",
+        "window": ["aaa"]
+    }
+  ],
+  "Door": [
+    {
+        "_oid": "door11",
+        "_hostentity": "Room!room01!path",
+        "name": "door11"
+    },
+    {
+        "_oid": "door41",
+        "_hostentity": "Room!room04!path",
+        "name": "door41"
+    },
+    {
+        "_oid": "door42",
+        "_hostentity": "Room!room04!path",
+        "name": "door42"
+    },
+    {
+        "_oid": "door51",
+        "_hostentity": "Room!room05!path",
+        "name": "door51"
+    },
+    {
+        "_oid": "door52",
+        "_hostentity": "Room!room05!path",
+        "name": "door52"
+    },
+    {
+        "_oid": "door61",
+        "_hostentity": "Room!room06!path",
+        "name": "door61"
+    },
+    {
+        "_oid": "door62",
+        "_hostentity": "Room!room06!path",
+        "name": "door62"
+    }
+  ],
+  "Lock": [
+    {
+        "_oid": "lock411",
+        "_hostentity": "Door!door41!lock",
+        "name": "lock411"
+    },
+    {
+        "_oid": "lock412",
+        "_hostentity": "Door!door41!lock",
+        "name": "lock412"
+    },
+	{
+        "_oid": "lock511",
+        "_hostentity": "Door!door51!lock",
+        "name": "lock511"
+    },
+    {
+        "_oid": "lock521",
+        "_hostentity": "Door!door52!lock",
+        "name": "lock521"
+    },
+    {
+        "_oid": "lock611",
+        "_hostentity": "Door!door61!lock",
+        "name": "lock611"
+    },
+    {
+        "_oid": "lock621",
+        "_hostentity": "Door!door62!lock",
+        "name": "lock621"
+    }
+  ],
+  
+  "LOJDataService" : [
+	   {
+	        "_type" : "LOJDataService",
+	        "_oid" : "LOJDataServiceOID1",
+	        "name" : "DS1",
+	        "label" : "DS1"
+	    }, {
+	        "_type" : "LOJDataService",
+	        "_oid" : "LOJDataServiceOID2",
+	        "name" : "DS2",
+	        "label" : "DS2",
+	        "applicationService" : {
+	            "_type" : "LOJApplicationService",
+	            "_oid" : "LOJApplicationServiceOID1"
+	        },
+	        "applicationServices" : [{
+	                "_type" : "LOJApplicationService",
+	                "_oid" : "LOJApplicationServiceOID1"
+	            }, {
+	                "_type" : "LOJApplicationService",
+	                "_oid" : "LOJApplicationServiceOID2"
+	            }
+	        ]
+	    }, {
+	        "_type" : "LOJDataService",
+	        "_oid" : "LOJDataServiceOID3",
+	        "name" : "DS3",
+	        "label" : "DS3",
+	        "applicationService" : {
+	            "_type" : "LOJApplicationService",
+	            "_oid" : "LOJApplicationServiceOID3"
+	        },
+	        "applicationServices" : [{
+	                "_type" : "LOJApplicationService",
+	                "_oid" : "LOJApplicationServiceOID3"
+	            }, {
+	                "_type" : "LOJApplicationService",
+	                "_oid" : "LOJApplicationServiceOID2"
+	            }
+	        ]
+	    }
+  ],
+  
+  "LOJApplicationService" : [
+	    {
+	        "_type" : "LOJApplicationService",
+	        "_oid" : "LOJApplicationServiceOID1",
+	        "name" : "AS1",
+	        "label" : "AS1"
+	    }, {
+	        "_type" : "LOJApplicationService",
+	        "_oid" : "LOJApplicationServiceOID2",
+	        "name" : "AS2",
+	        "label" : "AS2",
+	        "dependOn" : {
+	            "_type" : "LOJDataService",
+	            "_oid" : "LOJDataServiceOID1"
+	        },
+	        "dependOns" : [{
+	                "_type" : "LOJDataService",
+	                "_oid" : "LOJDataServiceOID1"
+	            }, {
+	                "_type" : "LOJDataService",
+	                "_oid" : "LOJDataServiceOID2"
+	            }
+	        ],
+	        "serviceInstance" : {
+	            "_type" : "LOJServiceInstance",
+	            "_oid" : "LOJServiceInstanceOID1"
+	        },
+	        "serviceInstances" : [{
+	                "_type" : "LOJServiceInstance",
+	                "_oid" : "LOJServiceInstanceOID1"
+	            }, {
+	                "_type" : "LOJServiceInstance",
+	                "_oid" : "LOJServiceInstanceOID2"
+	            }
+	        ]
+	    }, {
+	        "_type" : "LOJApplicationService",
+	        "_oid" : "LOJApplicationServiceOID3",
+	        "name" : "AS3",
+	        "label" : "AS3",
+	        "dependOn" : {
+	            "_type" : "LOJDataService",
+	            "_oid" : "LOJDataServiceOID3"
+	        },
+	        "dependOns" : [{
+	                "_type" : "LOJDataService",
+	                "_oid" : "LOJDataServiceOID3"
+	            }, {
+	                "_type" : "LOJDataService",
+	                "_oid" : "LOJDataServiceOID2"
+	            }
+	        ],
+	        "serviceInstance" : {
+	            "_type" : "LOJServiceInstance",
+	            "_oid" : "LOJServiceInstanceOID3"
+	        },
+	        "serviceInstances" : [{
+	                "_type" : "LOJServiceInstance",
+	                "_oid" : "LOJServiceInstanceOID3"
+	            }, {
+	                "_type" : "LOJServiceInstance",
+	                "_oid" : "LOJServiceInstanceOID2"
+	            }
+	        ]
+	    }
+  ],
+  
+  "LOJServiceInstance" : [
+	    {
+	        "_type" : "LOJServiceInstance",
+	        "_oid" : "LOJServiceInstanceOID1",
+	        "name" : "SI1",
+	        "label" : "SI1"
+	    }, {
+	        "_type" : "LOJServiceInstance",
+	        "_oid" : "LOJServiceInstanceOID2",
+	        "name" : "SI2",
+	        "label" : "SI2",
+	        "appService" : {
+	            "_type" : "LOJApplicationService",
+	            "_oid" : "LOJApplicationServiceOID1"
+	        },
+	        "appServices" : [{
+	                "_type" : "LOJApplicationService",
+	                "_oid" : "LOJApplicationServiceOID1"
+	            }, {
+	                "_type" : "LOJApplicationService",
+	                "_oid" : "LOJApplicationServiceOID2"
+	            }
+	        ],
+	        "runsOn" : {
+	            "_type" : "LOJCompute",
+	            "_oid" : "LOJComputeOID1"
+	        },
+	        "runsOns" : [{
+	                "_type" : "LOJCompute",
+	                "_oid" : "LOJComputeOID1"
+	            }, {
+	                "_type" : "LOJCompute",
+	                "_oid" : "LOJComputeOID2"
+	            }
+	        ]
+	    }, {
+	        "_type" : "LOJServiceInstance",
+	        "_oid" : "LOJServiceInstanceOID3",
+	        "name" : "SI3",
+	        "label" : "SI3",
+	        "appService" : {
+	            "_type" : "LOJApplicationService",
+	            "_oid" : "LOJApplicationServiceOID3"
+	        },
+	        "appServices" : [{
+	                "_type" : "LOJApplicationService",
+	                "_oid" : "LOJApplicationServiceOID3"
+	            }, {
+	                "_type" : "LOJApplicationService",
+	                "_oid" : "LOJApplicationServiceOID2"
+	            }
+	        ],
+	        "runsOn" : {
+	            "_type" : "LOJCompute",
+	            "_oid" : "LOJComputeOID3"
+	        },
+	        "runsOns" : [{
+	                "_type" : "LOJCompute",
+	                "_oid" : "LOJComputeOID3"
+	            }, {
+	                "_type" : "LOJCompute",
+	                "_oid" : "LOJComputeOID2"
+	            }
+	        ]
+	    }
+  ],
+  
+  "LOJCompute" : [
+	    {
+	        "_type" : "LOJCompute",
+	        "_oid" : "LOJComputeOID1",
+	        "name" : "CP1",
+	        "label" : "CP1"
+	    }, {
+	        "_type" : "LOJCompute",
+	        "_oid" : "LOJComputeOID2",
+	        "name" : "CP2",
+	        "label" : "CP2",
+	        "svcInstance" : {
+	            "_type" : "LOJServiceInstance",
+	            "_oid" : "LOJServiceInstanceOID1"
+	        },
+	        "svcInstances" : [{
+	                "_type" : "LOJServiceInstance",
+	                "_oid" : "LOJServiceInstanceOID1"
+	            }, {
+	                "_type" : "LOJServiceInstance",
+	                "_oid" : "LOJServiceInstanceOID2"
+	            }
+	        ]
+	    }, {
+	        "_type" : "LOJCompute",
+	        "_oid" : "LOJComputeOID3",
+	        "name" : "CP3",
+	        "label" : "CP3",
+	        "svcInstance" : {
+	            "_type" : "LOJServiceInstance",
+	            "_oid" : "LOJServiceInstanceOID3"
+	        },
+	        "svcInstances" : [{
+	                "_type" : "LOJServiceInstance",
+	                "_oid" : "LOJServiceInstanceOID3"
+	            }, {
+	                "_type" : "LOJServiceInstance",
+	                "_oid" : "LOJServiceInstanceOID2"
+	            }
+	        ]
+	    }
+  ],
+  
+  "Company" : [
+		{
+		    "_oid": "company01",
+		    "_type": "Company",
+		    "label": "company01",
+		    "name": "company01"
+		}, 
+		
+		{
+		    "_oid": "company02",
+		    "_type": "Company",
+		    "label": "company02",
+		    "name": "company02",
+		    "department": [{
+		        "_oid": "department0201",
+		        "_type": "Department",
+		        "label": "department0201",
+		        "name": "department0201"
+		    }, {
+		        "_oid": "department0202",
+		        "_type": "Department",
+		        "label": "department0202",
+		        "name": "department0202",
+		        "team": [{
+		            "_oid": "team020201",
+		            "_type": "Team",
+		            "name": "team020201",
+		            "label": "team020201"
+		        }, {
+		            "_oid": "team020202",
+		            "_type": "Team",
+		            "name": "team020202",
+		            "label": "team020202",
+		            "person": [{
+		                "_oid": "person02020201",
+		                "_type": "Person",
+		                "age": "19",
+		                "name": "dev-91"
+		            }, {
+		                "_oid": "person02020202",
+		                "_type": "Person",
+		                "address": ["a99",
+		                    "b99"
+		                ],
+		                "name": "dev-92"
+		            }]
+		        }],
+		        "squad" : [{
+                        "_oid" : "squad020201",
+                        "_type" : "Squad",
+                        "name" : "squad020201",
+                        "label" : "squad020201"
+                    }, {
+                        "_oid" : "squad020202",
+                        "_type" : "Squad",
+                        "name" : "squad020202",
+                        "label" : "squad020202",
+                        "human" : [{
+                                "_oid" : "herson02020201",
+                                "_type" : "Human",
+                                "age" : "19",
+                                "name" : "human-1"
+                            }, {
+                                "_oid" : "human02020202",
+                                "_type" : "Human",
+                                "label" : "Human99",
+                                "name" : "human-2"
+                            }
+                        ]
+                    }
+                ]
+		    }]
+		}
+  ],
+    "Cd": [
+    {
+        "_oid": "cd01",
+        "name": "Tom",
+        "age": "23",
+        "level": ["34","56"]
+    },
+    {
+        "_oid": "cd02",
+        "name": "Jack",
+        "age": "23"
+    },
+    {
+        "_oid": "cd03",
+        "name": "Lily",
+        "age": "23",
+        "level": ["34","56"]
+    }
+  ],
+
+  "AllowFullTableScanParentTest": [
+  	{
+  		"_oid": "4fbb314fc681caf13e244437",
+  		"_type": "AllowFullTableScanParentTest",
+  		"name": "AllowFullTableScanParentTest-embed-integer-test1",
+  		"embed": {
+  			"_oid": "AllowFullTableScanParentTest!4fbb314fc681caf13e244437!embed!embed11",
+  			"_type": "EmbeddedTest",
+  			"name": "EmbeddedTest-name",
+  			"label": "stratus",
+  			"number": 1
+  		},
+        "embed2": {
+            "_oid": "AllowFullTableScanParentTest!4fbb314fc681caf13e244437!embed2!embed21",
+            "_type": "EmbeddedTest2",
+            "name": "EmbeddedTest2-name",
+            "labels": [],
+            "number": 1
+        }
+  	},
+  	{
+        "_oid": "4fbb314fc681caf13e244438",
+        "_type": "AllowFullTableScanParentTest",
+        "name": "AllowFullTableScanParentTest-embed-integer-test2",
+        "embed": {
+            "_oid": "AllowFullTableScanParentTest!4fbb314fc681caf13e244438!embed!embed11",
+            "_type": "EmbeddedTest",
+            "name": "EmbeddedTest-name",
+            "label": "stratus",
+            "number": 2
+        },
+        "embed2": {
+            "_oid": "AllowFullTableScanParentTest!4fbb314fc681caf13e244438!embed2!embed21",
+            "_type": "EmbeddedTest2",
+            "name": "EmbeddedTest2-name",
+            "number": 2
+        }
+    }
+  ]
+
+}

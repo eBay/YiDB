@@ -1,0 +1,67 @@
+{ 
+	"name": "Module",
+	"pluralName": "Modules",
+	"description": "A network module used on switches",
+	"parent": "Resource",
+	"fields": {
+		"sourceId": {
+			"description":"The sourceid of the resource ",
+			"mandatory":true,
+			"dataType": "string",
+			"cardinality": "One"
+		},
+		"productionLevel":{
+			"description":"production service level",
+			"mandatory":true,
+			"dataType":"string"
+		},
+		"serial":{
+			"description":"the serial of the module",
+			"mandatory":true,
+			"dataType":"string"
+		},
+		"modnum":{
+			"description":"the model number of the module",
+			"mandatory":false,
+			"dataType":"string"
+		},
+		"model":{
+			"description":"model name",
+			"mandatory":true,
+			"dataType":"string"
+		},
+		"flag":{
+			"description":"the flag of the model",
+			"mandatory":false,
+			"dataType":"string"
+		},		   
+                "networkPorts": {
+                        "description": "the ports in this module",
+                        "dataType": "relationship",
+                        "refDataType": "NetworkPort",
+			"relationType": "Inner",
+                        "mandatory": false,
+                        "cardinality": "Many"
+                },
+                "asset": {
+                        "description": "the asset of this module",
+                        "dataType": "relationship",
+                        "refDataType": "Asset",
+                        "relationType": "Reference",
+                        "mandatory": true,
+                        "cardinality": "One"
+                }
+	},
+	"options": {
+		"indexes": {
+		        "sourceIdIndex":{
+				"indexName": "sourceIdIndex",
+				"keyList": ["sourceId"]
+		        },
+		        "serialIndex":{
+				"indexName": "serialIndex",
+				"keyList": ["serial"]
+		        }
+	        }
+        }
+}

@@ -1,0 +1,32 @@
+{
+    "SystemLimitationOnDocTest": [{
+    "_type" : "SystemLimitationOnDocTest",
+    "_oid" : "SystemLimitationOnDocTestBatchEmbedOID",
+    "resourceId" : "SystemLimitationOnDocTestBatchEmbedOID",
+    "manyString" : ["Hello", "World", "CMS"],
+    "manyEmbed" : [{
+            "_type" : "EmbeddedTest4Index",
+            "_oid" : "batchCreateEmbedEntity1",
+            "name" : ["Hello", "World", "CMS"],
+            "number" : 1,
+            "label" : "1"
+        }, {
+            "_type" : "EmbeddedTest4Index",
+            "_oid" : "batchCreateEmbedEntity2",
+            "name" : ["Hello", "World", "CMS"],
+            "number" : 2,
+            "label" : "2"
+        }
+    ],
+    "manyReference" : [{
+            "_type" : "QueryWithSortOnTest",
+            "_oid" : "QueryWithSortOnTestOID1"
+        }, {
+            "_type" : "QueryWithSortOnTest",
+            "_oid" : "QueryWithSortOnTestOID2"
+        }, {
+            "_type" : "QueryWithSortOnTest",
+            "_oid" : "QueryWithSortOnTestOID3"
+        }
+    ]
+}]}

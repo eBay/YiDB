@@ -1,0 +1,21 @@
+{
+    "name" : "SystemLimitationOnDocTest",
+    "options" : {
+        "indexes" : {
+            "oneStringIndex" : {
+                "indexName" : "oneStringIndex",
+                "keyList" : [
+                    "oneString"
+                ],
+                "indexOptions" : [
+                    "unique"
+                ]
+            },
+            "manyStringIndex" : {
+                "indexName" : "manyStringIndex",
+                "keyList" : ["manyString"],
+                "indexOptions" : ["unique"]
+            }
+        }
+    }
+}

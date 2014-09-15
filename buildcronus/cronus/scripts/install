@@ -1,0 +1,4 @@
+#!/bin/bash
+
+echo "Installing java runtime if not already installed"
+sudo apt-get install openjdk-6-jdk

@@ -1,0 +1,33 @@
+{
+	"name": "Contact",
+	"parent": "Resource",
+	"pluralName" : "Contacts",
+	"description" : "contact information",
+	"fields": {
+		"name": {
+			"description": "name of contact",
+			"dataType": "string"
+		},
+		"email": {
+			"description": "email of contact",
+			"dataType": "string"
+		},
+		"phone": {
+			"description": "phone number of contact",
+			"dataType": "string"
+		}
+	},
+	"options": {
+		"indexes": {
+		        "nameIndex":{
+				"indexName": "nameIndex",
+				"keyList": ["name"]
+		        },
+		        "phoneIndex":{
+				"indexName": "phoneIndex",
+				"keyList": ["phone"]
+		        }
+	        }
+        }
+
+}

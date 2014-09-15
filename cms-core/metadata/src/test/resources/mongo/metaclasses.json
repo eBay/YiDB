@@ -1,0 +1,2464 @@
+[
+
+        {
+            "name": "ApplicationService",
+            "pluralName": "ApplicationServices",
+            "fields": {
+            	"name": {
+                    "defaultValue": "",
+                    "mandatory": false,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "name",
+                    "dataType": "string",
+                    "cardinality": "One"
+                },
+                "archTier": {
+                    "defaultValue": null,
+                    "mandatory": false,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "archTier",
+                    "dataType": "string",
+                    "cardinality": "One"
+                },
+                "preActiveManifestRef": {
+                    "defaultValue": null,
+                    "mandatory": false,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "preActiveManifestRef",
+                    "dataType": "string",
+                    "cardinality": "One"
+                },
+                "services": {
+                    "refDataType": "ServiceInstance",
+                    "relationType": "Reference",
+                    "consistencyType": "Strong",
+                    "cascade": true,
+                    "name": "services",
+                    "dataType": "relationship",
+                    "cardinality": "Many"
+                },
+                "preManifestRef": {
+                    "defaultValue": null,
+                    "mandatory": false,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "preManifestRef",
+                    "dataType": "string",
+                    "cardinality": "Many"
+                },
+                "healthStatus": {
+                    "defaultValue": null,
+                    "mandatory": false,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "healthStatus",
+                    "dataType": "string",
+                    "cardinality": "One"
+                },
+                "appId": {
+                    "defaultValue": null,
+                    "mandatory": false,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "appId",
+                    "dataType": "string",
+                    "cardinality": "One"
+                },
+                "status": {
+                    "defaultValue": null,
+                    "mandatory": false,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "status",
+                    "dataType": "string",
+                    "cardinality": "One"
+                },
+                "deployHistory": {
+                    "defaultValue": null,
+                    "mandatory": false,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "deployHistory",
+                    "dataType": "string",
+                    "cardinality": "Many"
+                },
+                "label": {
+                    "defaultValue": null,
+                    "mandatory": false,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "label",
+                    "dataType": "string",
+                    "cardinality": "One"
+                },
+                "architecture": {
+                    "defaultValue": null,
+                    "mandatory": false,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "architecture",
+                    "dataType": "string",
+                    "cardinality": "One"
+                },
+                "activeManifestRef": {
+                    "defaultValue": null,
+                    "mandatory": false,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "activeManifestRef",
+                    "dataType": "string",
+                    "cardinality": "Many"
+                },
+                "nugget": {
+                    "defaultValue": null,
+                    "mandatory": false,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "nugget",
+                    "dataType": "string",
+                    "cardinality": "One"
+                },
+                "activeManifestCur": {
+                    "defaultValue": null,
+                    "mandatory": false,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "activeManifestCur",
+                    "dataType": "string",
+                    "cardinality": "One"
+                },
+                "manifestRef": {
+                    "defaultValue": null,
+                    "mandatory": false,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "manifestRef",
+                    "dataType": "string",
+                    "cardinality": "Many"
+                },
+                "updateStrategies": {
+                    "refDataType": "UpdateStrategy",
+                    "relationType": "Reference",
+                    "cascade": true,
+                    "name": "updateStrategies",
+                    "dataType": "relationship",
+                    "cardinality": "Many"
+                },
+                "manifestCur": {
+                    "defaultValue": null,
+                    "mandatory": false,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "manifestCur",
+                    "dataType": "string",
+                    "cardinality": "One"
+                },
+                "activeManifestDiff": {
+                    "defaultValue": null,
+                    "mandatory": false,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "activeManifestDiff",
+                    "dataType": "boolean",
+                    "cardinality": "One",
+                    "expression" : "function getDiff() {var ref = $activeManifestRef; var cur = $activeManifestCur;
+	if(ref == null || ref == \"\" || ref == \"null\") {
+		if(cur == \"null\" || cur == null || cur == \"\") {
+			return false;
+		};
+		return true;
+	};
+	ref = ref[0];
+	if(ref == null || ref == \"\" || ref == \"null\") {
+		if(cur == \"null\" || cur == null || cur == \"\") {
+			return false;
+		};
+		return true;
+	};
+	return ref != cur; }
+	getDiff();"
+                }
+            },
+            "options":{
+			    "indexes": {
+					"appTierIndex":{
+							"indexName": "appTierIndex",
+							"keyList": ["archTier"],
+							"indexOptions": []
+					}, 
+					"appNameIndex":{
+							"indexName": "appNameIndex",
+							"keyList": ["name"],
+							"indexOptions": ["unique"]
+					}
+				},
+				"primaryKey" : ["appNameIndex"]
+			},
+            "_id": null,
+            "lastModified": 1337149946243,
+            "repository": "raptor-paas",
+			"sharded" : true
+        },
+        {
+            "name": "Environment",
+            "pluralName": "Environments",
+            "fields": {
+            	"name": {
+                    "defaultValue": "",
+                    "mandatory": false,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "name",
+                    "dataType": "string",
+                    "cardinality": "One"
+                },
+                "numService": {
+                    "defaultValue": null,
+                    "mandatory": false,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "numService",
+                    "dataType": "integer",
+                    "cardinality": "One"
+                },
+                "numServices": {
+                    "defaultValue": null,
+                    "mandatory": false,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "numServices",
+                    "dataType": "long",
+                    "cardinality": "One"
+                },
+                "total": {
+                    "defaultValue": null,
+                    "mandatory": false,
+                    "enumValues": [],
+                    "expression": "$numService + $numServices",
+                    "validation": null,
+                    "name": "total",
+                    "dataType": "long",
+                    "cardinality": "One"
+                },
+                "cos": {
+                    "refDataType": "ClassOfService",
+                    "relationType": "Reference",
+                    "cascade": true,
+                    "name": "cos",
+                    "dataType": "relationship",
+                    "cardinality": "One"
+                },
+                "applications": {
+                    "refDataType": "ApplicationService",
+                    "relationType": "Reference",
+                    "cascade": false,
+                    "name": "applications",
+                    "dataType": "relationship",
+                    "cardinality": "Many"
+                },
+                "actionStatus": {
+                    "dataType": "enumeration",
+                    "defaultValue": "DONE",
+                    "enumValues": ["DONE", "Doing"]
+                }
+            },
+            "options": {
+	            "indexes": {
+					"envNameIndex":{
+							"indexName": "envNameIndex",
+							"keyList": ["name"],
+							"indexOptions": []
+					}
+				}
+			},
+            "_id": null,
+            "lastModified": 1337149946243,
+            "repository": "raptor-paas"
+        },
+        {
+            "name": "ClassOfService",
+            "pluralName": "ClassOfServices",
+            "fields": {
+            	"name": {
+                    "defaultValue": "",
+                    "mandatory": false,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "name",
+                    "dataType": "string",
+                    "cardinality": "One"
+                }
+            },
+            "_id": null,
+            "lastModified": 1337149946236,
+            "repository": "raptor-paas"
+        },
+        {
+            "name": "UpdateStrategy",
+            "pluralName": "UpdateStrategies",
+            "fields": {
+            	"name": {
+                    "defaultValue": "",
+                    "mandatory": false,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "name",
+                    "dataType": "string",
+                    "cardinality": "One"
+                },
+                "lastModifiedTime": {
+                    "defaultValue": null,
+                    "mandatory": true,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "lastModifiedTime",
+                    "dataType": "date",
+                    "cardinality": "One"
+                },
+                "failure": {
+                    "defaultValue": null,
+                    "mandatory": false,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "failure",
+                    "dataType": "string",
+                    "cardinality": "One"
+                },
+                "description": {
+                    "defaultValue": null,
+                    "mandatory": false,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "description",
+                    "dataType": "string",
+                    "cardinality": "One"
+                },
+                "strategy": {
+                    "defaultValue": null,
+                    "mandatory": false,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "strategy",
+                    "dataType": "string",
+                    "cardinality": "One"
+                },
+                "type": {
+                    "defaultValue": null,
+                    "mandatory": false,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "type",
+                    "dataType": "string",
+                    "cardinality": "One"
+                },
+                "groups": {
+                    "defaultValue": null,
+                    "mandatory": false,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "groups",
+                    "dataType": "string",
+                    "cardinality": "One"
+                },
+                "threshold": {
+                    "defaultValue": null,
+                    "mandatory": false,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "threshold",
+                    "dataType": "string",
+                    "cardinality": "One"
+                }
+            },
+            "options": {
+	            "indexes": {
+					"updateStrategyNameIndex":{
+							"indexName": "updateStrategyNameIndex",
+							"keyList": ["name"],
+							"indexOptions": []
+					}
+				}
+			},
+            "_id": null,
+            "lastModified": 1337149946242,
+            "repository": "raptor-paas"
+        },
+        {
+            "name": "ServiceInstance",
+            "pluralName": "ServiceInstances",
+            "fields": {
+            	"name": {
+                    "defaultValue": "",
+                    "mandatory": false,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "name",
+                    "dataType": "string",
+                    "cardinality": "One"
+                },
+                "https": {
+                    "defaultValue": "true",
+                    "mandatory": false,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "https",
+                    "dataType": "boolean",
+                    "cardinality": "One"
+                },
+                "port": {
+                    "defaultValue": null,
+                    "mandatory": false,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "port",
+                    "dataType": "string",
+                    "cardinality": "One"
+                },
+                "manifestDiff": {
+                    "defaultValue": null,
+                    "mandatory": false,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "manifestDiff",
+                    "dataType": "boolean",
+                    "cardinality": "One"
+                },
+                "healthStatus": {
+                    "defaultValue": null,
+                    "mandatory": false,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "healthStatus",
+                    "dataType": "string",
+                    "cardinality": "One"
+                },
+                "appService": {
+                    "refDataType": "ApplicationService",
+                    "relationType": "Reference",
+                    "cascade": true,
+                    "name": "appService",
+                    "dataType": "relationship",
+                    "cardinality": "One"
+                },
+                "runsOn": {
+                    "refDataType": "Compute",
+                    "relationType": "Reference",
+                    "cascade": true,
+                    "name": "runsOn",
+                    "mandatory":false,
+                    "dataType": "relationship",
+                    "cardinality": "One"
+                },
+                "manifestCur": {
+                    "defaultValue": null,
+                    "mandatory": false,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "manifestCur",
+                    "dataType": "string",
+                    "cardinality": "One"
+                },
+                "activeManifestRef": {
+                    "defaultValue": null,
+                    "mandatory": false,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "activeManifestRef",
+                    "dataType": "string",
+                    "cardinality": "Many"
+                },
+                "activeManifestDiff": {
+                    "defaultValue": null,
+                    "mandatory": false,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "activeManifestDiff",
+                    "dataType": "boolean",
+                    "cardinality": "One"
+                },
+                "activeManifestCur": {
+                    "defaultValue": null,
+                    "mandatory": false,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "activeManifestCur",
+                    "dataType": "string",
+                    "cardinality": "One"
+                },
+                "manifestRef": {
+                    "defaultValue": null,
+                    "mandatory": false,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "manifestRef",
+                    "dataType": "string",
+                    "cardinality": "Many"
+                },
+				"properties": {
+					"defaultValue": null,
+                    "mandatory": false,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "properties",
+                    "dataType": "json",
+                    "cardinality": "One"
+				}
+            },
+            "options": {
+	            "indexes": {
+					"serviceInstanceNameIndex":{
+							"indexName": "serviceInstanceNameIndex",
+							"keyList": ["name"],
+							"indexOptions": []
+					}
+				}
+			},
+            "_id": null,
+            "lastModified": 1337149946243,
+            "repository": "raptor-paas"
+        },
+        {
+            "name": "Cluster",
+            "pluralName": "Clusters",
+            "fields": {
+            	"name": {
+                    "defaultValue": "",
+                    "mandatory": false,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "name",
+                    "dataType": "string",
+                    "cardinality": "One"
+                },
+                "appId": {
+                    "defaultValue": null,
+                    "mandatory": false,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "appId",
+                    "dataType": "string",
+                    "cardinality": "One"
+                },
+                "computes": {
+                    "refDataType": "Compute",
+                    "relationType": "Reference",
+                    "cascade": true,
+                    "name": "computes",
+                    "dataType": "relationship",
+                    "cardinality": "Many"
+                },
+                "label": {
+                    "defaultValue": null,
+                    "mandatory": false,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "label",
+                    "dataType": "string",
+                    "cardinality": "One"
+                },
+                "updateStrategies": {
+                    "refDataType": "UpdateStrategy",
+                    "relationType": "Reference",
+                    "cascade": true,
+                    "name": "updateStrategies",
+                    "dataType": "relationship",
+                    "cardinality": "Many"
+                },
+                "activeManifestRef": {
+                    "defaultValue": null,
+                    "mandatory": false,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "activeManifestRef",
+                    "dataType": "string",
+                    "cardinality": "Many"
+                },
+                "activeManifestDiff": {
+                    "defaultValue": null,
+                    "mandatory": false,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "activeManifestDiff",
+                    "dataType": "boolean",
+                    "cardinality": "One"
+                },
+                "manifestRef": {
+                    "defaultValue": null,
+                    "mandatory": false,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "manifestRef",
+                    "dataType": "string",
+                    "cardinality": "Many"
+                },
+                "activeManifestCur": {
+                    "defaultValue": null,
+                    "mandatory": false,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "activeManifestCur",
+                    "dataType": "string",
+                    "cardinality": "One"
+                }
+            },
+            "options": {
+	            "indexes": {
+					"clusterNameIndex":{
+							"indexName": "clusterNameIndex",
+							"keyList": ["name"],
+							"indexOptions": []
+					}
+				}
+			},
+            "_id": null,
+            "lastModified": 1337149946243,
+            "repository": "raptor-paas"
+        },
+        {
+            "name": "Compute",
+            "pluralName": "Computes",
+            "fields": {
+            	"name": {
+                    "defaultValue": "",
+                    "mandatory": false,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "name",
+                    "dataType": "string",
+                    "cardinality": "One"
+                },
+                "https": {
+                    "defaultValue": null,
+                    "mandatory": false,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "https",
+                    "dataType": "boolean",
+                    "cardinality": "One"
+                },
+                "manifestDiff": {
+                    "defaultValue": null,
+                    "mandatory": false,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "manifestDiff",
+                    "dataType": "boolean",
+                    "cardinality": "One"
+                },
+                "location": {
+                    "defaultValue": null,
+                    "mandatory": false,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "location",
+                    "dataType": "string",
+                    "cardinality": "One"
+                },
+                "adminStatus": {
+                    "defaultValue": null,
+                    "mandatory": false,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "adminStatus",
+                    "dataType": "string",
+                    "cardinality": "One"
+                },
+                "label": {
+                    "defaultValue": null,
+                    "mandatory": false,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "label",
+                    "dataType": "string",
+                    "cardinality": "One"
+                },
+                "computeState": {
+                    "defaultValue": null,
+                    "mandatory": false,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "computeState",
+                    "dataType": "string",
+                    "cardinality": "One"
+                },
+                "activeManifestRef": {
+                    "defaultValue": null,
+                    "mandatory": false,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "activeManifestRef",
+                    "dataType": "string",
+                    "cardinality": "Many"
+                },
+                "fqdn": {
+                    "defaultValue": null,
+                    "mandatory": false,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "fqdn",
+                    "dataType": "string",
+                    "cardinality": "One"
+                },
+                "manifestRef": {
+                    "defaultValue": null,
+                    "mandatory": false,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "manifestRef",
+                    "dataType": "string",
+                    "cardinality": "Many"
+                },
+                "activeManifestCur": {
+                    "defaultValue": null,
+                    "mandatory": false,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "activeManifestCur",
+                    "dataType": "string",
+                    "cardinality": "One"
+                },
+                "assetStatus": {
+                    "defaultValue": null,
+                    "mandatory": false,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "assetStatus",
+                    "dataType": "string",
+                    "cardinality": "One"
+                },
+                "manifestCur": {
+                    "defaultValue": null,
+                    "mandatory": false,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "manifestCur",
+                    "dataType": "string",
+                    "cardinality": "One"
+                },
+                "activeManifestDiff": {
+                    "defaultValue": null,
+                    "mandatory": false,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "activeManifestDiff",
+                    "dataType": "boolean",
+                    "cardinality": "One"
+                }
+            },
+            "options": {
+	            "indexes": {
+					"computeNameIndex":{
+							"indexName": "computeNameIndex",
+							"keyList": ["name"],
+							"indexOptions": []
+					}
+				}
+			},
+            "_id": null,
+            "lastModified": 1337149946243,
+            "repository": "raptor-paas"
+        },
+        {
+        	"name": "NoUse",
+            "pluralName": "NoUses",
+            "fields": {
+            	"name": {
+                    "defaultValue": "",
+                    "mandatory": false,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "name",
+                    "dataType": "string",
+                    "cardinality": "One"
+                }, 
+                "noUseHistory": {
+                	"name": "noUseHistory",
+                	"dataType": "string",
+                    "cardinality": "Many"
+                },
+                "noUseProperties": {
+                	"name": "noUseProperties",
+                	"dataType": "json"
+                }
+            },
+            "_id": null,
+            "embed": true,
+            "lastModified": 1337149946244,
+            "repository": "software-deployment"
+        },
+        
+        {
+            "name": "Manifest",
+            "pluralName": "Manifests",
+            "fields": {
+            	"name": {
+                    "defaultValue": "",
+                    "mandatory": false,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "name",
+                    "dataType": "string",
+                    "cardinality": "One"
+                },
+                "lastModifiedTime": {
+                    "defaultValue": null,
+                    "mandatory": true,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "lastModifiedTime",
+                    "dataType": "date",
+                    "defaultValue":"$NOW",
+                    "cardinality": "One"
+                },
+                "versions": {
+                    "refDataType": "ManifestVersion",
+                    "relationType": "Embedded",
+                    "cascade": true,
+                    "name": "versions",
+                    "dataType": "relationship",
+                    "cardinality": "Many"
+                },
+                "noUses": {
+                    "refDataType": "NoUse",
+                    "relationType": "Embedded",
+                    "cascade": true,
+                    "name": "noUses",
+                    "dataType": "relationship",
+                    "cardinality": "One"
+                }
+            },
+            "options": {
+	            "indexes": {
+					"manifestNameIndex":{
+							"indexName": "manifestNameIndex",
+							"keyList": ["name"],
+							"indexOptions": []
+					}
+				}
+			},
+            "_id": null,
+            "lastModified": 1337149946244,
+            "repository": "software-deployment"
+        },
+        {
+            "name": "DeploymentEntityStatus",
+            "fields": {
+            	"name": {
+                    "defaultValue": "",
+                    "mandatory": false,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "name",
+                    "dataType": "string",
+                    "cardinality": "One"
+                },
+                "status": {
+                    "defaultValue": null,
+                    "mandatory": false,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "status",
+                    "dataType": "string",
+                    "cardinality": "One"
+                },
+                "description": {
+                    "defaultValue": null,
+                    "mandatory": false,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "description",
+                    "dataType": "string",
+                    "cardinality": "One"
+                }
+            },
+            "options": {
+	            "indexes": {
+					"deploymentEntityStatusNameIndex":{
+							"indexName": "deploymentEntityStatusNameIndex",
+							"keyList": ["name"],
+							"indexOptions": []
+					}
+				}
+			},
+            "_id": null,
+            "embed": true,
+            "lastModified": 1337149946244,
+            "repository": "software-deployment"
+        },
+        {
+            "name": "PackageVersion",
+            "pluralName": "PackageVersions",
+            "fields": {
+            	"name": {
+                    "defaultValue": "",
+                    "mandatory": false,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "name",
+                    "dataType": "string",
+                    "cardinality": "One"
+                },
+                "description": {
+                    "defaultValue": null,
+                    "mandatory": false,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "description",
+                    "dataType": "string",
+                    "cardinality": "One"
+                },
+                "externalId": {
+                    "defaultValue": null,
+                    "mandatory": false,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "externalId",
+                    "dataType": "string",
+                    "cardinality": "One"
+                },
+                "metaData": {
+                    "defaultValue": null,
+                    "mandatory": false,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "metaData",
+                    "dataType": "string",
+                    "cardinality": "One"
+                }
+            },
+            "options": {
+	            "indexes": {
+					"packageVersionNameIndex":{
+							"indexName": "packageVersionNameIndex",
+							"keyList": ["name"],
+							"indexOptions": []
+					}
+				}
+			},
+            "_id": null,
+            "embed": true,
+            "lastModified": 1337149946244,
+            "repository": "software-deployment"
+        },
+        {
+            "name": "DeployClassOfService",
+            "pluralName": "DeployClassOfServices",
+            "fields": {
+            	"name": {
+                    "defaultValue": "",
+                    "mandatory": false,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "name",
+                    "dataType": "string",
+                    "cardinality": "One"
+                }
+            },
+            "_id": null,
+            "lastModified": 1337149946236,
+            "repository": "software-deployment"
+        },
+        {
+            "name": "Approval",
+            "pluralName": "Approvals",
+            "fields": {
+            	"name": {
+                    "mandatory": false,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "name",
+                    "dataType": "string",
+                    "cardinality": "One"
+                },
+                "appId": {
+                    "defaultValue": null,
+                    "mandatory": false,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "appId",
+                    "dataType": "string",
+                    "cardinality": "One"
+                },
+                "manifestCreatedBy": {
+                    "defaultValue": null,
+                    "mandatory": false,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "manifestCreatedBy",
+                    "dataType": "string",
+                    "cardinality": "One"
+                },
+                "createdBy": {
+                    "defaultValue": null,
+                    "mandatory": false,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "createdBy",
+                    "dataType": "string",
+                    "cardinality": "One"
+                },
+                "manifestCreatedTime": {
+                    "defaultValue": null,
+                    "mandatory": true,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "manifestCreatedTime",
+                    "dataType": "date",
+                    "cardinality": "One"
+                },
+                "createdTime": {
+                    "defaultValue": null,
+                    "mandatory": true,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "createdTime",
+                    "dataType": "date",
+                    "cardinality": "One"
+                },
+                "classOfService": {
+                    "refDataType": "DeployClassOfService",
+                    "relationType": "Reference",
+                    "cascade": true,
+                    "name": "classOfService",
+                    "dataType": "relationship",
+                    "cardinality": "One"
+                }
+            },
+            "options": {
+	            "indexes": {
+					"approvalNameIndex":{
+							"indexName": "approvalNameIndex",
+							"keyList": ["name"],
+							"indexOptions": []
+					}
+				}
+			},
+            "_id": null,
+            "embed": true,
+            "lastModified": 1337149946244,
+            "repository": "software-deployment"
+        },
+        {
+            "name": "Package",
+            "pluralName": "Packages",
+            "fields": {
+            	"name": {
+                    "defaultValue": "",
+                    "mandatory": false,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "name",
+                    "dataType": "string",
+                    "cardinality": "One"
+                },
+                "lastModifiedTime": {
+                    "defaultValue": null,
+                    "mandatory": true,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "lastModifiedTime",
+                    "dataType": "date",
+                    "cardinality": "One"
+                },
+                "versions": {
+                    "refDataType": "PackageVersion",
+                    "relationType": "Embedded",
+                    "cascade": true,
+                    "name": "versions",
+                    "dataType": "relationship",
+                    "cardinality": "Many"
+                },
+                "type": {
+                    "defaultValue": null,
+                    "mandatory": false,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "type",
+                    "dataType": "string",
+                    "cardinality": "One"
+                }
+            },
+            "options": {
+	            "indexes": {
+					"packageNameIndex":{
+							"indexName": "packageNameIndex",
+							"keyList": ["name"],
+							"indexOptions": []
+					}
+				}
+			},
+            "_id": null,
+            "lastModified": 1337149946244,
+            "repository": "software-deployment"
+        },
+        {
+            "name": "ManifestVersion",
+            "pluralName": "ManifestVersions",
+            "fields": {
+            	"name": {
+                    "defaultValue": "",
+                    "mandatory": false,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "name",
+                    "dataType": "string",
+                    "cardinality": "One"
+                },
+                "approvals": {
+                    "refDataType": "Approval",
+                    "relationType": "Embedded",
+                    "cascade": true,
+                    "name": "approvals",
+                    "dataType": "relationship",
+                    "cardinality": "Many"
+                },
+                "packages": {
+                    "refDataType": "Package",
+                    "relationType": "Reference",
+                    "cascade": true,
+                    "name": "packages",
+                    "dataType": "relationship",
+                    "cardinality": "Many"
+                },
+                "createdBy": {
+                    "defaultValue": null,
+                    "mandatory": false,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "createdBy",
+                    "dataType": "string",
+                    "cardinality": "One"
+                },
+                "createdTime": {
+                    "defaultValue": null,
+                    "mandatory": true,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "createdTime",
+                    "dataType": "date",
+                    "cardinality": "One"
+                },
+                "description": {
+                    "defaultValue": null,
+                    "mandatory": false,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "description",
+                    "dataType": "string",
+                    "cardinality": "One"
+                }
+            },
+            "options": {
+	            "indexes": {
+					"manifestVersionNameIndex":{
+							"indexName": "manifestVersionNameIndex",
+							"keyList": ["name"],
+							"indexOptions": []
+					}
+				}
+			},
+            "_id": null,
+            "embed": true,
+            "lastModified": 1337149946244,
+            "repository": "software-deployment"
+        },
+        {
+            "name": "DeploymentEvent",
+            "pluralName": "DeploymentEvents",
+            "fields": {
+            	"name": {
+                    "defaultValue": "",
+                    "mandatory": false,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "name",
+                    "dataType": "string",
+                    "cardinality": "One"
+                },
+                "lastModifiedTime": {
+                    "defaultValue": null,
+                    "mandatory": true,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "lastModifiedTime",
+                    "dataType": "date",
+                    "cardinality": "One"
+                }
+            },
+            "options": {
+	            "indexes": {
+					"deploymentEventNameIndex":{
+							"indexName": "deploymentEventNameIndex",
+							"keyList": ["name"],
+							"indexOptions": []
+					}
+				}
+			},
+            "_id": null,
+            "embed": true,
+            "lastModified": 1337149946244,
+            "repository": "software-deployment"
+        },
+        {
+            "name": "DeploymentTarget",
+            "pluralName": "DeploymentTargets",
+            "fields": {
+            	"name": {
+                    "defaultValue": "",
+                    "mandatory": false,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "name",
+                    "dataType": "string",
+                    "cardinality": "One"
+                },
+                "targetNode": {
+                    "defaultValue": null,
+                    "mandatory": false,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "targetNode",
+                    "dataType": "string",
+                    "cardinality": "One"
+                },
+                "inOrder": {
+                    "defaultValue": null,
+                    "mandatory": false,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "inOrder",
+                    "dataType": "boolean",
+                    "cardinality": "One"
+                },
+                "manifest": {
+                	"refDataType": "Manifest",
+                    "relationType": "Reference",
+                    "mandatory": false,
+                    "name": "manifest",
+                    "dataType": "relationship",
+                    "cardinality": "One"
+                },
+                "manifestVersion": {
+                    "refDataType": "ManifestVersion",
+                    "relationType": "Embedded",
+                    "mandatory": false,
+                    "name": "manifestVersion",
+                    "dataType": "relationship",
+                    "cardinality": "One"
+                }
+            },
+            "options": {
+	            "indexes": {
+					"deploymentTargetNameIndex":{
+							"indexName": "deploymentTargetNameIndex",
+							"keyList": ["name"],
+							"indexOptions": []
+					}
+				}
+			},
+            "_id": null,
+            "embed": true,
+            "lastModified": 1337149946244,
+            "repository": "software-deployment"
+        },
+        {
+            "name": "Deployment",
+            "pluralName": "Deployments",
+            "fields": {
+            	"name": {
+                    "defaultValue": "",
+                    "mandatory": false,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "name",
+                    "dataType": "string",
+                    "cardinality": "One"
+                },
+                "syncUpdateStrategy": {
+                    "defaultValue": null,
+                    "mandatory": false,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "syncUpdateStrategy",
+                    "dataType": "boolean",
+                    "cardinality": "One"
+                },
+                "lastModifiedTime": {
+                    "defaultValue": null,
+                    "mandatory": true,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "lastModifiedTime",
+                    "dataType": "date",
+                    "cardinality": "One"
+                },
+                "activeUpdateStrategy": {
+                    "defaultValue": null,
+                    "mandatory": false,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "activeUpdateStrategy",
+                    "dataType": "string",
+                    "cardinality": "One"
+                },
+                "entitiesStatus": {
+                    "refDataType": "DeploymentEntityStatus",
+                    "relationType": "Embedded",
+                    "cascade": true,
+                    "name": "entitiesStatus",
+                    "dataType": "relationship",
+                    "cardinality": "Many"
+                },
+                "createdTime": {
+                    "defaultValue": null,
+                    "mandatory": true,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "createdTime",
+                    "dataType": "date",
+                    "cardinality": "One"
+                },
+                "status": {
+                    "defaultValue": null,
+                    "mandatory": false,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "status",
+                    "dataType": "string",
+                    "cardinality": "One"
+                },
+                "events": {
+                    "refDataType": "DeploymentEvent",
+                    "relationType": "Embedded",
+                    "cascade": true,
+                    "name": "events",
+                    "dataType": "relationship",
+                    "cardinality": "Many"
+                },
+                "scheduledTime": {
+                    "defaultValue": null,
+                    "mandatory": true,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "scheduledTime",
+                    "dataType": "date",
+                    "cardinality": "One"
+                },
+                "remote": {
+                    "defaultValue": null,
+                    "mandatory": false,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "remote",
+                    "dataType": "string",
+                    "cardinality": "One"
+                },
+                "autoPause": {
+                    "defaultValue": null,
+                    "mandatory": false,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "autoPause",
+                    "dataType": "boolean",
+                    "cardinality": "One"
+                },
+                "targets": {
+                    "refDataType": "DeploymentTarget",
+                    "relationType": "Embedded",
+                    "cascade": true,
+                    "name": "targets",
+                    "dataType": "relationship",
+                    "cardinality": "Many"
+                },
+                "statusMessage": {
+                    "defaultValue": null,
+                    "mandatory": false,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "statusMessage",
+                    "dataType": "string",
+                    "cardinality": "One"
+                }
+            },
+            "options": {
+	            "indexes": {
+					"deploymentNameIndex":{
+							"indexName": "deploymentNameIndex",
+							"keyList": ["name"],
+							"indexOptions": []
+					}
+				}
+			},
+            "_id": null,
+            "lastModified": 1337149946244,
+            "repository": "software-deployment"
+        },
+        {
+            "name": "ExpressionTest",
+            "pluralName": "ExpressionTests",
+            "fields": {
+            	"name": {
+                    "defaultValue": "",
+                    "mandatory": false,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "name",
+                    "dataType": "string",
+                    "cardinality": "One"
+                },
+                "name1": {
+                    "defaultValue": "",
+                    "mandatory": false,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "name1",
+                    "dataType": "string",
+                    "cardinality": "One"
+                },
+                "ename": {
+                    "defaultValue": "",
+                    "mandatory": false,
+                    "enumValues": [],
+                    "expression": "$name1+$name",
+                    "validation": null,
+                    "name": "ename",
+                    "dataType": "string",
+                    "cardinality": "One"
+                },
+                "d": {
+                    "defaultValue": 0.0,
+                    "mandatory": false,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "d",
+                    "dataType": "double",
+                    "cardinality": "One"
+                },
+                "d1": {
+                    "defaultValue": 0.0,
+                    "mandatory": false,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "d1",
+                    "dataType": "double",
+                    "cardinality": "One"
+                },
+                "ed": {
+                    "defaultValue": 0.0,
+                    "mandatory": false,
+                    "enumValues": [],
+                    "expression": "$d1 * $d",
+                    "validation": null,
+                    "name": "ed",
+                    "dataType": "double",
+                    "cardinality": "One"
+                },
+                "i": {
+                    "defaultValue": 0,
+                    "mandatory": false,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "i",
+                    "dataType": "integer",
+                    "cardinality": "One"
+                },
+                "i1": {
+                    "defaultValue": 0,
+                    "mandatory": false,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "i1",
+                    "dataType": "integer",
+                    "cardinality": "One"
+                },
+                "ei": {
+                    "defaultValue": 0,
+                    "mandatory": false,
+                    "enumValues": [],
+                    "expression": "$i1 / $i",
+                    "validation": null,
+                    "name": "ei",
+                    "dataType": "integer",
+                    "cardinality": "One"
+                },
+            },
+            "_id": null,
+            "lastModified": 1337149946243,
+            "repository": "raptor-paas"
+        },
+        {
+            "name": "Employee",
+            "pluralName": "Employees",
+            "fields": {
+            	"name": {
+                    "defaultValue": "",
+                    "mandatory": false,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "name",
+                    "dataType": "string",
+                    "cardinality": "One"
+                },
+                "company": {
+                    "defaultValue": "ebay",
+                    "mandatory": false,
+                    "validation": null,
+                    "constant" : true,
+                    "name": "company",
+                    "dataType": "string",
+                    "cardinality": "One"
+                },
+                "age": {
+                    "defaultValue": null,
+                    "mandatory": false,
+                    "validation": null,
+                    "name": "age",
+                    "dataType": "integer",
+                    "cardinality": "One"
+                },
+                "address": {
+                    "defaultValue": "",
+                    "mandatory": false,
+                    "validation": null,
+                    "name": "address",
+                    "dataType": "string",
+                    "cardinality": "One"
+                },
+                "title": {
+                    "defaultValue": null,
+                    "mandatory": false,
+                    "validation": null,
+                    "enumValues": ["junior", "senior"],
+                    "name": "title",
+                    "dataType": "enumeration",
+                    "cardinality": "One"
+                }
+            },
+            "options": {
+	            "indexes": {
+					"nameIndex":{
+							"indexName": "nameIndex",
+							"keyList": ["name"],
+							"indexOptions": ["unique"]
+					},
+					"ageTitleIndex":{
+							"indexName": "ageTitleIndex",
+							"keyList": ["age", "title"],
+							"indexOptions": []
+					}
+				}
+			},
+            "lastModified": 1337149946243,
+            "repository": "raptor-paas"
+        },
+        {
+            "name": "Worker",
+            "pluralName": "Worker",
+            "parent": "Employee",
+            "fields": {
+                "age": {
+                    "defaultValue": "28",
+                    "mandatory": true,
+                    "validation": null,
+                    "name": "age",
+                    "dataType": "integer",
+                    "cardinality": "One"
+                },
+                "address": {
+                    "defaultValue": null,
+                    "mandatory": true,
+                    "validation": null,
+                    "name": "address",
+                    "dataType": "string",
+                    "cardinality": "One"
+                },
+                "title": {
+                    "defaultValue": null,
+                    "mandatory": false,
+                    "validation": null,
+                    "name": "title",
+                    "enumValues": ["junior", "senior", "staff"],
+                    "dataType": "enumeration",
+                    "cardinality": "One"
+                }
+            },
+            "options": {
+	            "indexes": {
+                    "nameIndex":{
+							"indexName": "nameIndex",
+							"keyList": ["name"],
+							"indexOptions": ["hashed"]
+					},
+   					"ageIndex":{
+							"indexName": "ageIndex",
+							"keyList": ["age"],
+							"indexOptions": []
+					}
+				}
+			},
+            "lastModified": 1337149946243,
+            "repository": "raptor-paas"
+        },
+
+        {
+            "name": "Engineer",
+            "pluralName": "Engineer",
+            "parent": "Worker",
+            "fields": {
+                "age": {
+                    "defaultValue": "34",
+                    "mandatory": true,
+                    "validation": null,
+                    "name": "age",
+                    "dataType": "integer",
+                    "cardinality": "One"
+                },
+                "title": {
+                    "defaultValue": null,
+                    "mandatory": false,
+                    "validation": null,
+                    "name": "title",
+                    "enumValues": ["junior", "senior", "staff", "distinguished"],
+                    "dataType": "enumeration",
+                    "cardinality": "One"
+                }
+            },
+            "options": {
+	            "indexes": {
+                    "nameIndex":{
+							"indexName": "nameIndex",
+							"keyList": ["name"],
+							"indexOptions": ["unique"]
+					},
+					"ageTitleIndex":{
+							"indexName": "ageTitleIndex",
+							"keyList": ["company", "title", "age"],
+							"indexOptions": ["unique"]
+					}
+				}
+			},
+            "lastModified": 1337149946244,
+            "repository": "raptor-paas"
+        },
+
+
+        {
+            "name": "Person",
+            "repository":"raptor-paas",
+            "pluralName": "Persons",
+            "fields": {
+                "age": {
+                    "name": "age",
+                    "dataType": "string"
+                },
+                "address": {
+                    "name": "address",
+                    "dataType": "string",
+                    "cardinality": "Many"
+                },
+                "phone": {
+                    "name": "phone",
+                    "dataType": "json",
+                    "cardinality": "One"
+                },
+                "name": {
+                    "defaultValue": "",
+                    "mandatory": false,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "name",
+                    "dataType": "string",
+                    "cardinality": "One"
+                },
+                "isOld": {
+                    "defaultValue": null,
+                    "mandatory": false,
+                    "enumValues": [],
+                    "expression": "if ($age >= 50) {true} else {false}",
+                    "validation": null,
+                    "name": "isOld",
+                    "dataType": "boolean",
+                    "cardinality": "One"
+                }
+            },
+            "embed": true
+        },
+        {
+            "name": "Team",
+            "repository":"raptor-paas",
+            "pluralName": "Teams",
+            "fields": {
+                "label": {
+                    "name": "label",
+                    "dataType": "string",
+                    "defaultValue": "stratus"
+                },
+                "seat": {
+                    "name": "seat",
+                    "dataType": "string",
+                    "cardinality": "Many"
+                },
+                "person": {
+                    "name": "person",
+                    "dataType": "relationship",
+                    "refDataType": "Person",
+                    "relationType":"Embedded",
+                    "sourceDataType": "Team",
+                    "cardinality": "Many"
+                },
+                "leader": {
+                    "name": "leader",
+                    "dataType": "relationship",
+                    "refDataType": "Person",
+                    "relationType":"Embedded",
+                    "sourceDataType": "Team",
+                    "cardinality": "One"
+                },
+                "name": {
+                    "defaultValue": "",
+                    "mandatory": false,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "name",
+                    "dataType": "string",
+                    "cardinality": "One"
+                },
+                "isLargeTeam": {
+                    "defaultValue": null,
+                    "mandatory": false,
+                    "enumValues": [],
+                    "expression": "($person != null && $person.length >=2)",
+                    "validation": null,
+                    "name": "isLargeTeam",
+                    "dataType": "boolean",
+                    "cardinality": "One"
+                }
+            },
+            "embed": true
+        },
+        {
+            "name": "Dep",
+            "repository":"raptor-paas",
+            "pluralName": "Deps",
+            "fields": {
+                "label": {
+                    "name": "label",
+                    "dataType": "string",
+                    "defaultValue": "cloud"
+                },
+                "team": {
+                    "name": "team",
+                    "dataType": "relationship",
+                    "refDataType": "Team",
+                    "relationType":"Embedded",
+                    "sourceDataType": "Dep",
+                    "cardinality": "Many"
+                },
+                "name": {
+                    "defaultValue": "",
+                    "mandatory": false,
+                    "enumValues": [],
+                    "expression": null,
+                    "validation": null,
+                    "name": "name",
+                    "dataType": "string",
+                    "cardinality": "One"
+                },
+                "CalName": {
+                    "defaultValue": "",
+                    "mandatory": false,
+                    "enumValues": [],
+                    "expression": "$name",
+                    "validation": null,
+                    "name": "CalName",
+                    "dataType": "string",
+                    "cardinality": "One"
+                }
+            },
+            "embed": false
+        },
+        {
+            "name": "Leader",
+            "repository":"raptor-paas",
+            "pluralName": "Leaders",
+            "fields": {
+                "name": {
+                    "name": "name",
+                    "dataType": "string",
+                    "defaultValue": "Tom"
+                },
+                "head": {
+                    "name": "head",
+                    "dataType": "relationship",
+                    "refDataType": "Dep",
+                    "relationType":"Reference",
+                    "sourceDataType": "Leader",
+                    "cardinality": "Many",
+                    "consistencyType": "Strong"
+                }
+            },
+            "embed": false
+        },
+        {
+            "name": "Lock",
+            "repository":"raptor-paas",
+            "pluralName": "Locks",
+            "fields": {
+                "name": {
+                    "name": "name",
+                    "dataType": "string"
+                }
+            },
+            "embed": false,
+            "inner": true,
+            "allowFullTableScan": true
+        },
+        {
+            "name": "Door",
+            "repository":"raptor-paas",
+            "pluralName": "Doors",
+            "fields": {
+                "name": {
+                    "name": "name",
+                    "dataType": "string"
+                },
+                "lock": {
+                    "name": "lock",
+                    "dataType": "relationship",
+                    "refDataType": "Lock",
+                    "relationType":"Inner",
+                    "sourceDataType": "Door",
+                    "cardinality": "Many"
+                },
+                "rearlock": {
+                    "name": "rearlock",
+                    "dataType": "relationship",
+                    "refDataType": "Lock",
+                    "relationType":"Inner",
+                    "sourceDataType": "Door",
+                    "cardinality": "One"
+                }
+            },
+            "embed": false,
+            "inner": true,
+            "allowFullTableScan": true
+        },
+        {
+            "name": "Room",
+            "repository":"raptor-paas",
+            "pluralName": "Rooms",
+            "fields": {
+                "name": {
+                    "name": "name",
+                    "dataType": "string"
+                },
+                "floor": {
+                    "name": "floor",
+                    "dataType": "string"
+                },
+                "window": {
+                    "name": "window",
+                    "dataType": "string",
+                    "cardinality": "Many"
+                },
+                "level": {
+                    "name": "level",
+                    "dataType": "string",
+                    "cardinality": "Many",
+                    "defaultValue": "123"
+                },
+                "path": {
+                    "name": "path",
+                    "dataType": "relationship",
+                    "refDataType": "Door",
+                    "relationType":"Inner",
+                    "sourceDataType": "Room",
+                    "cardinality": "Many"
+                },
+                "door": {
+                    "name": "door",
+                    "dataType": "relationship",
+                    "refDataType": "Door",
+                    "relationType":"Reference",
+                    "sourceDataType": "Room",
+                    "cardinality": "Many"
+                }
+            },
+            "embed": false,
+            "repository": "raptor-paas",
+            "allowFullTableScan": true
+        },
+        
+        {
+	        "name" : "LOJDataService",
+	        "pluralName" : "LOJDataServices",
+	        "repository" : "raptor-paas",
+	        "allowFullTableScan" : false,
+	        "fields" : {
+	            "name" : {
+	                "name" : "name",
+	                "dataType" : "string"
+	            },
+	            "label" : {
+	                "name" : "label",
+	                "dataType" : "string"
+	            },
+	            "applicationService" : {
+	                "name" : "applicationService",
+	                "dataType" : "relationship",
+	                "relationType" : "Reference",
+	                "cardinality" : "One",
+	                "refDataType" : "LOJApplicationService"
+	            },
+	            "applicationServices" : {
+	                "name" : "applicationServices",
+	                "dataType" : "relationship",
+	                "relationType" : "Reference",
+	                "cardinality" : "Many",
+	                "refDataType" : "LOJApplicationService"
+	            }
+	        },
+	        "options" : {
+	            "indexes" : {}
+	        },
+	        "embed" : false
+	    },
+	    {
+	        "name" : "LOJApplicationService",
+	        "pluralName" : "LOJApplicationServices",
+	        "repository" : "raptor-paas",
+	        "allowFullTableScan" : false,
+	        "fields" : {
+	            "name" : {
+	                "name" : "name",
+	                "dataType" : "string"
+	            },
+	            "label" : {
+	                "name" : "label",
+	                "dataType" : "string"
+	            },
+	            "dependOn" : {
+	                "name" : "dependOn",
+	                "dataType" : "relationship",
+	                "relationType" : "Reference",
+	                "cardinality" : "One",
+	                "refDataType" : "LOJDataService"
+	            },
+	            "dependOns" : {
+	                "name" : "dependOns",
+	                "dataType" : "relationship",
+	                "relationType" : "Reference",
+	                "cardinality" : "Many",
+	                "refDataType" : "LOJDataService"
+	            },
+	            "serviceInstance" : {
+	                "name" : "serviceInstance",
+	                "dataType" : "relationship",
+	                "relationType" : "Reference",
+	                "cardinality" : "One",
+	                "refDataType" : "LOJServiceInstance"
+	            },
+	            "serviceInstances" : {
+	                "name" : "serviceInstances",
+	                "dataType" : "relationship",
+	                "relationType" : "Reference",
+	                "cardinality" : "Many",
+	                "refDataType" : "LOJServiceInstance"
+	            }
+	        },
+	        "options" : {
+	            "indexes" : {}
+	        },
+	        "embed" : false
+	    },
+	    {
+	        "name" : "LOJServiceInstance",
+	        "pluralName" : "LOJServiceInstances",
+	        "repository" : "raptor-paas",
+	        "allowFullTableScan" : false,
+	        "fields" : {
+	            "name" : {
+	                "name" : "name",
+	                "dataType" : "string"
+	            },
+	            "label" : {
+	                "name" : "label",
+	                "dataType" : "string"
+	            },
+	            "appService" : {
+	                "name" : "appService",
+	                "dataType" : "relationship",
+	                "relationType" : "Reference",
+	                "cardinality" : "One",
+	                "refDataType" : "LOJApplicationService"
+	            },
+	            "appServices" : {
+	                "name" : "appServices",
+	                "dataType" : "relationship",
+	                "relationType" : "Reference",
+	                "cardinality" : "Many",
+	                "refDataType" : "LOJApplicationService"
+	            },
+	            "runsOn" : {
+	                "name" : "runsOn",
+	                "dataType" : "relationship",
+	                "relationType" : "Reference",
+	                "cardinality" : "One",
+	                "refDataType" : "LOJCompute"
+	            },
+	            "runsOns" : {
+	                "name" : "runsOns",
+	                "dataType" : "relationship",
+	                "relationType" : "Reference",
+	                "cardinality" : "Many",
+	                "refDataType" : "LOJCompute"
+	            }
+	        },
+	        "options" : {
+	            "indexes" : {}
+	        },
+	        "embed" : false
+	    },
+	    {
+	        "name" : "LOJCompute",
+	        "pluralName" : "LOJComputes",
+	        "repository" : "raptor-paas",
+	        "allowFullTableScan" : false,
+	        "fields" : {
+	            "name" : {
+	                "name" : "name",
+	                "dataType" : "string"
+	            },
+	            "label" : {
+	                "name" : "label",
+	                "dataType" : "string"
+	            },
+	            "svcInstance" : {
+	                "name" : "svcInstance",
+	                "dataType" : "relationship",
+	                "relationType" : "Reference",
+	                "cardinality" : "One",
+	                "refDataType" : "LOJServiceInstance"
+	            },
+	            "svcInstances" : {
+	                "name" : "svcInstances",
+	                "dataType" : "relationship",
+	                "relationType" : "Reference",
+	                "cardinality" : "Many",
+	                "refDataType" : "LOJServiceInstance"
+	            }
+	        },
+	        "options" : {
+	            "indexes" : {}
+	        },
+	        "embed" : false
+	    },
+	    {
+	        "name" : "Human",
+	        "pluralName" : "Humans",
+	        "repository" : "raptor-paas",
+	        "allowFullTableScan" : false,
+	        "embed" : true,
+	        "fields" : {
+	            "age" : {
+	                "name" : "age",
+	                "dataType" : "string"
+	            },
+	            "name" : {
+	                "name" : "name",
+	                "dataType" : "string"
+	            },
+	            "label" : {
+	                "name" : "label",
+	                "dataType" : "string"
+	            }
+	        },
+	        "inner" : false,
+	        "options" : {
+	            "indexes" : {}
+	        }
+	    },
+	    
+	    {
+	        "name" : "Squad",
+	        "pluralName" : "Squads",
+	        "repository" : "raptor-paas",
+	        "allowFullTableScan" : false,
+	        "embed" : true,
+	        "fields" : {
+	            "human" : {
+	                "name" : "human",
+	                "dataType" : "relationship",
+	                "cardinality" : "Many",
+	                "refDataType" : "Human",
+	                "relationType" : "Embedded"
+	            },
+	            "name" : {
+	                "name" : "name",
+	                "dataType" : "string"
+	            },
+	            "label" : {
+	                "name" : "label",
+	                "dataType" : "string"
+	            }
+	        },
+	        "inner" : false,
+	        "options" : {
+	            "indexes" : {}
+	        }
+	    },
+	    
+		{
+			"name": "Department",
+			"pluralName": "Departments",
+			"repository": "raptor-paas",
+			"allowFullTableScan": false,
+			"fields": {
+				"name": {
+					"name": "name",
+					"dataType": "string"
+				},
+				"label": {
+					"name": "label",
+					"dataType": "string",
+					"defaultValue": "cloud"
+				},
+				"team": {
+					"name": "team",
+					"dataType": "relationship",
+					"cardinality": "Many",
+					"refDataType": "Team",
+					"relationType": "Embedded"
+				},
+				"squad" : {
+	                "name" : "squad",
+	                "dataType" : "relationship",
+	                "cardinality" : "Many",
+	                "refDataType" : "Squad",
+	                "relationType" : "Embedded"
+	            }
+			},
+			"options": {
+				"indexes": {}
+			},
+			"embed": true
+		}, 
+		
+		{
+			"name": "Company",
+			"pluralName": "Companies",
+			"repository": "raptor-paas",
+			"allowFullTableScan": false,
+			"fields": {
+				"name": {
+					"name": "name",
+					"dataType": "string"
+				},
+				"label": {
+					"name": "label",
+					"dataType": "string",
+					"defaultValue": "cloud"
+				},
+				"department": {
+					"name": "department",
+					"dataType": "relationship",
+					"cardinality": "Many",
+					"refDataType": "Department",
+					"relationType": "Embedded"
+				}
+			},
+			"options": {
+				"indexes": {}
+			},
+			"embed": false
+		},
+		{
+            "name": "Cd",
+            "repository":"raptor-paas",
+            "pluralName": "Cds",
+            "fields": {
+                "name": {
+                    "name": "name",
+                    "dataType": "string"
+                },
+                "age": {
+                    "name": "age",
+                    "dataType": "string"
+                },
+                "level": {
+                    "name": "level",
+                    "dataType": "string",
+                    "cardinality": "Many",
+                    "defaultValue": "123"
+                },
+                "door": {
+                    "name": "door",
+                    "dataType": "relationship",
+                    "refDataType": "Door",
+                    "relationType":"Reference",
+                    "sourceDataType": "Cd",
+                    "cardinality": "Many"
+                }
+            },
+            "embed": false,
+            "repository": "raptor-paas",
+            "allowFullTableScan": true
+        },
+        
+        {
+			"name": "EmbeddedTest",
+			"repository": "raptor-paas",
+			"allowFullTableScan": false,
+			"fields": {
+				"name": {
+					"dataType": "string",
+					"cardinality": "One",
+					"defaultValue": ""
+				},
+				"label": {
+					"dataType": "string",
+					"cardinality": "One",
+					"defaultValue": "stratus"
+				},
+				"number": {
+					"dataType": "integer",
+					"cardinality": "One"
+				},
+                "locks": {
+                    "name": "locks",
+                    "dataType": "relationship",
+                    "refDataType": "Lock",
+                    "relationType":"Inner",
+                    "sourceDataType": "Person",
+                    "cardinality": "One"
+                }
+			},
+			"options": {
+				"indexes": {},
+				"primaryKeys": []
+			},
+			"embed": true
+		},
+		
+		{
+			"name": "EmbeddedTest2",
+			"pluralName": null,
+			"description": null,
+			"repository": "raptor-paas",
+			"parent": null,
+			"ancestors": null,
+			"allowFullTableScan": false,
+			"lastModified": 1381301604134,
+			"fields": {
+				"name": {
+					"dataType": "string",
+					"cardinality": "One"
+				},
+				"labels": {
+					"dataType": "string",
+					"cardinality": "Many"
+				},
+				"number": {
+					"dataType": "integer",
+					"cardinality": "One"
+				}
+			},
+			"embed": true
+		},
+		
+		{
+			"name": "AllowFullTableScanTest",
+			"repository": "raptor-paas",
+			"allowFullTableScan": true,
+			"fields": {
+				"name": {
+					"dataType": "string",
+					"cardinality": "One"
+				},
+				"label": {
+					"dataType": "string",
+					"cardinality": "One"
+				},
+				"number": {
+					"dataType": "integer",
+					"cardinality": "One"
+				}
+			}
+		},
+		
+		{
+			"name": "AllowFullTableScanTest2",
+			"repository": "raptor-paas",
+			"allowFullTableScan": false,
+			"fields": {
+				"name": {
+					"dataType": "string",
+					"cardinality": "One"
+				},
+				"label": {
+					"dataType": "string",
+					"cardinality": "One"
+				},
+				"number": {
+					"dataType": "integer",
+					"cardinality": "One"
+				}
+			}
+		},
+		
+        {
+			"name": "AllowFullTableScanParentTest",
+			"repository": "raptor-paas",
+			"allowFullTableScan": false,
+			"fields": {
+				"relation2": {
+					"dataType": "relationship",
+					"cardinality": "One",
+					"refDataType": "AllowFullTableScanTest2",
+					"relationType": "Reference",
+					"consistencyType": "Normal"
+				},
+				"embed2": {
+					"dataType": "relationship",
+					"cardinality": "One",
+					"refDataType": "EmbeddedTest2",
+					"relationType": "Embedded",
+					"consistencyType": "Normal"
+				},
+				"name": {
+					"dataType": "string",
+					"cardinality": "One"
+				},
+				"relation": {
+					"dataType": "relationship",
+					"cardinality": "One",
+					"refDataType": "AllowFullTableScanTest",
+					"relationType": "Reference",
+					"consistencyType": "Normal"
+				},
+				"label": {
+					"dataType": "string",
+					"cardinality": "One"
+				},
+				"embed": {
+					"dataType": "relationship",
+					"cardinality": "One",
+					"refDataType": "EmbeddedTest",
+					"relationType": "Embedded",
+					"consistencyType": "Normal"
+				}
+			}
+		}
+	    
+]

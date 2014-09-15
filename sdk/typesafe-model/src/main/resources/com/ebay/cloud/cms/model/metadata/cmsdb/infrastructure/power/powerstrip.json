@@ -1,0 +1,59 @@
+{ 
+	"name": "PowerStrip",
+	"pluralName": "PowerStrips",
+	"description": "The powerstrip",
+	"parent": "Resource",
+	"fields": {
+		"owner":{
+			"description":"owner",
+			"mandatory":false,
+			"dataType":"string"
+		},
+		"receptacleCount":{
+			"description":"receptaclecount",
+			"mandatory":false,
+			"dataType":"string"
+		},
+                "asset": {
+                        "description": "the asset of this module",
+                        "dataType": "relationship",
+                        "refDataType": "Asset",
+                        "relationType": "Reference",
+                        "mandatory": false,
+                        "cardinality": "One"
+                },
+                "electricalCircuits": {
+                        "description": "the electrical circuit associated with this powerstrip",
+                        "dataType": "relationship",
+                        "refDataType": "ElectricalCircuit",
+                        "relationType": "Reference",
+                        "mandatory": false,
+                        "cardinality": "Many"
+                },
+		"receptacleType":{
+			"description":"receptacletype",
+			"mandatory":false,
+			"dataType":"string"
+		},
+		"model":{
+			"description":"model",
+			"mandatory":false,
+			"dataType":"string"
+		},
+		"maxPowerCapacity":{
+			"description":"maxpowercapacity",
+			"mandatory":false,
+			"dataType":"string"
+		}
+	},
+        "options": {
+                "indexes": {
+                        "modelIndex":{
+                                "indexName": "modelIndex",
+                                "keyList": ["model"]
+                        }
+                }
+        }
+
+
+}

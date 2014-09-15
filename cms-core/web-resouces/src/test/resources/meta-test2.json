@@ -1,0 +1,22 @@
+{
+	"name": "meta-test2",
+	"lastModified": 1344576149526,
+	"fields": {
+		"name": {
+			"name": "name",
+			"dataType": "string",
+			"cardinality": "One",
+			"mandatory": true,
+			"enumValues": []
+		}
+	}, 
+	"options": {
+		"indexes": {
+			"meta_test1_indexName":{
+					"indexName": "meta_test1_indexName",
+					"keyList": ["name"],
+					"indexOptions": []
+			}
+		}
+	}
+}

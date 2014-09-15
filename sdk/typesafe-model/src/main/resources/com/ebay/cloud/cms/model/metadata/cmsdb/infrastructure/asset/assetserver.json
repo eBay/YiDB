@@ -1,0 +1,184 @@
+{
+	"description":"A physical, or virtual server able to run an operating system",
+	"name" : "AssetServer",
+	"pluralName":"AssetServers",
+	"parent": "Resource",
+	"fields" : {
+		"isAllocated":{
+			"description":"demonstrate this assetserver has been used",
+			"mandatory":true,
+			"dataType":"boolean",
+			"cardinality":"One",
+			"defaultValue" : "false"
+		},
+		"asset":{
+			"description":"The asset",
+			"refDataType": "Asset",
+			"relationType": "Reference",
+			"dataType": "relationship",
+			"cardinality": "One"
+		},
+		"resourceCapabilities":{
+			"description":"Capability character of this resource, eg. cos, rackprofile etc.",
+			"dataType": "json",
+			"cardinality": "One"
+		},
+		"faultDomain":{
+			"description":"The faultDomain of this asset server",
+                        "mandatory":false,
+                        "dataType":"string",
+                        "cardinality":"One"
+		},
+		"type":{
+			"description":"Define if this server is a Bare Metal machine, a VM",
+			"mandatory":true,
+			"enumValues": ["bm","vm"],
+			"dataType":"enumeration",
+			"cardinality":"One"
+		},
+		"networkControllers":{
+			"description":"List of Network controllers, or network interface cards",
+			"refDataType": "NetworkController",
+			"relationType": "Embedded",
+			"dataType": "relationship",
+			"cardinality": "Many"
+		},
+		"nodeServer":{
+			"description":"OS instance on this server",
+			"refDataType": "NodeServer",
+			"relationType": "Reference",
+			"dataType": "relationship",
+			"cardinality": "One"
+		},
+		"nodeLOM":{
+			"description":"Light Out Management instance hosted on this server",
+			"refDataType": "NodeServer",
+			"relationType": "Reference",
+			"dataType": "relationship",
+			"cardinality": "One"
+		},
+		"managementServer":{
+			"description":"Reference to the server managing the life cycle of this server",
+			"refDataType": "NodeServer",
+			"relationType": "Reference",
+			"dataType": "relationship",
+			"cardinality": "One"
+		},
+		"reservedResources": {
+			"description":"Reserved resouces for this asset",
+			"refDataType": "ReservedResources",
+			"consistencyType" : "Strong",
+			"relationType": "Reference",
+			"dataType": "relationship",
+			"cardinality": "One"
+		},
+		"configuredTo": {
+			"refDataType": "SkuConfiguration",
+			"relationType": "Reference",
+			"dataType": "relationship",
+			"cardinality": "Many"
+		},
+		"bios":{
+			"description":"the bois of the machine",
+			"mandatory":false,
+			"dataType":"json",
+			"cardinality":"One"
+		},
+		"bmc":{
+			"description":"the bmc of the machine",
+			"mandatory":false,
+			"dataType":"json",
+			"cardinality":"One"
+		},
+		"disk":{
+			"description":"disk of the machine",
+			"mandatory":false,
+			"dataType":"json",
+			"cardinality":"One"
+		},
+		"memory":{
+			"description":"the memory of the machine",
+			"mandatory":false,
+			"dataType":"string",
+			"cardinality":"One"
+		},
+		"rootDiskWwn":{
+			"description":"the root disk wwn of the machine",
+			"mandatory":false,
+			"dataType":"string",
+			"cardinality":"One"
+		},
+		"rootDiskSerialNumber":{
+			"description":"the root disk serial of the machine",
+			"mandatory":false,
+			"dataType":"string",
+			"cardinality":"One"
+		},
+		"raidController":{
+			"description":"the raid controller of the machine",
+			"mandatory":false,
+			"dataType":"json",
+			"cardinality":"One"
+		},
+		"processor":{
+			"description":"the processor of the machine",
+			"mandatory":false,
+			"dataType":"json",
+			"cardinality":"One"
+		},
+		"scanTime": {
+			"description":"scan time populated by Tivoli agent",
+			"mandatory":false,
+			"dataType":"string",
+			"cardinality":"One"
+		},
+		"hyperThread": {
+			"description":"hyperthread of this assetserver",
+			"mandatory":false,
+			"dataType":"string",
+			"cardinality":"One"
+		},
+		"spFirmware": {
+			"description":"the spfirmware of this assetserver",
+			"mandatory":false,
+			"dataType":"string",
+			"cardinality":"One"
+		},
+		"standard": {
+			"description":"standard of this assetserver",
+			"mandatory":false,
+			"dataType":"string",
+			"cardinality":"One"
+		},
+		"threads": {
+			"description":"the threads of this assetserver",
+			"mandatory":false,
+			"dataType":"string",
+			"cardinality":"One"
+		},
+		"cpufrequency" : {
+			"description":"cpufrequency of the asset server",
+			"mandatory":false,
+			"dataType":"string",
+			"cardinality":"One"
+		},
+		"version" : {
+			"description":"version of the asset server",
+			"mandatory":false,
+			"dataType":"string",
+			"cardinality":"One"
+		},
+		"health" : {
+			"description": "health of the asset server",
+			"mandatory":false,
+			"dataType":"string",
+			"cardinality":"One"
+		},
+		"cpucount" : {
+			"description": "cpucount of the asset server",
+			"mandatory":false,
+			"dataType":"string",
+			"cardinality":"One"
+		}
+	}
+}

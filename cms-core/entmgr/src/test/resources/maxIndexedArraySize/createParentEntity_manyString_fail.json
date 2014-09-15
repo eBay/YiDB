@@ -1,0 +1,16 @@
+{
+    "SystemLimitationOnDocTest": [
+        {
+            "_type": "SystemLimitationOnDocTest",
+            "_oid": "SystemLimitationOnDocTestManyStringFail",
+            "resourceId": "SystemLimitationOnDocTestManyStringFail",
+            "_branch": "main",
+            "manyString": [
+                "Hello",
+                "World",
+                "CMS",
+                "Extra"
+            ]
+        }
+    ]
+}

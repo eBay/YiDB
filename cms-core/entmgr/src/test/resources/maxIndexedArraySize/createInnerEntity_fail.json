@@ -1,0 +1,9 @@
+{
+    "InnerTest": [{
+    "_type" : "InnerTest",
+    "resourceId" : "InnerTestResourceId-4",
+    "_oid" : "createInnerEntityFail4",
+    "name" : "Hello4",
+    "number" : 4,
+    "label" : "4"
+}]}

@@ -1,0 +1,21 @@
+{
+    "name" : "InnerTest",
+    "repository" : "raptor-paas",
+    "parent" : "Resource",
+    "allowFullTableScan" : false,
+    "fields" : {
+        "name" : {
+            "name" : "name",
+            "dataType" : "string"
+        },
+        "tag" : {
+            "name" : "tag",
+            "dataType" : "string"
+        },
+        "number" : {
+            "name" : "number",
+            "dataType" : "integer"
+        }
+    },
+    "inner" : true
+}

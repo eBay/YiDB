@@ -1,0 +1,3957 @@
+{
+	"Vlan": [
+	   {
+		    "_lastmodified": 1387778137796,
+		    "_creator": "_NETDBSYNC_READWRITE",
+		    "_oid": "5197fa14e4b01fc1877c31a2",
+		    "sourceId": "3032",
+		    "_type": "Vlan",
+		    "_branch": "main",
+		    "productionLevel": "production",
+		    "resourceId": "lvs2-ra00400:01",
+		    "description": "vlan",
+		    "domain": "ebay.com",
+		    "_modifier": "_NETDBSYNC_READWRITE",
+		    "_comment": "cms@:cms_User - cms synch : netdb - vlans",
+		    "_status": "active",
+		    "vlanNumber": "1",
+		    "healthState": "healthy",
+		    "adminStatus": "allocated",
+		    "multicastEnabled": "2",
+		    "env": "",
+		    "_pversion": -1,
+		    "_createtime": 1368914452780,
+		    "_version": 0,
+		    "owner": "network engineering",
+		    "_metaversion": 1,
+		    "_user": "_NETDBSYNC_READWRITE",
+		    "vlanProfile": "routed",
+		    "networkPorts": [
+				{
+		        "_oid": "519810bee4b013af0d68a84c",
+		        "_type": "NetworkPort"
+				}
+		    ],
+		    "subnets": [
+				{
+		        "_oid": "51afafe9e4b01696e74867fc",
+		        "_type": "Subnet"
+				}
+			]
+		}
+	],
+	"Subnet": [
+		{
+		    "_lastmodified": 1370468329384,
+		    "_creator": "_NETDBSYNC_READWRITE",
+		    "_oid": "51afafe9e4b01696e74867fc",
+		    "netmask": "255.255.254.0",
+		    "sourceId": "11129",
+		    "_branch": "main",
+		    "_type": "Subnet",
+		    "productionLevel": "production",
+		    "resourceId": "1001.7.6.0/23",
+		    "domain": "ebay.com",
+		    "_modifier": "_NETDBSYNC_READWRITE",
+		    "_comment": "cms@:cms_User - cms synch : netdb - subnets",
+		    "_status": "active",
+		    "healthState": "healthy",
+		    "adminStatus": "allocated",
+		    "env": "",
+		    "_pversion": -1,
+		    "_createtime": 1370468329384,
+		    "_version": 0,
+		    "_user": "_NETDBSYNC_READWRITE",
+		    "gateway": {
+		        "_oid": "51afafe9e4b0783944bafb32",
+		        "_type": "NetworkAddress"
+		    },
+		    "broadcast": {
+		        "_oid": "51afafe9e4b062b1dafcaa10",
+		        "_type": "NetworkAddress"
+		    },
+		    "networkAddress": {
+		        "_oid": "51afafe9e4b046c5d4389d57",
+		        "_type": "NetworkAddress"
+		    }
+		}
+	],
+	"NetworkDevice": [
+		{
+		    "_lastmodified": 1369532160323,
+		    "model": "WS-C4948E",
+		    "_creator": "_NETDBSYNC_READWRITE",
+		    "_oid": "5197fa76e4b05e0dd3e45b18",
+		    "nrServer": "ntpserver.com",
+		    "type": "routed ToRS L3 switch",
+		    "sourceId": "2835",
+		    "_branch": "main",
+		    "_type": "NetworkDevice",
+		    "productionLevel": "production",
+		    "resourceId": "1001.871.255.10",
+		    "domain": "ebay.com",
+		    "_modifier": "_NETDBSYNC_READWRITE",
+		    "_comment": "cms@:cms_User - cms synch : netdb - devices",
+		    "snmpProfile": "15",
+		    "_status": "active",
+		    "healthState": "healthy",
+		    "switchLabel": "phx71-ra260",
+		    "env": "",
+		    "_pversion": -1,
+		    "_createtime": 1368914550909,
+		    "_version": 0,
+		    "serial": "CAT1524S1FT",
+		    "_user": "_NETDBSYNC_READWRITE",
+		    "zone": "site",
+		    "chassisDesc": "Cisco IOS Software, Catalyst 4500 L3 Switch Software (cat4500e-IPBASEK9-M), Version 12.2(54)SG1, RELEASE SOFTWARE (fc1)Technical Support: http://www.cisco.com/techsupportCopyright (c) 1986-2011 by Cisco Systems, Inc.Compiled Thu 27-Jan-11 12:19 by p",
+		    "asset": {
+		        "_oid": "519c15eee4b0aa9bbcbcd87d",
+		        "_type": "Asset"
+		    },
+		    "modules": [
+		        {
+		            "_oid": "519810bae4b087d5ff8f4e2e",
+		            "_type": "Module"
+		        }
+		    ]
+		}
+	],
+
+	"NetworkPort": [
+		{
+			"_oid": "519810bee4b013af0d68a84c",
+			"_type": "NetworkPort",
+			"port": "",
+		    "_hostentity": "NetworkDevice!5197fa76e4b05e0dd3e45b18!networkPorts",
+		    "_lastmodified": 1384157102675,
+		    "_creator": "_NETDBSYNC_READWRITE",
+		    "ifIndex": "20",
+		    "macAddress": [
+		        "00:33:51:44:FD:1E",
+		        "00:33:51:B6:03:E1",
+		        "00:33:51:B6:04:09",
+		        "00:33:56:B6:04:00",
+		        "00:33:56:B6:04:13",
+		        "D4:33:64:6A:88:70",
+		        "00:33:56:B6:2F:DF",
+		        "00:33:56:B6:3D:93"
+		    ],
+		    "type": "6",
+		    "sourceId": "413253",
+		    "_branch": "main",
+		    "_type": "NetworkPort",
+		    "resourceId": "1001.871.255.10:01/18",
+		    "description": "",
+		    "domain": "ebay.com",
+		    "_modifier": "_NETDBSYNC_READWRITE",
+		    "nativeVlan": "1",
+		    "_comment": "cms@:cms_User - cms synch : netdb - interfaces Update CMS Enity by Id: 519810bee4b013af0d68a84c",
+		    "_status": "active",
+		    "index": "1653282!1653337",
+		    "healthState": "healthy",
+		    "operStatus": "true",
+		    "adminStatus": "true",
+		    "label": "phx7-ra260:01/18",
+		    "env": "",
+		    "_pversion": -1,
+		    "_createtime": 1368920254366,
+		    "_version": 0,
+		    "_user": "_NETDBSYNC_READWRITE"
+			}
+		],
+	
+	"NetworkAddress" : [
+		{
+			"healthState": "healthy",
+			"_lastmodified": 1375302785029,
+			"_creator": "CloudMgr",
+			"ipVersion": "IPv4",
+			"_oid": "51f97481171b7e36601aa781",
+			"env": "",
+			"_pversion": -1,
+			"_createtime": 1375302785012,
+			"_type": "NetworkAddress",
+			"_branch": "main",
+			"_version": 0,
+			"resourceId": "1001.7.0.71",
+			"resourceOwner": "CloudMgr",
+			"address": "1001.7.0.71",
+			"domain": "ebay.com",
+			"_modifier": "CloudMgr",
+			"_comment": "Sync data from ODB to CMS",
+			"_status": "active"
+	  },
+	  {
+		"healthState": "healthy",
+		"_lastmodified": 1372844178196,
+		"_creator": null,
+		"_oid": "51d3f0926ec8516d8026ba0e",
+		"ipVersion": "IPv4",
+		"_pversion": -1,
+		"_createtime": 1372844178196,
+		"_branch": "main",
+		"_type": "NetworkAddress",
+		"resourceId": "192.168.3.5",
+		"_version": 0,
+		"address": "192.168.3.5",
+		"_modifier": null,
+		"_comment": null,
+		"_status": "active",
+		"_user": null
+	  },
+	  {
+		"healthState": "healthy",
+		"_lastmodified": 1372844178196,
+		"_creator": null,
+		"_oid": "51f977a5171b7e36601ad404",
+		"ipVersion": "IPv4",
+		"_pversion": -1,
+		"_createtime": 1372844178196,
+		"_branch": "main",
+		"_type": "NetworkAddress",
+		"resourceId": "192.168.3.15",
+		"_version": 0,
+		"address": "192.168.3.15",
+		"_modifier": null,
+		"_comment": null,
+		"_status": "active",
+		"_user": null
+	  },
+	  {
+		"healthState": "healthy",
+		"_creator": null,
+		"_oid": "51f9766f171b7e36601ac23c",
+		"ipVersion": "IPv4",
+		"_pversion": -1,
+		"_createtime": 1372844178196,
+		"_branch": "main",
+		"_type": "NetworkAddress",
+		"resourceId": "192.168.3.35",
+		"_version": 0,
+		"address": "192.168.3.35",
+		"_modifier": null,
+		"_comment": null,
+		"_status": "active",
+		"_user": null
+	  },
+	  {
+		"healthState": "healthy",
+		"_lastmodified": 1372844178279,
+		"_creator": null,
+		"_oid": "51d3f0926ec8516d8026ba12",
+		"ipVersion": "IPv4",
+		"_pversion": -1,
+		"_createtime": 1372844178279,
+		"_branch": "main",
+		"_type": "NetworkAddress",
+		"resourceId": "192.168.3.8",
+		"_version": 0,
+		"address": "192.168.3.8",
+		"_modifier": null,
+		"_comment": null,
+		"_status": "active",
+		"_user": null
+	  },
+	  {
+		"healthState": "healthy",
+		"_lastmodified": 1372844178359,
+		"_creator": null,
+		"_oid": "51d3f0926ec8516d8026ba1e",
+		"ipVersion": "IPv4",
+		"_pversion": -1,
+		"_createtime": 1372844178359,
+		"_branch": "main",
+		"_type": "NetworkAddress",
+		"resourceId": "192.168.3.9",
+		"_version": 0,
+		"address": "192.168.3.9",
+		"_modifier": null,
+		"_comment": null,
+		"_status": "active",
+		"_user": null
+	  },
+	  {
+		"_lastmodified": 1370326255883,
+		"healthState": "healthy",
+		"_creator": "_DNSSYNC_READWRITE",
+		"_oid": "51ad84efe4b062b1dafc1d66",
+		"ipVersion": "IPv4",
+		"_pversion": -1,
+		"_createtime": 1370326255883,
+		"_branch": "main",
+		"_type": "NetworkAddress",
+		"_version": 0,
+		"resourceId": "1001.91.117.115",
+		"address": "1001.91.117.115",
+		"_modifier": "_DNSSYNC_READWRITE",
+		"_comment": "Sync Object: aaa.com",
+		"_status": "active",
+		"_user": "_DNSSYNC_READWRITE"
+	  }
+	],
+	"FQDN": [
+	  {
+		"_lastmodified": 1370326259502,
+		"healthState": "healthy",
+		"_creator": "_DNSSYNC_READWRITE",
+		"_oid": "51ad84f3e4b01696e747cf77",
+		"_pversion": -1,
+		"fqdn": "aaa.com",
+		"_createtime": 1370326259502,
+		"_branch": "main",
+		"_type": "FQDN",
+		"_version": 0,
+		"resourceId": "aaa.com",
+		"_modifier": "_DNSSYNC_READWRITE",
+		"_comment": "Sync Object: aaa.ebay.com",
+		"_status": "active",
+		"_user": "_DNSSYNC_READWRITE"
+	  },
+	  {
+		"_lastmodified": 1370326255833,
+		"healthState": "healthy",
+		"_creator": "_DNSSYNC_READWRITE",
+		"_oid": "51ad84efe4b07a05b3fcd522",
+		"_pversion": -1,
+		"fqdn": "bbb.com",
+		"_createtime": 1370326255833,
+		"_branch": "main",
+		"_type": "FQDN",
+		"_version": 0,
+		"resourceId": "bbb.com",
+		"_modifier": "_DNSSYNC_READWRITE",
+		"_comment": "Sync Object: bbb.com",
+		"_status": "active",
+		"_user": "_DNSSYNC_READWRITE"
+	  },
+	  {
+		"_lastmodified": 1370326257463,
+		"healthState": "healthy",
+		"_creator": "_DNSSYNC_READWRITE",
+		"_oid": "51ad84f1e4b062b1dafc1d78",
+		"_pversion": -1,
+		"fqdn": "ccc.com",
+		"_createtime": 1370326257463,
+		"_branch": "main",
+		"_type": "FQDN",
+		"_version": 0,
+		"resourceId": "ccc.com",
+		"_modifier": "_DNSSYNC_READWRITE",
+		"_comment": "Sync Object: ccc.com",
+		"_status": "active",
+		"_user": "_DNSSYNC_READWRITE"
+	  }
+	],
+	"LBService": [
+	  {
+		"healthState": "healthy",
+		"_lastmodified": 1372903256070,
+		"_creator": null,
+		"_oid": "51d4d7586ec8516d8026ba38",
+		"floatType": "netscalar-shared-primary",
+		"managedBy": null,
+		"label": "ddd.com",
+		"_pversion": -1,
+		"_createtime": 1372903256070,
+		"_type": "LBService",
+		"_branch": "main",
+		"resourceId": "192.168.3.1",
+		"_version": 0,
+		"_modifier": null,
+		"_comment": null,
+		"_status": "active",
+		"_user": null,
+		"networkAddress": {"_oid":"51d4cd996ec8516d8026ba32"},
+		"capacities": [
+		{
+			"total": 800,
+			"_lastmodified": 1372903256070,
+			"healthState": "healthy",
+			"_oid": "LBService!51d4d7586ec8516d8026ba38!capacities!51d4d7586ec8516d8026ba39",
+			"used": 0,
+			"unit" : "unit",
+			"type": "bandwidth",
+			"reserved": 0,
+			"_createtime": 1372903256070,
+			"_branch": "main",
+			"_type": "ResourceCapacity",
+			"resourceId": "placeholder",
+			"_status": "active"
+		}
+		]
+	  }
+	],
+	
+	"LBVirtualIP": [
+	  {
+		"port": 80,
+		"enabled": true,
+		"healthState": "healthy",
+		"protocol": "HTTP",
+		"_lastmodified": 1372844178480,
+		"_creator": null,
+		"_oid": "51d3f0926ec8516d8026ba2e",
+		"label": "lbVirtualIP101",
+		"_pversion": -1,
+		"opsState": "up",
+		"_createtime": 1372844178480,
+		"_type": "LBVirtualIP",
+		"_branch": "main",
+		"_version": 0,
+		"resourceId": "192.168.3.5:80",
+		"_modifier": null,
+		"_comment": null,
+		"_user": null,
+		"_status": "active",
+		"monitor": 
+		[
+		  {"_oid":"51d3f0906ec8516d8026b9ea"}
+		],
+		"networkAddress": {"_oid":"51d3f0926ec8516d8026ba0e"},
+		"pools": 
+		[
+		  {"_oid":"51d3f0926ec8516d8026ba2a"}
+		],
+		"lbService": 
+		  {"_oid":"51d4d7586ec8516d8026ba38"}
+	  },
+      {
+        "port": 80,
+        "enabled": true,
+        "healthState": "healthy",
+        "protocol": "HTTP",
+        "_lastmodified": 1372844178480,
+        "_creator": null,
+        "_oid": "51d3f0926ec8516d8026ba2f",
+        "label": "lbVirtualIP102",
+        "_pversion": -1,
+        "opsState": "up",
+        "_createtime": 1372844178488,
+        "_type": "LBVirtualIP",
+        "_branch": "main",
+        "_version": 0,
+        "resourceId": "192.168.3.6:80",
+        "_modifier": null,
+        "_comment": null,
+        "_user": null,
+        "_status": "active",
+        "networkAddress": {"_oid":"51d3f0926ec8516d8026ba0e"},
+        "lbService": 
+          {"_oid":"51d4d7586ec8516d8026ba38"}
+      }
+	],
+	
+	"AccessPoint": [
+	  {
+        "_type": "AccessPoint",
+        "healthState": "unknown",
+        "protocol": "ANY",
+        "_lastmodified": 1393299830569,
+        "_creator": "_LBSYNC_READWRITE",
+        "_oid": "528e0669e4b006c12989fa20",
+        "env": "",
+        "_createtime": 1385039465985,
+        "_branch": "main",
+        "resourceId": "ctlg-agg-phx-001-new",
+        "resourceOwner": "_LBSYNC_READWRITE",
+        "domain": "ebay.com",
+        "_modifier": "_LBSYNC_READWRITE",
+        "_comment": "lbsync.pl@aaa.com",
+        "_user": "1001.871.196.251",
+        "_status": "active",
+        "vip": {"_oid":"51d3f0926ec8516d8026ba2f"}
+	  }
+	],
+	
+	"LBPool": [
+	  {
+		"protocol": "HTTP",
+		"healthState": "healthy",
+		"_lastmodified": 1372844178441,
+		"_creator": null,
+		"_oid": "51d3f0926ec8516d8026ba2a",
+		"label": "lbPool101",
+		"_pversion": -1,
+		"_createtime": 1372844178441,
+		"_type": "LBPool",
+		"_branch": "main",
+		"resourceId": "192.168.3.1:lbPool101",
+		"_version": 0,
+		"method": "ROUND_ROBIN",
+		"_modifier": null,
+		"_comment": null,
+		"_status": "active",
+		"_user": null,
+		"lbService": 
+		  {"_oid":"51d4d7586ec8516d8026ba38"}
+	  }
+	],
+
+	
+	"LBPoolMap": [
+	  {
+	    "_oid": "52d3f0926ec8516d8026ba1a",
+		"resourceId": "192.168.3.1:lbPoolMap001",
+		"_hostentity" : "LBVirtualIP!51d3f0926ec8516d8026ba2e!poolMaps",
+		"pool": {"_oid":"51d3f0926ec8516d8026ba2a"}
+	  },
+      {
+        "_oid": "52d3f0926ec8516d8026ba1b",
+        "resourceId": "192.168.3.2:lbPoolMap002",
+        "_hostentity" : "LBVirtualIP!51d3f0926ec8516d8026ba2f!poolMaps",
+        "pool": {"_oid":"51d3f0926ec8516d8026ba2b"}
+      }
+	],
+	
+	"LBMember": [
+	  {
+		"enabled": true,
+		"healthState": "healthy",
+		"_lastmodified": 1372844178327,
+		"weight": 1,
+		"_creator": null,
+		"_oid": "51d3f0926ec8516d8026ba16",
+		"_pversion": -1,
+		"opsState": "up",
+		"_createtime": 1372844178327,
+		"_type": "LBMember",
+		"_branch": "main",
+		"_version": 0,
+		"resourceId": "192.168.3.1:lbPool101-LBMember-192.168.3.8:8080",
+		"_modifier": null,
+		"_comment": null,
+		"_user": null,
+		"_status": "active",
+		"protocol": "HTTP",
+		"networkAddress":  {"_oid":"51d3f0926ec8516d8026ba0e"}
+	  }
+	],
+	
+	"LBMemberOf": [
+	  {
+		"enabled": true,
+		"healthState": "healthy",
+		"_lastmodified": 1372844178327,
+		"weight": 1,
+		"_creator": null,
+		"_oid": "51d3f0926ec8516d8026ba1a",
+		"label": "192.168.3.8:8080",
+		"_pversion": -1,
+		"opsState": "up",
+		"_createtime": 1372844178327,
+		"_type": "LBMemberOf",
+		"_branch": "main",
+		"_version": 0,
+		"resourceId": "192.168.3.1:lbPool101-LBMemberOf-192.168.3.8:8080",
+		"_modifier": null,
+		"_comment": null,
+		"_hostentity": "LBPool!51d3f0926ec8516d8026ba2a!services",
+		"_user": null,
+		"_status": "active",
+		"lbMember":  {"_oid":"51d3f0926ec8516d8026ba16"}
+	  },
+	  {
+		"enabled": true,
+		"_hostentity": "LBPool!51d3f0926ec8516d8026ba2a!services",
+		"healthState": "healthy",
+		"_lastmodified": 1372844178410,
+		"weight": 1,
+		"_creator": null,
+		"_oid": "51d3f0926ec8516d8026ba26",
+		"label": "192.168.3.9:8080",
+		"_pversion": -1,
+		"opsState": "up",
+		"_createtime": 1372844178410,
+		"_type": "LBMemberOf",
+		"_branch": "main",
+		"_version": 0,
+		"resourceId": "192.168.3.1:lbPool101-LBMemberOf-192.168.3.9:8080",
+		"_modifier": null,
+		"_comment": null,
+		"_user": null,
+		"_status": "active",
+		"lbMember":  {"_oid":"51d3f0926ec8516d8026ba22"}		
+	  }
+	],
+	
+	"LBMonitor": [
+	  {
+		"healthState": "healthy",
+		"_lastmodified": 1372844176796,
+		"interval": 6,
+		"_creator": null,
+		"responsePattern": "TrafficEnabled",
+		"_oid": "51d3f0906ec8516d8026b9ea",
+		"label": "v3app_ecv",
+		"_pversion": -1,
+		"type": "HTTP-ECV",
+		"_createtime": 1372844176796,
+		"url": "/admin/v3console/ViewConfigCategory?id=ebay.kernel.ServeTraffic",
+		"downTime": 15,
+		"_type": "LBMonitor",
+		"_branch": "main",
+		"_version": 0,
+		"resourceId": "192.168.3.1:v3app_ecv",
+		"method": "GET",
+		"_modifier": null,
+		"_comment": null,
+		"_user": null,
+		"timeout": 5,
+		"_status": "active"
+	  },
+	  {
+		"healthState": "healthy",
+		"_lastmodified": 1372844176826,
+		"interval": 6,
+		"_creator": null,
+		"responsePattern": "ServeTraffic=true",
+		"_oid": "51d3f0906ec8516d8026b9ee",
+		"label": "qlio_ecv",
+		"_pversion": -1,
+		"type": "HTTP-ECV",
+		"_createtime": 1372844176826,
+		"url": "/admin/ecv",
+		"downTime": 15,
+		"_type": "LBMonitor",
+		"_branch": "main",
+		"_version": 0,
+		"resourceId": "192.168.3.1:qlio_ecv",
+		"method": "GET",
+		"_modifier": null,
+		"_comment": null,
+		"_user": null,
+		"timeout": 5,
+		"_status": "active"
+	  },
+	  {
+		"healthState": "healthy",
+		"_lastmodified": 1372844176850,
+		"interval": 6,
+		"_creator": null,
+		"responsePattern": "TrafficEnabled",
+		"_oid": "51d3f0906ec8516d8026b9f2",
+		"label": "v3app_ecv_tomcat",
+		"_pversion": -1,
+		"type": "HTTP-ECV",
+		"_createtime": 1372844176850,
+		"url": "/admin/v3console/ViewConfigCategoryXml?id=ebay.kernel.ServeTrafficTomcat",
+		"downTime": 15,
+		"_type": "LBMonitor",
+		"_branch": "main",
+		"_version": 0,
+		"resourceId": "192.168.3.1:v3app_ecv_tomcat",
+		"method": "GET",
+		"_modifier": null,
+		"_comment": null,
+		"_user": null,
+		"timeout": 5,
+		"_status": "active"
+	  },
+	  {
+		"healthState": "healthy",
+		"_lastmodified": 1372844176876,
+		"interval": 6,
+		"_creator": null,
+		"responsePattern": "TrafficEnabled",
+		"_oid": "51d3f0906ec8516d8026b9f6",
+		"label": "v3app_https_ecv_tomcat",
+		"_pversion": -1,
+		"type": "HTTP-ECV",
+		"_createtime": 1372844176876,
+		"url": "/admin/v3console/ViewConfigCategoryXml?id=ebay.kernel.ServeTrafficTomcat",
+		"downTime": 15,
+		"_type": "LBMonitor",
+		"_branch": "main",
+		"_version": 0,
+		"resourceId": "192.168.3.1:v3app_https_ecv_tomcat",
+		"method": "GET",
+		"_modifier": null,
+		"_comment": null,
+		"_user": null,
+		"timeout": 5,
+		"_status": "active"
+	  },
+	  {
+		"healthState": "healthy",
+		"_lastmodified": 1372844176902,
+		"interval": 6,
+		"_creator": null,
+		"responsePattern": "TrafficEnabled",
+		"_oid": "51d3f0906ec8516d8026b9fa",
+		"label": "event_tracker_ecv",
+		"_pversion": -1,
+		"type": "HTTP-ECV",
+		"_createtime": 1372844176902,
+		"url": "/admin/ValidateInternals",
+		"downTime": 15,
+		"_type": "LBMonitor",
+		"_branch": "main",
+		"_version": 0,
+		"resourceId": "192.168.3.1:event_tracker_ecv",
+		"method": "GET",
+		"_modifier": null,
+		"_comment": null,
+		"_user": null,
+		"timeout": 5,
+		"_status": "active"
+	  },
+	  {
+		"healthState": "healthy",
+		"_lastmodified": 1372844176925,
+		"interval": 6,
+		"_creator": null,
+		"responsePattern": "200",
+		"_oid": "51d3f0906ec8516d8026b9fe",
+		"label": "http",
+		"_pversion": -1,
+		"type": "HTTP",
+		"_createtime": 1372844176925,
+		"downTime": 15,
+		"_type": "LBMonitor",
+		"_branch": "main",
+		"_version": 0,
+		"resourceId": "192.168.3.1:http",
+		"_modifier": null,
+		"_comment": null,
+		"_user": null,
+		"timeout": 5,
+		"_status": "active"
+	  },
+	  {
+		"healthState": "healthy",
+		"_lastmodified": 1372844176949,
+		"interval": 6,
+		"_creator": null,
+		"_oid": "51d3f0906ec8516d8026ba02",
+		"label": "tcp",
+		"_pversion": -1,
+		"type": "TCP",
+		"_createtime": 1372844176949,
+		"downTime": 15,
+		"_type": "LBMonitor",
+		"_branch": "main",
+		"_version": 0,
+		"resourceId": "192.168.3.1:tcp",
+		"_modifier": null,
+		"_comment": null,
+		"_user": null,
+		"timeout": 5,
+		"_status": "active"
+	  },
+	  {
+		"healthState": "healthy",
+		"_lastmodified": 1372844176972,
+		"interval": 6,
+		"_creator": null,
+		"_oid": "51d3f0906ec8516d8026ba06",
+		"label": "web_tcp",
+		"_pversion": -1,
+		"type": "TCP",
+		"_createtime": 1372844176972,
+		"downTime": 15,
+		"_type": "LBMonitor",
+		"_branch": "main",
+		"_version": 0,
+		"resourceId": "192.168.3.1:web_tcp",
+		"_modifier": null,
+		"_comment": null,
+		"_user": null,
+		"timeout": 5,
+		"_status": "active"
+	  },
+	  {
+		"healthState": "healthy",
+		"_lastmodified": 1372844176998,
+		"interval": 6,
+		"_creator": null,
+		"_oid": "51d3f0906ec8516d8026ba0a",
+		"label": "6.1_tcp",
+		"_pversion": -1,
+		"type": "TCP",
+		"_createtime": 1372844176998,
+		"downTime": 15,
+		"_type": "LBMonitor",
+		"_branch": "main",
+		"_version": 0,
+		"resourceId": "192.168.3.1:6.1_tcp",
+		"_modifier": null,
+		"_comment": null,
+		"_user": null,
+		"timeout": 5,
+		"_status": "active"
+	  }
+	],
+
+	"DNSRecord": [
+	  {
+		"healthState": "healthy",
+		"_lastmodified": 1370326257285,
+		"_creator": "_DNSSYNC_READWRITE",
+		"_oid": "51ad84efe4b062b1dafc1d6a",
+		"_pversion": -1,
+		"type": "A",
+		"_createtime": 1370326255994,
+		"_type": "DNSRecord",
+		"_branch": "main",
+		"_version": 0,
+		"resourceId": "aaa.com-1001.91.117.115",
+		"_modifier": null,
+		"_comment": "cms@:cms_User - cms synch : DNS - aaa.com",
+		"_user": "_DNSSYNC_READWRITE",
+		"forwardZone": "aaa.com",
+		"_status": "active",
+		"networkAddress": {"_oid":"51ad84efe4b062b1dafc1d66"},
+		"fqdn": {"_oid":"51ad84efe4b07a05b3fcd522"}
+	  },
+	  
+	  {
+		"healthState": "healthy",
+		"_lastmodified": 1370326259989,
+		"_creator": "_DNSSYNC_READWRITE",
+		"_oid": "51ad84f3e4b01696e747cf7d",
+		"_pversion": -1,
+		"type": "CNAME",
+		"_createtime": 1370326259780,
+		"_type": "DNSRecord",
+		"_branch": "main",
+		"_version": 0,
+		"resourceId": "aaa.com-bbb.com",
+		"_modifier": null,
+		"_comment": "cms@:cms_User - cms synch : DNS - aaa.com",
+		"_user": "_DNSSYNC_READWRITE",
+		"forwardZone": "aaa.com",
+		"_status": "active",
+		"fqdn": {"_oid":"51ad84f3e4b01696e747cf77"},
+		"cname": {"_oid":"51ad84f1e4b062b1dafc1d78"}
+	  }
+
+	],
+	
+    "ResourceGroup": [
+      {
+        "_lastmodified": 1375192972715,
+        "_creator": "_EPSYNC_READWRITE",
+        "_oid": "51f0cd24e4b0058c9e1a72c5",
+        "type": "VCS",
+        "_branch": "main",
+        "_type": "ResourceGroup",
+        "resourceId": "VCS",
+        "_modifier": "_EPSYNC_READWRITE",
+        "_comment": "./epsynccms.pl@aaa",
+        "_status": "active",
+        "healthState": "healthy",
+        "_pversion": -1,
+        "_createtime": 1374735652453,
+        "_version": 0,
+        "_user": null,
+        "manager": {
+		        "_oid": "51f977a4171b7e36601ad3f9"
+		},
+        "children": [
+            {
+                "_oid": "519b4a45e4b0b07c832d6949",
+                "_type": "Asset"
+            },
+            {
+                "_oid": "5199c9450cf2359a4ea29a62",
+                "_type": "Resource"
+            },
+            {
+                "_oid": "51f0cd24e4b0058c9e1a72c5",
+				"_type": "Resource"
+            },
+            {
+                "_oid": "invalid-oid",
+                "_type": "Resource"
+            }
+        ]
+     }
+    ],
+
+	
+	"Rack" : [
+		{
+		    "_lastmodified": 1369484301431,
+		    "model": "",
+		    "rawRU": "60",
+		    "_creator": "_TRACE_CLIENT",
+		    "location": "LVS01-01-400-1605",
+		    "allocatedRU": "48",
+		    "_oid": "5199c9450cf2359a4ea29a62",
+		    "_type": "Rack",
+		    "_branch": "main",
+		    "resourceId": "LVS:LVS01:01-400:16:05",
+		    "description": "",
+		    "_modifier": "_TRACE_CLIENT",
+		    "_comment": "Trace@:_TRACE_CLIENT - UPDATE BY TRACE",
+		    "_status": "active",
+		    "healthState": "healthy",
+		    "powerAllocated": "28800",
+		    "label": "05",
+		    "lifeCycleState": "prep",
+		    "_pversion": -1,
+		    "_createtime": 1301597071000,
+		    "rackProfile": "Cassini-LVS-Compute-96",
+		    "_version": 0,
+		    "allocatedStatus": "Yes",
+		    "owner": "MKP",
+		    "_user": "_TRACE_CLIENT",
+		    "assets": [
+		        {
+		            "_oid": "519b4a45e4b0b07c832d6949",
+		            "_type": "Asset"
+		        },
+		        {
+		            "_oid": "519b4a45e4b0f6b5ed99a1ff",
+		            "_type": "Asset"
+		        },
+		        {
+		            "_oid": "519b4a46e4b06ba580824891",
+		            "_type": "Asset"
+		        },
+		        {
+		            "_oid": "519b5547e4b0aa9bbcbab937",
+		            "_type": "Asset"
+		        },
+		        {
+		            "_oid": "519b5548e4b0b07c832e6fab",
+		            "_type": "Asset"
+		        },
+		        {
+		            "_oid": "519b5548e4b097e4705649e1",
+		            "_type": "Asset"
+		        },
+		        {
+		            "_oid": "519b5cf4e4b06ba5808349b1",
+		            "_type": "Asset"
+		        }
+		    ]
+		}
+	],
+	
+	"Asset" : [
+		{
+		    "_lastmodified": 1369131589689,
+		    "_creator": "_TMASYNC_READWRITE",
+		    "_oid": "519b4a45e4b0b07c832d6949",
+		    "allocated": "YES",
+		    "_type": "Asset",
+		    "_branch": "main",
+		    "resourceId": "ASSET00225292",
+		    "assetId": "705143",
+		    "assetType": "Server",
+		    "costcenter": "1109094336",
+		    "_modifier": "_TMASYNC_READWRITE",
+		    "_comment": "cms@:cms_User - cms synch : tma - mainasset",
+		    "traceRatedPower": "210",
+		    "_status": "active",
+		    "disposition": "None",
+		    "healthState": "healthy",
+		    "condition": "None",
+		    "_pversion": -1,
+		    "_createtime": 1369131589689,
+		    "assetStatus": "IN SERVICE",
+		    "locationCode": "LVS01-01-400-1605",
+		    "_version": 0,
+		    "manufacturer": "DELL",
+		    "subType": "Blade",
+		    "serial": "3JS2ML1.3",
+		    "_user": "_TMASYNC_READWRITE"
+		},
+		{
+		    "_lastmodified": 1369131589827,
+		    "_creator": "_TMASYNC_READWRITE",
+		    "_oid": "519b4a45e4b0f6b5ed99a1ff",
+		    "allocated": "YES",
+		    "_type": "Asset",
+		    "_branch": "main",
+		    "resourceId": "ASSET00225293",
+		    "assetId": "705144",
+		    "assetType": "Server",
+		    "costcenter": "1109094336",
+		    "_modifier": "_TMASYNC_READWRITE",
+		    "_comment": "cms@:cms_User - cms synch : tma - mainasset",
+		    "traceRatedPower": "210",
+		    "_status": "active",
+		    "disposition": "None",
+		    "healthState": "healthy",
+		    "condition": "None",
+		    "_pversion": -1,
+		    "_createtime": 1369131589827,
+		    "assetStatus": "IN SERVICE",
+		    "locationCode": "LVS01-01-400-1605",
+		    "_version": 0,
+		    "manufacturer": "DELL",
+		    "subType": "Blade",
+		    "serial": "3JS2ML1.4",
+		    "_user": "_TMASYNC_READWRITE"
+		},
+		{
+		    "_lastmodified": 1369131590013,
+		    "_creator": "_TMASYNC_READWRITE",
+		    "_oid": "519b4a46e4b06ba580824891",
+		    "allocated": "YES",
+		    "_type": "Asset",
+		    "_branch": "main",
+		    "resourceId": "ASSET00225294",
+		    "assetId": "705146",
+		    "assetType": "Server",
+		    "costcenter": "1109094336",
+		    "_modifier": "_TMASYNC_READWRITE",
+		    "_comment": "cms@:cms_User - cms synch : tma - mainasset",
+		    "traceRatedPower": "210",
+		    "_status": "active",
+		    "disposition": "None",
+		    "healthState": "healthy",
+		    "condition": "None",
+		    "_pversion": -1,
+		    "_createtime": 1369131590013,
+		    "assetStatus": "IN SERVICE",
+		    "locationCode": "LVS01-01-400-1605",
+		    "_version": 0,
+		    "manufacturer": "DELL",
+		    "subType": "Blade",
+		    "serial": "7MS2ML1.1",
+		    "_user": "_TMASYNC_READWRITE"
+		},
+		{
+		    "_lastmodified": 1369134407997,
+		    "_creator": "_TMASYNC_READWRITE",
+		    "_oid": "519b5547e4b0aa9bbcbab937",
+		    "allocated": "YES",
+		    "_type": "Asset",
+		    "_branch": "main",
+		    "resourceId": "ASSET00225298",
+		    "assetId": "705151",
+		    "assetType": "Server",
+		    "costcenter": "1109094336",
+		    "_modifier": "_TMASYNC_READWRITE",
+		    "_comment": "cms@:cms_User - cms synch : tma - mainasset",
+		    "traceRatedPower": "210",
+		    "_status": "active",
+		    "disposition": "None",
+		    "healthState": "healthy",
+		    "condition": "None",
+		    "_pversion": -1,
+		    "_createtime": 1369134407997,
+		    "assetStatus": "IN SERVICE",
+		    "locationCode": "LVS01-01-400-1605",
+		    "_version": 0,
+		    "manufacturer": "DELL",
+		    "subType": "Blade",
+		    "serial": "BLS2ML1.1",
+		    "_user": "_TMASYNC_READWRITE"
+		},
+		{
+		    "_lastmodified": 1369134408402,
+		    "_creator": "_TMASYNC_READWRITE",
+		    "_oid": "519b5548e4b097e4705649e1",
+		    "allocated": "YES",
+		    "_type": "Asset",
+		    "_branch": "main",
+		    "resourceId": "ASSET00225301",
+		    "assetId": "705154",
+		    "assetType": "Server",
+		    "costcenter": "1109094336",
+		    "_modifier": "_TMASYNC_READWRITE",
+		    "_comment": "cms@:cms_User - cms synch : tma - mainasset",
+		    "traceRatedPower": "210",
+		    "_status": "active",
+		    "disposition": "None",
+		    "healthState": "healthy",
+		    "condition": "None",
+		    "_pversion": -1,
+		    "_createtime": 1369134408402,
+		    "assetStatus": "IN SERVICE",
+		    "locationCode": "LVS01-01-400-1605",
+		    "_version": 0,
+		    "manufacturer": "DELL",
+		    "subType": "Blade",
+		    "serial": "BLS2ML1.4",
+		    "_user": "_TMASYNC_READWRITE"
+		
+		},
+		{
+		    "_lastmodified": 1369134408169,
+		    "_creator": "_TMASYNC_READWRITE",
+		    "_oid": "519b5548e4b0aa9bbcbab93b",
+		    "allocated": "YES",
+		    "_type": "Asset",
+		    "_branch": "main",
+		    "resourceId": "ASSET00225299",
+		    "assetId": "705152",
+		    "assetType": "Server",
+		    "costcenter": "1109094336",
+		    "_modifier": "_TMASYNC_READWRITE",
+		    "_comment": "cms@:cms_User - cms synch : tma - mainasset",
+		    "traceRatedPower": "210",
+		    "_status": "active",
+		    "disposition": "None",
+		    "healthState": "healthy",
+		    "condition": "None",
+		    "_pversion": -1,
+		    "_createtime": 1369134408169,
+		    "assetStatus": "IN SERVICE",
+		    "locationCode": "LVS01-01-400-1605",
+		    "_version": 0,
+		    "manufacturer": "DELL",
+		    "subType": "Blade",
+		    "serial": "BLS2ML1.2",
+		    "_user": "_TMASYNC_READWRITE"
+		
+		},
+		{
+		    "_lastmodified": 1369134408201,
+		    "_creator": "_TMASYNC_READWRITE",
+		    "_oid": "519b5548e4b0b07c832e6fab",
+		    "allocated": "YES",
+		    "_type": "Asset",
+		    "_branch": "main",
+		    "resourceId": "ASSET00225300",
+		    "assetId": "705153",
+		    "assetType": "Server",
+		    "costcenter": "1109094336",
+		    "_modifier": "_TMASYNC_READWRITE",
+		    "_comment": "cms@:cms_User - cms synch : tma - mainasset",
+		    "traceRatedPower": "210",
+		    "_status": "active",
+		    "disposition": "None",
+		    "healthState": "healthy",
+		    "condition": "None",
+		    "_pversion": -1,
+		    "_createtime": 1369134408201,
+		    "assetStatus": "IN SERVICE",
+		    "locationCode": "LVS01-01-400-1605",
+		    "_version": 0,
+		    "manufacturer": "DELL",
+		    "subType": "Blade",
+		    "serial": "BLS2ML1.3",
+		    "_user": "_TMASYNC_READWRITE"
+		
+		},
+		{
+		    "_lastmodified": 1369136372190,
+		    "_creator": "_TMASYNC_READWRITE",
+		    "_oid": "519b5cf4e4b06ba5808349b1",
+		    "allocated": "YES",
+		    "_type": "Asset",
+		    "_branch": "main",
+		    "resourceId": "ASSET00225594",
+		    "assetId": "649622",
+		    "assetType": "Network Equipment",
+		    "costcenter": "1109094336",
+		    "_modifier": "_TMASYNC_READWRITE",
+		    "_comment": "cms@:cms_User - cms synch : tma - mainasset",
+		    "traceRatedPower": "200",
+		    "_status": "active",
+		    "disposition": "None",
+		    "healthState": "healthy",
+		    "condition": "None",
+		    "_pversion": -1,
+		    "_createtime": 1369136372190,
+		    "assetStatus": "IN SERVICE",
+		    "locationCode": "LVS01-01-400-1605",
+		    "_version": 0,
+		    "manufacturer": "CISCO",
+		    "subType": "Access Layer Switch",
+		    "serial": "CAT1506S04J",
+		    "_user": "_TMASYNC_READWRITE"
+		
+		},
+		{
+		    "_lastmodified": 1369138877961,
+		    "_creator": "_TMASYNC_READWRITE",
+		    "_oid": "519b66bde4b06ba58084723b",
+		    "allocated": "YES",
+		    "_type": "Asset",
+		    "_branch": "main",
+		    "resourceId": "ASSET00225287",
+		    "assetId": "705137",
+		    "assetType": "Server",
+		    "costcenter": "1109094336",
+		    "_modifier": "_TMASYNC_READWRITE",
+		    "_comment": "cms@:cms_User - cms synch : tma - mainasset",
+		    "traceRatedPower": "210",
+		    "_status": "active",
+		    "disposition": "None",
+		    "healthState": "healthy",
+		    "condition": "None",
+		    "_pversion": -1,
+		    "_createtime": 1369138877961,
+		    "assetStatus": "IN SERVICE",
+		    "locationCode": "LVS01-01-400-1605",
+		    "_version": 0,
+		    "manufacturer": "DELL",
+		    "subType": "Blade",
+		    "serial": "HJS2ML1.2",
+		    "_user": "_TMASYNC_READWRITE"
+		},
+		{
+		    "_lastmodified": 1369207933472,
+		    "_creator": "_TMASYNC_READWRITE",
+		    "_oid": "519c747de4b0aa9bbcbd2e85",
+		    "allocated": "YES",
+		    "_type": "Asset",
+		    "_branch": "main",
+		    "resourceId": "ASSET00225305",
+		    "assetId": "705159",
+		    "assetType": "Server",
+		    "costcenter": "1109094336",
+		    "_modifier": "_TMASYNC_READWRITE",
+		    "_comment": "cms@:cms_User - cms synch : tma - mainasset",
+		    "traceRatedPower": "210",
+		    "_status": "active",
+		    "disposition": "None",
+		    "healthState": "healthy",
+		    "condition": "None",
+		    "_pversion": -1,
+		    "_createtime": 1369207933472,
+		    "assetStatus": "IN SERVICE",
+		    "locationCode": "LVS01-01-400-1605",
+		    "_version": 0,
+		    "manufacturer": "DELL",
+		    "subType": "Blade",
+		    "serial": "3MS2ML1.4",
+		    "_user": "_TMASYNC_READWRITE"
+		}
+	], 
+	
+	"AssetServer": [
+		{
+		
+		    "_lastmodified": 1377231036295,
+		    "hyperThread": null,
+		    "bmc": null,
+		    "_creator": "CloudMgr",
+		    "scanTime": null,
+		    "_oid": "51f977a4171b7e36601ad3f0",
+		    "disk": null,
+		    "type": "vm",
+		    "version": "vmx-07",
+		    "_type": "AssetServer",
+		    "_branch": "main",
+		    "resourceId": "Uuid-564D07D6-7C82-9CEC-7028-364219411198",
+		    "threads": null,
+		    "_modifier": "_datasync_tocms",
+		    "isAllocated": false,
+		    "processor": null,
+		    "raidController": null,
+		    "_comment": "Sync data from ODB to CMS",
+		    "_status": "active",
+		    "rootDiskSerialNumber": null,
+		    "healthState": "healthy",
+		    "standard": "true",
+		    "spFirmware": null,
+		    "health": "GREEN",
+		    "_pversion": -1,
+		    "bios": null,
+		    "memory": "12288",
+		    "_createtime": 1377231036295,
+		    "rootDiskWwn": null,
+		    "_version": 0,
+		    "cpufrequency": null,
+		    "resourceOwner": "CloudMgr",
+		    "resourceCapabilities": null,
+		    "faultDomain": null,
+		    "cpucount": "4",
+		    "_user": null,
+		    "nodeServer": {
+		        "_oid": "51f977a3171b7e36601ad3ea",
+		        "_type": "NodeServer"
+		    },
+		    "asset": {
+		        "_oid": "519b4a45e4b0b07c832d6949",
+		        "_type": "Asset"
+		    },
+		    "configuredTo": [
+		        {
+		            "_oid": "51f97773e4b0c41c6e86841b",
+		            "_type": "SkuConfiguration"
+		        }
+		    ],
+		    "managementServer": {
+		        "_oid": "51f977a5171b7e36601ad408",
+		        "_type": "NodeServer"
+		    },
+			"networkControllers": [{
+				"_type": "NetworkController",
+				"_branch": "main",
+				"resourceId": "005056B603F8",
+				"resourceOwner": "CloudMgr",
+				"ifIndex": null,
+				"type": "virtual",
+				"ifSpeed": null,
+				"ifdescr": null,
+				"ifVersion": null,
+				"ifLink": null,
+				"_creator": "_datasync_tocms",
+				"_oid": "AssetServer!51f977a4171b7e36601ad3f0!networkControllers!5216e0bc171bd2d7a58c8874",
+				"_lastmodified": 1377231036295,
+				"_modifier": "_datasync_tocms",
+				"_status": "active",
+				"_createtime": 1377231036295,
+				"port": {
+					"_oid": "519810bee4b013af0d68a84c",
+					"_type": "NetworkPort"
+				},
+				"macAddress": "11badddfsafsdfa"
+			},
+			{
+				"_type": "NetworkController",
+				"_branch": "main",
+				"resourceId": "005056B603F8",
+				"resourceOwner": "CloudMgr",
+				"ifIndex": 1,
+				"type": "virtual",
+				"ifSpeed": null,
+				"ifdescr": "",
+				"ifVersion": null,
+				"ifLink": null,
+				"_creator": "_datasync_tocms",
+				"_oid": "AssetServer!51f977a4171b7e36601ad3f0!networkControllers!5216e0bc171bd2d7a58c8875",
+				"_lastmodified": 1377231036295,
+				"_modifier": "_datasync_tocms",
+				"_status": "active",
+				"_createtime": 1377231036295,
+				"port": {
+					"_oid": "519810bee4b013af0d68a84c",
+					"_type": "NetworkPort"
+				},
+				"macAddress": "00badddfsafsdfa"
+			}]
+		},
+		{
+		    "hyperThread": null,
+		    "bmc": null,
+		    "_creator": "CloudMgr",
+		    "scanTime": null,
+		    "_oid": "51f977a4171b7e3660-manual-2",
+		    "disk": null,
+		    "type": "vm",
+		    "version": "vmx-07",
+		    "_type": "AssetServer",
+		    "_branch": "main",
+		    "resourceId": "Uuid-564D07D6-7C82-9CEC-7028-33532343",
+		    "threads": null,
+		    "_modifier": "_datasync_tocms",
+		    "isAllocated": false,
+		    "processor": null,
+		    "raidController": null,
+		    "_comment": "Sync data from ODB to CMS",
+		    "_status": "active",
+		    "rootDiskSerialNumber": null,
+		    "healthState": "healthy",
+		    "standard": "true",
+		    "spFirmware": null,
+		    "health": "GREEN",
+		    "_pversion": -1,
+		    "bios": null,
+		    "memory": "12288",
+		    "rootDiskWwn": null,
+		    "_version": 0,
+		    "cpufrequency": null,
+		    "resourceOwner": "CloudMgr",
+		    "resourceCapabilities": null,
+		    "faultDomain": null,
+		    "cpucount": "4",
+		    "_user": null,
+		    "nodeServer": {
+		        "_oid": "51f977a3171b7e366-dangle",
+		        "_type": "NodeServer"
+		    },
+		    "asset": {
+		        "_oid": "519b4a45e4b0b07c832d6949",
+		        "_type": "Asset"
+		    },
+		    "managementServer": {
+		        "_oid": "51f9776f171b7e36601ad0f6",
+		        "_type": "NodeServer"
+		    }
+		},
+		{
+		    "hyperThread": null,
+		    "bmc": null,
+		    "_creator": "CloudMgr",
+		    "scanTime": null,
+		    "_oid": "51f977a4171b7e3660-manual",
+		    "disk": null,
+		    "type": "vm",
+		    "version": "vmx-07",
+		    "_type": "AssetServer",
+		    "_branch": "main",
+		    "resourceId": "Uuid-564D07D6-7C82-9CEC-7028-7878787",
+		    "threads": null,
+		    "_modifier": "_datasync_tocms",
+		    "isAllocated": false,
+		    "processor": null,
+		    "raidController": null,
+		    "_comment": "Sync data from ODB to CMS",
+		    "_status": "active",
+		    "rootDiskSerialNumber": null,
+		    "healthState": "healthy",
+		    "standard": "true",
+		    "spFirmware": null,
+		    "health": "GREEN",
+		    "_pversion": -1,
+		    "bios": null,
+		    "memory": "12288",
+		    "rootDiskWwn": null,
+		    "_version": 0,
+		    "cpufrequency": null,
+		    "resourceOwner": "CloudMgr",
+		    "resourceCapabilities": null,
+		    "faultDomain": null,
+		    "cpucount": "4",
+		    "_user": null,
+		    "asset": {
+		        "_oid": "519b4a45e4b0b07c832d6949",
+		        "_type": "Asset"
+		    },
+		    "managementServer": {
+		        "_oid": "51f9776f171b7e36601ad0f6",
+		        "_type": "NodeServer"
+		    }
+		},
+		{
+		
+		    "_lastmodified": 1377231036283,
+		    "hyperThread": null,
+		    "bmc": null,
+		    "_creator": "CloudMgr",
+		    "scanTime": null,
+		    "_oid": "51f977a5171b7e36601ad3ff",
+		    "disk": null,
+		    "type": "vm",
+		    "version": "vmx-07",
+		    "_type": "AssetServer",
+		    "_branch": "main",
+		    "resourceId": "Uuid-564D2D82-824D-1495-5025-2573868EFB20",
+		    "threads": null,
+		    "_modifier": "_datasync_tocms",
+		    "isAllocated": false,
+		    "processor": null,
+		    "raidController": null,
+		    "_comment": "Sync data from ODB to CMS",
+		    "_status": "active",
+		    "rootDiskSerialNumber": null,
+		    "healthState": "healthy",
+		    "standard": "true",
+		    "spFirmware": null,
+		    "health": "GREEN",
+		    "_pversion": -1,
+		    "bios": null,
+		    "memory": "12288",
+		    "_createtime": 1377231036283,
+		    "rootDiskWwn": null,
+		    "_version": 0,
+		    "cpufrequency": null,
+		    "resourceOwner": "CloudMgr",
+		    "resourceCapabilities": null,
+		    "faultDomain": null,
+		    "cpucount": "4",
+		    "_user": null,
+		    "nodeServer": {
+		        "_oid": "51f977a4171b7e36601ad3f9",
+		        "_type": "NodeServer"
+		    },
+		    "asset": {
+		        "_oid": "519b4a45e4b0b07c832d6949",
+		        "_type": "Asset"
+		    },
+		    "managementServer": {
+		        "_oid": "51f9776f171b7e36601ad0f6",
+		        "_type": "NodeServer"
+		    }
+		},
+		{
+		
+		    "_lastmodified": 1377231036165,
+		    "hyperThread": null,
+		    "bmc": null,
+		    "_creator": "CloudMgr",
+		    "scanTime": null,
+		    "_oid": "51f977a6171b7e36601ad40e",
+		    "disk": null,
+		    "type": "vm",
+		    "version": "vmx-07",
+		    "_type": "AssetServer",
+		    "_branch": "main",
+		    "resourceId": "Uuid-564D7692-66EB-1B78-06CA-8490B51BCFDB",
+		    "threads": null,
+		    "_modifier": "_datasync_tocms",
+		    "isAllocated": false,
+		    "processor": null,
+		    "raidController": null,
+		    "_comment": "Sync data from ODB to CMS",
+		    "_status": "active",
+		    "rootDiskSerialNumber": null,
+		    "healthState": "healthy",
+		    "standard": "true",
+		    "spFirmware": null,
+		    "health": "GREEN",
+		    "_pversion": -1,
+		    "bios": null,
+		    "memory": "12288",
+		    "_createtime": 1377231036165,
+		    "rootDiskWwn": null,
+		    "_version": 0,
+		    "cpufrequency": null,
+		    "resourceOwner": "CloudMgr",
+		    "resourceCapabilities": null,
+		    "faultDomain": null,
+		    "cpucount": "4",
+		    "_user": null,
+		    "nodeServer": {
+		        "_oid": "51f977a5171b7e36601ad408",
+		        "_type": "NodeServer"
+		    },
+		    "asset": {
+		        "_oid": "519b4a45e4b0b07c832d6949",
+		        "_type": "Asset"
+		    },
+		    "managementServer": {
+		        "_oid": "51f9776f171b7e36601ad0f6",
+		        "_type": "NodeServer"
+		    }
+		
+		},
+		{
+		
+		    "_lastmodified": 1377231036292,
+		    "hyperThread": null,
+		    "bmc": null,
+		    "_creator": "CloudMgr",
+		    "scanTime": null,
+		    "_oid": "51f977aa171b7e36601ad449",
+		    "disk": null,
+		    "type": "vm",
+		    "version": "vmx-07",
+		    "_type": "AssetServer",
+		    "_branch": "main",
+		    "resourceId": "Uuid-564DAE4E-6CC5-344D-F827-78342A3CBB8F",
+		    "threads": null,
+		    "_modifier": "_datasync_tocms",
+		    "isAllocated": false,
+		    "processor": null,
+		    "raidController": null,
+		    "_comment": "Sync data from ODB to CMS",
+		    "_status": "active",
+		    "rootDiskSerialNumber": null,
+		    "healthState": "healthy",
+		    "standard": "true",
+		    "spFirmware": null,
+		    "health": "GREEN",
+		    "_pversion": -1,
+		    "bios": null,
+		    "memory": "12288",
+		    "_createtime": 1377231036292,
+		    "rootDiskWwn": null,
+		    "_version": 0,
+		    "cpufrequency": null,
+		    "resourceOwner": "CloudMgr",
+		    "resourceCapabilities": null,
+		    "faultDomain": null,
+		    "cpucount": "4",
+		    "_user": null,
+		    "nodeServer": {
+		        "_oid": "51f977aa171b7e36601ad443",
+		        "_type": "NodeServer"
+		    },
+		    "asset": {
+		        "_oid": "519b4a45e4b0b07c832d6949",
+		        "_type": "Asset"
+		    },
+		    "managementServer": {
+		        "_oid": "51f9776f171b7e36601ad0f6",
+		        "_type": "NodeServer"
+		    }
+		
+		},
+		{
+		
+		    "_lastmodified": 1377231036291,
+		    "hyperThread": null,
+		    "bmc": null,
+		    "_creator": "CloudMgr",
+		    "scanTime": null,
+		    "_oid": "51f977ab171b7e36601ad458",
+		    "disk": null,
+		    "type": "vm",
+		    "version": "vmx-07",
+		    "_type": "AssetServer",
+		    "_branch": "main",
+		    "resourceId": "Uuid-564D8B11-EF1C-2133-75EE-CF02CCD4C7EF",
+		    "threads": null,
+		    "_modifier": "_datasync_tocms",
+		    "isAllocated": false,
+		    "processor": null,
+		    "raidController": null,
+		    "_comment": "Sync data from ODB to CMS",
+		    "_status": "active",
+		    "rootDiskSerialNumber": null,
+		    "healthState": "healthy",
+		    "standard": "true",
+		    "spFirmware": null,
+		    "health": "GREEN",
+		    "_pversion": -1,
+		    "bios": null,
+		    "memory": "12288",
+		    "_createtime": 1377231036291,
+		    "rootDiskWwn": null,
+		    "_version": 0,
+		    "cpufrequency": null,
+		    "resourceOwner": "CloudMgr",
+		    "resourceCapabilities": null,
+		    "faultDomain": null,
+		    "cpucount": "4",
+		    "_user": null,
+		    "nodeServer": {
+		        "_oid": "51f977ab171b7e36601ad452",
+		        "_type": "NodeServer"
+		    },
+		    "asset": {
+		        "_oid": "519b4a45e4b0b07c832d6949",
+		        "_type": "Asset"
+		    },
+		    "managementServer": {
+		        "_oid": "51f9776f171b7e36601ad0f6",
+		        "_type": "NodeServer"
+		    }
+		
+		},
+		{
+		
+		    "_lastmodified": 1377231036377,
+		    "hyperThread": null,
+		    "bmc": null,
+		    "_creator": "CloudMgr",
+		    "scanTime": null,
+		    "_oid": "51f977ae171b7e36601ad485",
+		    "disk": null,
+		    "type": "vm",
+		    "version": "vmx-07",
+		    "_type": "AssetServer",
+		    "_branch": "main",
+		    "resourceId": "Uuid-564DB53E-28AE-347C-853F-D15790FC8F67",
+		    "threads": null,
+		    "_modifier": "_datasync_tocms",
+		    "isAllocated": false,
+		    "processor": null,
+		    "raidController": null,
+		    "_comment": "Sync data from ODB to CMS",
+		    "_status": "active",
+		    "rootDiskSerialNumber": null,
+		    "healthState": "healthy",
+		    "standard": "true",
+		    "spFirmware": null,
+		    "health": "GREEN",
+		    "_pversion": -1,
+		    "bios": null,
+		    "memory": "12288",
+		    "_createtime": 1377231036377,
+		    "rootDiskWwn": null,
+		    "_version": 0,
+		    "cpufrequency": null,
+		    "resourceOwner": "CloudMgr",
+		    "resourceCapabilities": null,
+		    "faultDomain": null,
+		    "cpucount": "4",
+		    "_user": null,
+		    "nodeServer": {
+		        "_oid": "51f977ae171b7e36601ad47f",
+		        "_type": "NodeServer"
+		    },
+		    "asset": {
+		        "_oid": "519b4a45e4b0b07c832d6949",
+		        "_type": "Asset"
+		    },
+		    "managementServer": {
+		        "_oid": "51f9776f171b7e36601ad0f6",
+		        "_type": "NodeServer"
+		    }
+		
+		},
+		{
+		
+		    "_lastmodified": 1377229783255,
+		    "hyperThread": "enabled",
+		    "bmc": null,
+		    "_creator": "_onboardmgr",
+		    "scanTime": "Thu Dec 27 23:03:36 GMT+7 2012",
+		    "_oid": "51e8e962e4b0c41c6e837677",
+		    "disk": null,
+		    "type": "bm",
+		    "_type": "AssetServer",
+		    "_branch": "main",
+		    "resourceId": "Serial-3JS2ML1.4",
+		    "threads": "12",
+		    "description": "AssetServer for Asset ASSET00225293",
+		    "_modifier": "_datasync_tocms",
+		    "isAllocated": false,
+		    "processor": null,
+		    "raidController": null,
+		    "_comment": "Sync data from ODB to CMS",
+		    "_status": "active",
+		    "rootDiskSerialNumber": null,
+		    "healthState": "healthy",
+		    "standard": "true",
+		    "spFirmware": "2.21",
+		    "label": "AssetServer for Asset ASSET00225293",
+		    "_pversion": -1,
+		    "bios": null,
+		    "memory": "74227336",
+		    "_createtime": 1377229783255,
+		    "rootDiskWwn": null,
+		    "_version": 0,
+		    "resourceOwner": "CloudMgr",
+		    "faultDomain": "LVS01-01-400-1605-1",
+		    "_user": null,
+		    "nodeServer": {
+		        "_oid": "51f9484b171b7e3660180c1b",
+		        "_type": "NodeServer"
+		    },
+		    "nodeLOM": {
+		        "_oid": "51e8e962e4b0c41c6e837673",
+		        "_type": "NodeServer"
+		    },
+		    "asset": {
+		        "_oid": "519b4a45e4b0f6b5ed99a1ff",
+		        "_type": "Asset"
+		    }
+		
+		},
+		{
+		
+		    "_lastmodified": 1377230948173,
+		    "hyperThread": "enabled",
+		    "bmc": null,
+		    "_creator": "_onboardmgr",
+		    "scanTime": "Sun Feb 3 21:19:05 MST 2013",
+		    "_oid": "51eaf819e4b0df04738b606d",
+		    "disk": null,
+		    "type": "bm",
+		    "_type": "AssetServer",
+		    "_branch": "main",
+		    "resourceId": "Serial-7MS2ML1.1",
+		    "threads": "24",
+		    "description": "AssetServer for Asset ASSET00225294",
+		    "_modifier": "_datasync_tocms",
+		    "isAllocated": false,
+		    "processor": null,
+		    "raidController": null,
+		    "_comment": "Sync data from ODB to CMS",
+		    "_status": "active",
+		    "rootDiskSerialNumber": null,
+		    "healthState": "healthy",
+		    "standard": "true",
+		    "spFirmware": "2.21",
+		    "label": "AssetServer for Asset ASSET00225294",
+		    "_pversion": -1,
+		    "bios": null,
+		    "memory": "77298925568",
+		    "_createtime": 1377230948173,
+		    "rootDiskWwn": null,
+		    "_version": 0,
+		    "resourceOwner": "CloudMgr",
+		    "faultDomain": "LVS01-01-400-1605-1",
+		    "_user": null,
+		    "nodeServer": {
+		        "_oid": "51f97481171b7e36601aa785",
+		        "_type": "NodeServer"
+		    },
+		    "nodeLOM": {
+		        "_oid": "51e8e998e4b09986eaf46b07",
+		        "_type": "NodeServer"
+		    },
+		    "asset": {
+		        "_oid": "519b4a46e4b06ba580824891",
+		        "_type": "Asset"
+		    }
+		
+		},
+		{
+		
+		    "_lastmodified": 1377231003768,
+		    "hyperThread": null,
+		    "bmc": null,
+		    "_creator": "CloudMgr",
+		    "scanTime": null,
+		    "_oid": "51f97661171b7e36601ac183",
+		    "disk": null,
+		    "type": "vm",
+		    "version": "vmx-07",
+		    "_type": "AssetServer",
+		    "_branch": "main",
+		    "resourceId": "Uuid-564D2906-73B3-08C4-8D6F-F7D2A0D424DA",
+		    "threads": null,
+		    "_modifier": "_datasync_tocms",
+		    "isAllocated": false,
+		    "processor": null,
+		    "raidController": null,
+		    "_comment": "Sync data from ODB to CMS",
+		    "_status": "active",
+		    "rootDiskSerialNumber": null,
+		    "healthState": "healthy",
+		    "standard": "true",
+		    "spFirmware": null,
+		    "health": "GREEN",
+		    "_pversion": -1,
+		    "bios": null,
+		    "memory": "12288",
+		    "_createtime": 1377231003768,
+		    "rootDiskWwn": null,
+		    "_version": 0,
+		    "cpufrequency": null,
+		    "resourceOwner": "CloudMgr",
+		    "resourceCapabilities": null,
+		    "faultDomain": null,
+		    "cpucount": "4",
+		    "_user": null,
+		    "nodeServer": {
+		        "_oid": "51f97661171b7e36601ac17d",
+		        "_type": "NodeServer"
+		    },
+		    "asset": {
+		        "_oid": "519b4a46e4b06ba580824891",
+		        "_type": "Asset"
+		    },
+		    "managementServer": {
+		        "_oid": "51f97481171b7e36601aa785",
+		        "_type": "NodeServer"
+		    }
+		
+		},
+		{
+		
+		    "_lastmodified": 1377231005200,
+		    "hyperThread": null,
+		    "bmc": null,
+		    "_creator": "CloudMgr",
+		    "scanTime": null,
+		    "_oid": "51f97670171b7e36601ac246",
+		    "disk": null,
+		    "type": "vm",
+		    "version": "vmx-07",
+		    "_type": "AssetServer",
+		    "_branch": "main",
+		    "resourceId": "Uuid-564D616B-D441-D355-D395-A5CC80CA07E0",
+		    "threads": null,
+		    "_modifier": "_datasync_tocms",
+		    "isAllocated": false,
+		    "processor": null,
+		    "raidController": null,
+		    "_comment": "Sync data from ODB to CMS",
+		    "_status": "active",
+		    "rootDiskSerialNumber": null,
+		    "healthState": "healthy",
+		    "standard": "true",
+		    "spFirmware": null,
+		    "health": "GREEN",
+		    "_pversion": -1,
+		    "bios": null,
+		    "memory": "12288",
+		    "_createtime": 1377231005200,
+		    "rootDiskWwn": null,
+		    "_version": 0,
+		    "cpufrequency": null,
+		    "resourceOwner": "CloudMgr",
+		    "resourceCapabilities": null,
+		    "faultDomain": null,
+		    "cpucount": "4",
+		    "_user": null,
+		    "nodeServer": {
+		        "_oid": "51f97670171b7e36601ac240",
+		        "_type": "NodeServer"
+		    },
+		    "asset": {
+		        "_oid": "519b4a46e4b06ba580824891",
+		        "_type": "Asset"
+		    },
+		    "managementServer": {
+		        "_oid": "51f97481171b7e36601aa785",
+		        "_type": "NodeServer"
+		    }
+		
+		},
+		{
+		
+		    "_lastmodified": 1377231007260,
+		    "hyperThread": null,
+		    "bmc": null,
+		    "_creator": "CloudMgr",
+		    "scanTime": null,
+		    "_oid": "51f97673171b7e36601ac273",
+		    "disk": null,
+		    "type": "vm",
+		    "version": "vmx-07",
+		    "_type": "AssetServer",
+		    "_branch": "main",
+		    "resourceId": "Uuid-564DD6D5-F37D-2456-E236-AB49F146B396",
+		    "threads": null,
+		    "_modifier": "_datasync_tocms",
+		    "isAllocated": false,
+		    "processor": null,
+		    "raidController": null,
+		    "_comment": "Sync data from ODB to CMS",
+		    "_status": "active",
+		    "rootDiskSerialNumber": null,
+		    "healthState": "healthy",
+		    "standard": "true",
+		    "spFirmware": null,
+		    "health": "GREEN",
+		    "_pversion": -1,
+		    "bios": null,
+		    "memory": "12288",
+		    "_createtime": 1377231007260,
+		    "rootDiskWwn": null,
+		    "_version": 0,
+		    "cpufrequency": null,
+		    "resourceOwner": "CloudMgr",
+		    "resourceCapabilities": null,
+		    "faultDomain": null,
+		    "cpucount": "4",
+		    "_user": null,
+		    "nodeServer": {
+		        "_oid": "51f97673171b7e36601ac26d",
+		        "_type": "NodeServer"
+		    },
+		    "asset": {
+		        "_oid": "519b4a46e4b06ba580824891",
+		        "_type": "Asset"
+		    },
+		    "managementServer": {
+		        "_oid": "51f97481171b7e36601aa785",
+		        "_type": "NodeServer"
+		    }
+		
+		},
+		{
+		
+		    "_lastmodified": 1377231009140,
+		    "hyperThread": null,
+		    "bmc": null,
+		    "_creator": "CloudMgr",
+		    "scanTime": null,
+		    "_oid": "51f97688171b7e36601ac384",
+		    "disk": null,
+		    "type": "vm",
+		    "version": "vmx-07",
+		    "_type": "AssetServer",
+		    "_branch": "main",
+		    "resourceId": "Uuid-564DFDCB-0785-F10E-2E09-7A0A0E41A96D",
+		    "threads": null,
+		    "_modifier": "_datasync_tocms",
+		    "isAllocated": false,
+		    "processor": null,
+		    "raidController": null,
+		    "_comment": "Sync data from ODB to CMS",
+		    "_status": "active",
+		    "rootDiskSerialNumber": null,
+		    "healthState": "healthy",
+		    "standard": "true",
+		    "spFirmware": null,
+		    "health": "GREEN",
+		    "_pversion": -1,
+		    "bios": null,
+		    "memory": "12288",
+		    "_createtime": 1377231009140,
+		    "rootDiskWwn": null,
+		    "_version": 0,
+		    "cpufrequency": null,
+		    "resourceOwner": "CloudMgr",
+		    "resourceCapabilities": null,
+		    "faultDomain": null,
+		    "cpucount": "4",
+		    "_user": null,
+		    "nodeServer": {
+		        "_oid": "51f97687171b7e36601ac37e",
+		        "_type": "NodeServer"
+		    },
+		    "asset": {
+		        "_oid": "519b4a46e4b06ba580824891",
+		        "_type": "Asset"
+		    },
+		    "managementServer": {
+		        "_oid": "51f97481171b7e36601aa785",
+		        "_type": "NodeServer"
+		    }
+		
+		},
+		{
+		
+		    "_lastmodified": 1377231009173,
+		    "hyperThread": null,
+		    "bmc": null,
+		    "_creator": "CloudMgr",
+		    "scanTime": null,
+		    "_oid": "51f97689171b7e36601ac393",
+		    "disk": null,
+		    "type": "vm",
+		    "version": "vmx-07",
+		    "_type": "AssetServer",
+		    "_branch": "main",
+		    "resourceId": "Uuid-564D4B9A-B361-58E9-7064-DFE1D5982D25",
+		    "threads": null,
+		    "_modifier": "_datasync_tocms",
+		    "isAllocated": false,
+		    "processor": null,
+		    "raidController": null,
+		    "_comment": "Sync data from ODB to CMS",
+		    "_status": "active",
+		    "rootDiskSerialNumber": null,
+		    "healthState": "healthy",
+		    "standard": "true",
+		    "spFirmware": null,
+		    "health": "GREEN",
+		    "_pversion": -1,
+		    "bios": null,
+		    "memory": "12288",
+		    "_createtime": 1377231009173,
+		    "rootDiskWwn": null,
+		    "_version": 0,
+		    "cpufrequency": null,
+		    "resourceOwner": "CloudMgr",
+		    "resourceCapabilities": null,
+		    "faultDomain": null,
+		    "cpucount": "4",
+		    "_user": null,
+		    "nodeServer": {
+		        "_oid": "51f97688171b7e36601ac38d",
+		        "_type": "NodeServer"
+		    },
+		    "asset": {
+		        "_oid": "519b4a46e4b06ba580824891",
+		        "_type": "Asset"
+		    },
+		    "managementServer": {
+		        "_oid": "51f97481171b7e36601aa785",
+		        "_type": "NodeServer"
+		    }
+		
+		},
+		{
+		
+		    "_lastmodified": 1377532937933,
+		    "hyperThread": "enabled",
+		    "bmc": {
+		        "bmc_ipaddress": "1001.7.1.203",
+		        "bmc_ipsource": "DHCP Address",
+		        "bmc_macaddress": "00:26:6a:fb:1d:87",
+		        "bmc_netmask": "255.255.254.0",
+		        "bmc_version": "2.21"
+		    },
+		    "_creator": "_onboardmgr",
+		    "scanTime": "Fri May 31 12:09:52 GMT+7 2013",
+		    "_oid": "51e8e9bde4b09986eaf46b1f",
+		    "disk": {
+		        "diskCount": 1,
+		        "disk1": {
+		            "disk1_device": "/dev/sda",
+		            "disk1_firmware": "2.12",
+		            "disk1_id": "wwn-0x600605b002f1aed0193ba9e707a039e5",
+		            "disk1_model": "MR9260-8i",
+		            "disk1_serial": "00e539a007e7a93b19d0aef102b00506",
+		            "disk1_size": "584843264",
+		            "disk1_vendor": "LSI"
+		        }
+		    },
+		    "type": "bm",
+		    "_type": "AssetServer",
+		    "_branch": "main",
+		    "resourceId": "Serial-BLS2ML1.1",
+		    "threads": "12",
+		    "description": "AssetServer for Asset ASSET00225298",
+		    "_modifier": "_onboardmgr",
+		    "isAllocated": false,
+		    "processor": {
+		        "processors": "{\"Intel(R) Xeon(R) CPU X5675 @ 3.07GHz\":24}",
+		        "physicalProcessorCount": 2,
+		        "processorCount": 24
+		    },
+		    "raidController": {
+		        "raidCount": 1,
+		        "raidController1": {
+		            "raidctrl1_cachesize": "512",
+		            "raidctrl1_device": "LSI MegaRAID SAS 9260-8i",
+		            "raidctrl1_ld1_raidlevel": "raid10",
+		            "raidctrl1_ld1_status": "Optimal",
+		            "raidctrl1_ld_count": "1",
+		            "raidctrl1_pd_count": "4",
+		            "raidctrl1_version": "12.12.0-0048"
+		        }
+		    },
+		    "_comment": "Onboarding",
+		    "_status": "active",
+		    "rootDiskSerialNumber": "00e539a007e7a93b19d0aef102b00506",
+		    "healthState": "healthy",
+		    "standard": "true",
+		    "spFirmware": "2.21",
+		    "label": "AssetServer for Asset ASSET00225298",
+		    "_pversion": -1,
+		    "bios": {
+		        "bios_release_date": "02/16/2011",
+		        "bios_vendor": "Inventec",
+		        "bios_version": "1.55.02"
+		    },
+		    "memory": "74227336",
+		    "_createtime": 1377229789482,
+		    "rootDiskWwn": "wwn-0x600605b002f1aed0193ba9e707a039e5",
+		    "_version": 0,
+		    "resourceCapabilities": {
+		        "cos": [
+		            "Production",
+		            "Infrastructure",
+		            "Pre-Production"
+		        ]
+		    },
+		    "faultDomain": "LVS01-01-400-1605-1",
+		    "_user": "_onboardmgr",
+		    "nodeServer": {
+		        "_oid": "51f94866171b7e3660180e15",
+		        "_type": "NodeServer"
+		    },
+		    "nodeLOM": {
+		        "_oid": "51e8e9bde4b09986eaf46b1b",
+		        "_type": "NodeServer"
+		    },
+		    "configuredTo": [
+		        {
+		            "_oid": "51f97773e4b0c41c6e86841b",
+		            "_type": "SkuConfiguration"
+		        }
+		    ],
+		    "asset": {
+		        "_oid": "519b5547e4b0aa9bbcbab937",
+		        "_type": "Asset"
+		    }
+		
+		},
+		{
+		
+		    "_lastmodified": 1377532937980,
+		    "hyperThread": "enabled",
+		    "bmc": {
+		        "bmc_ipaddress": "1001.7.3.200",
+		        "bmc_ipsource": "DHCP Address",
+		        "bmc_macaddress": "00:26:6a:fb:1b:c7",
+		        "bmc_netmask": "255.255.254.0",
+		        "bmc_version": "2.21"
+		    },
+		    "_creator": "_onboardmgr",
+		    "scanTime": "Thu Dec 27 23:05:38 GMT+7 2012",
+		    "_oid": "51e8e9e2e4b0c41c6e8376cb",
+		    "disk": {
+		        "diskCount": 1,
+		        "disk1": {
+		            "disk1_device": "/dev/sda",
+		            "disk1_firmware": "2.12",
+		            "disk1_id": "wwn-0x600605b002f1ae70186ff0180694794e",
+		            "disk1_model": "MR9260-8i",
+		            "disk1_serial": "004e79940618f06f1870aef102b00506",
+		            "disk1_size": "1169686528",
+		            "disk1_vendor": "LSI"
+		        }
+		    },
+		    "type": "bm",
+		    "_type": "AssetServer",
+		    "_branch": "main",
+		    "resourceId": "Serial-BLS2ML1.3",
+		    "threads": "12",
+		    "description": "AssetServer for Asset ASSET00225300",
+		    "_modifier": "_onboardmgr",
+		    "isAllocated": false,
+		    "processor": {
+		        "processors": "{\"Intel(R) Xeon(R) CPU X5675 @ 3.07GHz\":24}",
+		        "physicalProcessorCount": 2,
+		        "processorCount": 24
+		    },
+		    "raidController": {
+		        "raidCount": 1,
+		        "raidController1": {
+		            "raidctrl1_cachesize": "512",
+		            "raidctrl1_device": "LSI MegaRAID SAS 9260-8i",
+		            "raidctrl1_ld1_raidlevel": "raid0",
+		            "raidctrl1_ld1_status": "Optimal",
+		            "raidctrl1_ld_count": "1",
+		            "raidctrl1_pd_count": "4",
+		            "raidctrl1_version": "12.12.0-0048"
+		        }
+		    },
+		    "_comment": "Onboarding",
+		    "_status": "active",
+		    "rootDiskSerialNumber": "004e79940618f06f1870aef102b00506",
+		    "healthState": "healthy",
+		    "standard": "true",
+		    "spFirmware": "2.21",
+		    "label": "AssetServer for Asset ASSET00225300",
+		    "_pversion": -1,
+		    "bios": {
+		        "bios_release_date": "02/16/2011",
+		        "bios_vendor": "Inventec",
+		        "bios_version": "1.55.02"
+		    },
+		    "memory": "70.79 GB",
+		    "_createtime": 1377229785850,
+		    "rootDiskWwn": "wwn-0x600605b002f1ae70186ff0180694794e",
+		    "_version": 0,
+		    "resourceCapabilities": {
+		        "cos": [
+		            "Production",
+		            "Infrastructure",
+		            "Pre-Production"
+		        ]
+		    },
+		    "faultDomain": "LVS01-01-400-1605-1",
+		    "_user": "_onboardmgr",
+		    "nodeServer": {
+		        "_oid": "51f94853171b7e3660180caa",
+		        "_type": "NodeServer"
+		    },
+		    "nodeLOM": {
+		        "_oid": "51e8e9e2e4b0c41c6e8376c3",
+		        "_type": "NodeServer"
+		    },
+		    "configuredTo": [
+		        {
+		            "_oid": "51f97773e4b0c41c6e86841b",
+		            "_type": "SkuConfiguration"
+		        }
+		    ],
+		    "asset": {
+		        "_oid": "519b5548e4b0b07c832e6fab",
+		        "_type": "Asset"
+		    }
+		
+		},
+		{
+		
+		    "_lastmodified": 1377532937373,
+		    "hyperThread": "enabled",
+		    "bmc": {
+		        "bmc_ipaddress": "1001.7.3.223",
+		        "bmc_ipsource": "DHCP Address",
+		        "bmc_macaddress": "00:26:6a:fb:1b:6b",
+		        "bmc_netmask": "255.255.254.0",
+		        "bmc_version": "2.21"
+		    },
+		    "_creator": "_onboardmgr",
+		    "scanTime": "Thu Dec 27 23:05:28 GMT+7 2012",
+		    "_oid": "51e8e9f7e4b0c41c6e8376e0",
+		    "disk": {
+		        "diskCount": 1,
+		        "disk1": {
+		            "disk1_device": "/dev/sda",
+		            "disk1_firmware": "2.12",
+		            "disk1_id": "wwn-0x600605b002f1ac00186fefe106b08aaa",
+		            "disk1_model": "MR9260-8i",
+		            "disk1_serial": "00aa8ab006e1ef6f1800acf102b00506",
+		            "disk1_size": "1169686528",
+		            "disk1_vendor": "LSI"
+		        }
+		    },
+		    "type": "bm",
+		    "_type": "AssetServer",
+		    "_branch": "main",
+		    "resourceId": "Serial-BLS2ML1.4",
+		    "threads": "12",
+		    "description": "AssetServer for Asset ASSET00225301",
+		    "_modifier": "_onboardmgr",
+		    "isAllocated": false,
+		    "processor": {
+		        "processors": "{\"Intel(R) Xeon(R) CPU X5675 @ 3.07GHz\":24}",
+		        "physicalProcessorCount": 2,
+		        "processorCount": 24
+		    },
+		    "raidController": {
+		        "raidCount": 1,
+		        "raidController1": {
+		            "raidctrl1_cachesize": "512",
+		            "raidctrl1_device": "LSI MegaRAID SAS 9260-8i",
+		            "raidctrl1_ld1_raidlevel": "raid0",
+		            "raidctrl1_ld1_status": "Optimal",
+		            "raidctrl1_ld_count": "1",
+		            "raidctrl1_pd_count": "4",
+		            "raidctrl1_version": "12.12.0-0048"
+		        }
+		    },
+		    "_comment": "Onboarding",
+		    "_status": "active",
+		    "rootDiskSerialNumber": "00aa8ab006e1ef6f1800acf102b00506",
+		    "healthState": "healthy",
+		    "standard": "true",
+		    "spFirmware": "2.21",
+		    "label": "AssetServer for Asset ASSET00225301",
+		    "_pversion": -1,
+		    "bios": {
+		        "bios_release_date": "02/16/2011",
+		        "bios_vendor": "Inventec",
+		        "bios_version": "1.55.02"
+		    },
+		    "memory": "70.79 GB",
+		    "_createtime": 1377229786147,
+		    "rootDiskWwn": "wwn-0x600605b002f1ac00186fefe106b08aaa",
+		    "_version": 0,
+		    "resourceCapabilities": {
+		        "cos": [
+		            "Production",
+		            "Infrastructure",
+		            "Pre-Production"
+		        ]
+		    },
+		    "faultDomain": "LVS01-01-400-1605-1",
+		    "_user": "_onboardmgr",
+		    "nodeServer": {
+		        "_oid": "51f94852171b7e3660180c9d",
+		        "_type": "NodeServer"
+		    },
+		    "nodeLOM": {
+		        "_oid": "51e8e9f7e4b0df047389da9f",
+		        "_type": "NodeServer"
+		    },
+		    "configuredTo": [
+		        {
+		            "_oid": "51f97773e4b0c41c6e86841b",
+		            "_type": "SkuConfiguration"
+		        }
+		    ],
+		    "asset": {
+		        "_oid": "519b5548e4b097e4705649e1",
+		        "_type": "Asset"
+		    }
+		
+		},
+		{
+		    "_lastmodified": 1377532937560,
+		    "hyperThread": "enabled",
+		    "bmc": {
+		        "bmc_ipaddress": "1001.7.1.200",
+		        "bmc_ipsource": "DHCP Address",
+		        "bmc_macaddress": "00:26:6a:fb:1c:cb",
+		        "bmc_netmask": "255.255.254.0",
+		        "bmc_version": "2.21"
+		    },
+		    "_creator": "_onboardmgr",
+		    "scanTime": "Tue May 28 12:47:26 GMT+7 2013",
+		    "_oid": "51e8e9cfe4b0c41c6e8376b0",
+		    "disk": {
+		        "diskCount": 1,
+		        "disk1": {
+		            "disk1_device": "/dev/sda",
+		            "disk1_firmware": "2.12",
+		            "disk1_id": "wwn-0x600605b002f1ac901937c2f60793a943",
+		            "disk1_model": "MR9260-8i",
+		            "disk1_serial": "0043a99307f6c2371990acf102b00506",
+		            "disk1_size": "1169686528",
+		            "disk1_vendor": "LSI"
+		        }
+		    },
+		    "type": "bm",
+		    "_type": "AssetServer",
+		    "_branch": "main",
+		    "resourceId": "Serial-BLS2ML1.2",
+		    "threads": "12",
+		    "description": "AssetServer for Asset ASSET00225299",
+		    "_modifier": "_onboardmgr",
+		    "isAllocated": false,
+		    "processor": {
+		        "processors": "{\"Intel(R) Xeon(R) CPU X5675 @ 3.07GHz\":24}",
+		        "physicalProcessorCount": 2,
+		        "processorCount": 24
+		    },
+		    "raidController": {
+		        "raidCount": 1,
+		        "raidController1": {
+		            "raidctrl1_cachesize": "512",
+		            "raidctrl1_device": "LSI MegaRAID SAS 9260-8i",
+		            "raidctrl1_ld1_raidlevel": "raid0",
+		            "raidctrl1_ld1_status": "Optimal",
+		            "raidctrl1_ld_count": "1",
+		            "raidctrl1_pd_count": "4",
+		            "raidctrl1_version": "12.12.0-0048"
+		        }
+		    },
+		    "_comment": "Onboarding",
+		    "_status": "active",
+		    "rootDiskSerialNumber": "0043a99307f6c2371990acf102b00506",
+		    "healthState": "healthy",
+		    "standard": "true",
+		    "spFirmware": "2.21",
+		    "label": "AssetServer for Asset ASSET00225299",
+		    "_pversion": -1,
+		    "bios": {
+		        "bios_release_date": "02/16/2011",
+		        "bios_vendor": "Inventec",
+		        "bios_version": "1.55.02"
+		    },
+		    "memory": "74227336",
+		    "_createtime": 1377228283389,
+		    "rootDiskWwn": "wwn-0x600605b002f1ac901937c2f60793a943",
+		    "_version": 0,
+		    "resourceCapabilities": {
+		        "cos": [
+		            "Production",
+		            "Infrastructure",
+		            "Pre-Production"
+		        ]
+		    },
+		    "faultDomain": "LVS01-01-400-1605-1",
+		    "_user": "_onboardmgr",
+		    "nodeServer": {
+		        "_oid": "51f91782171b7e3660159a8e",
+		        "_type": "NodeServer"
+		    },
+		    "nodeLOM": {
+		        "_oid": "51e8e9cee4b0c41c6e8376ac",
+		        "_type": "NodeServer"
+		    },
+		    "configuredTo": [
+		        {
+		            "_oid": "51f97773e4b0c41c6e86841b",
+		            "_type": "SkuConfiguration"
+		        }
+		    ],
+		    "asset": {
+		        "_oid": "519b5548e4b0aa9bbcbab93b",
+		        "_type": "Asset"
+		    }
+		},
+		{
+		    "hyperThread": "enabled",
+		    "bmc": {
+		        "bmc_ipaddress": "1001.7.3.214",
+		        "bmc_ipsource": "DHCP Address",
+		        "bmc_macaddress": "00:26:6a:fb:1c:4b",
+		        "bmc_netmask": "255.255.254.0",
+		        "bmc_version": "2.21"
+		    },
+		    "_creator": "_onboardmgr",
+		    "scanTime": "Thu Dec 27 23:07:29 GMT+7 2012",
+		    "_oid": "51e8e91de4b0c41c6e83762d",
+		    "disk": {
+		        "diskCount": 1,
+		        "disk1": {
+		            "disk1_device": "/dev/sda",
+		            "disk1_firmware": "2.12",
+		            "disk1_id": "wwn-0x600605b002f19520186ff08b069fddca",
+		            "disk1_model": "MR9260-8i",
+		            "disk1_serial": "00cadd9f068bf06f182095f102b00506",
+		            "disk1_size": "1169686528",
+		            "disk1_vendor": "LSI"
+		        }
+		    },
+		    "type": "bm",
+		    "_type": "AssetServer",
+		    "_branch": "main",
+		    "resourceId": "Serial-HJS2ML1.3",
+		    "threads": "12",
+		    "description": "AssetServer for Asset ASSET00225288",
+		    "_modifier": "_onboardmgr",
+		    "isAllocated": false,
+		    "processor": {
+		        "processors": "{\"Intel(R) Xeon(R) CPU X5675 @ 3.07GHz\":24}",
+		        "physicalProcessorCount": 2,
+		        "processorCount": 24
+		    },
+		    "raidController": {
+		        "raidCount": 1,
+		        "raidController1": {
+		            "raidctrl1_cachesize": "512",
+		            "raidctrl1_device": "LSI MegaRAID SAS 9260-8i",
+		            "raidctrl1_ld1_raidlevel": "raid0",
+		            "raidctrl1_ld1_status": "Optimal",
+		            "raidctrl1_ld_count": "1",
+		            "raidctrl1_pd_count": "4",
+		            "raidctrl1_version": "12.12.0-0048"
+		        }
+		    },
+		    "_comment": "Onboarding",
+		    "_status": "active",
+		    "rootDiskSerialNumber": "00cadd9f068bf06f182095f102b00506",
+		    "healthState": "healthy",
+		    "standard": "true",
+		    "spFirmware": "2.21",
+		    "label": "AssetServer for Asset ASSET00225288",
+		    "_pversion": -1,
+		    "bios": {
+		        "bios_release_date": "02/16/2011",
+		        "bios_vendor": "Inventec",
+		        "bios_version": "1.55.02"
+		    },
+		    "memory": "70.79 GB",
+		    "_createtime": 1377229783911,
+		    "rootDiskWwn": "wwn-0x600605b002f19520186ff08b069fddca",
+		    "_version": 0,
+		    "resourceCapabilities": {
+		        "cos": [
+		            "Production",
+		            "Infrastructure",
+		            "Pre-Production"
+		        ]
+		    },
+		    "faultDomain": "LVS01-01-400-1605-1",
+		    "_user": "_onboardmgr",
+		    "nodeServer": {
+		        "_oid": "51f9484d171b7e3660180c35",
+		        "_type": "NodeServer"
+		    },
+		    "nodeLOM": {
+		        "_oid": "51e8e91de4b0c41c6e837629",
+		        "_type": "NodeServer"
+		    },
+		    "configuredTo": [
+		        {
+		            "_oid": "51f97773e4b0c41c6e86841b",
+		            "_type": "SkuConfiguration"
+		        }
+		    ],
+		    "asset": {
+		        "_oid": "519b66bee4b08e4986c5b3cb",
+		        "_type": "Asset"
+		    }
+		}
+	],
+	
+	"SkuConfiguration" : [
+		{
+		    "healthState": "healthy",
+		    "bmcVersion": {
+		        "latestversion": "1.23",
+		        "versions": "2.1,2.01,1.23"
+		    },
+		    "_creator": "_onboardmgr",
+		    "_oid": "51f97773e4b0c41c6e86841b",
+		    "env": "",
+		    "_pversion": -1,
+		    "raidCtrlVersion": {
+		        "latestversion": "12.12.0-0111",
+		        "versions": "12.12.0-0111,3.2.0.1022,3.0.0.1093"
+		    },
+		    "_createtime": 1375303540260,
+		    "biosVersion": {
+		        "latestversion": "1.0.24",
+		        "versions": "1.1.21,1.1.17,1.0.24"
+		    },
+		    "_type": "SkuConfiguration",
+		    "_branch": "main",
+		    "_version": 0,
+		    "resourceId": "P1G2-Dell-DCS7200S-CFG",
+		    "domain": "ebay.com",
+		    "_modifier": "_onboardmgr",
+		    "_comment": "Onboarding_Rack_Sku",
+		    "_user": "_onboardmgr",
+		    "_status": "active",
+		    "raidCtrlRaidLevel": [
+		        "raid0",
+		        "raid10"
+		    ],
+		    "supportedBy": {
+			    "_oid": "51f976d8e4b0c41c6e86839b",
+			    "_type": "ServerHWModel"
+			}
+		},
+		{
+		
+		    "_lastmodified": 1375303543321,
+		    "_creator": "_onboardmgr",
+		    "bmcVersion": {
+		        "latestversion": "1.20",
+		        "versions": "1.20,1.10"
+		    },
+		    "_oid": "51f97777e4b0df04738cba25",
+		    "raidCtrlVersion": {
+		        "latestversion": "3.22",
+		        "versions": "3.22"
+		    },
+		    "biosVersion": {
+		        "latestversion": "P75",
+		        "versions": "P75"
+		    },
+		    "_branch": "main",
+		    "_type": "SkuConfiguration",
+		    "resourceId": "P1G2-HP-SL230-CFG",
+		    "domain": "ebay.com",
+		    "_modifier": "_onboardmgr",
+		    "_comment": "Onboarding_Rack_Sku",
+		    "_status": "active",
+		    "healthState": "healthy",
+		    "env": "",
+		    "_pversion": -1,
+		    "_createtime": 1375303543321,
+		    "_version": 0,
+		    "_user": "_onboardmgr",
+		    "raidCtrlRaidLevel": [
+		        "raid0",
+		        "raid10"
+		    ],
+		    "supportedBy": {
+		        "_oid": "51f976d8e4b0c41c6e8683a3",
+		        "_type": "ServerHWModel"
+		    }
+		
+		}
+	],
+	
+	"NodeServer": [
+		{
+		    "_lastmodified": 1377231034604,
+		    "_creator": "CloudMgr",
+		    "_oid": "51f977a5171b7e36601ad408",
+		    "adminNotes": "waiting for code roll - prjoshi - 2/11/2013",
+		    "_type": "NodeServer",
+		    "_branch": "main",
+		    "resourceId": "1001.7.2.68",
+		    "timezone": "G(UTC+7)",
+		    "_modifier": "_datasync_tocms",
+		    "nodeType": "virtual",
+		    "_comment": "Sync data from ODB to CMS",
+		    "_status": "active",
+		    "healthState": "healthy",
+		    "adminStatus": "NORMAL",
+		    "label": "aaa.com",
+		    "_pversion": -1,
+		    "_createtime": 1377231034604,
+		    "assetStatus": "prep",
+		    "_version": 0,
+		    "resourceOwner": "CloudMgr",
+		    "uuid": "564D7692-66EB-1B78-06CA-8490B51BCFDB",
+		    "_user": null,
+		    "hostName": {
+		        "_oid": "51f977a5171b7e36601ad402",
+		        "_type": "FQDN"
+		    },
+		    "networkAddress": [
+		        {
+		            "_oid": "51f977a5171b7e36601ad404",
+		            "_type": "NetworkAddress"
+		        }
+		    ],
+		    "capacities": [
+		        {
+		            "_type": "ResourceCapacity",
+		            "_branch": "main",
+		            "resourceId": "1001.7.2.68:slot",
+		            "resourceOwner": "CloudMgr",
+		            "_createtime": 1377231034571,
+		            "_lastmodified": 1377231034571,
+		            "type": "slot",
+		            "total": 2,
+		            "unit" : "Gb",
+		            "used": 2,
+		            "reserved": 0,
+		            "_creator": "_datasync_tocms",
+		            "_oid": "NodeServer!51f977a5171b7e36601ad408!capacities!5216e0ba171bd2d7a58c87e2",
+		            "_modifier": "_datasync_tocms",
+		            "_status": "active"
+		        }
+		    ]
+		
+		},
+		{
+		    "_creator": "CloudMgr",
+		    "_oid": "51f977a3171b7e36601ad3ea",
+		    "adminNotes": "waiting for code roll - prjoshi - 2/11/2013",
+		    "_type": "NodeServer",
+		    "_branch": "main",
+		    "resourceId": "1001.7.2.72",
+		    "timezone": "G(UTC+7)",
+		    "_modifier": "_datasync_tocms",
+		    "nodeType": "virtual",
+		    "_comment": "Sync data from ODB to CMS",
+		    "_status": "active",
+		    "healthState": "healthy",
+		    "adminStatus": "NORMAL",
+		    "label": "bbb.com",
+		    "_pversion": -1,
+		    "_createtime": 1377231034548,
+		    "assetStatus": "prep",
+		    "_version": 0,
+		    "resourceOwner": "CloudMgr",
+		    "uuid": "564D07D6-7C82-9CEC-7028-364219411198",
+		    "_user": null,
+		    "hostName": {
+		        "_oid": "51f977a3171b7e36601ad3e4",
+		        "_type": "FQDN"
+		    },
+		    "networkAddress": [
+		        {
+		            "_oid": "51f977a3171b7e36601ad3e6",
+		            "_type": "NetworkAddress"
+		        }
+		    ],
+		    "capacities": [
+		        {
+		            "_type": "ResourceCapacity",
+		            "_branch": "main",
+		            "resourceId": "1001.7.2.72:slot",
+		            "resourceOwner": "CloudMgr",
+		            "_createtime": 1377231034516,
+		            "_lastmodified": 1377231034516,
+		            "type": "slot",
+		            "unit" : "Gb",
+		            "total": 12,
+		            "used": 2,
+		            "reserved": 0,
+		            "_creator": "_datasync_tocms",
+		            "_oid": "NodeServer!51f977a3171b7e36601ad3ea!capacities!5216e0ba171bd2d7a58c87bc",
+		            "_modifier": "_datasync_tocms",
+		            "_status": "active"
+		        }
+		    ]
+		},
+		{
+		    "_creator": "CloudMgr",
+		    "_oid": "51f977a4171b7e36601ad3f9",
+		    "adminNotes": "waiting for code roll - prjoshi - 2/11/2013",
+		    "_type": "NodeServer",
+		    "_branch": "main",
+		    "resourceId": "1001.7.2.57",
+		    "timezone": "G(UTC+7)",
+		    "_modifier": "_datasync_tocms",
+		    "nodeType": "virtual",
+		    "_comment": "Sync data from ODB to CMS",
+		    "_status": "active",
+		    "healthState": "healthy",
+		    "adminStatus": "NORMAL",
+		    "label": "ccc.com",
+		    "_pversion": -1,
+		    "_createtime": 1377231034560,
+		    "assetStatus": "prep",
+		    "_version": 0,
+		    "resourceOwner": "CloudMgr",
+		    "uuid": "564D2D82-824D-1495-5025-2573868EFB20",
+		    "_user": null,
+		    "hostName": {
+		        "_oid": "51f977a4171b7e36601ad3f3",
+		        "_type": "FQDN"
+		    },
+		    "networkAddress": [
+		        {
+		            "_oid": "51f977a4171b7e36601ad3f5",
+		            "_type": "NetworkAddress"
+		        }
+		    ],
+		    "capacities": [
+		        {
+		            "_type": "ResourceCapacity",
+		            "_branch": "main",
+		            "resourceId": "1001.7.2.57:slot",
+		            "resourceOwner": "CloudMgr",
+		            "_createtime": 1377231034526,
+		            "_lastmodified": 1377231034526,
+		            "type": "slot",
+		            "unit" : "Gb",
+		            "total": 2,
+		            "used": 2,
+		            "reserved": 0,
+		            "_creator": "_datasync_tocms",
+		            "_oid": "NodeServer!51f977a4171b7e36601ad3f9!capacities!5216e0ba171bd2d7a58c87c8",
+		            "_modifier": "_datasync_tocms",
+		            "_status": "active"
+		        }
+		    ]
+		},
+		{
+		    "_creator": "CloudMgr",
+		    "_oid": "51f977aa171b7e36601ad443",
+		    "adminNotes": "waiting for code roll - prjoshi - 2/11/2013",
+		    "_type": "NodeServer",
+		    "_branch": "main",
+		    "resourceId": "1001.7.2.74",
+		    "timezone": "G(UTC+7)",
+		    "_modifier": "_datasync_tocms",
+		    "nodeType": "virtual",
+		    "_comment": "Sync data from ODB to CMS",
+		    "_status": "active",
+		    "healthState": "healthy",
+		    "adminStatus": "NORMAL",
+		    "label": "ddd.com",
+		    "_pversion": -1,
+		    "_createtime": 1377231034555,
+		    "assetStatus": "prep",
+		    "_version": 0,
+		    "resourceOwner": "CloudMgr",
+		    "uuid": "564DAE4E-6CC5-344D-F827-78342A3CBB8F",
+		    "_user": null,
+		    "hostName": {
+		        "_oid": "51f977a9171b7e36601ad43d",
+		        "_type": "FQDN"
+		    },
+		    "networkAddress": [
+		        {
+		            "_oid": "51f977a9171b7e36601ad43f",
+		            "_type": "NetworkAddress"
+		        }
+		    ],
+		    "capacities": [
+		        {
+		            "_type": "ResourceCapacity",
+		            "_branch": "main",
+		            "resourceId": "1001.7.2.74:slot",
+		            "resourceOwner": "CloudMgr",
+		            "_createtime": 1377231034516,
+		            "_lastmodified": 1377231034516,
+		            "type": "slot",
+		            "unit" : "Gb",
+		            "total": 2,
+		            "used": 2,
+		            "reserved": 0,
+		            "_creator": "_datasync_tocms",
+		            "_oid": "NodeServer!51f977aa171b7e36601ad443!capacities!5216e0ba171bd2d7a58c87c3",
+		            "_modifier": "_datasync_tocms",
+		            "_status": "active"
+		        }
+		    ]
+		},
+		{
+		    "_creator": "CloudMgr",
+		    "_oid": "51f977ab171b7e36601ad452",
+		    "adminNotes": "waiting for code roll - prjoshi - 2/11/2013",
+		    "_type": "NodeServer",
+		    "_branch": "main",
+		    "resourceId": "1001.7.2.73",
+		    "timezone": "G(UTC+7)",
+		    "_modifier": "_datasync_tocms",
+		    "nodeType": "virtual",
+		    "_comment": "Sync data from ODB to CMS",
+		    "_status": "active",
+		    "healthState": "healthy",
+		    "adminStatus": "NORMAL",
+		    "label": "eee.com",
+		    "_pversion": -1,
+		    "_createtime": 1377231034555,
+		    "assetStatus": "prep",
+		    "_version": 0,
+		    "resourceOwner": "CloudMgr",
+		    "uuid": "564D8B11-EF1C-2133-75EE-CF02CCD4C7EF",
+		    "_user": null,
+		    "hostName": {
+		        "_oid": "51f977aa171b7e36601ad44c",
+		        "_type": "FQDN"
+		    },
+		    "networkAddress": [
+		        {
+		            "_oid": "51f977aa171b7e36601ad44e",
+		            "_type": "NetworkAddress"
+		        }
+		    ],
+		    "capacities": [
+		        {
+		            "_type": "ResourceCapacity",
+		            "_branch": "main",
+		            "resourceId": "1001.7.2.73:slot",
+		            "resourceOwner": "CloudMgr",
+		            "_createtime": 1377231034516,
+		            "_lastmodified": 1377231034516,
+		            "type": "slot",
+		            "unit" : "Gb",
+		            "total": 2,
+		            "used": 2,
+		            "reserved": 0,
+		            "_creator": "_datasync_tocms",
+		            "_oid": "NodeServer!51f977ab171b7e36601ad452!capacities!5216e0ba171bd2d7a58c87c6",
+		            "_modifier": "_datasync_tocms",
+		            "_status": "active"
+		        }
+		    ]
+		
+		},
+		{
+		    "_creator": "CloudMgr",
+		    "_oid": "51f977ae171b7e36601ad47f",
+		    "adminNotes": "waiting for code roll - prjoshi - 2/11/2013",
+		    "_type": "NodeServer",
+		    "_branch": "main",
+		    "resourceId": "1001.7.2.77",
+		    "timezone": "G(UTC+7)",
+		    "_modifier": "_datasync_tocms",
+		    "nodeType": "virtual",
+		    "_comment": "Sync data from ODB to CMS",
+		    "_status": "active",
+		    "healthState": "healthy",
+		    "adminStatus": "NORMAL",
+		    "label": "fff.com",
+		    "_pversion": -1,
+		    "_createtime": 1377231035738,
+		    "assetStatus": "prep",
+		    "_version": 0,
+		    "resourceOwner": "CloudMgr",
+		    "uuid": "564DB53E-28AE-347C-853F-D15790FC8F67",
+		    "_user": null,
+		    "hostName": {
+		        "_oid": "51f977ad171b7e36601ad479",
+		        "_type": "FQDN"
+		    },
+		    "networkAddress": [
+		        {
+		            "_oid": "51f977ae171b7e36601ad47b",
+		            "_type": "NetworkAddress"
+		        }
+		    ],
+		    "capacities": [
+		        {
+		            "_type": "ResourceCapacity",
+		            "_branch": "main",
+		            "resourceId": "1001.7.2.77:slot",
+		            "resourceOwner": "CloudMgr",
+		            "_createtime": 1377231035702,
+		            "_lastmodified": 1377231035702,
+		            "type": "slot",
+		            "unit" : "Gb",
+		            "total": 2,
+		            "used": 2,
+		            "reserved": 0,
+		            "_creator": "_datasync_tocms",
+		            "_oid": "NodeServer!51f977ae171b7e36601ad47f!capacities!5216e0bb171bd2d7a58c8829",
+		            "_modifier": "_datasync_tocms",
+		            "_status": "active"
+		        }
+		    ]
+		
+		},
+		{
+		    "_creator": "CloudMgr",
+		    "_oid": "51f9484b171b7e3660180c1b",
+		    "adminNotes": "CHNGE18138756",
+		    "_type": "NodeServer",
+		    "_branch": "main",
+		    "resourceId": "1001.7.2.17",
+		    "timezone": "G(UTC+7)",
+		    "_modifier": "_datasync_tocms",
+		    "nodeType": "physical",
+		    "_comment": "Sync data from ODB to CMS",
+		    "_status": "active",
+		    "healthState": "healthy",
+		    "adminStatus": "NORMAL",
+		    "label": "ggg.com",
+		    "_pversion": -1,
+		    "_createtime": 1377229783025,
+		    "assetStatus": "live",
+		    "_version": 0,
+		    "resourceOwner": "CloudMgr",
+		    "uuid": "4C4C4544-004A-5310-8032-B3C04F4D4C31",
+		    "_user": null,
+		    "hostName": {
+		        "_oid": "51f9484b171b7e3660180c15",
+		        "_type": "FQDN"
+		    },
+		    "networkAddress": [
+		        {
+		            "_oid": "51f9484b171b7e3660180c17",
+		            "_type": "NetworkAddress"
+		        }
+		    ],
+		    "capacities": [
+		        {
+		            "_type": "ResourceCapacity",
+		            "_branch": "main",
+		            "resourceId": "1001.7.2.17:cpu",
+		            "resourceOwner": "CloudMgr",
+		            "_createtime": 1377229782985,
+		            "_lastmodified": 1377229782985,
+		            "type": "cpu",
+		            "unit" : "Gb",
+		            "total": 24,
+		            "used": 24,
+		            "reserved": 0,
+		            "_creator": "_datasync_tocms",
+		            "_oid": "NodeServer!51f9484b171b7e3660180c1b!capacities!5216dbd7171bd2d7a58a83f3",
+		            "_modifier": "_datasync_tocms",
+		            "_status": "active"
+		        },
+		        {
+		            "_type": "ResourceCapacity",
+		            "_branch": "main",
+		            "resourceId": "1001.7.2.17:memory",
+		            "resourceOwner": "CloudMgr",
+		            "_createtime": 1377229782985,
+		            "_lastmodified": 1377229782985,
+		            "type": "memory",
+		            "unit" : "Gb",
+		            "total": 74227336,
+		            "used": 74227336,
+		            "reserved": 0,
+		            "_creator": "_datasync_tocms",
+		            "_oid": "NodeServer!51f9484b171b7e3660180c1b!capacities!5216dbd7171bd2d7a58a83f4",
+		            "_modifier": "_datasync_tocms",
+		            "_status": "active"
+		        }
+		    ]
+		
+		},
+		{
+		    "_creator": "CloudMgr",
+		    "_oid": "51f97481171b7e36601aa785",
+		    "adminNotes": "",
+		    "_type": "NodeServer",
+		    "_branch": "main",
+		    "resourceId": "1001.7.0.71",
+		    "timezone": "unknown",
+		    "_modifier": "_datasync_tocms",
+		    "nodeType": "vmm",
+		    "_comment": "Sync data from ODB to CMS",
+		    "_status": "active",
+		    "healthState": "healthy",
+		    "adminStatus": "NORMAL",
+		    "label": "hhh.com",
+		    "_pversion": -1,
+		    "_createtime": 1377230947805,
+		    "assetStatus": "live",
+		    "_version": 0,
+		    "resourceOwner": "CloudMgr",
+		    "uuid": "4C4C4544-004D-5310-8032-B7C04F4D4C31",
+		    "_user": null,
+		    "hostName": {
+		        "_oid": "51f97480171b7e36601aa77f",
+		        "_type": "FQDN"
+		    },
+		    "networkAddress": [
+		        {
+		            "_oid": "51f97481171b7e36601aa781",
+		            "_type": "NetworkAddress"
+		        }
+		    ],
+		    "capacities": [
+		        {
+		            "_type": "ResourceCapacity",
+		            "_branch": "main",
+		            "resourceId": "1001.7.0.71:cpu",
+		            "resourceOwner": "CloudMgr",
+		            "_createtime": 1377230947769,
+		            "_lastmodified": 1377230947769,
+		            "type": "cpu",
+		            "unit" : "Gb",
+		            "total": 24,
+		            "_creator": "_datasync_tocms",
+		            "_oid": "NodeServer!51f97481171b7e36601aa785!capacities!5216e063171bd2d7a58c67d5",
+		            "_modifier": "_datasync_tocms",
+		            "_status": "active"
+		        },
+		        {
+		            "_type": "ResourceCapacity",
+		            "_branch": "main",
+		            "resourceId": "1001.7.0.71:memory",
+		            "resourceOwner": "CloudMgr",
+		            "_createtime": 1377230947769,
+		            "_lastmodified": 1377230947769,
+		            "unit" : "Gb",
+		            "type": "memory",
+		            "total": 77298925568,
+		            "_creator": "_datasync_tocms",
+		            "_oid": "NodeServer!51f97481171b7e36601aa785!capacities!5216e063171bd2d7a58c67d6",
+		            "_modifier": "_datasync_tocms",
+		            "_status": "active"
+		        },
+		        {
+		            "_type": "ResourceCapacity",
+		            "_branch": "main",
+		            "resourceId": "1001.7.0.71:slot",
+		            "resourceOwner": "CloudMgr",
+		            "_createtime": 1377230947769,
+		            "_lastmodified": 1377230947769,
+		            "unit" : "Gb",
+		            "type": "slot",
+		            "total": 12,
+		            "reserved": 0,
+		            "used": 12,
+		            "_creator": "_datasync_tocms",
+		            "_oid": "NodeServer!51f97481171b7e36601aa785!capacities!5216e063171bd2d7a58c67d7",
+		            "_modifier": "_datasync_tocms",
+		            "_status": "active"
+		        }
+		    ]
+		
+		},
+		{
+		    "_creator": "CloudMgr",
+		    "_oid": "51f97661171b7e36601ac17d",
+		    "adminNotes": "waiting for code roll - prjoshi - 2/11/2013",
+		    "_type": "NodeServer",
+		    "_branch": "main",
+		    "resourceId": "1001.7.0.77",
+		    "timezone": "G(UTC+7)",
+		    "_modifier": "_datasync_tocms",
+		    "nodeType": "virtual",
+		    "_comment": "Sync data from ODB to CMS",
+		    "_status": "active",
+		    "healthState": "healthy",
+		    "adminStatus": "NORMAL",
+		    "label": "iii.com",
+		    "_pversion": -1,
+		    "_createtime": 1377231002303,
+		    "assetStatus": "prep",
+		    "_version": 0,
+		    "resourceOwner": "CloudMgr",
+		    "uuid": "564D2906-73B3-08C4-8D6F-F7D2A0D424DA",
+		    "_user": null,
+		    "hostName": {
+		        "_oid": "51f97660171b7e36601ac177",
+		        "_type": "FQDN"
+		    },
+		    "networkAddress": [
+		        {
+		            "_oid": "51f97661171b7e36601ac179",
+		            "_type": "NetworkAddress"
+		        }
+		    ],
+		    "capacities": [
+		        {
+		            "_type": "ResourceCapacity",
+		            "_branch": "main",
+		            "resourceId": "1001.7.0.77:slot",
+		            "resourceOwner": "CloudMgr",
+		            "_createtime": 1377231002267,
+		            "_lastmodified": 1377231002267,
+		            "unit" : "Gb",
+		            "type": "slot",
+		            "total": 2,
+		            "used": 2,
+		            "reserved": 0,
+		            "_creator": "_datasync_tocms",
+		            "_oid": "NodeServer!51f97661171b7e36601ac17d!capacities!5216e09a171bd2d7a58c7a2c",
+		            "_modifier": "_datasync_tocms",
+		            "_status": "active"
+		        }
+		    ]
+		
+		},
+		{
+		    "_creator": "CloudMgr",
+		    "_oid": "51f97670171b7e36601ac240",
+		    "adminNotes": "waiting for code roll - prjoshi - 2/11/2013",
+		    "_type": "NodeServer",
+		    "_branch": "main",
+		    "resourceId": "1001.7.0.83",
+		    "timezone": "G(UTC+7)",
+		    "_modifier": "_datasync_tocms",
+		    "nodeType": "virtual",
+		    "_comment": "Sync data from ODB to CMS",
+		    "_status": "active",
+		    "healthState": "healthy",
+		    "adminStatus": "NORMAL",
+		    "label": "jjj.com",
+		    "_pversion": -1,
+		    "_createtime": 1377231003990,
+		    "assetStatus": "prep",
+		    "_version": 0,
+		    "resourceOwner": "CloudMgr",
+		    "uuid": "564D616B-D441-D355-D395-A5CC80CA07E0",
+		    "_user": null,
+		    "hostName": {
+		        "_oid": "51f9766f171b7e36601ac23a",
+		        "_type": "FQDN"
+		    },
+		    "networkAddress": [
+		        {
+		            "_oid": "51f9766f171b7e36601ac23c",
+		            "_type": "NetworkAddress"
+		        }
+		    ],
+		    "capacities": [
+		        {
+		            "_type": "ResourceCapacity",
+		            "_branch": "main",
+		            "resourceId": "1001.7.0.83:slot",
+		            "resourceOwner": "CloudMgr",
+		            "_createtime": 1377231003957,
+		            "_lastmodified": 1377231003957,
+		            "unit" : "Gb",
+		            "type": "slot",
+		            "total": 2,
+		            "used": 2,
+		            "reserved": 0,
+		            "_creator": "_datasync_tocms",
+		            "_oid": "NodeServer!51f97670171b7e36601ac240!capacities!5216e09b171bd2d7a58c7ad7",
+		            "_modifier": "_datasync_tocms",
+		            "_status": "active"
+		        }
+		    ]
+		
+		},
+		{
+		    "_creator": "CloudMgr",
+		    "_oid": "51f97673171b7e36601ac26d",
+		    "adminNotes": "waiting for code roll - prjoshi - 2/11/2013",
+		    "_type": "NodeServer",
+		    "_branch": "main",
+		    "resourceId": "1001.7.0.81",
+		    "timezone": "G(UTC+7)",
+		    "_modifier": "_datasync_tocms",
+		    "nodeType": "virtual",
+		    "_comment": "Sync data from ODB to CMS",
+		    "_status": "active",
+		    "healthState": "healthy",
+		    "adminStatus": "NORMAL",
+		    "label": "kkk.com",
+		    "_pversion": -1,
+		    "_createtime": 1377231005058,
+		    "assetStatus": "prep",
+		    "_version": 0,
+		    "resourceOwner": "CloudMgr",
+		    "uuid": "564DD6D5-F37D-2456-E236-AB49F146B396",
+		    "_user": null,
+		    "hostName": {
+		        "_oid": "51f97672171b7e36601ac267",
+		        "_type": "FQDN"
+		    },
+		    "networkAddress": [
+		        {
+		            "_oid": "51f97673171b7e36601ac269",
+		            "_type": "NetworkAddress"
+		        }
+		    ],
+		    "capacities": [
+		        {
+		            "_type": "ResourceCapacity",
+		            "_branch": "main",
+		            "resourceId": "1001.7.0.81:slot",
+		            "resourceOwner": "CloudMgr",
+		            "_createtime": 1377231005023,
+		            "_lastmodified": 1377231005023,
+		            "unit" : "Gb",
+		            "type": "slot",
+		            "total": 2,
+		            "used": 2,
+		            "reserved": 0,
+		            "_creator": "_datasync_tocms",
+		            "_oid": "NodeServer!51f97673171b7e36601ac26d!capacities!5216e09d171bd2d7a58c7ae3",
+		            "_modifier": "_datasync_tocms",
+		            "_status": "active"
+		        }
+		    ]
+		
+		},
+		{
+		    "_creator": "CloudMgr",
+		    "_oid": "51f97687171b7e36601ac37e",
+		    "adminNotes": "waiting for code roll - prjoshi - 2/11/2013",
+		    "_type": "NodeServer",
+		    "_branch": "main",
+		    "resourceId": "1001.7.0.15",
+		    "timezone": "G(UTC+7)",
+		    "_modifier": "_datasync_tocms",
+		    "nodeType": "virtual",
+		    "_comment": "Sync data from ODB to CMS",
+		    "_status": "active",
+		    "healthState": "healthy",
+		    "adminStatus": "NORMAL",
+		    "label": "lll.com",
+		    "_pversion": -1,
+		    "_createtime": 1377231007421,
+		    "assetStatus": "prep",
+		    "_version": 0,
+		    "resourceOwner": "CloudMgr",
+		    "uuid": "564DFDCB-0785-F10E-2E09-7A0A0E41A96D",
+		    "_user": null,
+		    "hostName": {
+		        "_oid": "51f97687171b7e36601ac378",
+		        "_type": "FQDN"
+		    },
+		    "networkAddress": [
+		        {
+		            "_oid": "51f97687171b7e36601ac37a",
+		            "_type": "NetworkAddress"
+		        }
+		    ],
+		    "capacities": [
+		        {
+		            "_type": "ResourceCapacity",
+		            "_branch": "main",
+		            "resourceId": "1001.7.0.15:slot",
+		            "resourceOwner": "CloudMgr",
+		            "_createtime": 1377231007385,
+		            "_lastmodified": 1377231007385,
+		            "unit" : "Gb",
+		            "type": "slot",
+		            "total": 2,
+		            "used": 2,
+		            "reserved": 0,
+		            "_creator": "_datasync_tocms",
+		            "_oid": "NodeServer!51f97687171b7e36601ac37e!capacities!5216e09f171bd2d7a58c7bce",
+		            "_modifier": "_datasync_tocms",
+		            "_status": "active"
+		        }
+		    ]
+		
+		},
+		{
+		    "_creator": "CloudMgr",
+		    "_oid": "51f97688171b7e36601ac38d",
+		    "adminNotes": "waiting for code roll - prjoshi - 2/11/2013",
+		    "_type": "NodeServer",
+		    "_branch": "main",
+		    "resourceId": "1001.7.0.61",
+		    "timezone": "G(UTC+7)",
+		    "_modifier": "_datasync_tocms",
+		    "nodeType": "virtual",
+		    "_comment": "Sync data from ODB to CMS",
+		    "_status": "active",
+		    "healthState": "healthy",
+		    "adminStatus": "NORMAL",
+		    "label": "mmm.com",
+		    "_pversion": -1,
+		    "_createtime": 1377231007460,
+		    "assetStatus": "prep",
+		    "_version": 0,
+		    "resourceOwner": "CloudMgr",
+		    "uuid": "564D4B9A-B361-58E9-7064-DFE1D5982D25",
+		    "_user": null,
+		    "hostName": {
+		        "_oid": "51f97688171b7e36601ac387",
+		        "_type": "FQDN"
+		    },
+		    "networkAddress": [
+		        {
+		            "_oid": "51f97688171b7e36601ac389",
+		            "_type": "NetworkAddress"
+		        }
+		    ],
+		    "capacities": [
+		        {
+		            "_type": "ResourceCapacity",
+		            "_branch": "main",
+		            "resourceId": "1001.7.0.61:slot",
+		            "resourceOwner": "CloudMgr",
+		            "_createtime": 1377231007424,
+		            "_lastmodified": 1377231007424,
+		            "unit" : "Gb",
+		            "type": "slot",
+		            "total": 2,
+		            "used": 2,
+		            "reserved": 0,
+		            "_creator": "_datasync_tocms",
+		            "_oid": "NodeServer!51f97688171b7e36601ac38d!capacities!5216e09f171bd2d7a58c7bda",
+		            "_modifier": "_datasync_tocms",
+		            "_status": "active"
+		        }
+		    ]
+		
+		},
+		{
+		    "_creator": "CloudMgr",
+		    "_oid": "51f91782171b7e3660159a8e",
+		    "adminNotes": "CHNGE18138756",
+		    "_type": "NodeServer",
+		    "_branch": "main",
+		    "resourceId": "1001.7.0.80",
+		    "timezone": "G(UTC+7)",
+		    "_modifier": "_datasync_tocms",
+		    "nodeType": "physical",
+		    "_comment": "Sync data from ODB to CMS",
+		    "_status": "active",
+		    "healthState": "healthy",
+		    "adminStatus": "NORMAL",
+		    "label": "nnn.com",
+		    "_pversion": -1,
+		    "_createtime": 1377228283192,
+		    "assetStatus": "live",
+		    "_version": 0,
+		    "resourceOwner": "CloudMgr",
+		    "uuid": "4C4C4544-004C-5310-8032-C2C04F4D4C31",
+		    "_user": null,
+		    "hostName": {
+		        "_oid": "51f8ef84171b24695a36eaaa",
+		        "_type": "FQDN"
+		    },
+		    "networkAddress": [
+		        {
+		            "_oid": "51f8ef85171b24695a36eaac",
+		            "_type": "NetworkAddress"
+		        },
+		        {
+		            "_oid": "5215a6f8171ba5cc52e007f1",
+		            "_type": "NetworkAddress"
+		        }
+		    ],
+		    "capacities": [
+		        {
+		            "_type": "ResourceCapacity",
+		            "_branch": "main",
+		            "resourceId": "1001.7.0.80:cpu",
+		            "resourceOwner": "CloudMgr",
+		            "_createtime": 1377228283158,
+		            "_lastmodified": 1377228283158,
+		            "unit" : "Gb",
+		            "type": "cpu",
+		            "total": 24,
+		            "used": 24,
+		            "reserved": 0,
+		            "_creator": "_datasync_tocms",
+		            "_oid": "NodeServer!51f91782171b7e3660159a8e!capacities!5216d5fb171bd2d7a58833c4",
+		            "_modifier": "_datasync_tocms",
+		            "_status": "active"
+		        },
+		        {
+		            "_type": "ResourceCapacity",
+		            "_branch": "main",
+		            "resourceId": "1001.7.0.80:memory",
+		            "resourceOwner": "CloudMgr",
+		            "_createtime": 1377228283158,
+		            "_lastmodified": 1377228283158,
+		            "unit" : "Gb",
+		            "type": "memory",
+		            "total": 74227336,
+		            "used": 74227336,
+		            "reserved": 0,
+		            "_creator": "_datasync_tocms",
+		            "_oid": "NodeServer!51f91782171b7e3660159a8e!capacities!5216d5fb171bd2d7a58833c5",
+		            "_modifier": "_datasync_tocms",
+		            "_status": "active"
+		        }
+		    ]
+		
+		},
+		{
+		    "_creator": "CloudMgr",
+		    "_oid": "51f94866171b7e3660180e15",
+		    "adminNotes": "CHNGE18138756",
+		    "_type": "NodeServer",
+		    "_branch": "main",
+		    "resourceId": "1001.7.0.59",
+		    "timezone": "G(UTC+7)",
+		    "_modifier": "_datasync_tocms",
+		    "nodeType": "physical",
+		    "_comment": "Sync data from ODB to CMS",
+		    "_status": "active",
+		    "healthState": "healthy",
+		    "adminStatus": "NORMAL",
+		    "label": "ooo.com",
+		    "_pversion": -1,
+		    "_createtime": 1377229788371,
+		    "assetStatus": "live",
+		    "_version": 0,
+		    "resourceOwner": "CloudMgr",
+		    "uuid": "4C4C4544-004C-5310-8032-C2C04F4D4C31",
+		    "_user": null,
+		    "hostName": {
+		        "_oid": "51f94866171b7e3660180e0f",
+		        "_type": "FQDN"
+		    },
+		    "networkAddress": [
+		        {
+		            "_oid": "51f94866171b7e3660180e11",
+		            "_type": "NetworkAddress"
+		        },
+		        {
+		            "_oid": "5215cc8a171bd5d0a09ffb95",
+		            "_type": "NetworkAddress"
+		        }
+		    ],
+		    "capacities": [
+		        {
+		            "_type": "ResourceCapacity",
+		            "_branch": "main",
+		            "resourceId": "1001.7.0.59:cpu",
+		            "resourceOwner": "CloudMgr",
+		            "_createtime": 1377229788332,
+		            "_lastmodified": 1377229788332,
+		            "unit" : "Gb",
+		            "type": "cpu",
+		            "total": 24,
+		            "used": 24,
+		            "reserved": 0,
+		            "_creator": "_datasync_tocms",
+		            "_oid": "NodeServer!51f94866171b7e3660180e15!capacities!5216dbdc171bd2d7a58a857c",
+		            "_modifier": "_datasync_tocms",
+		            "_status": "active"
+		        },
+		        {
+		            "_type": "ResourceCapacity",
+		            "_branch": "main",
+		            "resourceId": "1001.7.0.59:memory",
+		            "resourceOwner": "CloudMgr",
+		            "_createtime": 1377229788332,
+		            "_lastmodified": 1377229788332,
+		            "unit" : "Gb",
+		            "type": "memory",
+		            "total": 74227336,
+		            "used": 74227336,
+		            "reserved": 0,
+		            "_creator": "_datasync_tocms",
+		            "_oid": "NodeServer!51f94866171b7e3660180e15!capacities!5216dbdc171bd2d7a58a857d",
+		            "_modifier": "_datasync_tocms",
+		            "_status": "active"
+		        }
+		    ]
+		
+		},
+		{
+		    "_creator": "CloudMgr",
+		    "_oid": "51f94853171b7e3660180caa",
+		    "adminNotes": "CHNGE18138756",
+		    "_type": "NodeServer",
+		    "_branch": "main",
+		    "resourceId": "1001.7.2.28",
+		    "timezone": "G(UTC+7)",
+		    "_modifier": "_datasync_tocms",
+		    "nodeType": "physical",
+		    "_comment": "Sync data from ODB to CMS",
+		    "_status": "active",
+		    "healthState": "healthy",
+		    "adminStatus": "NORMAL",
+		    "label": "ppp.com",
+		    "_pversion": -1,
+		    "_createtime": 1377229784466,
+		    "assetStatus": "live",
+		    "_version": 0,
+		    "resourceOwner": "CloudMgr",
+		    "uuid": "4C4C4544-004C-5310-8032-C2C04F4D4C31",
+		    "_user": null,
+		    "hostName": {
+		        "_oid": "51f94852171b7e3660180ca4",
+		        "_type": "FQDN"
+		    },
+		    "networkAddress": [
+		        {
+		            "_oid": "51f94853171b7e3660180ca6",
+		            "_type": "NetworkAddress"
+		        },
+		        {
+		            "_oid": "5215cc88171bd5d0a09ffb17",
+		            "_type": "NetworkAddress"
+		        }
+		    ],
+		    "capacities": [
+		        {
+		            "_type": "ResourceCapacity",
+		            "_branch": "main",
+		            "resourceId": "1001.7.2.28:cpu",
+		            "resourceOwner": "CloudMgr",
+		            "_createtime": 1377229784431,
+		            "_lastmodified": 1377229784431,
+		            "unit" : "Gb",
+		            "type": "cpu",
+		            "total": 24,
+		            "used": 24,
+		            "reserved": 0,
+		            "_creator": "_datasync_tocms",
+		            "_oid": "NodeServer!51f94853171b7e3660180caa!capacities!5216dbd8171bd2d7a58a8463",
+		            "_modifier": "_datasync_tocms",
+		            "_status": "active"
+		        },
+		        {
+		            "_type": "ResourceCapacity",
+		            "_branch": "main",
+		            "resourceId": "1001.7.2.28:memory",
+		            "resourceOwner": "CloudMgr",
+		            "_createtime": 1377229784431,
+		            "_lastmodified": 1377229784431,
+		            "unit" : "Gb",
+		            "type": "memory",
+		            "total": 74227336,
+		            "used": 74227336,
+		            "reserved": 0,
+		            "_creator": "_datasync_tocms",
+		            "_oid": "NodeServer!51f94853171b7e3660180caa!capacities!5216dbd8171bd2d7a58a8464",
+		            "_modifier": "_datasync_tocms",
+		            "_status": "active"
+		        }
+		    ]
+		
+		},
+		{
+		    "_creator": "CloudMgr",
+		    "_oid": "51f94852171b7e3660180c9d",
+		    "adminNotes": "CHNGE18138756",
+		    "_type": "NodeServer",
+		    "_branch": "main",
+		    "resourceId": "1001.7.2.33",
+		    "timezone": "G(UTC+7)",
+		    "_modifier": "_datasync_tocms",
+		    "nodeType": "physical",
+		    "_comment": "Sync data from ODB to CMS",
+		    "_status": "active",
+		    "healthState": "healthy",
+		    "adminStatus": "NORMAL",
+		    "label": "qqq.com",
+		    "_pversion": -1,
+		    "_createtime": 1377229784727,
+		    "assetStatus": "live",
+		    "_version": 0,
+		    "resourceOwner": "CloudMgr",
+		    "uuid": "4C4C4544-004C-5310-8032-C2C04F4D4C31",
+		    "_user": null,
+		    "hostName": {
+		        "_oid": "51f94852171b7e3660180c97",
+		        "_type": "FQDN"
+		    },
+		    "networkAddress": [
+		        {
+		            "_oid": "51f94852171b7e3660180c99",
+		            "_type": "NetworkAddress"
+		        },
+		        {
+		            "_oid": "5215cc88171bd5d0a09ffb25",
+		            "_type": "NetworkAddress"
+		        }
+		    ],
+		    "capacities": [
+		        {
+		            "_type": "ResourceCapacity",
+		            "_branch": "main",
+		            "resourceId": "1001.7.2.33:cpu",
+		            "resourceOwner": "CloudMgr",
+		            "_createtime": 1377229784691,
+		            "_lastmodified": 1377229784691,
+		            "unit" : "Gb",
+		            "type": "cpu",
+		            "total": 24,
+		            "used": 24,
+		            "reserved": 0,
+		            "_creator": "_datasync_tocms",
+		            "_oid": "NodeServer!51f94852171b7e3660180c9d!capacities!5216dbd8171bd2d7a58a847b",
+		            "_modifier": "_datasync_tocms",
+		            "_status": "active"
+		        },
+		        {
+		            "_type": "ResourceCapacity",
+		            "_branch": "main",
+		            "resourceId": "1001.7.2.33:memory",
+		            "resourceOwner": "CloudMgr",
+		            "_createtime": 1377229784691,
+		            "_lastmodified": 1377229784691,
+		            "unit" : "Gb",
+		            "type": "memory",
+		            "total": 74227336,
+		            "used": 74227336,
+		            "reserved": 0,
+		            "_creator": "_datasync_tocms",
+		            "_oid": "NodeServer!51f94852171b7e3660180c9d!capacities!5216dbd8171bd2d7a58a847c",
+		            "_modifier": "_datasync_tocms",
+		            "_status": "active"
+		        }
+		    ]
+		},
+		{
+		    "_creator": "CloudMgr",
+		    "_oid": "51f977a9171b7e36601ad434",
+		    "adminNotes": "waiting for code roll - prjoshi - 2/11/2013",
+		    "_type": "NodeServer",
+		    "_branch": "main",
+		    "resourceId": "1001.7.6.56",
+		    "timezone": "G(UTC+7)",
+		    "_modifier": "_datasync_tocms",
+		    "nodeType": "virtual",
+		    "_comment": "Sync data from ODB to CMS",
+		    "_status": "active",
+		    "healthState": "healthy",
+		    "adminStatus": "NORMAL",
+		    "label": "rrr.com",
+		    "_pversion": -1,
+		    "_createtime": 1377231034552,
+		    "assetStatus": "prep",
+		    "_version": 0,
+		    "resourceOwner": "CloudMgr",
+		    "uuid": "564D09FA-B372-2F90-C680-EDB62CFE94EA",
+		    "_user": null,
+		    "hostName": {
+		        "_oid": "51f977a8171b7e36601ad42e",
+		        "_type": "FQDN"
+		    },
+		    "networkAddress": [
+		        {
+		            "_oid": "51f977a8171b7e36601ad430",
+		            "_type": "NetworkAddress"
+		        }
+		    ],
+		    "capacities": [
+		        {
+		            "_type": "ResourceCapacity",
+		            "_branch": "main",
+		            "resourceId": "1001.7.6.56:slot",
+		            "resourceOwner": "CloudMgr",
+		            "_createtime": 1377231034516,
+		            "_lastmodified": 1377231034516,
+		            "unit" : "Gb",
+		            "type": "slot",
+		            "total": 2,
+		            "used": 2,
+		            "reserved": 0,
+		            "_creator": "_datasync_tocms",
+		            "_oid": "NodeServer!51f977a9171b7e36601ad434!capacities!5216e0ba171bd2d7a58c87c0",
+		            "_modifier": "_datasync_tocms",
+		            "_status": "active"
+		        }
+		    ]
+		
+		}
+
+	],
+	
+	"ClassOfService" : [
+		{
+			"healthState": "healthy",
+			"_lastmodified": 1376034413818,
+			"_creator": "CloudMgr",
+			"_oid": "51d675cd171b3cb034c00d48",
+			"label": "Production",
+			"_pversion": -1,
+			"_createtime": 1376034413818,
+			"_branch": "main",
+			"_type": "ClassOfService",
+			"resourceId": "Production",
+			"_version": 0,
+			"resourceOwner": "CloudMgr",
+			"_modifier": "_datasync_tocms",
+			"_comment": "Sync data from ODB to CMS",
+			"_status": "active",
+			"_user": null
+		}, {
+			"healthState": "healthy",
+			"_lastmodified": 1376034413818,
+			"_creator": "CloudMgr",
+			"_oid": "51d675cd171b3cb034c00d4c",
+			"label": "QA",
+			"_pversion": -1,
+			"_createtime": 1376034413818,
+			"_branch": "main",
+			"_type": "ClassOfService",
+			"resourceId": "QA",
+			"_version": 0,
+			"resourceOwner": "CloudMgr",
+			"_modifier": "_datasync_tocms",
+			"_comment": "Sync data from ODB to CMS",
+			"_status": "active",
+			"_user": null
+		}, {
+			"healthState": "healthy",
+			"_lastmodified": 1376034413818,
+			"_creator": "CloudMgr",
+			"_oid": "51d675cd171b3cb034c00d50",
+			"label": "Experimentation",
+			"_pversion": -1,
+			"_createtime": 1376034413818,
+			"_branch": "main",
+			"_type": "ClassOfService",
+			"resourceId": "Experimentation",
+			"_version": 0,
+			"resourceOwner": "CloudMgr",
+			"_modifier": "_datasync_tocms",
+			"_comment": "Sync data from ODB to CMS",
+			"_status": "active",
+			"_user": null
+		}, {
+			"healthState": "healthy",
+			"_lastmodified": 1376034413818,
+			"_creator": "CloudMgr",
+			"_oid": "51d675cd171b3cb034c00d54",
+			"label": "Pre-Production",
+			"_pversion": -1,
+			"_createtime": 1376034413818,
+			"_branch": "main",
+			"_type": "ClassOfService",
+			"resourceId": "Pre-Production",
+			"_version": 0,
+			"resourceOwner": "CloudMgr",
+			"_modifier": "_datasync_tocms",
+			"_comment": "Sync data from ODB to CMS",
+			"_status": "active",
+			"_user": null
+		}, {
+			"healthState": "healthy",
+			"_lastmodified": 1376034413818,
+			"_creator": "CloudMgr",
+			"_oid": "51d675cd171b3cb034c00d58",
+			"label": "Infrastructure",
+			"_pversion": -1,
+			"_createtime": 1376034413818,
+			"_branch": "main",
+			"_type": "ClassOfService",
+			"resourceId": "Infrastructure",
+			"_version": 0,
+			"resourceOwner": "CloudMgr",
+			"_modifier": "_datasync_tocms",
+			"_comment": "Sync data from ODB to CMS",
+			"_status": "active",
+			"_user": null
+		}, {
+			"healthState": "healthy",
+			"_lastmodified": 1376034413822,
+			"_creator": "CloudMgr",
+			"_oid": "51d675cd171b3cb034c00d5c",
+			"label": "DEV",
+			"_pversion": -1,
+			"_createtime": 1376034413822,
+			"_branch": "main",
+			"_type": "ClassOfService",
+			"resourceId": "DEV",
+			"_version": 0,
+			"resourceOwner": "CloudMgr",
+			"_modifier": "_datasync_tocms",
+			"_comment": "Sync data from ODB to CMS",
+			"_status": "active",
+			"_user": null
+		}, {
+			"healthState": "healthy",
+			"_lastmodified": 1376034413818,
+			"_creator": "CloudMgr",
+			"_oid": "51d675cd171b3cb034c00d60",
+			"label": "Sandbox",
+			"_pversion": -1,
+			"_createtime": 1376034413818,
+			"_branch": "main",
+			"_type": "ClassOfService",
+			"resourceId": "Sandbox",
+			"_version": 0,
+			"resourceOwner": "CloudMgr",
+			"_modifier": "_datasync_tocms",
+			"_comment": "Sync data from ODB to CMS",
+			"_status": "active",
+			"_user": null
+		}, {
+			"healthState": "healthy",
+			"_lastmodified": 1376034413819,
+			"_creator": "CloudMgr",
+			"_oid": "51d675cd171b3cb034c00d64",
+			"label": "LnP",
+			"_pversion": -1,
+			"_createtime": 1376034413819,
+			"_branch": "main",
+			"_type": "ClassOfService",
+			"resourceId": "LnP",
+			"_version": 0,
+			"resourceOwner": "CloudMgr",
+			"_modifier": "_datasync_tocms",
+			"_comment": "Sync data from ODB to CMS",
+			"_status": "active",
+			"_user": null
+		}, {
+			"healthState": "healthy",
+			"_lastmodified": 1376034413818,
+			"_creator": "CloudMgr",
+			"_oid": "51d675cd171b3cb034c00d68",
+			"label": "Staging",
+			"_pversion": -1,
+			"_createtime": 1376034413818,
+			"_branch": "main",
+			"_type": "ClassOfService",
+			"resourceId": "Staging",
+			"_version": 0,
+			"resourceOwner": "CloudMgr",
+			"_modifier": "_datasync_tocms",
+			"_comment": "Sync data from ODB to CMS",
+			"_status": "active",
+			"_user": null
+		}, {
+			"healthState": "healthy",
+			"_lastmodified": 1373009357841,
+			"_creator": "CloudMgr",
+			"_oid": "51d675cd171b3cb034c00d6c",
+			"label": "MQA",
+			"_pversion": -1,
+			"_createtime": 1373009357841,
+			"_branch": "main",
+			"_type": "ClassOfService",
+			"resourceId": "MQA",
+			"_version": 0,
+			"_modifier": "_datasync_tocms",
+			"_comment": "Sync data from ODB to CMS",
+			"_status": "active",
+			"_user": null
+		}
+	],
+	
+	
+	"PolicyGroup" : [
+		{
+			"_oid" : "51e5ff3ee4b0f20e66499726",
+			"resourceId": "QA-Policy-Group",
+			"compatibleCos" : {
+				"_oid": "51d675cd171b3cb034c00d4c",
+				"_type": "ClassOfService"
+			},
+			"iaasPolicy" : {
+			},
+			"paasPolicy": {
+			}
+		},
+		{
+			"_oid" : "51e5ff3ee4b0f20e66499728",
+			"resourceId": "Prod-Policy-Group",
+			"compatibleCos" : {
+				"_oid": "51d675cd171b3cb034c00d48",
+				"_type": "ClassOfService"
+			},
+			"iaasPolicy" : {
+			},
+			"paasPolicy": {
+			}
+		},
+		{
+			"_oid" : "51e5ff3ee4b0f20e66499527",
+			"resourceId": "LnP-Policy-Group",
+			"compatibleCos" : {
+				"_oid": "51d675cd171b3cb034c00d64",
+				"_type": "ClassOfService"
+			},
+			"iaasPolicy" : {
+			},
+			"paasPolicy": {
+			}
+		}
+	],
+	
+	"Manifest" : [
+		{
+			"_oid" : "51e5ff3ee4b0f20e6850612",
+			"resourceId": "Manifest-Test",
+			"softwareVersion" : "1.0.5-SNAPSHOT",
+			"approvals" : [
+				{
+					"_lastmodified": 1374027582408,
+					"_creator": "_CMS_QA_ADMIN",
+					"approver": "gisreepathi",
+					"_oid": "51e5ff3ee4b0f20e6649e5cf",
+					"applicationId": "urn: ebay-marketplace-testapp-id1",
+					"_pversion": -1,
+					"_createtime": 1374027582408,
+					"_type": "ManifestApproval",
+					"_branch": "main",
+					"resourceId": "ManifestTest1",
+					"_version": 0,
+					"_modifier": "_CMS_QA_ADMIN",
+					"_comment": null,
+					"_status": "active",
+					"_user": null,
+					"policyGroup" : "Sandbox"
+				},
+				{
+					"_lastmodified": 1374027582408,
+					"_creator": "_CMS_QA_ADMIN",
+					"approver": "gisreepathi",
+					"_oid": "51e5ff3ee4b0f20e6851206",
+					"applicationId": "urn: ebay-marketplace-testapp-id1",
+					"_pversion": -1,
+					"_createtime": 1374027582408,
+					"_type": "ManifestApproval",
+					"_branch": "main",
+					"resourceId": "ManifestTest2",
+					"_version": 0,
+					"_modifier": "_CMS_QA_ADMIN",
+					"_comment": null,
+					"_status": "active",
+					"_user": null,
+					"policyGroup" : "Infrastructure"
+				},
+				{
+					"_lastmodified": 1374027582408,
+					"_creator": "_CMS_QA_ADMIN",
+					"approver": "gisreepathi",
+					"_oid": "51e5ff3ee4b0f20e6870424",
+					"applicationId": "urn: ebay-marketplace-testapp-id1",
+					"_pversion": -1,
+					"_createtime": 1374027582408,
+					"_type": "ManifestApproval",
+					"_branch": "main",
+					"resourceId": "ManifestTest3",
+					"_version": 0,
+					"_modifier": "_CMS_QA_ADMIN",
+					"_comment": null,
+					"_status": "active",
+					"_user": null,
+					"policyGroup" : "QA"
+				}
+			]
+		}
+	]
+
+}

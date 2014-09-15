@@ -1,0 +1,23 @@
+{
+	"name": "StrategySegment",
+	"description": "a segment within an update strategy",
+	"parent": "Resource",
+	"pluralName": "StrategySegments",
+	"fields": {
+		"targetFilters": {
+			"description": "a list of filter queries for resources for 'explicit' type segments",
+			"dataType": "string",
+			"cardinality": "Many"
+		},
+		"distribution": {
+			"description": "number of nodes to select for this segment. Append '%' for percentage.  For 'random' type segments",
+			"dataType": "string"
+		},
+		"passThreshold": {
+			"description": "pass threshold count for this segment.  Append '%' to use percentage instead of count",
+			"dataType": "string",
+			"defaultValue": "0",
+			"mandatory": true
+		}
+	}
+}

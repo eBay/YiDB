@@ -1,0 +1,41 @@
+{ 
+	"name": "Package",
+	"pluralName": "Packages",
+	"parent": "Resource",
+	"description": "a software package",
+	"fields": {
+		"version": {
+			"description": "version of this package",
+			"dataType": "string",
+			"mandatory": true			
+		},		
+		"externalId": {
+			"description": "location of package",
+			"dataType": "string",
+			"mandatory": true			
+		},
+		"type": {
+			"description": "package type",
+			"dataType": "string"
+		},
+		"status": {
+			"description": "Status of package",
+			"dataType": "enumeration",
+			"defaultValue" : "available",
+			"enumValues": ["available", "obsoleted", "deprecated"]
+		}
+	},
+	"options": {
+		"indexes":{
+		    "externalIdIndex":{
+		        "indexName": "externalIdIndex",
+			    "keyList": ["externalId"]
+			},
+		    "versionIndex":{
+		        "indexName": "versionIndex",
+			    "keyList": ["version"]
+			}
+		}
+	}
+
+}

@@ -1,0 +1,24 @@
+{
+	"name": "Identity",
+	"pluralName": "Identities",
+	"parent": "Resource",
+	"description": "identity within Stratus",
+	"fields": {
+		"contact": {
+			"description": "account contact information",
+			"dataType": "relationship",
+			"refDataType": "Contact",
+			"relationType": "Reference"
+		},
+		"externalId" : {
+			"description": "external system identifier (e.g. LDAP)",
+			"dataType": "string"
+		},
+		"identityType": {
+			"description": "type of identity",
+			"dataType": "enumeration",
+			"enumValues": [ "USER", "GROUP" ],
+			"mandatory": true
+		}
+	}	
+}

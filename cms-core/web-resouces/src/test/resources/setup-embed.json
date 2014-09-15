@@ -1,0 +1,23 @@
+{
+    "name": "EmbeddedTest4Index",
+    "pluralName": "EmbeddedTest4Index",
+    "description": "Embed",
+    "repository": "raptor-paas",
+    "allowFullTableScan": true,
+    "fields": {
+        "name": {
+            "name": "name",
+            "dataType": "string",
+	    "cardinality": "Many"
+        },
+        "number": {
+            "name": "number",
+            "dataType": "integer"
+        },
+        "label": {
+            "name": "label",
+            "dataType": "string"
+        }
+    },
+    "embed": true
+}

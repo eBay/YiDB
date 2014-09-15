@@ -1,0 +1,89 @@
+{
+	"description":"A Load Balancer Pool (note that eBay pools have no IP address)",
+	"name" : "LBPool",
+	"pluralName":"LBPool",
+	"parent": "Resource",
+	"fields" : {
+		"method":{
+			"description":"load balancing methods (only common ones)",
+			"mandatory":true,
+			"enumValues": [
+				      "ROUND_ROBIN",
+				      "RATIO_MEMBER",
+				      "LEAST_CONNECTION_MEMBER",
+				      "OBSERVED_MEMBER",
+				      "PREDICTIVE_MEMBER",
+				      "RATIO_NODE_ADDRESS",
+				      "LEAST_CONNECTION_NODE_ADDRESS",
+				      "FASTEST_NODE_ADDRESS",
+				      "OBSERVED_NODE_ADDRESS",
+				      "PREDICTIVE_NODE_ADDRESS",
+				      "DYNAMIC_RATIO",
+				      "FASTEST_APP_RESPONSE",
+				      "LEAST_SESSIONS",
+				      "DYNAMIC_RATIO_MEMBER",
+				      "L3_ADDR",
+				      "UNKNOWN",
+				      "WEIGHTED_LEAST_CONNECTION_MEMBER",
+				      "WEIGHTED_LEAST_CONNECTION_NODE_ADDRESS",
+				      "RATIO_SESSION",
+				      "RATIO_LEAST_CONNECTION_MEMBER",
+				      "RATIO_LEAST_CONNECTION_NODE_ADDRESS",
+				      "LEASTCONNECTION",
+				      "ROUNDROBIN",
+				      "LEASTRESPONSETIME",
+				      "URLHASH",
+				      "DOMAINHASH",
+				      "DESTINATIONIPHASH",
+				      "SOURCEIPHASH",
+				      "SRCIPDESTIPHASH",
+				      "CALLIDHASH",
+				      "SRCIPSRCPORTHASH",
+				      "LEASTBANDWIDTH",
+				      "LEASTPACKETS",
+				      "CUSTOMLOAD",
+				      "TOKEN",
+				      "LRTM"
+				      ],
+			"dataType":"enumeration",
+			"cardinality":"One"
+		},
+		"lbService":{
+			"description":"The lb manages this pool",
+			"mandatory":true,
+			"refDataType": "LBService",
+			"relationType": "Reference",
+			"dataType": "relationship",
+			"cardinality": "One"
+		},
+		"services":{
+			"description":"list of services that are members of this pool",
+			"mandatory":false,
+			"refDataType": "LBMemberOf",
+			"relationType": "Inner",
+			"dataType": "relationship",
+			"cardinality": "Many"
+		},
+		"networkAddress":{
+			"description":"The IP address object corresponding to virtual IP",
+			"refDataType": "NetworkAddress",
+			"relationType": "Reference",
+			"dataType": "relationship",
+			"cardinality": "One"
+		},
+		"port":{
+			"description":"The TCP/IP port",
+			"mandatory":false,
+			"dataType":"integer",
+			"cardinality":"One"
+		},
+		"protocol":{
+			"description":"the protocol",
+			"mandatory":false,
+			"enumValues": ["Any","TCP","DNS","UDP","FTP","RADIUS","HTTP","RTSP","SIP_UDP","SSL","SSL_TCP"],
+			"dataType":"enumeration",
+			"cardinality":"One"
+		}
+
+	}
+}

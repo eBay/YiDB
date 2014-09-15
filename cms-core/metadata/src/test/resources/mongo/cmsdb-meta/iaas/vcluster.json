@@ -1,0 +1,55 @@
+{ 
+	"name": "VCluster",
+	"pluralName": "VClusters",
+	"parent": "Resource",
+	"description": "The VCluster class",
+	"fields": {
+		"computes": {
+			"description": "computes this cluster owns",
+			"dataType": "relationship",
+			"refDataType": "Compute",
+			"relationType": "Reference",
+			"cardinality": "Many",
+			"mandatory": false
+		},
+                "accessPoints": {
+			"description": "access point this pool owned",
+			"dataType": "relationship",
+			"refDataType": "AccessPoint",
+			"relationType": "Reference",
+                        "cardinality": "Many",
+			"mandatory": false
+		},
+                "lbPool": {
+			"description": "lbPool in this Cluster",
+			"dataType": "relationship",
+			"refDataType": "LBPool",
+			"relationType": "Reference",
+                        "cardinality": "Many",
+			"mandatory": false
+		},
+                "vcsResourceGroups": {
+			"description": "ResourceGroups for VCS",
+			"dataType": "relationship",
+			"refDataType": "VCSResourceGroup",
+			"relationType": "Reference",
+                        "cardinality": "Many",
+			"mandatory": false
+		},
+		"environment": {
+			"description": "the environment this Resource belongs to",
+			"dataType": "relationship",
+			"consistencyType" : "Strong",
+			"mandatory": true,
+			"relationType": "Reference",
+			"refDataType": "Environment"
+		},
+		"region": {
+			"description": "the region of this cluster",
+			"dataType": "relationship",
+			"mandatory": true,
+			"relationType": "Reference",
+			"refDataType": "Region"
+		}
+	}
+}

@@ -1,0 +1,34 @@
+{
+	"name": "Account",
+	"pluralName": "Accounts",
+	"parent": "Resource",
+	"description": "CMS Account class",
+	"fields": {
+		"dl": {
+                        "description": "the DL for this account",
+                        "dataType": "string",
+                        "mandatory": true
+		},
+		"accountType": {
+			"description": "type of this account",
+			"dataType": "enumeration",
+			"enumValues": [ "CORP_ID", "DEDICATE_TEAM","DOMAIN" ],
+			"mandatory": true
+		},
+		"lifeCycleState": {
+			"description": "life cycle state of this acount",
+			"dataType": "enumeration",
+			"enumValues": [ "Active", "Disabled" ],
+			"mandatory": true
+		},
+		"organization": {
+			"description": "organization associated with this account",
+			"dataType": "relationship",
+			"refDataType": "Organization",
+			"relationType": "Reference",
+			"cardinality": "One",
+			"mandatory": true
+
+		}
+	}
+}

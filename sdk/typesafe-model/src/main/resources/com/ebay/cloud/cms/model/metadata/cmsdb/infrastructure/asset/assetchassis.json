@@ -1,0 +1,88 @@
+{
+	"description":"A physical chassis",
+	"name" : "AssetChassis",
+	"pluralName":"Assetchassises",
+	"parent": "Resource",
+	"fields" : {
+		"asset":{
+			"description":"The asset",
+			"refDataType": "Asset",
+			"relationType": "Reference",
+			"dataType": "relationship",
+			"cardinality": "One"
+		},
+		"nodeLom":{
+			"description":"NodeLom for this chassis",
+			"refDataType": "NodeServer",
+			"relationType": "Reference",
+			"dataType": "relationship",
+			"cardinality": "One"
+		},
+		"type":{
+			"description":"the chassis type",
+			"mandatory":true,
+			"dataType":"string",
+			"cardinality":"One"
+		},
+		"sid":{
+			"description":"the chassis sid",
+			"mandatory":true,
+			"dataType":"string",
+			"cardinality":"One"
+		},
+		"uuid":{
+			"description":"the chassis uuid",
+			"mandatory":true,
+			"dataType":"string",
+			"cardinality":"One"
+		},
+		"modelType":{
+			"description":"the chassis modelType",
+			"mandatory":true,
+			"dataType":"string",
+			"cardinality":"One"
+		},
+		"power":{
+			"description":"the chassis power",
+			"mandatory":true,
+			"dataType":"string",
+			"cardinality":"One"
+		},
+		"powerAllocated":{
+			"description":"the chassis power allocated",
+			"mandatory":true,
+			"dataType":"string",
+			"cardinality":"One"
+		},
+		"powerMode":{
+			"description":"the chassis power mode",
+			"mandatory":true,
+			"dataType":"string",
+			"cardinality":"One"
+		},
+		"dynamicPower":{
+			"description":"the chassis dynamic power",
+			"mandatory":true,
+			"dataType":"string",
+			"cardinality":"One"
+		},
+		"version":{
+			"description":"the chassis version",
+			"mandatory":true,
+			"dataType":"string",
+			"cardinality":"One"
+		},
+		"powerSupplyCount":{
+			"description":"the chassis powerSupplyCount",
+			"mandatory":true,
+			"dataType":"string",
+			"cardinality":"One"
+		},
+		"ratedPower":{
+			"description":"the chassis ratedPower",
+			"mandatory":true,
+			"dataType":"string",
+			"cardinality":"One"
+		}
+	}
+}

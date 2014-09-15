@@ -1,0 +1,78 @@
+{
+	"description":"An IPv4 or IPv6 address",
+	"name" : "NetworkAddress",
+	"pluralName":"NetworkAddresses",
+	"parent": "Resource",
+	"fields":{
+		"address":{
+			"description":"IPv4 or IPv6 address",
+			"mandatory":true,
+			"dataType":"string",
+			"cardinality":"One"			    
+		},
+		"ipVersion":{
+			"description":"define the version of the IP address",
+			"mandatory":true,
+			"enumValues": ["IPv4","IPv6"],
+			"dataType":"enumeration",
+			"cardinality":"One"
+		},
+		"vendor":{
+			"description":"The vendor of this ip node, discoverred by tools",
+			"mandatory":false,
+			"enumValues": [
+				      "bigip",
+				      "netscaler",
+				      "clariion",
+				      "netapp",
+				      "ironport",
+				      "cisco",
+				      "net-snmp",
+				      "ibm-blade",
+				      "sun",
+				      "hp",
+				      "brocade",
+				      "avaya",
+				      "juniper",
+				      "bluecoat",
+				      "compaq",
+				      "silverpeak",
+				      "polycom",
+				      "arista",
+				      "apc",
+				      "liebert",
+				      "tandberg",
+				      "ucd-snmp",
+				      "dell",
+				      "vmware",
+				      "nokia",
+				      "hitachi",
+				      "microsoft",
+				      "excide",
+				      "xerox",
+				      "force10",
+				      "telepresence",
+				      "lattitude",
+				      "netlabs",
+				      "pan",
+				      "dialogic",
+				      "niksun",
+				      "lannet"],	
+			"dataType":"enumeration",
+			"cardinality":"One"
+		}
+	},
+	"options": {
+		"indexes": {
+		        "addressIndex":{
+				"indexName": "addressIndex",
+				"keyList": ["address"]
+		        },
+		        "vendorIndex":{
+				"indexName": "vendorIndex",
+				"keyList": ["vendor"]
+		        }
+	        }
+        }
+
+}

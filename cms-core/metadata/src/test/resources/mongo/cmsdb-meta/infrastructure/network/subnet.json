@@ -1,0 +1,78 @@
+{
+	"description":"A physical or virtual subnet",
+	"name" : "Subnet",
+	"pluralName":"Subnets",
+	"parent": "Resource",
+	"fields":{
+		"sourceId": {
+			"description":"The sourceid of the resource ",
+			"mandatory":true,
+			"dataType": "string",
+			"cardinality": "One"
+		},
+		"gateway":{
+			"description":"a network device routing packets between subnets",
+			"mandatory":true,
+			"refDataType": "NetworkAddress",
+			"relationType": "Reference",
+			"dataType": "relationship",
+			"cardinality": "One"
+		},
+		"adminStatus":{
+			"description":"adminstatus of this subnet",
+			"mandatory":true,
+			"dataType":"string",
+			"cardinality":"One"
+		},
+		"dhcpServers":{
+			"description":"The DHCPServer of this network",
+			"refDataType": "NodeServer",
+			"relationType": "Reference",
+			"dataType": "relationship",
+			"cardinality": "Many"
+		},
+		"broadcast":{
+			"description":"The broadcast address for this network",
+			"refDataType": "NetworkAddress",
+			"relationType": "Reference",
+			"dataType": "relationship",
+			"cardinality": "One"
+		},
+		"netmask":{
+			"description":"The net mask for this network",
+			"mandatory":true,
+			"dataType":"string",
+			"cardinality":"One"
+		},
+		"networkAddress":{
+			"description":"The network address for this network",
+			"refDataType": "NetworkAddress",
+			"relationType": "Reference",
+			"dataType": "relationship",
+			"cardinality": "One"
+		},
+		"productionLevel":{
+			"description":"production service level",
+			"mandatory":true,
+			"dataType":"string"
+		},
+		"dataCenter":{
+			"mandatory":false,
+			"description":"The datacenter",
+			"refDataType": "DataCenter",
+			"relationType": "Reference",
+            		"dataType": "relationship",
+            		"cardinality": "One"
+		}
+	},
+        "options": {
+                "indexes": {
+                        "sourceIdIndex":{
+                                "indexName": "sourceIdIndex",
+                                "keyList": ["sourceId"]
+                        }
+                }
+        }
+
+
+}

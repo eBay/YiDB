@@ -1,0 +1,58 @@
+{
+	"name": "ServiceInstance",
+	"pluralName": "ServiceInstances",
+	"parent": "Resource",
+	"description": "an application service node",
+	"fields": {
+		"activeManifestRef": {
+			"description": "software manifest that should be active on this service node",
+			"dataType": "string"
+		},
+		"appports": {
+			"description": "port list",
+			"dataType": "string",
+			"cardinality": "Many",
+			"mandatory": false
+		},
+		"activeManifestCur": {
+			"description": "software manifest that is active on this service node",
+			"dataType": "string"
+		},
+		"activeManifestDiff":{
+			"description": "check whether there exists difference between activeManifestRef & activeManifestCur",
+			"dataType":"boolean",
+			"defaultValue": false,
+			"expression": "$activeManifestCur !== $activeManifestRef"
+		},
+		"installedManifestsRef": {
+			"description": "list of manifests that should be installed on this service node",
+			"dataType": "string",
+			"cardinality": "Many"
+		},
+		"installedManifestsCur": {
+			"description": "list of manifests that are installed on this service node",
+			"dataType": "string",
+			"cardinality": "Many"
+		},
+		"installedManifestDiff":{
+			"description": "check whether there exists difference between installedManifestsCur & installedManifestsRef",
+			"dataType":"boolean",
+			"defaultValue": false,
+			"expression":  "if ( $installedManifestsRef ==null || $installedManifestsCur == null) { false; } else {curCount = 0; $installedManifestsRef.forEach(function check(x){if ($installedManifestsCur.indexOf(x) == -1){curCount++}});refCount=0;$installedManifestsRef.forEach(function check(x){if ($installedManifestsCur.indexOf(x) == -1){refCount++}}); curCount==0 && refCount==0;}"
+		},
+		"runsOn": {
+			"description": "compute object that this service instance node runs on",
+			"dataType": "relationship",
+			"refDataType": "Compute",
+			"relationType": "Reference"
+		},
+		"buildId" : {
+			"description": "This is used to identify the buildId of this service",
+                        "dataType": "string"
+		},
+		"serverName" : {
+			"description": "The middleware installed on this serviceInstance, such as Oracle, Tomcat etc.",
+                        "dataType": "string" 
+		}
+	}
+}

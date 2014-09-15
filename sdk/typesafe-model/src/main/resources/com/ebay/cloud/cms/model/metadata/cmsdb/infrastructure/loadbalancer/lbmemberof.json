@@ -1,0 +1,66 @@
+{
+	"description":"LB member class ",
+	"name" : "LBMemberOf",
+	"pluralName":"LBMemberOfs",
+	"parent": "Resource",
+	"inner" : true,
+	"fields" : {
+		"enabled": {
+			"description":"Enabled or not for this relationship",
+			"mandatory":false,
+			"dataType":"boolean",
+			"cardinality":"One"
+		},
+		"weight": {
+			"description":"Weight used by load balancing method",
+			"mandatory":false,
+			"dataType":"integer",
+			"cardinality":"One"
+		},
+		"connectionLimit":{
+			"description":"Connection Limit",
+			"mandatory":false,
+			"dataType":"integer",
+			"cardinality":"One"
+		},
+		"tcpBuffering": {
+			"description":"TCP Buffering",
+			"mandatory":false,
+			"dataType":"boolean",
+			"cardinality":"One"
+		},
+		"clientKeepLive": {
+			"description":"keep client live",
+			"mandatory":false,
+			"dataType":"boolean",
+			"cardinality":"One"
+		},
+		"clientIpEnabled": {
+			"description":"Define if Client IP is passed in the HTTP header",
+			"mandatory":false,
+			"dataType":"boolean",
+			"cardinality":"One"
+		},
+		"clientIPIdentifier":{
+			"description":"The client IP identifier",
+			"mandatory":false,
+			"dataType":"string",
+			"cardinality":"One"
+		},
+		"lbMember":{
+			"description":"lb end point this pool point to",
+			"refDataType": "LBMember",
+			"relationType": "Reference",
+			"dataType": "relationship",
+			"cardinality": "One"
+		},
+		"opsState":{
+			"description":"States used to drive provisioning and remediation transitions",
+			"mandatory":false,
+            "enumValues":["up","down","outofservice","busy","transition2outofservice","transition2outofservicedown","unknown"],
+			"dataType":"enumeration",
+			"cardinality":"One"
+		}
+	}
+}
+

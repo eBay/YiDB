@@ -1,0 +1,55 @@
+#Each line in this file is considered as an entry
+#If an entry starts with character '#' (like this entry), then it is ignored as comment
+#For more information on this properties, refer to 
+
+#By default, the service manager will scan all classes in the CLASSPATH while looking for controller
+#This can be a time consuming operation. The scanFilters help in narrowing the scope of this scanning
+#Enter the pkg names where controllers can be found
+#Each separate package will be in separate lines
+#If scanfilter entries are present, then we will scan only the classes in these packages
+#If scanfilter entries are not present at all, then all classes in the classpath will be scanned
+#If the value of a scanfilter starts with character '!' then all classes in the specified package are ignored
+scanfilter1=com.ebay
+
+#This flag, indicates if the service manager instance is going to run in stand alone mode or not. 
+#Stand alone mode is useful when a developer wants to test a service manager instance w/o it registering itself with
+#the registry, responding to heartbeats etc etc
+#Set this flag to false or remove flag from this file, if the service manager instance is being deployed in QA/production
+#If this flag is not there, then the instance is in stand alone mode
+##stand-alone-mode=true
+
+#The 'scope' property defines the scope of this controller. Valid values are GLOBAL / LOCAL
+##scope=GLOBAL
+
+#The 'tracker-path' property defines the path used in Event Tracking  Should be simple string, it will
+#be dot separated and combined with others to form a complex path
+##tracker-path=SMGingerWar
+
+#This URL tells service manager where global registry is located; this will be used for home grown 
+#(service manager based) global registry implementation
+
+#This comma separated host:port combo gives the list zookeeper instances this service manager can talk to
+#It is expected that each service manager will be configured with one such list for each data center 
+##zookeeper-instance-list-SLC=localhost:2181
+##zookeeper-instance-list-LVS=localhost:2182
+##zookeeper-instance-list-PHX=localhost:2183
+
+#This specifies a timeout value for zookeeper sessions
+##zookeeper-session-timeout=9999
+
+#This URL lets the service manager instance inform global registry about its VIP. This is not mandatory, but
+#If configured, will save some CPU cycles for the registry (which, otherwise, will have to do a reverse lookup
+#from ODB based on this service manager instance's host, port information)
+##vip-url=http://localhost:8080
+
+#This tells the location where the instance is present. Valid values are SLC, PHX, LVS. This is not mandatory, but
+#If configured, will save some CPU cycles for the registry (which, otherwise, will have to do a reverse lookup
+#from ODB based on this service manager instance's host, port information)
+##data-center=SLC
+
+#This tells the location where the security service is running
+security-service-url=http://localhost:7070
+
+#This is the cache time for security permissions
+security-service-cache_expr_minutes=120
+

@@ -1,0 +1,59 @@
+{ 
+	"name": "Compute",
+	"pluralName": "Computes",
+	"parent": "Resource",	
+	"description": "bare metal or vm instance",
+	"fields": {
+		"computeType":{
+			"description":"The type of the compute",
+			"mandatory":true,
+			"enumValues": ["bm","vm"],
+			"dataType":"enumeration",
+			"cardinality":"One"
+		},
+		"nodeServer": {
+			"description": "identity to physical layer server resource",
+			"refDataType": "NodeServer",
+			"relationType": "Reference",
+			"dataType": "relationship",
+			"cardinality": "One"
+		},
+		"uuid" : {
+			"description":"external system uuid",
+			"mandatory":false,
+			"dataType":"string",
+			"cardinality":"One"	            
+		},
+		"flavor" : {
+		       "description" : "the size of the compute",
+			"mandatory": false,
+			"dataType":"string",
+			"cardinality":"One"	            
+		},
+		"imageProfile" : {
+			"description":"Image profile for this compute",
+			"mandatory":false,
+			"dataType":"string",
+			"cardinality":"One"	            
+		},
+		"imageId" : {
+			"description":"image version or Uid of this compute",
+			"mandatory":false,
+			"dataType":"string",
+			"cardinality":"One"	            
+		},
+		"environment": {
+			"description": "the environment this Resource belongs to",
+			"dataType": "relationship",
+			"mandatory": true,
+			"consistencyType" : "Strong",
+			"relationType": "Reference",
+			"refDataType": "Environment"
+		},
+                "requester": {
+                        "description": "The distributor that made the original request",
+                        "dataType": "string"
+                }
+	}
+
+}

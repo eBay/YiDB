@@ -1,0 +1,89 @@
+{
+	"description":"A physical or virtual network port",
+	"name" : "NetworkPort",
+	"pluralName":"NetworkPorts",
+	"parent": "Resource",
+	"fields":{
+		"sourceId": {
+			"description":"The sourceid of the resource ",
+			"mandatory":true,
+			"dataType": "string",
+			"cardinality": "One"
+		},
+		"port":{
+			"description":"the port",
+			"mandatory":false,
+			"dataType":"string",
+			"cardinality":"One"
+		},
+		"type":{
+			"description":"defines the type of port",
+			"mandatory":true,
+			"dataType":"string",
+			"cardinality":"One"
+		},
+		"ifIndex":{
+			"description":"The ifindex associated with this port",
+			"mandatory":true,
+			"dataType":"string",
+			"cardinality":"One"
+		},
+		"adminStatus":{
+			"description":"The adminstratus of this port",
+			"mandatory":false,
+			"dataType":"string",
+			"cardinality":"One"
+		},
+		"operStatus":{
+			"description":"The operstatus of this port",
+			"mandatory":false,
+			"dataType":"string",
+			"cardinality":"One"
+		},
+		"nativeVlan":{
+			"description":"The native vlan of this port",
+			"mandatory":false,
+			"dataType":"string",
+			"cardinality":"One"
+		},
+		"index":{
+			"description":"The index associated with this port",
+			"mandatory":false,
+			"dataType":"string",
+			"cardinality":"One"
+		},
+		"productionLevel":{
+			"description":"production service level",
+			"mandatory":false,
+			"dataType":"string"
+		},
+		"macAddress":{
+			"description":"IEEE 802 address",
+			"mandatory":false,
+			"dataType": "string",
+			"cardinality":"Many"
+		},
+		"networkPort": {
+			"description":"The network port this port is linked",
+			"refDataType": "NetworkPort",
+			"relationType": "Reference",
+			"dataType": "relationship",
+			"cardinality": "One"
+		}
+	},
+	"inner" : true,
+        "options": {
+                "indexes": {
+                        "sourceIdIndex":{
+                                "indexName": "sourceIdIndex",
+                                "keyList": ["sourceId"]
+                        },
+                        "portIndex":{
+                                "indexName": "portIndex",
+                                "keyList": ["port"]
+                        }
+                }
+        }
+
+
+}

@@ -1,0 +1,22 @@
+{
+	"description":"A vcs member",
+	"name" : "VCSMember",
+	"pluralName":"VCSMember",
+	"parent": "Resource",
+	"fields" : {
+                "opsState":{
+                        "description":"States used to drive provisioning and remediation transitions",
+                        "mandatory":false,
+                        "enumValues":["active","standby"],
+                        "dataType":"enumeration",
+                        "cardinality":"One"
+                },
+                "networkAddress":{
+                        "description":"The IP address of the endpoint service",
+                        "refDataType": "NetworkAddress",
+                        "relationType": "Reference",
+                        "dataType": "relationship",
+                        "cardinality": "One"
+                }
+	}
+}

@@ -1,0 +1,171 @@
+{
+	"description":"The asset class sync from TMA",
+	"name" : "Asset",
+	"pluralName":"Assets",
+	"parent": "Resource",
+	"fields" : {
+		"assetId":{
+			"description":"Asset tag or other identifier, e.g. uuid",
+			"mandatory":true,
+			"dataType":"string",
+			"cardinality":"One"
+		},
+		"manufacturer":{
+			"description":"Manufacturer of the asset",
+			"mandatory":false,
+			"dataType":"string",
+			"cardinality":"One"
+		},
+		"locationCode":{
+			"description":"Location of the asset",
+			"mandatory":false,
+			"dataType":"string",
+			"cardinality":"One"
+		},
+		"serial":{
+			"description":"Serial of the asset",
+			"mandatory":false,
+			"dataType":"string",
+			"cardinality":"One"
+		},
+		"assetStatus":{
+			"description":"Assetstatus of the asset",
+			"mandatory":false,
+			"dataType":"string",
+			"cardinality":"One"
+		},
+		"macAddress":{
+			"description":"MacAddress provided by vendor",
+			"mandatory":false,
+			"dataType":"string"
+		},
+		"ilomMacAddress":{
+			"description":"provided by vendor",
+			"mandatory":false,
+			"dataType":"string"
+		},
+		"site":{
+			"description":"Site of the asset",
+			"mandatory":false,
+			"dataType":"string",
+			"cardinality":"One"
+		},
+		"assetType":{
+			"description":"assettype of the asset",
+			"mandatory":false,
+			"dataType":"string",
+			"cardinality":"One"
+		},
+		"subType":{
+			"description":"subtype of the asset",
+			"mandatory":false,
+			"dataType":"string",
+			"cardinality":"One"
+                },
+		"condition":{
+			"description":"Condition of the asset",
+			"mandatory":false,
+			"dataType":"string",
+			"cardinality":"One"
+		},
+		"costcenter":{
+			"description":"Cost center of the asset",
+			"mandatory":false,
+			"dataType":"string",
+			"cardinality":"One"
+		},
+		"procrAllocated":{
+			"description":"Allocation in the flow of Procr ticket",
+			"mandatory":false,
+			"dataType":"string",
+			"cardinality":"One"
+		},
+		"rackUnitNo":{
+			"description":"Rack unit number of the asset",
+			"mandatory":false,
+			"dataType":"string",
+			"cardinality":"One"
+		},
+		"disposition":{
+			"description":"Disposition of the asset",
+			"mandatory":false,
+			"dataType":"string",
+			"cardinality":"One"
+		},
+		"lifeCycleState":{
+			"description":"Lifecyclestate of the asset",
+			"mandatory":false,
+			"dataType":"string",
+			"cardinality":"One"
+		},
+		"electricalCircuit":{
+			"description":"The electrical circult this asset point to",
+			"refDataType": "ElectricalCircuit",
+			"relationType": "Reference",
+			"mandatory":false,
+			"dataType": "relationship",
+			"cardinality": "One"
+		},
+		"powerStrip":{
+			"description":"The PowerStrip this asset point to",
+			"refDataType": "PowerStrip",
+			"relationType": "Reference",
+			"mandatory":false,
+			"dataType": "relationship",
+			"cardinality": "One"
+		},
+		"traceRatedPower":{
+			"description":"Traceratedpower of the asset",
+			"mandatory":false,
+			"dataType":"string",
+			"cardinality":"One"
+		},
+		"model": {
+			"description":"vendor model info",
+			"mandatory":false,
+			"dataType":"string",
+			"cardinality":"One"
+		},
+		"parentTag": {
+			"description":"parenttag of this asset, used by blade and chasis",
+			"mandatory":false,
+			"dataType":"string",
+			"cardinality":"One"
+		},
+		"leaseStartDate": {
+			"description":"lease start date of this asset",
+			"mandatory":false,
+			"dataType":"string",
+			"cardinality":"One"
+		},
+		"leaseEndDate": {
+			"description":"lease end date of this asset",
+			"mandatory":false,
+			"dataType":"string",
+			"cardinality":"One"
+		},
+		"allocatedCache": {
+                        "description":"allocated Reserved resouces for this asset",
+                        "refDataType": "ReservedResources",
+                        "relationType": "Reference",
+                        "dataType": "relationship",
+                        "cardinality": "One"
+                }
+	},
+	"options": {
+		"indexes": {
+		        "serialIndex":{
+				"indexName": "serialIndex",
+				"keyList": ["serial"]
+			},
+		        "assetIdIndex":{
+				"indexName": "assetIdIndex",
+				"keyList": ["assetId"]
+			},
+		        "assetTypeIndex":{
+				"indexName": "assetTypeIndex",
+				"keyList": ["assetType"]
+			}
+		}
+	}
+}

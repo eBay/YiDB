@@ -1,0 +1,34 @@
+{
+  "name": "Topology",
+  "pluralName": "Topologies",
+  "parent": "Resource",
+  "description": "Described all the components including Infrastructure info and Application info",
+  "fields": {
+    "request":{
+       "description": "the request coming from customer",
+       "dataType": "json",
+       "cardinality":"One"
+     },
+    "applicationServices": {
+      "description": "application services",
+      "dataType": "relationship",
+      "relationType": "Reference",
+      "refDataType": "ApplicationService",
+      "cardinality": "Many"
+    },
+    "resourceClusters": {
+      "description": "list of puppet pools that make up this topology",
+      "dataType": "relationship",
+      "refDataType": "VCluster",
+      "relationType": "Reference",
+      "cardinality": "Many"
+    },
+    "accessPoints": {
+      "description": "DNS and LB access points",
+      "dataType": "relationship",
+      "refDataType": "AccessPoint",
+      "relationType": "Reference",
+      "cardinality": "Many"
+    }
+  }
+}

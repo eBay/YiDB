@@ -1,0 +1,111 @@
+{ 
+	"name": "NetworkDevice",
+	"pluralName": "NetworkDevices",
+	"description": "The device for switches",
+	"parent": "Resource",
+	"fields": {
+		"sourceId": {
+			"description":"The sourceid of the resource ",
+			"mandatory":true,
+			"dataType": "string",
+			"cardinality": "One"
+		},
+		"ipAddress":{
+			"description":"IPv4 or IPv6 address",
+			"refDataType": "NetworkAddress",
+			"relationType": "Reference",
+			"dataType": "relationship",
+			"cardinality": "One"
+		},
+		"model":{
+			"description":"model name",
+			"mandatory":false,
+			"dataType":"string"
+		},
+		"nrServer":{
+			"description":"the netrange server",
+			"mandatory":true,
+			"dataType":"string"
+		},
+		"snmpProfile":{
+			"description":"the snmpprofile of this switch",
+			"mandatory":true,
+			"dataType":"string"
+		},
+		"serial":{
+			"description":"the serial of the device",
+			"mandatory":false,
+			"dataType":"string"
+		},
+		"zone":{
+			"description":"the zone of this switch device",
+			"mandatory":true,
+			"dataType":"string"
+		},
+		"chassisDesc":{
+			"description":"chassis description",
+			"mandatory":false,
+			"dataType":"string"
+		},
+		"switchLabel":{
+			"description":"the label of this switch",
+			"mandatory":true,
+			"dataType":"string"
+		},
+		"type":{
+			"description":"type of this network device",
+			"mandatory":false,
+			"dataType":"string"
+		},
+		"productionLevel":{
+			"description":"production service level",
+			"mandatory":true,
+			"dataType":"string"
+		},
+		"networkDevices":{
+			"mandatory":false,
+			"description":"The network device it links to",
+			"refDataType": "NetworkDevice",
+			"relationType": "Reference",
+			"dataType": "relationship",
+			"cardinality": "Many"
+		},
+		"asset":{
+			"mandatory":true,
+			"description":"The asset of this device, reference to parent since we may have different assets of network device",
+			"refDataType": "Asset",
+			"relationType": "Reference",
+			"dataType": "relationship",
+			"cardinality": "One"
+		},
+		"networkPorts":{
+			"mandatory":false,
+			"description":"The network ports of this device",
+			"refDataType": "NetworkPort",
+			"relationType": "Inner",
+			"dataType": "relationship",
+			"cardinality": "Many"
+		},
+		"modules": {
+			"mandatory":false,
+			"description":"The network module of this swtich",
+			"refDataType": "Module",
+			"relationType": "Reference",
+			"dataType": "relationship",
+			"cardinality": "Many"
+		}
+	},
+	"options": {
+		"indexes": {
+		        "sourceIdIndex":{
+				"indexName": "sourceIdIndex",
+				"keyList": ["sourceId"]
+		        },
+		        "serialIndex":{
+				"indexName": "serialIndex",
+				"keyList": ["serial"]
+		        }
+	        }
+        }
+
+}

@@ -1,0 +1,12 @@
+{
+	"name" : "ApplicationService",
+	"options": {
+		"indexes" : {
+			"newIndex_fromMetaUpdate" : {
+				"indexName": "newIndex_fromMetaUpdate",
+				"keyList": [ "name", "archTier", "healthStatus" ],
+				"indexOptions" : [ "unique" ]
+			}
+		}
+	}
+}

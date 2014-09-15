@@ -1,0 +1,924 @@
+[
+	{
+		"name": "Base",
+		"description": "base type",
+		"repository": "stratus-ci",
+		"fields": {
+			"label": {
+				"dataType": "string",
+				"description": "object label"
+			},
+			"description": {
+				"dataType": "string",
+				"description": "object description"
+			}
+		},
+		"options":{
+		    "indexes": {
+				"labelIndex":{
+						"indexName": "labelIndex",
+						"keyList": ["label"],
+						"indexOptions": []
+				}
+			}
+		}
+	},
+	{
+		"name": "JobTarget",
+		"pluralName": "JobTargets",
+		"parent": "Base",
+		"repository": "stratus-ci",
+		"description": "an object that can have associated jobs"
+	},
+	{
+		"name": "ClassOfService",
+		"repository": "stratus-ci",
+		"pluralName": "ClassesOfService",
+		"parent": "Base",
+		"description": "object representing a class of service, defined by different sets of SLA's"
+	},
+	{
+		"name": "Environment",
+		"pluralName": "Environments",
+		"parent": "JobTarget",
+		"repository": "stratus-ci",
+		"description": "Houses a set of Resources that are tied to a single ClassOfService",
+		"fields": {
+			"classOfService": {
+				"description": "the ClassOfService that this environment is bound to",
+				"dataType": "relationship",
+				"relationType": "Reference",
+				"refDataType": "ClassOfService",
+				"mandatory": true
+			}	
+		}
+	},
+	{
+		"name": "Resource",
+		"pluralName": "Resources",
+		"parent": "JobTarget",
+		"repository": "stratus-ci",
+		"description": "A stratus managed resource",
+		"fields": {
+			"adminState": {
+				"description": "administrative state for resource",
+				"dataType": "enumeration",
+				"defaultValue": "NOT_LIVE",
+				"enumValues": [ "LIVE", "NOT_LIVE" ]
+			},
+			"resourceId" : {
+				"dataType": "string"
+			},
+			"opState": {
+				"description": "operational state for Resource",
+				"dataType": "enumeration",
+				"mandatory": false,
+				"enumValues": [ "NORMAL", "ABNORMAL", "PROBATION", "MAINTENANCE" ]
+			},
+			"healthState": {
+				"description": "health of this resource",
+				"dataType": "enumeration",
+				"defaultValue" : "UNKNOWN",
+				"enumValues": [ "HEALTHY", "WARNING", "ERROR", "UNKNOWN" ]
+			},
+			"environment": {
+				"description": "the environment this Resource belongs to",
+				"dataType": "relationship",
+				"mandatory": false,
+				"relationType": "Reference",
+				"refDataType": "Environment"
+			},
+			"metaData": {
+				"description": "metadata used by stratus controllers",
+				"dataType": "json"
+			},
+			"userData": {
+				"description": "arbitrary user data, ignored by startus",
+				"dataType": "json"
+			},
+			"legacyFields": {
+				"description": "container for legacy data.  Will eventually be deprecated",
+				"dataType": "json"
+			}
+		},
+		"options": {
+		},
+		"sharded": true
+	},
+	{ 
+		"name": "VCluster",
+		"pluralName": "VClusters",
+		"parent": "Resource",
+		"repository": "stratus-ci",
+		"fields": {
+			"computes": {
+				"description": "computes this cluster owns",
+				"dataType": "relationship",
+				"refDataType": "Compute",
+				"relationType": "Reference",
+				"cardinality": "Many",
+				"mandatory": false
+			}
+		}
+	},
+	{
+		"name": "VPool",
+		"repository": "stratus-ci",
+		"pluralName": "VPools",
+		"parent": "VCluster"
+	},
+	{
+		"name": "Compute",
+		"repository": "stratus-ci",
+		"pluralName": "Computes",
+		"parent": "Resource",	
+		"description": "bare metal or vm instance",
+		"fields": {
+			"parentCluster": {
+				"description": "the cluster or pool that this node is a part of",
+				"dataType": "relationship",
+				"refDataType": "VCluster",
+				"relationType": "Reference"
+			},
+			"activeManifestRef": {
+				"description": "software manifest that should be active on this service node",
+				"dataType": "relationship",
+				"refDataType": "Manifest",
+				"relationType": "Reference"
+			},
+			"installedManifestsRef": {
+				"description": "list of manifests that should be installed on this service node",
+				"dataType": "relationship",
+				"refDataType": "Manifest",
+				"relationType": "Reference",
+				"cardinality": "Many"
+			},
+			"activeManifestCur": {
+				"description": "software manifest that is active on this service node",
+				"dataType": "relationship",
+				"refDataType": "Manifest",
+				"relationType": "Reference"
+			},
+			"installedManifestsCur": {
+				"description": "list of manifests that are installed on this service node",
+				"dataType": "relationship",
+				"refDataType": "Manifest",
+				"relationType": "Reference",
+				"cardinality": "Many"
+			},
+			"runs": {
+				"description": "list of service instance nodes that runs on this compute",
+				"dataType": "relationship",
+				"refDataType": "ServiceInstance",
+				"relationType": "Reference",
+				"cardinality": "Many"
+			},
+			"fqdns": {
+				"description": "fully qualified domain names",
+				"dataType": "string",
+				"cardinality": "Many"
+			},
+			"ips": {
+				"description": "ip addresses",
+				"dataType": "string",
+				"cardinality": "Many"
+			}			
+		}	
+	},
+	{
+		"name": "ServiceInstance",
+		"repository": "stratus-ci",
+		"pluralName": "ServiceInstances",
+		"parent": "Resource",
+		"description": "an application service node",
+		"fields": {
+			"applicationService": {
+				"description": "the application service that this node is a part of",
+				"dataType": "relationship",
+				"refDataType": "ApplicationService",
+				"relationType": "Reference"
+			},
+			"activeManifestRef": {
+				"description": "software manifest that should be active on this service node",
+				"dataType": "relationship",
+				"refDataType": "Manifest",
+				"relationType": "Reference"
+			},
+			"installedManifestsRef": {
+				"description": "list of manifests that should be installed on this service node",
+				"dataType": "relationship",
+				"refDataType": "Manifest",
+				"relationType": "Reference",
+				"cardinality": "Many"
+			},
+			"activeManifestCur": {
+				"description": "software manifest that is active on this service node",
+				"dataType": "relationship",
+				"refDataType": "Manifest",
+				"relationType": "Reference"
+			},
+			"installedManifestsCur": {
+				"description": "list of manifests that are installed on this service node",
+				"dataType": "relationship",
+				"refDataType": "Manifest",
+				"relationType": "Reference",
+				"cardinality": "Many"
+			},
+			"fqdn": {
+				"description": "fully qualified domain name",
+				"dataType": "string"
+			},
+			"runsOn": {
+				"description": "compute object that this service instance node runs on",
+				"dataType": "relationship",
+				"refDataType": "Compute",
+				"relationType": "Reference"
+			},
+			"serviceAccessPoints": {
+				"description": "service port and protocol exposed by this node, typically one, but possible to have many",
+				"dataType": "relationship",
+				"refDataType": "ServiceAccessPoint",
+				"relationType": "Embedded",
+				"cardinality": "Many"	
+			}
+		},
+		"options":{
+		    "indexes": {
+				"fqdnIndex":{
+						"indexName": "fqdnIndex",
+						"keyList": ["fqdn"],
+						"indexOptions": []
+				}
+			}
+		}
+	},
+	{ 
+		"name": "ServiceAccessPoint" ,
+		"repository": "stratus-ci",
+		"pluralName": "ServiceAccessPoints",
+		"parent": "Base",
+		"embed" : true,
+		"description": "service access point specification",
+		"fields": {
+			"port": {
+				"description": "port number",
+				"dataType": "integer",
+				"mandatory": true
+			},
+			"protocol": {
+				"description": "socket protocol",
+				"dataType": "enumeration",
+				"enumValues": [ "any","tcp","dns","udp","ftp","radius","http","rtsp","sip_udp","ssl","ssl_tcp" ],
+				"cardinality": "One",
+				"mandatory": true
+			}
+		}
+	},
+	{ 
+		"name": "Manifest",
+		"pluralName": "Manifests",
+		"parent": "Base",
+		"repository": "stratus-ci",
+		"description": "deployable unit of software consisting of packages",
+		"fields": {
+			"created": {
+				"description": "date this manifest was created",
+				"dataType": "date",
+				"defaultValue": "$NOW",
+				"mandatory": true			
+			},
+			"createdBy": {
+				"description": "identity of the creator of this manifest",
+				"dataType": "relationship",
+				"refDataType": "Identity",
+				"relationType": "Reference"
+			},
+			"softwareVersion": {
+				"description": "version of this manifest",
+				"dataType": "string",
+				"mandatory": true			
+			},		
+			"userData": {
+				"description": "arbitrary user data, ignored by startus",
+				"dataType": "json"
+			},
+			"approvals": {
+				"description": "list of approvals for this manifest",
+				"dataType": "relationship",
+				"refDataType": "ManifestApproval",
+				"relationType": "Embedded",
+				"cardinality": "Many"
+			},
+			"packages": {
+				"description": "list of packages that comprise this manifest",
+				"dataType": "relationship",
+				"refDataType": "Package",
+				"relationType": "Reference",
+				"cardinality": "Many"
+			}
+		},
+		"options":{
+		    "indexes":{
+		    }
+		}
+
+	},
+	{
+		"name": "Identity",
+		"repository": "stratus-ci",
+		"pluralName": "Identities",
+		"parent": "Base",
+		"description": "identity within Stratus",
+		"fields": {
+			"externalId" : {
+				"description": "external system identifier (e.g. LDAP)",
+				"dataType": "string"
+			},
+			"identityType": {
+				"description": "type of identity",
+				"dataType": "enumeration",
+				"enumValues": [ "USER", "GROUP" ],
+				"mandatory": true
+			}
+		}	
+	},
+	{
+		"name": "ManifestApproval",
+		"repository": "stratus-ci",
+		"pluralName": "ManifestApprovals",
+		"parent": "Base",
+		"embed" : true,
+		"description": "an approval for a manifest to be installed in a given class of service",
+		"fields": {
+			"applicationId": {
+				"description": "application id's that this manifest is approved for, '*' for all",
+				"dataType": "string"
+			},
+			"classOfService": {
+				"description": "class of service this this manifest is approved for",
+				"dataType": "relationship",
+				"refDataType": "ClassOfService",
+				"relationType": "Reference"
+			},
+			"created": {
+				"description": "date this manifest was created",
+				"dataType": "date",
+				"defaultValue": "$NOW"
+			},
+			"createdBy": {
+				"description": "identity of the creator of this manifest",
+				"dataType": "relationship",
+				"refDataType": "Identity",
+				"relationType": "Reference"
+			}
+		}
+	},
+	{ 
+		"name": "Package",
+		"pluralName": "Packages",
+		"parent": "Base",
+		"repository": "stratus-ci",
+		"description": "a software package",
+		"fields": {
+			"created": {
+				"description": "date this package was created",
+				"dataType": "date",
+				"defaultValue": "$NOW",
+				"mandatory": true			
+			},
+			"createdBy": {
+				"description": "identity of the creator of this package",
+				"dataType": "relationship",
+				"refDataType": "Identity",
+				"relationType": "Reference"
+			},
+			"version": {
+				"description": "version of this package",
+				"dataType": "string",
+				"mandatory": true			
+			},		
+			"userData": {
+				"description": "arbitrary user data, ignored by startus",
+				"dataType": "json"
+			},
+			"uri": {
+				"description": "location of package",
+				"dataType": "string",
+				"mandatory": true			
+			},
+			"dependsOn": {
+				"description": "package dependencies",
+				"dataType": "relationship",
+				"refDataType": "Package",
+				"relationType": "Reference",
+				"cardinality": "Many"
+			}
+		},
+		"options":{
+		    "indexes":{
+		    }
+		}
+	},
+{
+		"name": "ApplicationService",
+		"pluralName": "ApplicationServices",
+		"parent": "Resource",
+		"repository": "stratus-ci",
+		"description": "an application service composed by a set of individual logical service nodes (ServiceInstances)",
+		"fields": {
+			"parentApplicationservice": {
+				"description": "parent application service",
+				"dataType": "relationship",
+				"relationType": "Reference",
+				"refDataType": "ApplicationService"
+			},
+			"applicationServices": {
+				"description": "child application services",
+				"dataType": "relationship",
+				"relationType": "Reference",
+				"refDataType": "ApplicationService",
+				"cardinality": "Many"
+			},		
+			"applicationId": {
+				"description": "application id, which constrains the type of manifests that can be installed on this ApplicationService",
+				"dataType": "string"
+			},
+			"serviceInstances": {
+				"description": "list of individual ServiceInstance nodes that compose this application",
+				"dataType": "relationship",
+				"relationType": "Reference",
+				"refDataType": "ServiceInstance",
+				"cardinality": "Many"
+			},
+			"serviceInstanceViews": {
+				"description": "views of service instances",
+				"dataType": "relationship",
+				"relationType": "Reference",
+				"refDataType": "ResourceGroup",
+				"cardinality": "Many"
+			},
+			"updateStrategies": {
+				"description": "update strategies that operations can apply to this application service",
+				"dataType": "relationship",
+				"relationType": "Reference",
+				"refDataType": "UpdateStrategy",
+				"cardinality": "Many"
+			},
+			"defaultUpdateStrategy": {
+				"description": "default update strategy for operations to apply to this application service",
+				"dataType": "relationship",
+				"relationType": "Reference",
+				"refDataType": "UpdateStrategy"
+			},
+			"activeManifestRef": {
+				"description": "software manifest that should be active on all nodes in this ApplicationService",
+				"dataType": "relationship",
+				"refDataType": "Manifest",
+				"relationType": "Reference"
+			},
+			"installedManifestsRef": {
+				"description": "list of manifests that should be installed on all nodes in this ApplicationService",
+				"dataType": "relationship",
+				"refDataType": "Manifest",
+				"relationType": "Reference",
+				"cardinality": "Many"
+			},
+			"activeManifestHistory": {
+				"description": "history of activated manifests on this ApplicationService",
+				"dataType": "relationship",
+				"refDataType": "Manifest",
+				"relationType": "Reference"
+			},
+			"resourceClusters": {
+				"description": "list of VClusters or VPools that make up this ApplicationService",
+				"dataType": "relationship",
+				"refDataType": "VCluster",
+				"relationType": "Reference",
+				"cardinality": "Many"
+			}
+		}		
+	},
+	{ 
+		"name": "UpdateStrategy",
+		"pluralName": "UpdateStrategies",
+		"parent": "Base",
+		"repository": "stratus-ci",
+		"description": "used to organize resources for sequencing and parallelizing operations",
+		"fields": {
+			"version": {
+				"description": "version of this update strategy",
+				"dataType": "string",
+				"mandatory": true			
+			},
+			"segmentType": {
+				"description": "indicates if the segment types will explicitly select resources or whether random selection is used",
+				"dataType": "enumeration",
+				"enumValues": [ "explicit", "random" ],
+				"defaultValue": "random",
+				"mandatory": true			
+			},
+			"passThreshold": {
+				"description": "pass threshold count for this strategy.  Append '%' to use percentage instead of count",
+				"dataType": "string",
+				"defaultValue": "0",
+				"mandatory": true
+			},
+			"segments": {
+				"description": "resource segments",
+				"dataType": "relationship",
+				"refDataType": "StrategySegment",
+				"relationType": "Embedded",
+				"cardinality": "Many",
+				"mandatory": true
+			}
+		}		
+	},
+	{
+		"name": "StrategySegment",
+		"repository": "stratus-ci",
+		"embed" : true,
+		"description": "a segment within an update strategy",
+		"fields": {
+			"targetFilters": {
+				"description": "a list of filter queries for resources for 'explicit' type segments",
+				"dataType": "string",
+				"cardinality": "Many"
+			},
+			"distribution": {
+				"description": "number of nodes to select for this segment. Append '%' for percentage.  For 'random' type segments",
+				"dataType": "string"
+			},
+			"passThreshold": {
+				"description": "pass threshold count for this segment.  Append '%' to use percentage instead of count",
+				"dataType": "string",
+				"defaultValue": "0",
+				"mandatory": true
+			}
+		}
+	},
+	{
+		"name": "ResourceGroup",
+		"pluralName": "ResourceGroups",
+		"parent": "Resource",
+		"repository": "stratus-ci",
+		"description": "a grouping of Resources",
+		"fields": {
+			"parentGroup" : {
+				"description": "parent resource group",
+				"dataType": "relationship",
+				"relationType": "Reference",
+				"refDataType": "ResourceGroup"
+			},
+			"children": {
+				"description": "list of child resources",
+				"dataType": "relationship",
+				"relationType": "Reference",
+				"consistencyType" : "Strong",
+				"refDataType": "Resource",
+				"cardinality": "Many"
+			}
+		}
+	},
+	{
+		"name" : "PooledCluster",
+		"parent": "Resource",
+		"embed" : true,
+		"repository": "stratus-ci",
+		"description": "A pooled cluster is manually add meta, pretend to be a cluster of vpool/vcluster.",
+		"fields": {
+			"name" : {
+				"description": "name of the pooled cluster",
+				"dataType": "string"
+			},
+			"usage": {
+				"dataType": "string"
+			}
+		}
+	},
+	{
+		"name" : "PoolCluster",
+		"pluralName": "PoolClusters",
+		"parent": "Resource",
+		"repository": "stratus-ci",
+		"description": "A pool cluster is manually add meta, pretend to be a cluster of vpool/vcluster. It embeds a list of vpool/vcluster",
+		"fields": {
+			"pools" : {
+				"description": "pool clusters",
+				"dataType": "relationship",
+				"relationType": "Embedded",
+				"refDataType": "PooledCluster",
+				"cardinality": "Many"
+			},
+			"usage": {
+				"dataType": "string"
+			}
+		}
+	},
+	{
+		"name" : "RefApplicationService",
+		"pluralName": "RefApplicationServices",
+		"parent": "Resource",
+		"repository": "stratus-ci",
+		"description": "This is a sample cross repository reference that reference to the raptor-paas repository",
+		"fields": {
+			"stratusVPool": {
+				"description": "list of individual ServiceInstance nodes that compose this application",
+				"dataType": "relationship",
+				"relationType": "Reference",
+				"refDataType": "ServiceInstance",
+				"cardinality": "Many"
+			},
+			"raptorApplicationService": {
+				"name":"raptorApplicationService",
+				"description": "a reference to the ref-application-service in raptor-paas",
+				"dataType": "relationship",
+				"relationType": "CrossRepository",
+				"refRepository": "raptor-paas",
+				"refDataType": "ApplicationService",
+				"cardinality": "Many"
+			},
+			"sdRefApplicationService": {
+				"name":"sdRefApplicationService",
+				"description": "a reference to the ref-application-service in software-deployment",
+				"dataType": "relationship",
+				"relationType": "CrossRepository",
+				"refRepository": "software-deployment",
+				"refDataType": "RefApplicationService",
+				"cardinality": "Many"
+			}
+		}
+	},
+	{
+        "name": "RefApplicationService",
+        "pluralName": "RefApplicationServices",
+        "description" : "This is a sample application service for cross repository relationship test",
+        "fields": {
+        	"name": {
+                "defaultValue": "",
+                "mandatory": false,
+                "enumValues": [],
+                "expression": null,
+                "validation": null,
+                "name": "name",
+                "dataType": "string",
+                "cardinality": "One"
+            },
+            "manifest": {
+                "name": "manifest",
+                "dataType": "relationship",
+                "cardinality": "Many",
+                "relationType": "Reference",
+            	"refDataType": "Manifest"
+            }, 
+            "services": {
+                "name": "services",
+                "dataType": "relationship",
+                "cardinality": "Many",
+                "relationType": "CrossRepository",
+                "refRepository": "raptor-paas",
+            	"refDataType": "ServiceInstance"
+            }
+		},
+        "_id": null,
+        "lastModified": 1337149946243,
+        "repository": "software-deployment"
+    },
+    {
+		"name" : "PoolCluster",
+		"pluralName": "PoolClusters",
+		"repository": "software-deployment",
+		"description": "This meta class is a sample for the cross type cast. A pool cluster is manually add meta, pretend to be a cluster of vpool/vcluster. It embeds a list of vpool/vcluster.",
+		"fields": {
+			"name": {
+                "defaultValue": "",
+                "mandatory": false,
+                "enumValues": [],
+                "expression": null,
+                "validation": null,
+                "name": "name",
+                "dataType": "string",
+                "cardinality": "One"
+            },
+			"pools" : {
+				"description": "pool clusters",
+				"dataType": "relationship",
+				"relationType": "CrossRepository",
+				"refRepository": "stratus-ci",
+				"refDataType": "VCluster",
+				"cardinality": "Many"
+			},
+			"usage": {
+				"dataType": "string"
+			}
+		}
+	},
+	{
+		"name" : "ServiceCluster",
+		"repository": "software-deployment",
+		"fields": {
+			"name": {
+                "defaultValue": "",
+                "name": "name",
+                "dataType": "string"
+            },
+			"poolClusters" : {
+				"dataType": "relationship",
+				"relationType": "Reference",
+				"refDataType": "PoolCluster",
+				"cardinality": "Many"
+			}
+		}
+	},
+	{
+		"name" : "ResourceContainer",
+		"pluralName": "ResourceContainers",
+		"repository": "stratus-ci",
+		"description": "A resource container embed contains some resources. Such resource could be VPool/VCluster",
+		"parent":"Base",
+		"fields": {
+			"name": {
+                "defaultValue": "",
+                "mandatory": false,
+                "enumValues": [],
+                "expression": null,
+                "validation": null,
+                "name": "name",
+                "dataType": "string",
+                "cardinality": "One"
+            },
+			"resources" : {
+				"description": "resources like VPool, VCluster",
+				"dataType": "relationship",
+				"relationType": "Embedded",
+				"refDataType": "PooledCluster",
+				"cardinality": "Many"
+			}
+		}
+	},
+	{
+	    "name": "FQDN",
+	    "pluralName": "FQDNS",
+	    "repository": "stratus-ci",
+	    "fields": {
+	        "adminstatus": {
+	            "name": "adminstatus",
+	            "dataType": "string"
+	        },
+	        "ownedby": {
+	            "name": "ownedby",
+	            "dataType": "string"
+	        },
+	        "status": {
+	            "name": "status",
+	            "dataType": "string"
+	        },
+	        "sourceid": {
+	            "name": "sourceid",
+	            "dataType": "string"
+	        },
+	        "auditstatus": {
+	            "name": "auditstatus",
+	            "dataType": "string"
+	        },
+	        "label": {
+	            "name": "label",
+	            "dataType": "string"
+	        },
+	        "type": {
+	            "name": "type",
+	            "dataType": "string"
+	        },
+	        "zone": {
+	            "name": "zone",
+	            "dataType": "string"
+	        }
+	    }
+	},
+	{
+	    "name": "NetworkAddress",
+	    "pluralName": "NetworkAddresses",
+	    "repository": "stratus-ci",
+	    "fields": {
+	        "manager": {
+	            "dataType": "string"
+	        },
+	        "adminstatus": {
+	            "dataType": "string"
+	        },
+	        "gateway": {
+	            "dataType": "string"
+	        },
+	        "location": {
+	            "dataType": "string"
+	        },
+	        "subnetmask": {
+	            "dataType": "string"
+	        },
+	        "datacenter": {
+	            "dataType": "string"
+	        },
+	        "resourcetype": {
+	            "dataType": "string"
+	        },
+	        "ipaddress": {
+	            "dataType": "string"
+	        },
+	        "reservedcapacity": {
+	            "dataType": "string"
+	        },
+	        "description": {
+	            "dataType": "string"
+	        },
+	        "adminnotes": {
+	            "dataType": "string"
+	        },
+	        "ipstatus": {
+	            "dataType": "string"
+	        },
+	        "operstatus": {
+	            "dataType": "string"
+	        },
+	        "secondarydns": {
+	            "dataType": "string"
+	        },
+	        "usedcapacity": {
+	            "dataType": "string"
+	        },
+	        "ownedby": {
+	            "dataType": "string"
+	        },
+	        "alias": {
+	            "dataType": "string"
+	        },
+	        "802Address": {
+	        	"dataType": "string"
+	        },
+	        "vendor": {
+	            "dataType": "string"
+	        },
+	        "hostname": {
+	            "dataType": "string"
+	        },
+	        "label": {
+	            "dataType": "string"
+	        },
+	        "physaddress": {
+	            "dataType": "string"
+	        },
+	        "primarydns": {
+	            "dataType": "string"
+	        },
+	        "maxcapacity": {
+	            "dataType": "string"
+	        },
+	        "source": {
+	            "dataType": "string"
+	        },
+	        "sourceid": {
+	            "dataType": "string"
+	        },
+	        "objectid": {
+	            "dataType": "string"
+	        },
+	        "notes": {
+	            "dataType": "string"
+	        },
+	        "zone": {
+	            "dataType": "string"
+	        }
+	    },
+	    "options": {
+	    	"primaryKeys" : ["802Address"]
+	    }
+	},
+	{
+	    "name": "DNS",
+	    "pluralName": "DNSes",
+	    "repository": "stratus-ci",
+	    "fields": {
+	        "forward": {
+	            "dataType": "boolean"
+	        },
+	        "fqdnalias": {
+	            "dataType": "relationship",
+	            "refDataType": "FQDN",
+	            "relationType": "Reference"
+	        },
+	        "reversed": {
+	            "dataType": "boolean"
+	        },
+	        "networkaddress": {
+	            "dataType": "relationship",
+	            "refDataType": "NetworkAddress",
+	            "relationType": "Reference"
+	        },
+	        "fqdn": {
+	            "dataType": "relationship",
+	            "refDataType": "FQDN",
+	            "relationType": "Reference"
+	        }
+	    }
+	}
+
+]
+

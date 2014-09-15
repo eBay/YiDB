@@ -1,0 +1,35 @@
+#!/bin/bash -ae
+
+abspath=$(cd ${0%/*} && echo $PWD/${0##*/})
+scripts_dir=`dirname "$abspath"`
+echo "scripts_dir $scripts_dir"
+
+if [ ! -z "$UPSTARTSERVICE" ]; then
+    echo "Start service by upstart"
+    sudo initctl start $UPSTARTSERVICE
+else
+    echo "Start service without upstart"
+    $scripts_dir/../../container_runtime/bin/catalina.sh start
+fi  
+
+echo -e "\nWaiting for application to start completely..."
+
+# poll until the application started completely
+while true;
+do
+   export status=$(curl -s --head -o /dev/null -w "%{http_code}" http://localhost:8080/cms/monitors)
+   echo $status
+   # check if the status has a non-zero length
+   if [ "$status" != 200 ]
+   then
+      echo "Application has yet started."
+      sleep 1
+   else
+      echo "Application has started!!"
+      $scripts_dir/loadmeta.sh
+      break
+   fi
+done
+
+exit 0
+

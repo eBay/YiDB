@@ -1,0 +1,321 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Query - CMS</title>
+    <link href="css/doc.css" media="screen" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="js/jquery-min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/highlight.js"></script>
+    <style>
+        input.submit{
+        clear: none;
+        display: block;
+        float: right;
+        padding: 6px 8px;
+        }
+        h2.menu{
+        font-family:"黑体"；
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+<div id='navbar'>
+    <a href="home.html"><img src="images/cms_logo.png" height="90pt"></img></a>
+    <ul>
+        <li>
+            <a href='home.html'>home</a> |
+        </li>
+        <li>
+            <a href='console.html'>console</a> |
+        </li>
+        <li>
+            <a href='doc.html'>docs</a>
+        </li>
+    </ul>
+</div>
+<div id="leftnav">
+    <h2 class="menu">Overview</h2>
+    <ul class="navul">
+        <li><a href="doc.html">About CMS</a></li>
+        <li><a href="metadataoverview.html">Metadata Overview</a></li>
+        <li><a href="persistenceoverview.html">Persistence Overview</a></li>
+        <li><a href="queryoverview.html">Query Overview</a></li>
+    </ul>
+    <h2 class="menu">Examples</h2>
+    <ul class="navul">
+        <li><a href="repository.html">Repository</a></li>
+        <li><a href="branch.html">Branch</a></li>
+        <li><a href="metadata.html">Metadata</a></li>
+        <li><a href="entity.html">Entity</a></li>
+        <li><a href="query.html">Query</a></li>
+        <li><a href="systemManagement.html">System Management</a></li>
+    </ul>
+    <h2 class="menu">User Guide</h2>
+    <ul class="navul">
+        <li><a href="evt.html">Event Dispatcher</a></li>
+    </ul>
+</div>
+<div id="content">
+
+    <h1> Query Language </h1>
+
+    <h3>1. Query Syntax</h3>
+
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;query&gt;&nbsp; ::= &lt;anchor-type&gt;
+        &lt;match-filter&gt; &lt;output-projection&gt; { &quot;.&quot; &lt;relation-attribute&gt;
+        &lt;match-filter&gt; &lt;output-projection&gt; } <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;anchor-type&gt;&nbsp; ::=<em
+                style="color:blue"> &lt;!-- matches any type defined in the
+            metadata. serves as an anchor point for the query
+            --&gt;</em><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;match-filter&gt;&nbsp; ::= “[”
+        &lt;expression&gt; “]” <em style="color:blue">&lt;!-- filters out
+            match objects immediately preceding filter.&nbsp; see Filter
+            Operators below for syntax --&gt;</em><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;output-projection&gt;&nbsp; ::=
+        &quot;{&quot; &quot;*&quot; | &lt;attribute&gt; {&quot;,&quot; &lt;attribute&gt;
+        } &quot;}&quot; <em style="color:blue">&lt;!-- attribute list
+            --&gt;</em><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;attribute&gt;&nbsp; ::= &quot;@&quot;
+        &lt;identifier&gt;<em style="color:blue"> &lt;!-- attribute name
+            --&gt;</em><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;relation-attribute&gt;&nbsp; ::=
+        <em style="color:blue">&lt;!-- relationship attribute name on
+            object. must be a relational attribute --&gt;</em><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;expression&gt;&nbsp; ::= <em
+                style="color:blue">&lt;!-- Boolean expression and attribute
+            expression --&gt;</em></p>
+
+    <h3>2. Filter Operators</h3>
+    <table border="1" cellspacing="0" cellpadding="0">
+        <tr>
+            <th width="148" valign="top">Operators</th>
+            <th width="148" valign="top">Description</th>
+            <th width="428" valign="top">Examples</th>
+        </tr>
+        <tr align="center">
+            <td width="148" valign="top">= != &lt; &gt; &lt;= &gt;=</td>
+            <td width="148" valign="top">comparison</td>
+            <td width="428" valign="top">[@name = &quot;foo&quot;]</td>
+        </tr>
+        <tr align="center">
+            <td width="148" valign="top">=~</td>
+            <td width="148" valign="top">regex match</td>
+            <td width="428" valign="top">[@name =~ &quot;^s.*&quot;]</td>
+        </tr>
+        <tr align="center">
+            <td width="148" valign="top">in</td>
+            <td width="148" valign="top">List membership</td>
+            <td width="428" valign="top">[@versions in (“1.0”, “1.1”)]</td>
+        </tr>
+        <tr align="center">
+            <td width="148" valign="top">and or</td>
+            <td width="148" valign="top">Boolean</td>
+            <td width="428" valign="top">[(@name = &quot;foo&quot;) and
+                (@healthStatus = &quot;healthy&quot;)]
+            </td>
+        </tr>
+        <tr align="center">
+            <td width="148" valign="top">exists</td>
+            <td width="148" valign="top">attribute existance</td>
+            <td width="428" valign="top">[exists @label]</td>
+        </tr>
+        <tr align="center">
+            <td width="148" valign="top">not</td>
+            <td width="148" valign="top">Boolean</td>
+            <td width="428" valign="top">[not (@versions in (“1.0”,
+                “1.1”))]
+            </td>
+        </tr>
+    </table>
+    <p>&nbsp;</p>
+
+    <h1> Query Examples </h1>
+    <ul>
+        <li>Match Filter</li>
+        <ol>
+            <li>Query the entities under the condition of
+                {query}=ApplicationService.<input type="button"
+                                                  value="Try me"
+                                                  onClick="window.location.href='console.html?opid=18&reponame=raptor-paas&branch=main&query=ApplicationService'"
+                                                  class="submit"></li>
+            <div>
+                <pre class="brush: sql; toolbar: false;">GET repositories/raptor-paas/branches/main/query/ApplicationService</pre>
+            </div>
+            <li>Query the entities under the condition of
+                {query}=ApplicationService[@name="srp-app:Raptor"].<input
+                        type="button" value="Try me"
+                        onClick="window.location.href='console.html?opid=18&reponame=raptor-paas&branch=main&query=ApplicationService[@name=%22srp-app:Raptor%22]'"
+                        class="submit"></li>
+            <div>
+                <pre class="brush: sql; toolbar: false;">GET repositories/raptor-paas/branches/main/query/ApplicationService[@name="srp-app:Raptor"]</pre>
+            </div>
+            <li>Query the entities under the condition of
+                {query}=ServiceInstance[@name =~ "srp.*" and
+                @activeManifestDiff = true].<input type="button"
+                                                   value="Try me"
+                                                   onClick="window.location.href='console.html?opid=18&reponame=raptor-paas&branch=main&query=ServiceInstance[@name =~ %22srp.*%22 and @activeManifestDiff = true]'"
+                                                   class="submit"></li>
+            <div>
+                <pre class="brush: sql; toolbar: false;">GET repositories/raptor-paas/branches/main/query/ServiceInstance[@name =~ "srp.*" and @activeManifestDiff = true]</pre>
+            </div>
+        </ol>
+    </ul>
+    <ul>
+        <li>Attribute Projection</li>
+        <ol>
+            <li>Query the entities under the condition of
+                {query}=ApplicationService[@name="srp-app:Raptor"]{*}.<input
+                        type="button" value="Try me"
+                        onClick="window.location.href='console.html?opid=18&reponame=raptor-paas&branch=main&query=ApplicationService[@name=%22srp-app:Raptor%22]{*}'"
+                        class="submit"></li>
+            <div>
+                <pre class="brush: sql; toolbar: false;">GET repositories/raptor-paas/branches/main/query/ApplicationService[@name="srp-app:Raptor"]{*}</pre>
+            </div>
+            <li>Query the entities under condition of
+                {query}=ApplicationService[@name="srp-app:Raptor"]{@name,
+                @activeManifestDiff, @updateStrategies}.<input type="button"
+                                                               value="Try me"
+                                                               onClick="window.location.href='console.html?opid=18&reponame=raptor-paas&branch=main&query=ApplicationService[@name=%22srp-app:Raptor%22]{@name, @activeManifestDiff, @updateStrategies}'"
+                                                               class="submit">
+            </li>
+            <div>
+			<pre class="brush: sql; toolbar: false;">GET repositories/raptor-paas/branches/main/query/
+			ApplicationService[@name="srp-app:Raptor"]{@name, @activeManifestDiff, @updateStrategies}</pre>
+            </div>
+        </ol>
+    </ul>
+    <ul>
+        <li>Relationship Join</li>
+        <ol>
+            <li>Query the entities under the condition of
+                {query}=ApplicationService[@name =
+                "srp-app:Raptor"]{*}.services[@name =
+                "srp-app:Raptor-00001"]{*}.runsOn[@assetStatus =
+                "normal"]{*}.<input type="button" value="Try me"
+                                    onClick="window.location.href='console.html?opid=18&reponame=raptor-paas&branch=main&query=ApplicationService[@name = %22srp-app:Raptor%22]{*}.services[@name = %22srp-app:Raptor-00001%22]{*}.runsOn[@assetStatus = %22normal%22]{*}'"
+                                    class="submit"></li>
+            <div>
+			<pre class="brush: sql; toolbar: false;">GET repositories/raptor-paas/branches/main/query/
+			ApplicationService[@name = "srp-app:Raptor"]{*}.services[@name = "srp-app:Raptor-00001"]{*}
+				.runsOn[@assetStatus = "normal"]{*}</pre>
+            </div>
+        </ol>
+    </ul>
+    <ul>
+        <li>Pagination</li>
+        <ol>
+            <li>Query the entities under the condition of
+                {query}=ServiceInstance[@name =~ "srp.*" and
+                @activeManifestDiff = true] .<input type="button"
+                                                    value="Try me"
+                                                    onClick="window.location.href='console.html?opid=18&reponame=raptor-paas&branch=main&query=ServiceInstance[@name =~ %22srp.*%22 and @activeManifestDiff = true] '"
+                                                    class="submit"></li>
+            <div>
+                <pre class="brush: sql; toolbar: false;">GET repositories/raptor-paas/branches/main/query/ServiceInstance[@name =~ "srp.*" and @activeManifestDiff = true] </pre>
+            </div>
+        </ol>
+    </ul>
+
+    <ul>
+        <li>Aggregation</li>
+        <ol>
+            <li>Aggregate query for the entities count in different status:
+                ServiceInstance<@healthStatus>{ @healthStatus, $count() }
+                .<input type="button" value="Try me"
+                        onClick="window.location.href='console.html?opid=18&reponame=raptor-paas&branch=main&query=ServiceInstance<@healthStatus>{ @healthStatus, $count() }'"
+                        class="submit"></li>
+            <div>
+                <pre class="brush: sql; toolbar: false;">GET repositories/raptor-paas/branches/main/query/ServiceInstance<@healthStatus>{ @healthStatus, $count() } </pre>
+            </div>
+            <li>Find the services that runs on the give compute
+                “compute-00010”, with https disabled. Ouputing the max port,
+                min port and the total count.<input type="button"
+                                                    value="Try me"
+                                                    onClick="window.location.href='console.html?opid=18&reponame=raptor-paas&branch=main&query=ServiceInstance<@https>[@https=false]{ $max(@port), $min(@port), $count()}.runsOn[@name=%22compute-00010%22]'"
+                                                    class="submit"></li>
+            <div>
+                <pre class="brush: sql; toolbar: false;">GET repositories/raptor-paas/branches/main/query/ServiceInstance<@https>[@https=false]{ $max(@port), $min(@port), $count()}.runsOn[@name="compute-00010"] </pre>
+            </div>
+        </ol>
+    </ul>
+    
+    <ul>
+        <li>Left Outer Join</li>
+        <ol>
+            <li>Query the entities under the condition of {query}=Rack[@resourceId="SLC:SLC01:01-150:01:08"]+.assets[@assetType="Server"]{@resourceId,@assetType,@healthState,@healthState._lastmodified,@manufacturer,@locationCode}.asset!AssetServer{*}.
+                <input type="button" value="Try me"
+                    onClick="window.location.href='console.html?opid=18&reponame=cmsdb&branch=main&query=Rack[@resourceId=%22SLC:SLC01:01-150:01:08%22]+.assets[@assetType=%22Server%22]{@resourceId,@assetType,@healthState,@healthState._lastmodified,@manufacturer,@locationCode}.asset!AssetServer{*} '"
+                    class="submit">
+            </li>
+            <div>
+                <pre class="brush: sql; toolbar: false;">GET repositories/cmsdb/branches/main/query/Rack[@resourceId="SLC:SLC01:01-150:01:08"]+.assets[@assetType="Server"]{@resourceId,@assetType,@healthState,@healthState._lastmodified,@manufacturer,@locationCode}.asset!AssetServer{*} </pre>
+            </div>
+            <li>Comparing with inner join {query}=Rack[@resourceId="SLC:SLC01:01-150:01:08"].assets[@assetType="Server"]{@resourceId,@assetType,@healthState,@healthState._lastmodified,@manufacturer,@locationCode}.asset!AssetServer{*}.
+            	<input type="button" value="Try me" 
+            		onClick="window.location.href='console.html?opid=18&reponame=cmsdb&branch=main&query=Rack[@resourceId=%22SLC:SLC01:01-150:01:08%22]+.assets[@assetType=%22Server%22]{@resourceId,@assetType,@healthState,@healthState._lastmodified,@manufacturer,@locationCode}.asset!AssetServer{*} '" 
+            		class="submit">
+            </li>
+            <div>
+                <pre class="brush: sql; toolbar: false;">GET repositories/cmsdb/branches/main/query/Rack[@resourceId="SLC:SLC01:01-150:01:08"].assets[@assetType="Server"]{@resourceId,@assetType,@healthState,@healthState._lastmodified,@manufacturer,@locationCode}.asset!AssetServer{*} </pre>
+            </div>
+        </ol>
+    </ul>
+
+    <ul>
+        <li>Reverse Relationship Join</li>
+        <ol>
+            <li>Query the given networkcontroller of AssetServer, and fetch its subnet information. This is compound queries used in resource searching. Left query is also used:
+                <input type="button" value="Try me"
+                    onClick="window.location.href='console.html?opid=18&reponame=cmsdb&branch=main&query=AssetServer.networkControllers[@resourceId=%2200:E0:ED:22:2B:BD%22].port.networkPorts!Vlan.subnets{*}+.(gateway{*} %26%26 broadcast{*}) '"
+                    class="submit">
+            </li>
+            <div>
+                <pre class="brush: sql; toolbar: false;">GET repositories/cmsdb/branches/main/query/AssetServer.networkControllers[@resourceId="00:E0:ED:22:2B:BD"].port.networkPorts!Vlan.subnets{*}+.(gateway{*}&&broadcast{*}) </pre>
+            </div>
+        </ol>
+    </ul>
+
+    <ul>
+        <li>Sub query</li>
+        <ol>
+            <li>Get subnets for a given network device:
+                <input type="button" value="Try me"
+                    onClick="window.location.href='console.html?opid=18&reponame=cmsdb&branch=main&query=BridgeGroup[@networkDevices=%26 NetworkDevice[@asset =%26 Asset[@resourceId=%22ASSET00292176%22]]].vlans{@subnets}.subnets{*} '"
+                    class="submit">
+            </li>
+            <div>
+                <pre class="brush: sql; toolbar: false;">GET repositories/cmsdb/branches/main/query/BridgeGroup[@networkDevices=& NetworkDevice[@asset =& Asset[@resourceId="ASSET00292176"]]].vlans{@subnets}.subnets{*} </pre>
+            </div>
+        </ol>
+    </ul>
+
+        <ul>
+        <li>Set query</li>
+        <ol>
+            <li>Get the application service information, with its detailed service instance, and update strategy:
+                <input type="button" value="Try me"
+                    onClick="window.location.href='console.html?opid=18&reponame=cmsdb&branch=main&query=ApplicationService{*}.(serviceInstances[@resourceId=~%22^srp-app.*%22]{*} %26%26 updateStrategies{*}) '"
+                    class="submit">
+            </li>
+            <div>
+                <pre class="brush: sql; toolbar: false;">GET repositories/cmsdb/branches/main/query/ApplicationService{*}.(serviceInstances[@resourceId=~"srp-app.*"]{*} && updateStrategies{*}) </pre>
+            </div>
+        </ol>
+    </ul>
+
+</div>
+<div class="footer">
+    <div id="footer">
+        <p>&copy;2012 eBay CMS System Foundation</p>
+    </div>
+</div>
+</div>
+<script type="text/javascript">
+    SyntaxHighlighter.all();
+</script>
+</body>
+</html>

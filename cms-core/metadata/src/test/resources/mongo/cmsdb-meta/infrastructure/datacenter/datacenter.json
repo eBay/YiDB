@@ -1,0 +1,20 @@
+{ 
+	"name": "DataCenter",
+	"pluralName": "DataCenters",
+	"description": "The data center",
+	"parent": "Resource",
+	"fields": {
+		"rooms":{
+			"description":"rooms in datacenter",
+			"refDataType": "Room",
+			"relationType": "Reference",
+            		"dataType": "relationship",
+            		"cardinality": "Many"
+		},
+                "shipAddress": {
+			"description": "The shipping address",
+ 	       	        "dataType": "string",
+			"mandatory": false
+	        }
+	}	
+}

@@ -1,0 +1,51 @@
+{
+	"name": "ResourceGroup",
+	"pluralName": "ResourceGroups",
+	"parent": "Resource",
+	"description": "a grouping of Resources",
+	"fields": {
+		"type" : {
+			"description":"The type of the resourcegroup",
+			"mandatory":true,
+			"dataType": "string",
+			"cardinality": "One"
+		},
+                "parentGroup" : {
+                        "description": "parent resource group",
+                        "dataType": "relationship",
+                        "relationType": "Reference",
+                        "refDataType": "ResourceGroup"
+                },
+                "manager" : {
+                        "description": "the manager of this resourceGroup",
+                        "dataType": "relationship",
+                        "relationType": "Reference",
+                        "refDataType": "Resource",
+			"mandatory": false,
+			"cardinality": "One"
+                },
+		"children": {
+			"description": "list of child resources",
+			"dataType": "relationship",
+			"relationType": "Reference",
+			"refDataType": "Resource",
+			"cardinality": "Many"
+		},
+		"account": {
+			"description": "account this group belongs to",
+			"dataType": "relationship",
+			"relationType": "Reference",
+			"refDataType": "Account",
+			"cardinality": "One"
+		},
+		"environment": {
+			"description": "the environment this Resource belongs to",
+			"dataType": "relationship",
+			"consistencyType" : "Strong",
+			"mandatory": false,
+			"relationType": "Reference",
+			"refDataType": "Environment"
+		}
+
+	}
+}

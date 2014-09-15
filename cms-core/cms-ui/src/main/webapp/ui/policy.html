@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <title>Policy - CMS</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav>
+    <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+
+                <!-- When you get a logo for cms.api uncomment this -->
+                <!--<a class="brand" href="/">-->
+                <!--<div class="cms-api-logo">CMS.API</div>-->
+                <!--</a>-->
+                <a class="brand" href="/">CMS</a>
+                <ul class="nav">
+                    <li><a href="doc.html">Getting Started</a></li>
+                    <li><a href="console.html">Goto Try me!</a></li>
+                    <li class="active"><a href="ui/policy.html">Access
+                        Policy</a></li>
+                    <li><a href="faqs.html">FAQs</a></li>
+                </ul>
+                <form class="navbar-search pull-right" action="/cms/policy"
+                      id="cse-search-box">
+                    <input type="hidden" name="ie" value="UTF-8">
+                    <input type="hidden" name="hl" value="en">
+                    <input type="search" name="q" class="search-query" id="q"
+                           autocomplete="off" placeholder="Search Policy"
+                           autofocus>
+                </form>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+
+    <div id="header">
+        <h1>Access Policy</h1>
+    </div>
+    <br>
+
+    <p>
+        Before CMS write, access control can be enforced to preserve the data
+        integrity based on repo and the class. There are two types of access
+        control currently supported, based on the appid 'token' (The application
+        identity).
+    </p>
+
+    <ol>
+        <li>Class Level</li>
+        <li>Object Level</li>
+    </ol>
+
+    <p>
+        The access control is applied in the same order. (Class) -> (Object)
+    </p>
+
+    <p>
+        The call will be returned without further processing if validation fails
+        at any level. For ex., if the class level validation fails, the call is
+        returned without any object level validation being executed.
+    </p>
+
+    <p>
+        Classes can be associated with a set of rules for enforcement. See below
+        for an example.
+    </p>
+
+    <p>
+        Here is a simplified flow for authorization.
+    </p>
+
+    <h3> Class level </h3>
+
+    <p>
+        Class level authorization enforces that only authorized applications can
+        Create/Update/Delete objects of a class.
+    </p>
+
+    <p>Ex., class rule.</p>
+
+    <pre>
+    "class" : {
+      "create" : ["_stratus", "dl-stratus-create"],
+      "update" : ["_wsm"]
+    }
+
+    `_stratus` and any subject that is part of the DL `dl-stratus-create`
+    can create instances of the class. and
+    `_wsm` can update the instances (governed by object level rules, if any)</pre>
+
+    <strong>Note: creators have full permission. </strong>
+
+    <br>
+
+    <h3>Object Level</h3>
+
+    <p>
+        Object level is more specific to single instance of a class. Instance
+        Level access enforces that a particular object of a class can be edited
+        only by the subjects mentioned in the policy. The access level can
+        further be refined to specify that the instances created by certain
+        subject can be updated only by certain subjects/subject-groups.
+    </p>
+
+    <p>
+        The rule has three attributes, "create", "update" and "fields".
+    </p>
+
+    <p>
+        Ex., rule.
+    </p>
+
+    <pre>
+    {
+      "create" : "_stratus",
+      "update" : ["_wsm"],
+      "fields" : ["id", "label"]
+    }
+
+    The above object rule specifies that the instances
+    created by `_stratus` can be
+    updated only by `_wsm` and
+    `_wsm` can update only the fields `id` and `label`</pre>
+
+    <ol>
+        <li>Absence of "create" means all the records.</li>
+        <li>Absence of "fields" indicates all the fields are update-able.</li>
+
+    </ol>
+
+    <strong>Absence of instance level policy means no-op at instance
+        level.</strong>
+
+
+    <h3>Example Rule Definition </h3>
+
+    <pre>
+    {
+      "name" : "AssetServer",
+      "repo" : "cmsdbconfig"
+      "rules" : {
+        "class" : {
+          "create" : ["pike", "russ"],
+          "update" : ["andrew", "cox", "pk", "dl-updates"]
+        },
+        "object" : [
+        {
+          "update" : ["cox", "dl-updates"]
+        },
+        {
+          "create" : "pike",
+          "update" : ["andrew"],
+          "fields" : ["id", "label"]
+        },
+        {
+          "create" : "russ",
+          "update" : ["dl-updates", "cox"],
+          "fields" : ["status", "desc"]
+        },
+        {
+          "create" : "russ",
+          "update" : ["pk"],
+          "fields" : ["name", "desc", "id"]
+        },
+        {
+          "update": ["hunt"],
+          "fields": ["extra", "dl-updates"]
+        }
+        ]
+      }
+    }</pre>
+
+    <br>
+    <strong> Some things to note: </strong>
+
+    <ol>
+
+        <li>This policy controls the class "AssetServer" in "cmsdbconfig"
+            repository
+        </li>
+        <li>All the 5 object level rules will be (if needed) applied, before
+            giving access to some subject for update. Any failure cause access
+            denied
+        </li>
+        <li>Only "andrew", "cox", "pk", subject part of "dl-updates" can update
+            instances of 'AssetServer'
+        </li>
+        <li>Only 'pike' and 'russ' can create instances of 'AssetServer' class
+        </li>
+    </ol>
+</div>
+
+</body>
+
+</body>
+</html>

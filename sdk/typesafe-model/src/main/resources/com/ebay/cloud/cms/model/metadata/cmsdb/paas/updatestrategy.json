@@ -1,0 +1,34 @@
+{ 
+	"name": "UpdateStrategy",
+	"pluralName": "UpdateStrategies",
+	"parent": "Resource",
+	"description": "used to organize resources for sequencing and parallelizing operations",
+	"fields": {
+		"version": {
+			"description": "version of this update strategy",
+			"dataType": "string",
+			"mandatory": true			
+		},
+		"segmentType": {
+			"description": "indicates if the segment types will explicitly select resources or whether random selection is used",
+			"dataType": "enumeration",
+			"enumValues": [ "explicit", "random" ],
+			"defaultValue": "random",
+			"mandatory": true			
+		},
+		"passThreshold": {
+			"description": "pass threshold count for this strategy.  Append '%' to use percentage instead of count",
+			"dataType": "string",
+			"defaultValue": "0",
+			"mandatory": true
+		},
+		"segments": {
+			"description": "resource segments",
+			"dataType": "relationship",
+			"refDataType": "StrategySegment",
+			"relationType": "Reference",
+			"cardinality": "Many",
+			"mandatory": true
+		}
+	}
+}

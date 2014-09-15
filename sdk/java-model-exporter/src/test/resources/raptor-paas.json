@@ -1,0 +1,1354 @@
+[
+{
+"_id": "514fab2777001a3fedee7b8f",
+"name": "History",
+"pluralName": null,
+"description": null,
+"repository": "raptor-paas",
+"parent": null,
+"ancestors": null,
+"allowFullTableScan": false,
+"lastModified": 1364175655803,
+"fields": {
+"logBody": {
+"name": "logBody",
+"description": null,
+"dbName": "A9",
+"valueDbName": "A9.v",
+"dataType": "json",
+"cardinality": "One",
+"mandatory": true,
+"defaultValue": null,
+"enumValues": [ ],
+"expression": null,
+"validation": null
+},
+"sourceIp": {
+"name": "sourceIp",
+"description": null,
+"dbName": "AB",
+"valueDbName": "AB.v",
+"dataType": "string",
+"cardinality": "One",
+"mandatory": true,
+"defaultValue": null,
+"enumValues": [ ],
+"expression": null,
+"validation": null
+},
+"entityId": {
+"name": "entityId",
+"description": null,
+"dbName": "AA",
+"valueDbName": "AA.v",
+"dataType": "string",
+"cardinality": "One",
+"mandatory": true,
+"defaultValue": null,
+"enumValues": [ ],
+"expression": null,
+"validation": null
+},
+"operType": {
+"name": "operType",
+"description": null,
+"dbName": "AC",
+"valueDbName": "AC.v",
+"dataType": "string",
+"cardinality": "One",
+"mandatory": true,
+"defaultValue": null,
+"enumValues": [ ],
+"expression": null,
+"validation": null
+}
+},
+"options": {
+"indexes": {
+"__logIdIndex__": {
+"indexName": "__logIdIndex__",
+"keyList": [
+"entityId"
+],
+"indexOptions": [ ]
+}
+}
+}
+},
+{
+"_id": "514fab2777001a3fedee7b90",
+"name": "Branch",
+"pluralName": null,
+"description": null,
+"repository": "raptor-paas",
+"parent": null,
+"ancestors": null,
+"allowFullTableScan": false,
+"lastModified": 1364175655817,
+"fields": {
+"parentId": {
+"name": "parentId",
+"description": null,
+"dbName": "AF",
+"valueDbName": "AF.v",
+"dataType": "string",
+"cardinality": "One",
+"mandatory": false,
+"defaultValue": null,
+"enumValues": [ ],
+"expression": null,
+"validation": null
+},
+"rootId": {
+"name": "rootId",
+"description": null,
+"dbName": "AD",
+"valueDbName": "AD.v",
+"dataType": "string",
+"cardinality": "One",
+"mandatory": true,
+"defaultValue": null,
+"enumValues": [ ],
+"expression": null,
+"validation": null
+},
+"branchStatus": {
+"name": "branchStatus",
+"description": null,
+"dbName": "AE",
+"valueDbName": "AE.v",
+"dataType": "enumeration",
+"cardinality": "One",
+"mandatory": true,
+"defaultValue": null,
+"enumValues": [
+"ACTIVE",
+"COMMITING",
+"COMMITTED",
+"ABORTED",
+"ABORTING"
+],
+"expression": null,
+"validation": null
+},
+"name": {
+"name": "name",
+"description": null,
+"dbName": "AG",
+"valueDbName": "AG.v",
+"dataType": "string",
+"cardinality": "One",
+"mandatory": false,
+"defaultValue": null,
+"enumValues": [ ],
+"expression": null,
+"validation": null
+},
+"isMain": {
+"name": "isMain",
+"description": null,
+"dbName": "AH",
+"valueDbName": "AH.v",
+"dataType": "boolean",
+"cardinality": "One",
+"mandatory": true,
+"defaultValue": null,
+"enumValues": [ ],
+"expression": null,
+"validation": null
+}
+},
+"options": {
+"indexes": { }
+}
+},
+{
+"_id": "514fab2777001a3fedee7b91",
+"name": "ApplicationService",
+"pluralName": "ApplicationServices",
+"description": null,
+"repository": "raptor-paas",
+"parent": null,
+"ancestors": null,
+"allowFullTableScan": false,
+"lastModified": 1364175655863,
+"fields": {
+"archTier": {
+"name": "archTier",
+"description": null,
+"dbName": "AI",
+"valueDbName": "AI.v",
+"dataType": "string",
+"cardinality": "One",
+"mandatory": false,
+"defaultValue": null,
+"enumValues": [ ],
+"expression": null,
+"validation": null
+},
+"preActiveManifestRef": {
+"name": "preActiveManifestRef",
+"description": null,
+"dbName": "AQ",
+"valueDbName": "AQ.v",
+"dataType": "string",
+"cardinality": "One",
+"mandatory": false,
+"defaultValue": null,
+"enumValues": [ ],
+"expression": null,
+"validation": null
+},
+"services": {
+"name": "services",
+"description": null,
+"dbName": "AT",
+"valueDbName": "AT.v",
+"dataType": "relationship",
+"cardinality": "Many",
+"mandatory": false,
+"refDataType": "ServiceInstance",
+"refRepository": null,
+"relationType": "Reference",
+"consistencyType": "Strong",
+"cascade": true,
+"sourceDataType": "ApplicationService"
+},
+"preManifestRef": {
+"name": "preManifestRef",
+"description": null,
+"dbName": "AS",
+"valueDbName": "AS.v",
+"dataType": "string",
+"cardinality": "Many",
+"mandatory": false,
+"defaultValue": null,
+"enumValues": [ ],
+"expression": null,
+"validation": null
+},
+"healthStatus": {
+"name": "healthStatus",
+"description": null,
+"dbName": "AR",
+"valueDbName": "AR.v",
+"dataType": "string",
+"cardinality": "One",
+"mandatory": false,
+"defaultValue": null,
+"enumValues": [ ],
+"expression": null,
+"validation": null
+},
+"appId": {
+"name": "appId",
+"description": null,
+"dbName": "AJ",
+"valueDbName": "AJ.v",
+"dataType": "string",
+"cardinality": "One",
+"mandatory": false,
+"defaultValue": null,
+"enumValues": [ ],
+"expression": null,
+"validation": null
+},
+"status": {
+"name": "status",
+"description": null,
+"dbName": "AU",
+"valueDbName": "AU.v",
+"dataType": "string",
+"cardinality": "One",
+"mandatory": false,
+"defaultValue": null,
+"enumValues": [ ],
+"expression": null,
+"validation": null
+},
+"deployHistory": {
+"name": "deployHistory",
+"description": null,
+"dbName": "AV",
+"valueDbName": "AV.v",
+"dataType": "string",
+"cardinality": "Many",
+"mandatory": false,
+"defaultValue": null,
+"enumValues": [ ],
+"expression": null,
+"validation": null
+},
+"label": {
+"name": "label",
+"description": null,
+"dbName": "AW",
+"valueDbName": "AW.v",
+"dataType": "string",
+"cardinality": "One",
+"mandatory": false,
+"defaultValue": null,
+"enumValues": [ ],
+"expression": null,
+"validation": null
+},
+"architecture": {
+"name": "architecture",
+"description": null,
+"dbName": "AK",
+"valueDbName": "AK.v",
+"dataType": "string",
+"cardinality": "One",
+"mandatory": false,
+"defaultValue": null,
+"enumValues": [ ],
+"expression": null,
+"validation": null
+},
+"activeManifestRef": {
+"name": "activeManifestRef",
+"description": null,
+"dbName": "AX",
+"valueDbName": "AX.v",
+"dataType": "string",
+"cardinality": "Many",
+"mandatory": false,
+"defaultValue": null,
+"enumValues": [ ],
+"expression": null,
+"validation": null
+},
+"nugget": {
+"name": "nugget",
+"description": null,
+"dbName": "AL",
+"valueDbName": "AL.v",
+"dataType": "string",
+"cardinality": "One",
+"mandatory": false,
+"defaultValue": null,
+"enumValues": [ ],
+"expression": null,
+"validation": null
+},
+"activeManifestCur": {
+"name": "activeManifestCur",
+"description": null,
+"dbName": "AY",
+"valueDbName": "AY.v",
+"dataType": "string",
+"cardinality": "One",
+"mandatory": false,
+"defaultValue": null,
+"enumValues": [ ],
+"expression": null,
+"validation": null
+},
+"manifestRef": {
+"name": "manifestRef",
+"description": null,
+"dbName": "AZ",
+"valueDbName": "AZ.v",
+"dataType": "string",
+"cardinality": "Many",
+"mandatory": false,
+"defaultValue": null,
+"enumValues": [ ],
+"expression": null,
+"validation": null
+},
+"name": {
+"name": "name",
+"description": null,
+"dbName": "AM",
+"valueDbName": "AM.v",
+"dataType": "string",
+"cardinality": "One",
+"mandatory": false,
+"defaultValue": "",
+"enumValues": [ ],
+"expression": null,
+"validation": null
+},
+"updateStrategies": {
+"name": "updateStrategies",
+"description": null,
+"dbName": "AN",
+"valueDbName": "AN.v",
+"dataType": "relationship",
+"cardinality": "Many",
+"mandatory": false,
+"refDataType": "UpdateStrategy",
+"refRepository": null,
+"relationType": "Reference",
+"consistencyType": null,
+"cascade": true,
+"sourceDataType": "ApplicationService"
+},
+"manifestCur": {
+"name": "manifestCur",
+"description": null,
+"dbName": "AO",
+"valueDbName": "AO.v",
+"dataType": "string",
+"cardinality": "One",
+"mandatory": false,
+"defaultValue": null,
+"enumValues": [ ],
+"expression": null,
+"validation": null
+},
+"activeManifestDiff": {
+"name": "activeManifestDiff",
+"description": null,
+"dbName": "AP",
+"valueDbName": "AP.v",
+"dataType": "boolean",
+"cardinality": "One",
+"mandatory": false,
+"defaultValue": null,
+"enumValues": [ ],
+"expression": "function getDiff() {var ref = $activeManifestRef; var cur = $activeManifestCur;\n\tif(ref == null || ref == \"\" || ref == \"null\") {\n\t\tif(cur == \"null\" || cur == null || cur == \"\") {\n\t\t\treturn false;\n\t\t};\n\t\treturn true;\n\t};\n\tref = ref[0];\n\tif(ref == null || ref == \"\" || ref == \"null\") {\n\t\tif(cur == \"null\" || cur == null || cur == \"\") {\n\t\t\treturn false;\n\t\t};\n\t\treturn true;\n\t};\n\treturn ref != cur; }\n\tgetDiff();",
+"validation": null
+}
+},
+"options": {
+"indexes": {
+"appNameIndex": {
+"indexName": "appNameIndex",
+"keyList": [
+"name"
+],
+"indexOptions": [
+"unique"
+]
+},
+"appTierIndex": {
+"indexName": "appTierIndex",
+"keyList": [
+"archTier"
+],
+"indexOptions": [ ]
+}
+}
+}
+},
+{
+"_id": "514fab2777001a3fedee7b92",
+"name": "Environment",
+"pluralName": "Environments",
+"description": null,
+"repository": "raptor-paas",
+"parent": null,
+"ancestors": null,
+"allowFullTableScan": false,
+"lastModified": 1364175655891,
+"fields": {
+"numService": {
+"name": "numService",
+"description": null,
+"dbName": "Aa",
+"valueDbName": "Aa.v",
+"dataType": "integer",
+"cardinality": "One",
+"mandatory": false,
+"defaultValue": null,
+"enumValues": [ ],
+"expression": null,
+"validation": null
+},
+"cos": {
+"name": "cos",
+"description": null,
+"dbName": "Ab",
+"valueDbName": "Ab.v",
+"dataType": "relationship",
+"cardinality": "One",
+"mandatory": false,
+"refDataType": "ClassOfService",
+"refRepository": null,
+"relationType": "Reference",
+"consistencyType": null,
+"cascade": true,
+"sourceDataType": "Environment"
+},
+"name": {
+"name": "name",
+"description": null,
+"dbName": "Ac",
+"valueDbName": "Ac.v",
+"dataType": "string",
+"cardinality": "One",
+"mandatory": false,
+"defaultValue": "",
+"enumValues": [ ],
+"expression": null,
+"validation": null
+},
+"applications": {
+"name": "applications",
+"description": null,
+"dbName": "Ad",
+"valueDbName": "Ad.v",
+"dataType": "relationship",
+"cardinality": "Many",
+"mandatory": false,
+"refDataType": "ApplicationService",
+"refRepository": null,
+"relationType": "Reference",
+"consistencyType": null,
+"cascade": true,
+"sourceDataType": "Environment"
+}
+},
+"options": {
+"indexes": {
+"envNameIndex": {
+"indexName": "envNameIndex",
+"keyList": [
+"name"
+],
+"indexOptions": [ ]
+}
+}
+}
+},
+{
+"_id": "514fab2777001a3fedee7b93",
+"name": "ClassOfService",
+"pluralName": "ClassOfServices",
+"description": null,
+"repository": "raptor-paas",
+"parent": null,
+"ancestors": null,
+"allowFullTableScan": false,
+"lastModified": 1364175655896,
+"fields": {
+"name": {
+"name": "name",
+"description": null,
+"dbName": "Ae",
+"valueDbName": "Ae.v",
+"dataType": "string",
+"cardinality": "One",
+"mandatory": false,
+"defaultValue": "",
+"enumValues": [ ],
+"expression": null,
+"validation": null
+}
+},
+"options": {
+"indexes": { }
+}
+},
+{
+"_id": "514fab2777001a3fedee7b94",
+"name": "UpdateStrategy",
+"pluralName": "UpdateStrategies",
+"description": null,
+"repository": "raptor-paas",
+"parent": null,
+"ancestors": null,
+"allowFullTableScan": false,
+"lastModified": 1364175655903,
+"fields": {
+"lastModifiedTime": {
+"name": "lastModifiedTime",
+"description": null,
+"dbName": "Af",
+"valueDbName": "Af.v",
+"dataType": "date",
+"cardinality": "One",
+"mandatory": true,
+"defaultValue": null,
+"enumValues": [ ],
+"expression": null,
+"validation": null
+},
+"failure": {
+"name": "failure",
+"description": null,
+"dbName": "Aj",
+"valueDbName": "Aj.v",
+"dataType": "string",
+"cardinality": "One",
+"mandatory": false,
+"defaultValue": null,
+"enumValues": [ ],
+"expression": null,
+"validation": null
+},
+"description": {
+"name": "description",
+"description": null,
+"dbName": "Ak",
+"valueDbName": "Ak.v",
+"dataType": "string",
+"cardinality": "One",
+"mandatory": false,
+"defaultValue": null,
+"enumValues": [ ],
+"expression": null,
+"validation": null
+},
+"name": {
+"name": "name",
+"description": null,
+"dbName": "Al",
+"valueDbName": "Al.v",
+"dataType": "string",
+"cardinality": "One",
+"mandatory": false,
+"defaultValue": "",
+"enumValues": [ ],
+"expression": null,
+"validation": null
+},
+"strategy": {
+"name": "strategy",
+"description": null,
+"dbName": "Ag",
+"valueDbName": "Ag.v",
+"dataType": "string",
+"cardinality": "One",
+"mandatory": false,
+"defaultValue": null,
+"enumValues": [ ],
+"expression": null,
+"validation": null
+},
+"type": {
+"name": "type",
+"description": null,
+"dbName": "Ah",
+"valueDbName": "Ah.v",
+"dataType": "string",
+"cardinality": "One",
+"mandatory": false,
+"defaultValue": null,
+"enumValues": [ ],
+"expression": null,
+"validation": null
+},
+"groups": {
+"name": "groups",
+"description": null,
+"dbName": "Am",
+"valueDbName": "Am.v",
+"dataType": "string",
+"cardinality": "One",
+"mandatory": false,
+"defaultValue": null,
+"enumValues": [ ],
+"expression": null,
+"validation": null
+},
+"threshold": {
+"name": "threshold",
+"description": null,
+"dbName": "Ai",
+"valueDbName": "Ai.v",
+"dataType": "string",
+"cardinality": "One",
+"mandatory": false,
+"defaultValue": null,
+"enumValues": [ ],
+"expression": null,
+"validation": null
+}
+},
+"options": {
+"indexes": {
+"updateStrategyNameIndex": {
+"indexName": "updateStrategyNameIndex",
+"keyList": [
+"name"
+],
+"indexOptions": [ ]
+}
+}
+}
+},
+{
+"_id": "514fab2777001a3fedee7b95",
+"name": "ServiceInstance",
+"pluralName": "ServiceInstances",
+"description": null,
+"repository": "raptor-paas",
+"parent": null,
+"ancestors": null,
+"allowFullTableScan": false,
+"lastModified": 1364175655914,
+"fields": {
+"https": {
+"name": "https",
+"description": null,
+"dbName": "An",
+"valueDbName": "An.v",
+"dataType": "boolean",
+"cardinality": "One",
+"mandatory": false,
+"defaultValue": "true",
+"enumValues": [ ],
+"expression": null,
+"validation": null
+},
+"port": {
+"name": "port",
+"description": null,
+"dbName": "Ao",
+"valueDbName": "Ao.v",
+"dataType": "string",
+"cardinality": "One",
+"mandatory": false,
+"defaultValue": null,
+"enumValues": [ ],
+"expression": null,
+"validation": null
+},
+"manifestDiff": {
+"name": "manifestDiff",
+"description": null,
+"dbName": "Ap",
+"valueDbName": "Ap.v",
+"dataType": "boolean",
+"cardinality": "One",
+"mandatory": false,
+"defaultValue": null,
+"enumValues": [ ],
+"expression": null,
+"validation": null
+},
+"healthStatus": {
+"name": "healthStatus",
+"description": null,
+"dbName": "Aq",
+"valueDbName": "Aq.v",
+"dataType": "string",
+"cardinality": "One",
+"mandatory": false,
+"defaultValue": null,
+"enumValues": [ ],
+"expression": null,
+"validation": null
+},
+"runsOn": {
+"name": "runsOn",
+"description": null,
+"dbName": "Ar",
+"valueDbName": "Ar.v",
+"dataType": "relationship",
+"cardinality": "One",
+"mandatory": true,
+"refDataType": "Compute",
+"refRepository": null,
+"relationType": "Reference",
+"consistencyType": null,
+"cascade": true,
+"sourceDataType": "ServiceInstance"
+},
+"properties": {
+"name": "properties",
+"description": null,
+"dbName": "As",
+"valueDbName": "As.v",
+"dataType": "json",
+"cardinality": "One",
+"mandatory": false,
+"defaultValue": null,
+"enumValues": [ ],
+"expression": null,
+"validation": null
+},
+"activeManifestRef": {
+"name": "activeManifestRef",
+"description": null,
+"dbName": "At",
+"valueDbName": "At.v",
+"dataType": "string",
+"cardinality": "Many",
+"mandatory": false,
+"defaultValue": null,
+"enumValues": [ ],
+"expression": null,
+"validation": null
+},
+"activeManifestCur": {
+"name": "activeManifestCur",
+"description": null,
+"dbName": "Au",
+"valueDbName": "Au.v",
+"dataType": "string",
+"cardinality": "One",
+"mandatory": false,
+"defaultValue": null,
+"enumValues": [ ],
+"expression": null,
+"validation": null
+},
+"manifestRef": {
+"name": "manifestRef",
+"description": null,
+"dbName": "Av",
+"valueDbName": "Av.v",
+"dataType": "string",
+"cardinality": "Many",
+"mandatory": false,
+"defaultValue": null,
+"enumValues": [ ],
+"expression": null,
+"validation": null
+},
+"appService": {
+"name": "appService",
+"description": null,
+"dbName": "Aw",
+"valueDbName": "Aw.v",
+"dataType": "relationship",
+"cardinality": "One",
+"mandatory": false,
+"refDataType": "ApplicationService",
+"refRepository": null,
+"relationType": "Reference",
+"consistencyType": null,
+"cascade": true,
+"sourceDataType": "ServiceInstance"
+},
+"name": {
+"name": "name",
+"description": null,
+"dbName": "Ax",
+"valueDbName": "Ax.v",
+"dataType": "string",
+"cardinality": "One",
+"mandatory": false,
+"defaultValue": "",
+"enumValues": [ ],
+"expression": null,
+"validation": null
+},
+"manifestCur": {
+"name": "manifestCur",
+"description": null,
+"dbName": "Ay",
+"valueDbName": "Ay.v",
+"dataType": "string",
+"cardinality": "One",
+"mandatory": false,
+"defaultValue": null,
+"enumValues": [ ],
+"expression": null,
+"validation": null
+},
+"activeManifestDiff": {
+"name": "activeManifestDiff",
+"description": null,
+"dbName": "Az",
+"valueDbName": "Az.v",
+"dataType": "boolean",
+"cardinality": "One",
+"mandatory": false,
+"defaultValue": null,
+"enumValues": [ ],
+"expression": null,
+"validation": null
+}
+},
+"options": {
+"indexes": {
+"serviceInstanceNameIndex": {
+"indexName": "serviceInstanceNameIndex",
+"keyList": [
+"name"
+],
+"indexOptions": [ ]
+}
+}
+}
+},
+{
+"_id": "514fab2777001a3fedee7b96",
+"name": "Cluster",
+"pluralName": "Clusters",
+"description": null,
+"repository": "raptor-paas",
+"parent": null,
+"ancestors": null,
+"allowFullTableScan": false,
+"lastModified": 1364175655930,
+"fields": {
+"appId": {
+"name": "appId",
+"description": null,
+"dbName": "B0",
+"valueDbName": "B0.v",
+"dataType": "string",
+"cardinality": "One",
+"mandatory": false,
+"defaultValue": null,
+"enumValues": [ ],
+"expression": null,
+"validation": null
+},
+"name": {
+"name": "name",
+"description": null,
+"dbName": "B6",
+"valueDbName": "B6.v",
+"dataType": "string",
+"cardinality": "One",
+"mandatory": false,
+"defaultValue": "",
+"enumValues": [ ],
+"expression": null,
+"validation": null
+},
+"computes": {
+"name": "computes",
+"description": null,
+"dbName": "B1",
+"valueDbName": "B1.v",
+"dataType": "relationship",
+"cardinality": "Many",
+"mandatory": false,
+"refDataType": "Compute",
+"refRepository": null,
+"relationType": "Reference",
+"consistencyType": null,
+"cascade": true,
+"sourceDataType": "Cluster"
+},
+"label": {
+"name": "label",
+"description": null,
+"dbName": "B2",
+"valueDbName": "B2.v",
+"dataType": "string",
+"cardinality": "One",
+"mandatory": false,
+"defaultValue": null,
+"enumValues": [ ],
+"expression": null,
+"validation": null
+},
+"updateStrategies": {
+"name": "updateStrategies",
+"description": null,
+"dbName": "B7",
+"valueDbName": "B7.v",
+"dataType": "relationship",
+"cardinality": "Many",
+"mandatory": false,
+"refDataType": "UpdateStrategy",
+"refRepository": null,
+"relationType": "Reference",
+"consistencyType": null,
+"cascade": true,
+"sourceDataType": "Cluster"
+},
+"activeManifestRef": {
+"name": "activeManifestRef",
+"description": null,
+"dbName": "B3",
+"valueDbName": "B3.v",
+"dataType": "string",
+"cardinality": "Many",
+"mandatory": false,
+"defaultValue": null,
+"enumValues": [ ],
+"expression": null,
+"validation": null
+},
+"activeManifestDiff": {
+"name": "activeManifestDiff",
+"description": null,
+"dbName": "B8",
+"valueDbName": "B8.v",
+"dataType": "boolean",
+"cardinality": "One",
+"mandatory": false,
+"defaultValue": null,
+"enumValues": [ ],
+"expression": null,
+"validation": null
+},
+"manifestRef": {
+"name": "manifestRef",
+"description": null,
+"dbName": "B4",
+"valueDbName": "B4.v",
+"dataType": "string",
+"cardinality": "Many",
+"mandatory": false,
+"defaultValue": null,
+"enumValues": [ ],
+"expression": null,
+"validation": null
+},
+"activeManifestCur": {
+"name": "activeManifestCur",
+"description": null,
+"dbName": "B5",
+"valueDbName": "B5.v",
+"dataType": "string",
+"cardinality": "One",
+"mandatory": false,
+"defaultValue": null,
+"enumValues": [ ],
+"expression": null,
+"validation": null
+}
+},
+"options": {
+"indexes": {
+"clusterNameIndex": {
+"indexName": "clusterNameIndex",
+"keyList": [
+"name"
+],
+"indexOptions": [ ]
+}
+}
+}
+},
+{
+"_id": "514fab2777001a3fedee7b97",
+"name": "Compute",
+"pluralName": "Computes",
+"description": null,
+"repository": "raptor-paas",
+"parent": null,
+"ancestors": null,
+"allowFullTableScan": false,
+"lastModified": 1364175655945,
+"fields": {
+"https": {
+"name": "https",
+"description": null,
+"dbName": "B9",
+"valueDbName": "B9.v",
+"dataType": "boolean",
+"cardinality": "One",
+"mandatory": false,
+"defaultValue": null,
+"enumValues": [ ],
+"expression": null,
+"validation": null
+},
+"manifestDiff": {
+"name": "manifestDiff",
+"description": null,
+"dbName": "BA",
+"valueDbName": "BA.v",
+"dataType": "boolean",
+"cardinality": "One",
+"mandatory": false,
+"defaultValue": null,
+"enumValues": [ ],
+"expression": null,
+"validation": null
+},
+"location": {
+"name": "location",
+"description": null,
+"dbName": "BB",
+"valueDbName": "BB.v",
+"dataType": "string",
+"cardinality": "One",
+"mandatory": false,
+"defaultValue": null,
+"enumValues": [ ],
+"expression": null,
+"validation": null
+},
+"adminStatus": {
+"name": "adminStatus",
+"description": null,
+"dbName": "BC",
+"valueDbName": "BC.v",
+"dataType": "string",
+"cardinality": "One",
+"mandatory": false,
+"defaultValue": null,
+"enumValues": [ ],
+"expression": null,
+"validation": null
+},
+"label": {
+"name": "label",
+"description": null,
+"dbName": "BD",
+"valueDbName": "BD.v",
+"dataType": "string",
+"cardinality": "One",
+"mandatory": false,
+"defaultValue": null,
+"enumValues": [ ],
+"expression": null,
+"validation": null
+},
+"computeState": {
+"name": "computeState",
+"description": null,
+"dbName": "BE",
+"valueDbName": "BE.v",
+"dataType": "string",
+"cardinality": "One",
+"mandatory": false,
+"defaultValue": null,
+"enumValues": [ ],
+"expression": null,
+"validation": null
+},
+"activeManifestRef": {
+"name": "activeManifestRef",
+"description": null,
+"dbName": "BF",
+"valueDbName": "BF.v",
+"dataType": "string",
+"cardinality": "Many",
+"mandatory": false,
+"defaultValue": null,
+"enumValues": [ ],
+"expression": null,
+"validation": null
+},
+"fqdn": {
+"name": "fqdn",
+"description": null,
+"dbName": "BG",
+"valueDbName": "BG.v",
+"dataType": "string",
+"cardinality": "One",
+"mandatory": false,
+"defaultValue": null,
+"enumValues": [ ],
+"expression": null,
+"validation": null
+},
+"manifestRef": {
+"name": "manifestRef",
+"description": null,
+"dbName": "BH",
+"valueDbName": "BH.v",
+"dataType": "string",
+"cardinality": "Many",
+"mandatory": false,
+"defaultValue": null,
+"enumValues": [ ],
+"expression": null,
+"validation": null
+},
+"activeManifestCur": {
+"name": "activeManifestCur",
+"description": null,
+"dbName": "BI",
+"valueDbName": "BI.v",
+"dataType": "string",
+"cardinality": "One",
+"mandatory": false,
+"defaultValue": null,
+"enumValues": [ ],
+"expression": null,
+"validation": null
+},
+"assetStatus": {
+"name": "assetStatus",
+"description": null,
+"dbName": "BJ",
+"valueDbName": "BJ.v",
+"dataType": "string",
+"cardinality": "One",
+"mandatory": false,
+"defaultValue": null,
+"enumValues": [ ],
+"expression": null,
+"validation": null
+},
+"name": {
+"name": "name",
+"description": null,
+"dbName": "BK",
+"valueDbName": "BK.v",
+"dataType": "string",
+"cardinality": "One",
+"mandatory": false,
+"defaultValue": "",
+"enumValues": [ ],
+"expression": null,
+"validation": null
+},
+"manifestCur": {
+"name": "manifestCur",
+"description": null,
+"dbName": "BL",
+"valueDbName": "BL.v",
+"dataType": "string",
+"cardinality": "One",
+"mandatory": false,
+"defaultValue": null,
+"enumValues": [ ],
+"expression": null,
+"validation": null
+},
+"activeManifestDiff": {
+"name": "activeManifestDiff",
+"description": null,
+"dbName": "BM",
+"valueDbName": "BM.v",
+"dataType": "boolean",
+"cardinality": "One",
+"mandatory": false,
+"defaultValue": null,
+"enumValues": [ ],
+"expression": null,
+"validation": null
+}
+},
+"options": {
+"indexes": {
+"computeNameIndex": {
+"indexName": "computeNameIndex",
+"keyList": [
+"name"
+],
+"indexOptions": [ ]
+}
+}
+}
+},
+{
+"_id": "514fab2777001a3fedee7b98",
+"name": "ExpressionTest",
+"pluralName": "ExpressionTests",
+"description": null,
+"repository": "raptor-paas",
+"parent": null,
+"ancestors": null,
+"allowFullTableScan": false,
+"lastModified": 1364175655961,
+"fields": {
+"d1": {
+"name": "d1",
+"description": null,
+"dbName": "BQ",
+"valueDbName": "BQ.v",
+"dataType": "double",
+"cardinality": "One",
+"mandatory": false,
+"defaultValue": "0.0",
+"enumValues": [ ],
+"expression": null,
+"validation": null
+},
+"d": {
+"name": "d",
+"description": null,
+"dbName": "BN",
+"valueDbName": "BN.v",
+"dataType": "double",
+"cardinality": "One",
+"mandatory": false,
+"defaultValue": "0.0",
+"enumValues": [ ],
+"expression": null,
+"validation": null
+},
+"name": {
+"name": "name",
+"description": null,
+"dbName": "BR",
+"valueDbName": "BR.v",
+"dataType": "string",
+"cardinality": "One",
+"mandatory": false,
+"defaultValue": "",
+"enumValues": [ ],
+"expression": null,
+"validation": null
+},
+"ei": {
+"name": "ei",
+"description": null,
+"dbName": "BS",
+"valueDbName": "BS.v",
+"dataType": "integer",
+"cardinality": "One",
+"mandatory": false,
+"defaultValue": "0",
+"enumValues": [ ],
+"expression": "i1 / i",
+"validation": null
+},
+"ename": {
+"name": "ename",
+"description": null,
+"dbName": "BT",
+"valueDbName": "BT.v",
+"dataType": "string",
+"cardinality": "One",
+"mandatory": false,
+"defaultValue": "",
+"enumValues": [ ],
+"expression": "name1+name",
+"validation": null
+},
+"name1": {
+"name": "name1",
+"description": null,
+"dbName": "BU",
+"valueDbName": "BU.v",
+"dataType": "string",
+"cardinality": "One",
+"mandatory": false,
+"defaultValue": "",
+"enumValues": [ ],
+"expression": null,
+"validation": null
+},
+"i1": {
+"name": "i1",
+"description": null,
+"dbName": "BV",
+"valueDbName": "BV.v",
+"dataType": "integer",
+"cardinality": "One",
+"mandatory": false,
+"defaultValue": "0",
+"enumValues": [ ],
+"expression": null,
+"validation": null
+},
+"ed": {
+"name": "ed",
+"description": null,
+"dbName": "BO",
+"valueDbName": "BO.v",
+"dataType": "double",
+"cardinality": "One",
+"mandatory": false,
+"defaultValue": "0.0",
+"enumValues": [ ],
+"expression": "d1 * d",
+"validation": null
+},
+"i": {
+"name": "i",
+"description": null,
+"dbName": "BP",
+"valueDbName": "BP.v",
+"dataType": "integer",
+"cardinality": "One",
+"mandatory": false,
+"defaultValue": "0",
+"enumValues": [ ],
+"expression": null,
+"validation": null
+}
+},
+"options": {
+"indexes": { }
+}
+}
+]

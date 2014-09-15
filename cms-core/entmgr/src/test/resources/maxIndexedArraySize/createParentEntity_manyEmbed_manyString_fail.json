@@ -1,0 +1,39 @@
+{
+    "SystemLimitationOnDocTest": [{
+    "_type" : "SystemLimitationOnDocTest",
+    "_oid" : "SystemLimitationOnDocTestManyEmbedManyStringFail",
+    "resourceId" : "SystemLimitationOnDocTestManyEmbedManyStringFail",
+    "_branch": "main",
+    "manyString" : ["Hello", "World", "CMS"],
+    "manyEmbed" : [{
+            "_type" : "EmbeddedTest4Index",
+            "_oid" : "EmbeddedTest4IndexOID1",
+            "name" : ["Hello", "World", "CMS", "Test"],
+            "number" : 1,
+            "label" : "1"
+        }, {
+            "_type" : "EmbeddedTest4Index",
+            "_oid" : "EmbeddedTest4IndexOID2",
+            "name" : ["Hello", "World", "CMS"],
+            "number" : 2,
+            "label" : "2"
+        }, {
+            "_type" : "EmbeddedTest4Index",
+            "_oid" : "EmbeddedTest4IndexOID3",
+            "name" : ["Hello", "World", "CMS"],
+            "number" : 3,
+            "label" : "3"
+        }
+    ],
+    "manyReference" : [{
+            "_type" : "QueryWithSortOnTest",
+            "_oid" : "QueryWithSortOnTestOID1"
+        }, {
+            "_type" : "QueryWithSortOnTest",
+            "_oid" : "QueryWithSortOnTestOID2"
+        }, {
+            "_type" : "QueryWithSortOnTest",
+            "_oid" : "QueryWithSortOnTestOID3"
+        }
+    ]
+}]}

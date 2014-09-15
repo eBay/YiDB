@@ -1,0 +1,31 @@
+#!/bin/bash
+set -e
+abspath=$(cd ${0%/*} && echo $PWD/${0##*/})
+scripts_dir=`dirname "$abspath"`
+package_dir=$scripts_dir/../..
+container_home=$package_dir/container_runtime
+
+echo -e "\nscripts_dir is $scripts_dir"
+echo -e "\npackage_dir is $package_dir"
+echo -e "\ncontainer_home is $container_home"
+echo -e "\nActivating application..."
+
+echo -e "\nCreating container logs folder..."
+mkdir -p $container_home/logs
+echo -e "\nChange access right to container/logs"
+chmod 755 $container_home/logs
+
+echo -e "\nSetting the required permissions to container bin directory"
+chmod 755 $container_home/bin/*
+
+#echo -e "\nCopying web application to container..."
+#application_dir=$package_dir/application
+#echo -e "\napplication_dir is $application_dir"
+
+#for app in $application_dir/*.war
+#do
+#   echo "app is $app"
+#   cp $app $container_home/webapps
+#done
+
+echo -e "\nActivated application"

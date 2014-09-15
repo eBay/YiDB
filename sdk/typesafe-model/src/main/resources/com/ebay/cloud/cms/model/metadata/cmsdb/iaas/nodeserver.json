@@ -1,0 +1,135 @@
+{
+	"description":"represents an instance of an Operation System running on physical or virtual hardware",
+	"name" : "NodeServer",
+	"pluralName":"NodeServers",
+	"parent": "Resource",
+	"fields":{
+		"networkInterfaces":{
+			"description":"List of network interface",
+			"refDataType": "NetworkInterface",
+			"relationType": "Embedded",
+			"dataType": "relationship",
+			"cardinality": "Many"
+		},
+		"osProfile":{
+			"description":"Reference to the os profile used to generate this OS instance",
+			"refDataType": "OsProfile",
+			"relationType": "Reference",
+			"consistencyType" : "Strong",
+			"dataType": "relationship",
+			"cardinality": "One"
+		},
+		"capacities":{
+			"description":"Enumeration of capability used for allocation",
+			"refDataType": "ResourceCapacity",
+			"relationType": "Embedded",
+			"dataType": "relationship",
+			"cardinality": "Many"
+		},
+		"hostName":{
+			"description":"hostname of this node",
+			"mandatory":true,
+			"refDataType": "FQDN",
+			"relationType": "Reference",
+			"dataType": "relationship",
+			"cardinality": "One"
+		},
+		"networkAddress":{
+			"description":"network address of this node",
+			"mandatory":true,
+			"refDataType": "NetworkAddress",
+			"relationType": "Reference",
+			"dataType": "relationship",
+			"cardinality": "Many"
+		},
+		"nodeType":{
+			"description":"provides the role of this server: LOM, Virtual Machine Manager, or compute resource",
+			"mandatory":true,
+			"enumValues": ["physical","lom","vmm","virtual","zone","globalzone","lb","unknown"],
+			"dataType":"enumeration",
+			"cardinality":"One"
+		},
+		"ntpServers":{
+		    "description": "primary and secondary ntp servers",
+			"refDataType": "NodeServer",
+			"relationType": "Reference",
+			"dataType": "relationship",
+			"cardinality": "Many"
+		},
+		"timezone":{
+		    "description": "timezone belongs to",
+			"enumValues": ["unknown","GMT(UTC+0)","A(UTC+1)","ACDT(UTC+10:30)","ACST(UTC+9:30)","ADT(UTC-3)","AEDT(UTC+11)","AEST(UTC+10)","AFT(UTC+4:30)","AKDT(UTC-8)","AKST(UTC-9)","ALMT(UTC+6)","AMST(UTC+5)","AMST(UTC-3)","AMT(UTC+4)","AMT(UTC-4)","ANAST(UTC+12)","ANAT(UTC+12)","AQTT(UTC+5)","ART(UTC-3)","AST(UTC+3)","AST(UTC-4)","AWDT(UTC+9)","AWST(UTC+8)","AZOT(UTC-1)","AZST(UTC+5)","AZT(UTC+4)","B(UTC+2)","BNT(UTC+8)","BOT(UTC-4)","BRST(UTC-2)","BRT(UTC-3)","BST(UTC+1)","BST(UTC+6)","BTT(UTC+6)","C(UTC+10)","C(UTC+3)","CAST(UTC+8)","CAT(UTC+2)","CCT(UTC+6:30)","CDT(UTC-4)","CDT(UTC-5)","CEST(UTC+2)","CET(UTC+1)","CHADT(UTC+13:45)","CHAST(UTC+12:45)","CKT(UTC-10)","CLST(UTC-3)","CLT(UTC-4)","COT(UTC-5)","CST(UTC+8)","CST(UTC-5)","CST(UTC-6)","CVT(UTC-1)","CXT(UTC+7)","D(UTC+4)","DAVT(UTC+7)","E(UTC+5)","EASST(UTC-5)","EAST(UTC-6)","EAT(UTC+3)","ECT(UTC-5)","EDT(UTC+11)","EDT(UTC-4)","EEST(UTC+3)","EET(UTC+2)","EGT(UTC-1)","EST(UTC-5)","ET(UTC-5)","F(UTC+6)","FJST(UTC+13)","FJT(UTC+12)","FKST(UTC-3)","FKT(UTC-4)","FNT(UTC-2)","G(UTC+7)","GALT(UTC-6)","GAMT(UTC-9)","GET(UTC+4)","GFT(UTC-3)","GILT(UTC+12)","GST(UTC+4)","GYT(UTC-4)","H(UTC+8)","HAA(UTC-3)","HAC(UTC-5)","HADT(UTC-9)","HAE(UTC-4)","HAP(UTC-7)","HAR(UTC-6)","HAST(UTC-10)","HAT(UTC-2:30)","HAY(UTC-8)","HKT(UTC+8)","HLV(UTC-4:30)","HNA(UTC-4)","HNC(UTC-6)","HNE(UTC-5)","HNP(UTC-8)","HNR(UTC-7)","HNT(UTC-3:30)","HNY(UTC-9)","HOVT(UTC+7)","I(UTC+9)","ICT(UTC+7)","IDT(UTC+3)","IOT(UTC+6)","IRDT(UTC+4:30)","IRKST(UTC+9)","IRKT(UTC+9)","IRST(UTC+3:30)","IST(UTC+1)","IST(UTC+2)","IST(UTC+5:30)","JST(UTC+9)","K(UTC+10)","KGT(UTC+6)","KRAST(UTC+8)","KRAT(UTC+8)","KST(UTC+9)","KUYT(UTC+4)","L(UTC+11)","LHDT(UTC+11)","LHST(UTC+10:30)","LINT(UTC+14)","M(UTC+12)","MAGST(UTC+12)","MAGT(UTC+12)","MART(UTC-9:30)","MAWT(UTC+5)","MDT(UTC-6)","MESZ(UTC+2)","MEZ(UTC+1)","MHT(UTC+12)","MMT(UTC+6:30)","MSD(UTC+4)","MSK(UTC+4)","MST(UTC-7)","MUT(UTC+4)","MVT(UTC+5)","MYT(UTC+8)","N(UTC-1)","NCT(UTC+11)","NDT(UTC-2:30)","NFT(UTC+11:30)","NOVST(UTC+7)","NOVT(UTC+6)","NPT(UTC+5:45)","NST(UTC-3:30)","NUT(UTC-11)","NZDT(UTC+13)","NZST(UTC+12)","O(UTC-2)","OMSST(UTC+7)","OMST(UTC+7)","P(UTC-3)","PDT(UTC-7)","PET(UTC-5)","PETST(UTC+12)","PETT(UTC+12)","PGT(UTC+10)","PHOT(UTC+13)","PHT(UTC+8)","PKT(UTC+5)","PMDT(UTC-2)","PMST(UTC-3)","PONT(UTC+11)","PST(UTC-8)","PT(UTC-8)","PWT(UTC+9)","PYST(UTC-3)","PYT(UTC-4)","Q(UTC-4)","R(UTC-5)","RET(UTC+4)","S(UTC-6)","SAMT(UTC+4)","SAST(UTC+2)","SBT(UTC+11)","SCT(UTC+4)","SGT(UTC+8)","SRT(UTC-3)","SST(UTC-11)","T(UTC-7)","TAHT(UTC-10)","TFT(UTC+5)","TJT(UTC+5)","TKT(UTC+13)","TLT(UTC+9)","TMT(UTC+5)","TVT(UTC+12)","U(UTC-8)","ULAT(UTC+8)","UYST(UTC-2)","UYT(UTC-3)","UZT(UTC+5)","V(UTC-9)","VET(UTC-4:30)","VLAST(UTC+11)","VLAT(UTC+11)","VUT(UTC+11)","W(UTC-10)","WAST(UTC+2)","WAT(UTC+1)","WEST(UTC+1)","WESZ(UTC+1)","WFT(UTC+12)","WGST(UTC-2)","WGT(UTC-3)","WIB(UTC+7)","WIT(UTC+9)","WITA(UTC+8)","WST(UTC+1)","WST(UTC+13)","X(UTC-11)","Y(UTC-12)","YAKST(UTC+10)","YAKT(UTC+10)","YAPT(UTC+10)","YEKST(UTC+6)","YEKT(UTC+6)"],
+			"dataType":"enumeration",
+			"cardinality":"One"
+		},
+		"agents":{
+		    "description": "agents run on this server",
+			"refDataType": "Agent",
+			"relationType": "Inner",
+			"dataType": "relationship",
+			"cardinality": "Many"
+		},
+		"adminStatus":{
+			"description":"adminstatus of the node",
+			"mandatory":true,
+			"enumValues": ["NORMAL","CMCHECK","SACHECK","SMOKE","BRCHECK","DEBUG"],
+			"dataType":"enumeration",
+			"cardinality":"One"
+		},
+		"adminNotes":{
+			"description":"admin Notes of the node",
+			"mandatory":true,
+			"dataType":"string",
+			"cardinality":"One"	            
+		},
+		"assetStatus":{
+			"description":"asset status of the node",
+			"mandatory":true,
+			"enumValues": ["build","cache","prep","live","sunset","decommed"],
+			"dataType":"enumeration",
+			"cardinality":"One"
+		},
+		"opState":{
+			"description":"mark node as active or standby",
+          		"mandatory":false,
+            		"enumValues": ["active","standby"],
+            		"dataType": "enumeration",
+            		"cardinality":"One"
+		},
+		"uuid" : {
+			"description":"external system uuid",
+			"mandatory":false,
+			"dataType":"string",
+			"cardinality":"One"	            
+		},
+		"firmware" : {
+			"description":"firmware of this NodeLom",
+			"mandatory":false,
+			"dataType":"string",
+			"cardinality":"One"	            
+		},
+		"managementService" : {
+			"description":"the endpoint that manages this compute",
+			"refDataType": "AccessPoint",
+			"relationType": "Reference",
+			"dataType": "relationship",
+			"cardinality": "One"
+		},
+		"volumes" : {
+                        "description": "Storage volumes used by this node server",
+                        "refDataType": "Volume",
+                        "relationType": "Reference",
+                        "dataType": "relationship",
+                        "cardinality": "Many"
+	       }
+	},
+    "options": {
+        "indexes": {
+            "uuidIndex":{
+                 "indexName": "uuidIndex",
+                 "keyList": ["uuid"],
+                 "indexOptions": ["sparse"]
+            }
+        }
+    }
+}

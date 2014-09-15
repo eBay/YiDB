@@ -1,0 +1,42 @@
+{
+	"name": "Agent",
+	"pluralName": "Agent",
+        "inner":true,
+	"parent": "Resource",
+	"description": "Agent in the nodeserver",
+	"fields": {
+		"type":{
+			"description":"agent type",
+			"mandatory":true,
+			"dataType":"string",
+			"cardinality":"One"	            
+		},
+		"version":{
+			"description":"agent version",
+			"mandatory":false,
+			"dataType":"string",
+			"cardinality":"One"	            
+		},
+		"status":{
+			"description":"status of the agent",
+			"mandatory":false,
+			"dataType":"string",
+			"cardinality":"One"	            
+		},
+		"networkAddress":{
+			"description":"network address of this agent",
+			"mandatory":false,
+			"refDataType": "NetworkAddress",
+			"relationType": "Reference",
+			"dataType": "relationship",
+			"cardinality": "One"
+		},
+		"port":{
+			"description":"port of the agent",
+			"mandatory":true,
+			"dataType":"string",
+			"cardinality":"One"	            
+		}
+	}
+
+}

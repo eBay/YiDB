@@ -1,0 +1,19 @@
+{
+    "EmbeddedTest4Index":[{
+        "_type" : "EmbeddedTest4Index",
+        "_oid" : "batchCreateEmbedEntity3",
+        "name" : ["Hello",
+            "World",
+            "CMS"],
+        "number" : 3,
+        "label" : "3"
+    }, {
+        "_type" : "EmbeddedTest4Index",
+        "_oid" : "batchCreateEmbedEntity4",
+        "name" : ["Hello",
+            "World",
+            "CMS"],
+        "number" : 4,
+        "label" : "4"
+    }
+]}

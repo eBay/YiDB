@@ -1,0 +1,36 @@
+{ 
+	"name": "NetworkBubble",
+	"pluralName": "NetworkBubbles",
+	"description": "A group of devices that in the same production service level",
+	"parent": "Resource",
+	"fields": {
+		"sourceId": {
+			"description":"The sourceid of the resource",
+			"mandatory":false,
+			"dataType": "string",
+			"cardinality": "One"
+		},
+		"networkDevices": {
+			"description": "switches in this bubble",
+			"refDataType": "NetworkDevice",
+             		"mandatory":false,
+			"relationType": "Reference",
+            		"dataType": "relationship",
+            		"cardinality": "Many"
+        	},
+		"productionLevel":{
+			"description":"production service level",
+			"mandatory":true,
+			"dataType":"string"
+		}        		
+	},
+	"options": {
+		"indexes": {
+		        "sourceIdIndex":{
+				"indexName": "sourceIdIndex",
+				"keyList": ["sourceId"]
+		        }
+	        }
+        }
+
+}

@@ -1,0 +1,29 @@
+{
+	"description":"A veritas cluster system hosted on a one or more resource groupsa",
+	"name" : "VCSService",
+	"pluralName":"VCSService",
+	"parent": "Resource",
+	"fields" : {
+		 "deviceName":{
+			"description":"The device name of this VCSService",
+			"mandatory":false,
+			"dataType":"string",
+			"cardinality":"One"
+		},
+		"networkAddress":{
+			"description":"the ipaddress associated with this VCS group ",
+			"refDataType": "NetworkAddress",
+			"relationType": "Reference",
+			"dataType": "relationship",
+			"mandatory":true,
+			"cardinality":"One"
+		},
+		"runsOn":{
+			"description":"The list of nodes this service runs on",
+			"refDataType": "NodeServer",
+			"relationType": "Reference",
+			"dataType": "relationship",
+			"cardinality": "Many"
+		}
+	}
+}

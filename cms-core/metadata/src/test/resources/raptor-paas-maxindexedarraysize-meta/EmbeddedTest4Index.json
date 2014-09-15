@@ -1,0 +1,43 @@
+{
+    "name": "EmbeddedTest4Index",
+    "pluralName": "EmbeddedTest4Index",
+    "description": "Embed",
+    "repository": "raptor-paas",
+    "allowFullTableScan": true,
+    "fields": {
+        "name": {
+            "name": "name",
+            "dataType": "string",
+	    "cardinality": "Many"
+        },
+        "number": {
+            "name": "number",
+            "dataType": "integer"
+        },
+        "label": {
+            "name": "label",
+            "dataType": "string"
+        },
+        "embedManyInner": {
+            "name": "embedManyInner",
+            "dataType": "relationship",
+            "cardinality": "Many",
+            "refDataType": "InnerTest",
+            "relationType": "Inner",
+            "consistencyType": "Normal"
+        }
+    },
+    "options": {
+        "indexes": {
+            "nameIndex": {
+                "indexName": "nameIndex",
+                "keyList": [
+                    "name"
+                ],
+                "indexOptions": []
+            }
+        },
+        "primaryKeys": []
+    },
+    "embed": true
+}

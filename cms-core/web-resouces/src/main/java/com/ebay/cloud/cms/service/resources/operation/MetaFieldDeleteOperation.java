@@ -1,0 +1,36 @@
+/*
+Copyright [2013-2014] eBay Software Foundation
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+*/
+
+
+package com.ebay.cloud.cms.service.resources.operation;
+
+import com.ebay.cloud.cms.metadata.service.MetadataContext;
+import com.ebay.cloud.cms.sysmgmt.priority.CMSPriority;
+
+public class MetaFieldDeleteOperation extends MetaClassOperation {
+	private final String fieldName;
+
+	public MetaFieldDeleteOperation(CMSPriority p, String repoName, String metaName, String fieldName,
+			MetadataContext context, String errorMsg) {
+		super(p, repoName, metaName, context, errorMsg);
+		this.fieldName = fieldName;
+	}
+
+	@Override
+	protected void performAction() {
+		cmsServer.deleteMetaField(p, repoName, metaName, fieldName, context);
+	}
+}

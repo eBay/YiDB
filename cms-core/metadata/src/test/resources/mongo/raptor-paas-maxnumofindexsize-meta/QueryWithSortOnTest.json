@@ -1,0 +1,31 @@
+{
+    "name": "QueryWithSortOnTest",
+    "repository": "raptor-paas",
+    "parent": "Resource",
+    "fields": {
+        "tag": {
+            "name": "tag",
+            "dataType": "string",
+            "cardinality": "One",
+            "mandatory": false,
+            "constant": false,
+            "enumValues": []
+        },
+        "name": {
+            "name": "name",
+            "dataType": "string",
+            "cardinality": "One",
+            "mandatory": false,
+            "constant": false,
+            "enumValues": []
+        },
+        "number": {
+            "name": "number",
+            "dataType": "integer",
+            "cardinality": "One",
+            "mandatory": false,
+            "constant": false,
+            "enumValues": []
+        }
+    }
+}

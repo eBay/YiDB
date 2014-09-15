@@ -1,0 +1,66 @@
+{
+	"description":"A Load Balancer Virtual IP",
+	"name" : "LBVirtualIP",
+	"pluralName":"LBVirtualIPs",
+	"parent": "Resource",
+	"fields" : {
+		"lbService":{
+			"description":"The lb manages this pool",
+			"mandatory":true,
+			"refDataType": "LBService",
+			"relationType": "Reference",
+			"consistencyType" : "Strong",
+			"dataType": "relationship",
+			"cardinality": "One"
+		},
+                "enabled": {
+                        "description":"Enabled or not for this relationship",
+                        "mandatory":false,
+                        "dataType":"boolean",
+                        "cardinality":"One"
+                },
+		"networkAddress":{
+			"description":"The IP address object corresponding to virtual IP",
+			"refDataType": "NetworkAddress",
+			"relationType": "Reference",
+			"dataType": "relationship",
+			"cardinality": "One"
+		},
+		"opsState":{
+			"description":"States used to drive provisioning and remediation transitions",
+			"mandatory":false,
+			"enumValues":["up","down","outofservice","busy","transition2outofservice","transition2outofservicedown","unknown"],
+			"dataType":"enumeration",
+			"cardinality":"One"
+		},
+		"port":{
+			"description":"The TCP/IP port",
+			"mandatory":true,
+			"dataType":"integer",
+			"cardinality":"One"
+		},
+		"protocol":{
+			"description":"the protocol",
+			"mandatory":true,
+			"enumValues": ["ANY","TCP","DNS","UDP","FTP","RADIUS","HTTP","RTSP","SIP_UDP","SSL","SSL_TCP","TELNET","SMTP","SNMP-TRAP","SSH"],
+			"dataType":"enumeration",
+			"cardinality":"One"
+		},
+		"poolMaps":{
+			"description":"The pool map of this lbpool (optional)",
+			"mandatory":false,
+			"refDataType": "LBPoolMap",
+			"relationType": "Inner",
+			"dataType": "relationship",
+			"cardinality": "Many"
+		},
+		"monitor":{
+			"description":"Monitors for this vip",
+			"mandatory":false,
+			"refDataType": "LBMonitor",
+			"relationType": "Reference",
+			"dataType": "relationship",
+			"cardinality": "Many"
+		}
+	}
+}

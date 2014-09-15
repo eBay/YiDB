@@ -1,0 +1,16 @@
+{
+	"name": "MetaVersionTestChild",
+	"parent": "MetaVersionTest",
+	"repository": "raptor-paas",
+	"fields": {
+		"name1": {
+			"name": "name1",
+			"dataType": "string",
+			"cardinality": "One",
+			"mandatory": true,
+			"enumValues": []
+		}
+	}, 
+	"options": {
+	}
+}

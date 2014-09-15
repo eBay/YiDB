@@ -1,0 +1,72 @@
+{ 
+	"name": "DNSRecord",
+	"pluralName": "DNSRecords",
+	"parent": "Resource",
+	"fields": {
+	    "managementService":{
+		"description":"The component controls this DNS record",
+		"mandatory":false,
+		"refDataType": "AccessPoint",
+                "relationType": "Reference",
+                "dataType": "relationship",
+                "cardinality":"One"
+	    },
+	    "fqdn":{
+                "description":"The fully qualified object",
+                "mandatory":true,
+                "refDataType": "FQDN",
+		"consistencyType" : "Strong",
+                "relationType": "Reference",
+                "dataType": "relationship",
+                "cardinality":"One"
+            },
+            "type":{
+                "description":"The fully qualified object for this VIP",
+                "mandatory":true,
+                "dataType":"enumeration",
+                "enumValues": ["CNAME","A", "PTR"],
+                "cardinality":"One"
+            },
+            "cname":{
+                "description":"cname",
+                "mandatory":false,
+                "refDataType": "FQDN",
+		"consistencyType" : "Strong",
+                "relationType": "Reference",
+                "dataType": "relationship",
+                "cardinality":"One"
+            },
+            "networkAddress":{
+		"description":"The networkaddress of this fqdn",
+		"mandatory":false,
+		"refDataType":"NetworkAddress",
+                "relationType": "Reference",
+		"cardinality":"One",
+		"dataType": "relationship"			    
+	    },
+	    "forwardZone":{
+                "description":"The forward zone file",
+                "mandatory":false,
+                "dataType":"string",
+                "cardinality":"One"
+            },
+	    "reverseZone":{
+                "description":"The reverse zone file",
+                "mandatory":false,
+                "dataType":"string",
+                "cardinality":"One"
+            }
+        },
+	"options": {
+		"indexes": {
+		        "forwardZoneIndex":{
+				"indexName": "forwardZoneIndex",
+				"keyList": ["forwardZone"]
+		        },
+		        "reverseZoneIndex":{
+				"indexName": "reverseZoneIndex",
+				"keyList": ["reverseZone"]
+		        }
+	        }
+        }
+}

@@ -1,0 +1,30 @@
+#
+# Endpoint where security service is deployed for authentication
+#
+securityServiceUrl=http://localhost:8888
+
+#
+# Enable Security
+#
+secure=true
+envSuperUser=admin
+#
+# cms.open configuration
+#
+cms.mongoConnection=localhost:27017
+cms.serverUserName=localCMSServer
+cms.calIsCalMode=false
+cms.calCalConfig=cal.txt
+
+#
+# Dual Write enabled
+#
+dualWrite=true
+
+# CAL configuration
+cal.sendBufferSize=128000
+cal.environment=core_staging
+cal.poolName=cmsapinew
+cal.siteViewAddr=cal.com
+
+

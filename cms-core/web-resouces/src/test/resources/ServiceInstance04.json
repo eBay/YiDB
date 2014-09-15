@@ -1,0 +1,47 @@
+{
+  "_pversion":0,
+  "port": "8080",
+  "https": false,
+  "_branch": "main",
+  "_type": "ServiceInstance",
+  "_version": 0,
+  "_lastmodified": 1337667919420,
+  "_oid": "oid-test-in-web-resource-004",
+  "appService" : {"_oid":"4fbb314fc681caf13e283a76"},
+  "runsOn": {"_oid":"4fbb314fc681caf13e283a7b"},
+  "name": "web-resource-test-00001",
+  "_status": "active",
+  "healthStatus":"up",
+  "activeManifestDiff": true,
+  "manifestRef": [
+    "manifest-1.0",
+    "manifest-2.0",
+    "manifest-3.0"
+  ],
+  "properties" : {
+	"f1" : 1,
+	"f2" : "a",
+	"f3" : 1,
+	"nestF1": {
+		"nestFF1": {
+			"fff1": 1337667919420,
+			"fff2":[
+				"nested-field-1",
+				"nested-field-2"
+			]
+		}
+	},
+	"nestF2Array": [
+		{
+			"ff1": 1234563,
+			"ff2":[
+				"nested-field-1",
+				"nested-field-2"
+			]
+		},
+		{
+			"ff3": 1234563
+		}
+	]
+  }
+}

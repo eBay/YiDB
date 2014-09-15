@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Persistence Overview - CMS</title>
+    <link href="css/doc.css" media="screen" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="js/jquery-min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/highlight.js"></script>
+    <style>
+        input.submit{
+        clear: none;
+        display: block;
+        float: right;
+        padding: 6px 8px;
+        }
+        h2.menu{
+        font-family:"黑体"；
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <div id='navbar'>
+        <a href="home.html"><img src="images/cms_logo.png" height="90pt"></img></a>
+        <ul>
+            <li>
+                <a href='home.html'>home</a> |
+            </li>
+            <li>
+                <a href='console.html'>console</a> |
+            </li>
+            <li>
+                <a href='doc.html'>docs</a>
+            </li>
+        </ul>
+    </div>
+    <div id="leftnav">
+        <h2 class="menu">Overview</h2>
+        <ul class="navul">
+            <li><a href="doc.html">About CMS</a></li>
+            <li><a href="metadataoverview.html">Metadata Overview</a></li>
+            <li><a href="persistenceoverview.html">Persistence Overview</a></li>
+            <li><a href="queryoverview.html">Query Overview</a></li>
+            <li><a href="auditoverview.html">Audit Overview</a></li>
+        </ul>
+        <h2 class="menu">Examples</h2>
+        <ul class="navul">
+            <li><a href="repository.html">Repository</a></li>
+            <li><a href="branch.html">Branch</a></li>
+            <li><a href="metadata.html">Metadata</a></li>
+            <li><a href="entity.html">Entity</a></li>
+            <li><a href="query.html">Query</a></li>
+            <li><a href="audit.html">Audit</a></li>
+            <li><a href="systemManagement.html">System Management</a></li>
+        </ul>
+		<h2 class="menu">User Guide</h2>
+        <ul class="navul">
+            <li><a href="evt.html">Event Dispatcher</a></li>
+        </ul>
+    </div>
+    <div id="content">
+        <h1>TBD</h1>
+
+        <p><strong>Persistence Service</strong></p>
+
+        <p>The persistence service provides CRUD API for the runtime entity of
+            metadata. The entity can be flat-structure or embedded-structure
+            that conformed to the metadata definition. Besides the basic
+            functionality, it also supports some advanced features: version
+            based optimistic locking, audit tracing, reference integrity,
+            security access control of data, branching and advanced data
+            browser.</p>
+
+    </div>
+    <div class="footer">
+        <div id="footer">
+            <p>&copy;2012 eBay CMS System Foundation</p>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    SyntaxHighlighter.all();
+</script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+{
+  "_oid":"MetaVersionTest-3",
+  "_pversion":0,
+  "_branch": "main",
+  "_type": "MetaVersionTest",
+  "_version": 0,
+  "_lastmodified": 1337667919417,
+  "location": null,
+  "rootId": "rootId-00003",
+  "name": "MetaVersionTestName-3",
+  "parentId": "parentId-00003",
+  "_status": "active"
+}

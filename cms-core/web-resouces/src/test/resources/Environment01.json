@@ -1,0 +1,18 @@
+{
+  "_pversion":0,
+  "_branch": "main",
+  "_type": "Environment",
+  "_version": 0,
+  "_lastmodified": 1337667919414,
+  "_oid": "oid-test-in-web-resource-environment-001",
+  "cos": {"_oid": "4fbb314fc681caf13e283a77"},
+  "name": "EnvRaptor",
+  "applications": [
+    {"_oid": "4fbb314fc681caf13e283a76"}
+  ],
+  "_status": "active",
+  "numService": 1024,
+  "numServices": 1024,
+  "total": 2048,
+  "actionStatus": "DONE"
+}

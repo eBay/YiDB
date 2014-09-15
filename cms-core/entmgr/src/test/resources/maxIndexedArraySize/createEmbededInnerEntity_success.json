@@ -1,0 +1,23 @@
+{
+    "InnerTest": [{
+    "_type" : "InnerTest",
+    "resourceId" : "InnerTestResourceId-EmbededInner-1",
+    "_oid" : "InnerTestOIDEmbededInner1",
+    "name" : "Hello1",
+    "number" : 1,
+    "label" : "1"
+},{
+    "_type" : "InnerTest",
+    "resourceId" : "InnerTestResourceId-EmbededInner-2",
+    "_oid" : "InnerTestOIDEmbededInner2",
+    "name" : "Hello2",
+    "number" : 2,
+    "label" : "2"
+},{
+    "_type" : "InnerTest",
+    "resourceId" : "InnerTestResourceId-EmbededInner-3",
+    "_oid" : "InnerTestOIDEmbededInner3",
+    "name" : "Hello3",
+    "number" : 3,
+    "label" : "3"
+}]}

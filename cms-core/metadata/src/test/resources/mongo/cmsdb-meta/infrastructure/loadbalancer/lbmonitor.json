@@ -1,0 +1,110 @@
+ {
+	"description":"A Load Balancer monitor defining a method to test connectivity. E.g. ECV check",
+	"name" : "LBMonitor",
+	"pluralName":"LBMonitors",
+	"parent": "Resource",
+	"fields" : {
+		"type":{
+			"description":"the type of monitor",
+			"mandatory":true,
+			"enumValues": [
+"ARP",
+"CITRIX-WEB-INTERFACE",
+"CITRIX-XML-SERVICE", 
+"DIAMETER",
+"DNS",
+"EXTERNAL",
+"FIREPASS",
+"FTP",
+"FTP-EXTENDED",
+"GATEWAY",
+"GATEWAY_ICMP",
+"HTTP",
+"HTTP-ECV",
+"HTTP-INLINE",
+"HTTPS",
+"ICMP",
+"IMAP",
+"INBAND",
+"LDAP",
+"LDNS-DNS",
+"LDNS-PING",
+"LDNS-TCP",
+"LOAD",
+"MODULE_SCORE",
+"MSSQL",
+"MYSQL",
+"ND6",
+"NNTP",
+"NONE",
+"ORACLE",
+"PING",
+"POP3",
+"POSTGRESQL",
+"RADIUS",
+"RADIUS_ACCOUNTING",
+"REAL_SERVER",
+"RPC",
+"SASP",
+"SCRIPTED",
+"SIP",
+"SIP-UDP",
+"SMB",
+"SMTP",
+"SNMP",
+"SNMP_DCA",
+"SNMP_DCA_BASE",
+"SOAP",
+"TCP",
+"TCP-ECV",
+"TCP_ECHO",
+"TCP_HALF_OPEN",
+"UDP",
+"UDP-ECV",
+"UNSET",
+"USER",
+"VIRTUAL_LOCATION",
+"WAP",
+"WMI"
+                        ],
+			"dataType":"enumeration",
+			"cardinality":"One"
+		},
+		"url":{
+			"description":"the url of the monitor",
+			"mandatory":false,
+			"dataType":"string",
+			"cardinality":"One"
+		},
+		"method":{
+			"description":"the command to execute (only for HTTP)",
+			"mandatory":false,
+			"dataType":"string",
+			"cardinality":"One"
+		},
+		"responsePattern":{
+			"description":"value returned",
+			"mandatory":false,
+			"dataType":"string",
+			"cardinality":"One"
+		},
+		"interval":{
+			"description":"interval between probes in seconds",
+			"mandatory":true,
+			"dataType":"integer",
+			"cardinality":"One"
+		},
+		"timeout":{
+			"description":"timeout of response in seconds",
+			"mandatory":true,
+			"dataType":"integer",
+			"cardinality":"One"
+		},
+		"downTime":{
+			"description":"timeout before mark down",
+			"mandatory":false,
+			"dataType":"integer",
+			"cardinality":"One"
+		}
+	}
+}

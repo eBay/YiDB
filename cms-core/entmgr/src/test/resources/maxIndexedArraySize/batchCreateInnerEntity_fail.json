@@ -1,0 +1,17 @@
+{"InnerTest" :[{
+    "_type" : "InnerTest",
+    "_hostentity" : "SystemLimitationOnDocTest!SystemLimitationOnDocTestBatchInnerOID!manyInner",
+    "resourceId" : "InnerTestResourceId-BatchInner-3",
+    "_oid" : "InnerTestOIDBatchInner3",
+    "name" : "Hello",
+    "number" : 3,
+    "label" : "3"
+},{
+    "_type" : "InnerTest",
+    "_hostentity" : "SystemLimitationOnDocTest!SystemLimitationOnDocTestBatchInnerOID!manyInner",
+    "resourceId" : "InnerTestResourceId-BatchInner-4",
+    "_oid" : "InnerTestOIDBatchInner4",
+    "name" : "Hello",
+    "number" : 4,
+    "label" : "4"
+}]}

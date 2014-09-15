@@ -1,0 +1,21 @@
+{
+  "_pversion":0,
+  "port": "8080",
+  "https": false,
+  "_branch": "main",
+  "_type": "ServiceInstance",
+  "_version": 0,
+  "_lastmodified": 1337667919474,
+  "_oid": "oid-web-resource-test-003",
+  "appService" : {"_oid":"4fbb314fc681caf13e283a76"},
+  "runsOn": {"_oid":"4fbb314fc681caf13e283a8b"},
+  "name": "web-resource-test-002",
+  "healthStatus":"unknown",
+  "_status": "active",
+  "activeManifestDiff": true,
+  "manifestRef": [
+    "manifest-1.0",
+    "manifest-2.0",
+    "manifest-5.0"
+  ]
+}

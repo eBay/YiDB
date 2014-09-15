@@ -1,0 +1,5 @@
+<FindBugsFilter>
+     <Match>
+       <Package name="com.ebay.cloud.cms.query.parser.antlr" />
+     </Match>
+</FindBugsFilter>

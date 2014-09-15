@@ -1,0 +1,21 @@
+{
+    "SystemLimitationOnDocTest": [{
+    "_type": "SystemLimitationOnDocTest",
+    "_oid": "SystemLimitationOnDocTestManyReferenceSuccess",
+    "resourceId": "SystemLimitationOnDocTestManyReferenceSuccess",
+    "_branch": "main",
+    "manyReference": [
+        {
+            "_type": "QueryWithSortOnTest",
+            "_oid": "QueryWithSortOnTestOID1"
+        },
+        {
+            "_type": "QueryWithSortOnTest",
+            "_oid": "QueryWithSortOnTestOID2"
+        },
+        {
+            "_type": "QueryWithSortOnTest",
+            "_oid": "QueryWithSortOnTestOID3"
+        }
+    ]
+}]}

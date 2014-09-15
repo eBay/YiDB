@@ -1,0 +1,63 @@
+{
+    "name": "SystemLimitationOnDocTest",
+    "repository": "raptor-paas",
+    "parent": "Resource",
+    "fields": {
+        "manyEmbed": {
+            "name": "manyEmbed",
+            "dataType": "relationship",
+            "cardinality": "Many",
+            "refDataType": "EmbeddedTest4Index",
+            "relationType": "Embedded",
+            "consistencyType": "Normal"
+        },
+        "manyInner": {
+            "name": "manyInner",
+            "dataType": "relationship",
+            "cardinality": "Many",
+            "refDataType": "InnerTest",
+            "relationType": "Inner",
+            "consistencyType": "Normal"
+        },
+        "oneReference": {
+            "name": "oneReference",
+            "dataType": "relationship",
+            "refDataType": "QueryWithSortOnTest",
+            "relationType": "Reference",
+            "consistencyType": "Normal"
+        },
+        "manyReference": {
+            "name": "manyReference",
+            "dataType": "relationship",
+            "cardinality": "Many",
+            "refDataType": "QueryWithSortOnTest",
+            "relationType": "Reference",
+            "consistencyType": "Normal"
+        },
+        "manyString": {
+            "name": "manyString",
+            "dataType": "string",
+            "cardinality": "Many"
+        },
+        "oneLong": {
+            "name": "oneLong",
+            "dataType": "long"
+        },
+        "oneString": {
+            "name": "oneString",
+            "dataType": "string"
+        }
+    },
+    "options": {
+        "indexes": {
+            "manyStringIndex": {
+                "indexName": "manyStringIndex",
+                "keyList": [
+                    "manyString"
+                ],
+                "indexOptions": []
+            }
+        },
+        "primaryKeys": []
+    }
+}

@@ -1,0 +1,15 @@
+{ 
+	"name": "Region",
+	"pluralName": "Regions",
+	"description": "The regions for data center",
+	"parent": "Resource",
+	"fields": {
+		"dataCenters":{
+			"description":"datacenter in regions",
+			"refDataType": "DataCenter",
+			"relationType": "Reference",
+            		"dataType": "relationship",
+            		"cardinality": "Many"
+		}
+	}	
+}

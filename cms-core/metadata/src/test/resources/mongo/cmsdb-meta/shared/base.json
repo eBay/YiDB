@@ -1,0 +1,33 @@
+{
+	"name": "Base",
+	"description": "base type",
+	"pluralName": "Bases",
+	"fields": {
+		"description": {
+			"dataType": "string",
+			"mandatory":false,
+			"description": "object description",
+			"cardinality": "One"
+		},
+		"label": {
+			"description":"The label of the resource ",
+			"mandatory":false,
+			"dataType": "string",
+			"cardinality": "One"
+		},
+		"resourceOwner": {
+			"description":"The app owner of the resource who will be used to validate the ACL rules when available. ",
+			"mandatory":false,
+			"dataType": "string",
+			"cardinality": "One"
+		}
+	},
+	"options": {
+		"indexes": {
+		        "labelIndex":{
+				"indexName": "labelIndex",
+				"keyList": ["label"]
+			}
+		}
+	}
+}

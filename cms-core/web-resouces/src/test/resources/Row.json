@@ -1,0 +1,21 @@
+{
+	"description": " A physical designated floor space within a room that houses a series of racks", 
+	"fields": {
+		"racks": {
+			"cardinality": "One", 
+			"dataType": "relationship", 
+			"description": "this test JSON change the cardinality from MANY to ONE", 
+			"mandatory": false, 
+			"refDataType": "Rack", 
+			"relationType": "Reference"
+		},
+		"owner":{
+			"description":"owner",
+			"mandatory":false,
+			"dataType":"string"
+		}
+	}, 
+	"name": "Row", 
+	"parent": "Resource", 
+	"pluralName": "Rows"
+}

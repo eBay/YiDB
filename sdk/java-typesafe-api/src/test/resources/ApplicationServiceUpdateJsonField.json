@@ -1,0 +1,12 @@
+{
+  "jsonField": {
+      "abc" : "def"
+  },
+  "multiJsonField": [ {
+  	"company" : "ebay"
+  }, {
+  	"department" : "PE-Cloud",
+  	"team" : "CMS"
+  }
+  ]
+}

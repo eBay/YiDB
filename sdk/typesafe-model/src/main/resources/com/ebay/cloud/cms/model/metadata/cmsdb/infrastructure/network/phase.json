@@ -1,0 +1,54 @@
+{ 
+	"name": "Phase",
+	"pluralName": "Phases",
+	"description": " A phase in the data center",
+	"parent": "Resource",
+	"fields": {
+		"sourceId": {
+			"description":"The sourceid of the resource ",
+			"mandatory":true,
+			"dataType": "string",
+			"cardinality": "One"
+		},
+		"networkDevices": {
+			"description":"switches for the same phase",
+			"mandatory":false,
+			"relationType": "Reference",
+			"refDataType": "NetworkDevice",
+            		"dataType": "relationship",
+            		"cardinality": "Many"
+		},
+		"productionLevel":{
+			"description":"production service level",
+			"mandatory":true,
+			"dataType":"string"
+		},
+		"adminStatus":{
+			"description":"admin status of this phase",
+			"mandatory":false,
+			"dataType":"string"
+		},
+		"visible":{
+			"description":"Is the phase visible",
+			"mandatory":true,
+			"dataType":"boolean"
+		},
+		"wiringPlants":{
+			"description":"wiringplant for this phase",
+			"refDataType": "WiringPlant",
+			"relationType": "Reference",
+            		"dataType": "relationship",
+            		"cardinality": "Many"
+		}
+	},
+        "options": {
+                "indexes": {
+                        "sourceIdIndex":{
+                                "indexName": "sourceIdIndex",
+                                "keyList": ["sourceId"]
+                        }
+                }
+        }
+
+
+}

@@ -1,0 +1,42 @@
+{
+	"description":"ReservedResources for provisioning",
+	"name" : "ReservedResources",
+	"pluralName":"ReservedResources",
+	"parent": "Resource",
+	"fields" : {
+		"owner":{
+			"description":"owner of this reservedResources",
+			"mandatory":false,
+			"dataType":"string",
+			"cardinality":"One"
+		},
+		"type":{
+			"description":"Define if this server is a Bare Metal machine, or a VM",
+			"mandatory":true,
+			"enumValues": ["AssetServer","NodeServer"],
+			"dataType":"enumeration",
+			"cardinality":"One"
+		},
+		"account": {
+			"description": "account this group belongs to",
+			"dataType": "relationship",
+			"relationType": "Reference",
+			"refDataType": "Account",
+			"cardinality": "One"
+		},
+		"resourceCapabilities":{
+			"description":"Enumeration of capability used for allocation",
+			"mandatory":true,
+			"dataType": "json",
+			"cardinality": "One"
+		}
+	},
+	"options": {
+		"indexes": {
+		        "ownerIndex":{
+				"indexName": "ownerIndex",
+				"keyList": ["owner"]
+		        }
+	        }
+        }
+}

@@ -1,0 +1,56 @@
+{
+	"description":"A Load Balancer Service hosted on a one or many physical or virtual load balancers",
+	"name" : "LBService",
+	"pluralName":"LBService",
+	"parent": "Resource",
+	"fields" : {
+		"deviceName":{
+			"description":"The device name of this LBService",
+			"mandatory":false,
+			"dataType":"string",
+			"cardinality":"One"
+		},
+		"resourceCapabilities":{
+                        "description":"Capability character of this reousce, eg. cos, reackprofile etc.",
+                        "dataType": "json",
+                        "cardinality": "One"
+                },
+		"capacities":{
+			"description":"Enumeration of resources used for allocation",
+			"refDataType": "ResourceCapacity",
+			"relationType": "Embedded",
+			"dataType": "relationship",
+			"cardinality": "Many"
+		},
+		"networkAddress":{
+			"description":"the ipaddress associated with the load balancer Management or floating IP",
+			"refDataType": "NetworkAddress",
+			"relationType": "Reference",
+			"dataType": "relationship",
+			"mandatory":true,
+			"cardinality":"One"
+		},
+		"floatType":{
+			"description":"Float type of the LB",
+			"mandatory":true,
+			"enumValues": ["netscalar-shared-primary","bigip-shared-primary"],
+			"dataType":"enumeration",
+			"cardinality":"One"
+		},
+		"runsOn":{
+			"description":"The list of nodes this service runs on",
+			"refDataType": "NodeServer",
+			"relationType": "Reference",
+			"dataType": "relationship",
+			"cardinality": "Many"
+		}
+	},
+	"options": {
+		"indexes": {
+		        "deviceNameIndex":{
+				"indexName": "deviceNameIndex",
+				"keyList": ["deviceName"]
+		        }
+	        }
+        }
+}

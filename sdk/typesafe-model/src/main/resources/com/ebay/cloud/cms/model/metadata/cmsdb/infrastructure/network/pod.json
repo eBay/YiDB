@@ -1,0 +1,56 @@
+{ 
+	"name": "Pod",
+	"pluralName": "Pods",
+	"description": " A pod in the data center",
+	"parent": "Resource",
+	"fields": {
+		"sourceId": {
+			"description":"The sourceid of the resource ",
+			"mandatory":true,
+			"dataType": "string",
+			"cardinality": "One"
+		},
+		"networkDevices": {
+			"description":"switches for the same pod",
+			"mandatory":false,
+			"refDataType": "NetworkDevice",
+			"relationType": "Reference",
+            		"dataType": "relationship",
+            		"cardinality": "Many"
+		},
+		"phases":{
+			"description":"phases in this pod",
+			"mandatory":false,
+			"refDataType": "Phase",
+			"relationType": "Reference",
+            		"dataType": "relationship",
+            		"cardinality": "Many"
+		},
+		"bridgeGroups":{
+			"mandatory":false,
+			"description":"bridgegroups for this pod",
+			"refDataType": "BridgeGroup",
+			"relationType": "Reference",
+            		"dataType": "relationship",
+            		"cardinality": "Many"
+		},
+		"dataCenter":{
+			"mandatory":false,
+			"description":"The datacenter",
+			"refDataType": "DataCenter",
+			"relationType": "Reference",
+            		"dataType": "relationship",
+            		"cardinality": "One"
+		}
+	},
+        "options": {
+                "indexes": {
+                        "sourceIdIndex":{
+                                "indexName": "sourceIdIndex",
+                                "keyList": ["sourceId"]
+                        }
+                }
+        }
+
+
+}

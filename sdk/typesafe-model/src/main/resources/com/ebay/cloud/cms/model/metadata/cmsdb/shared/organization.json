@@ -1,0 +1,25 @@
+{
+	"name": "Organization",
+	"pluralName": "Organizations",
+	"parent": "Resource",
+	"description": "Organization, with Organization code",
+	"fields": {
+		"sapCode": {
+			"description": "SAP code for the organization",
+			"mandatory":true,
+			"dataType":"string",
+			"cardinality":"One"
+		}
+
+	},
+	"options": {
+		"indexes": {
+		        "sapCodeIndex":{
+				"indexName": "sapCodeIndex",
+				"keyList": ["sapCode"],
+				"indexOptions": ["unique"]
+		        }
+	        }
+        }
+
+}

@@ -1,0 +1,4 @@
+#!/bin/bash
+dir=$(cd -P -- "$(dirname -- "$0")" && pwd -P)
+curl -s http://localhost:8080/cms/monitors | python $dir/formatnv.py
+

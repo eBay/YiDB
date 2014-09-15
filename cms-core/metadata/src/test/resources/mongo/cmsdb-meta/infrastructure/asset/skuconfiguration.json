@@ -1,0 +1,39 @@
+{
+	"description":"SKU configuration",
+	"name" : "SkuConfiguration",
+	"pluralName":"SkuConfigurations",
+	"parent": "Resource",
+	"fields" : {
+		"bmcVersion":{
+			"description":"BMC Versions",
+			"mandatory":false,
+			"dataType":"json",
+			"cardinality":"One"
+		},
+		"biosVersion":{
+			"description":"BIOSD Versions",
+			"mandatory":false,
+			"dataType":"json",
+			"cardinality":"One"
+		},
+		"raidCtrlVersion":{
+			"description":"Raid Control Versions",
+			"mandatory":false,
+			"dataType":"json",
+			"cardinality":"One"
+		},
+		"raidCtrlRaidLevel":{
+			"description":"Raid Control Level",
+			"mandatory":false,
+			"dataType":"string",
+			"cardinality":"Many"
+		},
+		"supportedBy":{
+			"description":"supported by the ServerHWModel",
+			"refDataType": "ServerHWModel",
+			"relationType": "Reference",
+			"dataType": "relationship",
+			"cardinality": "One"
+		}
+	}
+}

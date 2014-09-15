@@ -1,0 +1,64 @@
+{ 
+	"name": "StorageDevice",
+	"pluralName": "StorageDevices",
+	"parent": "Resource",	
+	"description": "Storage devices, this class will support all the five types defined in Volume class.",
+	"fields": {
+		"storageType":{
+			"description":"The type of the storage",
+			"mandatory":true,
+			"enumValues": ["FiberChannelSAN","iSCSI","NAS","DirectAttached","DistributedStorage"],
+			"dataType":"enumeration",
+			"cardinality":"One"
+		},
+                "adminStatus":{
+                        "description":"adminstatus of the node",
+                        "mandatory":true,
+                        "enumValues": ["NORMAL","CMCHECK","SACHECK","SMOKE","BRCHECK","DEBUG"],
+                        "dataType":"enumeration",
+                        "defaultValue" : "NORMAL",
+                        "cardinality":"One"
+				},
+                "adminNotes":{
+                        "description":"admin Notes of the node",
+                        "mandatory":true,
+                        "dataType":"string",
+                        "cardinality":"One"
+                },
+                "assetStatus":{
+                        "description":"asset status of the node",
+                        "mandatory":true,
+                        "enumValues": ["build","cache","prep","live","sunset","decommed"],
+                        "dataType":"enumeration",
+                        "defaultValue" : "build",
+                        "cardinality":"One"
+                },
+		"asset" : {
+                        "description":"The asset",
+                        "refDataType": "Asset",
+                        "relationType": "Reference",
+                        "dataType": "relationship",
+                        "cardinality": "One"
+		},
+		"deviceVersion" : {
+		       "description" : "the disk version of this storage device",
+			"mandatory": false,
+			"dataType":"string",
+			"cardinality":"One"	            
+		},
+		"uuid" : {
+		       "description" : "the uuid of this disk",
+			"mandatory": false,
+			"dataType":"string",
+			"cardinality":"One"	            
+		},
+		"networkAddress":{
+                        "description":"network address of this node",
+                        "mandatory":true,
+			"refDataType": "NetworkAddress",
+			"relationType": "Reference",
+			"dataType": "relationship",
+                        "cardinality": "One"
+	       }
+	}	
+}

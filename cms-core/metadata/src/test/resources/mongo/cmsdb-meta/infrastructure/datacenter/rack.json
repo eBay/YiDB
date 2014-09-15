@@ -1,0 +1,80 @@
+{ 
+	"name": "Rack",
+	"pluralName": "Racks",
+	"description": "A standardized frame or enclosure used for mounting multiple electronic modules (i.e. chassis, servers etc.)",
+	"parent": "Resource",
+	"fields": {
+		"rackProfile": {
+			"description": "Rack profile",
+			"mandatory":false,
+                	"dataType":"string",
+                	"cardinality":"One"
+		},
+		"model": {
+			"description": "the model of the rack",
+			"mandatory":false,
+                	"dataType":"string",
+                	"cardinality":"One"
+		},
+		"allocatedStatus": {
+			"description": "the allocated status of this rack",
+			"mandatory":true,
+                        "enumValues":["Yes","No"],
+                        "dataType":"enumeration",
+			"defaultValue" : "No",
+                	"cardinality":"One"
+		},
+		"lifeCycleState": {
+			"description": "the lifecyclestate of this rack",
+			"mandatory":true,
+                        "enumValues":["live","prep","decom"],
+                        "dataType":"enumeration",
+			"defaultValue" : "prep",
+                	"cardinality":"One"
+		},
+		"allocatedRU": {
+			"description": "the allocatedru of this rack",
+			"mandatory":false,
+                	"dataType":"string",
+                	"cardinality":"One"
+		},
+		"rawRU": {
+			"description": "the rawru of this rack",
+			"mandatory":false,
+                	"dataType":"string",
+                	"cardinality":"One"
+		},
+		"powerAllocated": {
+			"description": "powerallocated of this rack",
+			"mandatory":false,
+                	"dataType":"string",
+                	"cardinality":"One"
+		},
+		"owner": {
+			"description": "the buowner of this rack",
+			"mandatory":false,
+                	"dataType":"string",
+                	"cardinality":"One"
+		},
+		"location": {
+			"description": "the location of this rack",
+			"mandatory":false,
+                	"dataType":"string",
+                	"cardinality":"One"
+		},
+		"powerStrips": {
+			"description": "powerstrips associated with this rack",
+            		"refDataType": "PowerStrip",
+             		"mandatory":false,
+            		"dataType": "relationship",
+            		"cardinality": "Many"
+        	},
+		"assets": {
+			"description": "downstream binding asset series",
+            		"refDataType": "Asset",
+             		"mandatory":false,
+            		"dataType": "relationship",
+            		"cardinality": "Many"
+        	}
+	}	
+}

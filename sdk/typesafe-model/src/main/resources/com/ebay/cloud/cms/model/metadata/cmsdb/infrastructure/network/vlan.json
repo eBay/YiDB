@@ -1,0 +1,76 @@
+{ 
+	"name": "Vlan",
+	"pluralName": "Vlans",
+	"parent": "Resource",
+	"description": "The vlan in the network world",
+	"fields": {
+		"sourceId": {
+			"description":"The sourceid of the resource ",
+			"mandatory":true,
+			"dataType": "string",
+			"cardinality": "One"
+		},
+		"networkPorts": {
+			"description": "the ports in this vlan",
+			"dataType": "relationship",
+			"refDataType": "NetworkPort",
+			"relationType": "Reference",
+			"mandatory": false,
+			"cardinality": "Many"
+		},
+		"macAddresses": {
+			"description": "network interface that is binded to the vlan",
+			"dataType": "string",
+			"mandatory": false,
+			"cardinality": "Many"
+		},
+		"owner":{
+			"description":"vlan owner",
+			"mandatory":true,
+			"dataType":"string"
+		},
+		"vlanNumber":{
+			"description":"vlan number",
+			"mandatory":true,
+			"dataType":"string"
+		},
+		"multicastEnabled":{
+			"description":"multicast enabled",
+			"mandatory":false,
+			"dataType":"string"
+		},
+		"adminStatus":{
+			"description":"admin status of this vlan",
+			"mandatory":false,
+			"dataType":"string"
+		},
+		"vlanProfile":{
+			"description":"vlan profile",
+			"mandatory":true,
+			"dataType":"string"
+		},
+		"productionLevel":{
+			"description":"production service level",
+			"mandatory":true,
+			"dataType":"string"
+		},
+		"subnets":{
+			"description":"The networks in the vlan",
+			"mandatory":false,
+			"refDataType": "Subnet",
+            		"dataType": "relationship",
+			"relationType": "Reference",
+            		"cardinality": "Many"
+		}
+	},
+        "options": {
+                "indexes": {
+                        "sourceIdIndex":{
+                                "indexName": "sourceIdIndex",
+                                "keyList": ["sourceId"]
+                        }
+                }
+        }
+
+
+}

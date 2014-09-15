@@ -1,0 +1,13 @@
+{
+    "_id": "01234567890123456789abcd",
+	"_type": "ServiceInstance",
+	"name": "Dummy srp-ENV:Raptor-00001 Modify",
+	"https": true,
+    "port": "9090",
+    "manifestDiff": false,
+    "manifestCur": "manifest-3.0",
+    "activeManifestRef": ["manifest-4.0"],
+    "activeManifestDiff": true,
+    "activeManifestCur": "manifest-3.0",
+    "manifestRef": ["manifest-3.0","manifest-4.0"]
+}

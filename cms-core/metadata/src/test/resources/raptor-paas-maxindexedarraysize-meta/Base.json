@@ -1,0 +1,46 @@
+{
+    "name": "Base",
+    "description": "base type",
+    "repository": "raptor-paas",
+    "fields": {
+        "label": {
+            "name": "label",
+            "description": "The label of the resource ",
+            "dataType": "string",
+            "cardinality": "One",
+            "mandatory": false,
+            "constant": false,
+            "enumValues": []
+        },
+        "resourceOwner": {
+            "name": "resourceOwner",
+            "description": "The app owner of the resource who will be used to validate the ACL rules when available. ",
+            "dataType": "string",
+            "cardinality": "One",
+            "mandatory": false,
+            "constant": false,
+            "enumValues": []
+        },
+        "description": {
+            "name": "description",
+            "description": "object description",
+            "dataType": "string",
+            "cardinality": "One",
+            "mandatory": false,
+            "constant": false,
+            "enumValues": []
+        }
+    },
+    "options": {
+        "indexes": {
+            "labelIndex": {
+                "indexName": "labelIndex",
+                "keyList": [
+                    "label"
+                ],
+                "indexOptions": []
+            }
+        },
+        "primaryKeys": []
+    }
+}

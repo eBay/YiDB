@@ -1,0 +1,28 @@
+{ 
+	"name": "WiringPlant",
+	"pluralName": "Wiringplants",
+	"description": "The wiringplant",
+	"parent": "Resource",
+	"fields": {
+		"plantId":{
+			"description":"plantid of this wiringplant",
+			"mandatory":false,
+			"dataType":"string"
+		},
+		"type":{
+			"description":"type of this wiringplant",
+			"mandatory":false,
+			"dataType":"string"
+		}
+	},
+        "options": {
+                "indexes": {
+                        "plantIdIndex":{
+                                "indexName": "plantIdIndex",
+                                "keyList": ["plantId"]
+                        }
+                }
+        }
+
+
+}

@@ -1,0 +1,17 @@
+{
+    "name" : "EmbeddedTest4Index",
+    "options" : {
+        "indexes" : {
+            "nameIndex" : {
+                "indexName" : "nameIndex",
+                "keyList" : ["name"],
+                "indexOptions" : []
+            },
+            "numberIndex" : {
+                "indexName" : "numberIndex",
+                "keyList" : ["number"],
+                "indexOptions" : []
+            }
+        }
+    }
+}

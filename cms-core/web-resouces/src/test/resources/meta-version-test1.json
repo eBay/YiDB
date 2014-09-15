@@ -1,0 +1,29 @@
+{
+	"name": "MetaVersionTest",
+	"repository": "raptor-paas",
+	"fields": {
+		"isMain": {
+			"name": "isMain",
+			"dataType": "boolean",
+			"cardinality": "One",
+			"mandatory": true,
+			"enumValues": []
+		},
+		"parentId": {
+			"name": "parentId",
+			"dataType": "string",
+			"cardinality": "One",
+			"mandatory": false,
+			"enumValues": []
+		},
+		"rootId": {
+			"name": "rootId",
+			"dataType": "string",
+			"cardinality": "One",
+			"mandatory": true,
+			"enumValues": []
+		}
+	}, 
+	"options": {
+	}
+}

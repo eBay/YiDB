@@ -1,0 +1,9 @@
+{
+    "EmbeddedTest4Index": [{
+    "_type" : "EmbeddedTest4Index",
+    "_oid" : "createEmbedEntityManyString3",
+    "_branch": "main",
+    "name" : ["Hello", "World", "CMS", "Extra"],
+    "number" : 3,
+    "label" : "3"
+}]}

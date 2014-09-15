@@ -1,0 +1,27 @@
+{
+    "SystemLimitationOnDocTest": [{
+    "_type" : "SystemLimitationOnDocTest",
+    "_oid" : "SystemLimitationOnDocTestManyEmbedSuccess",
+    "resourceId" : "SystemLimitationOnDocTestManyEmbedSuccess",
+    "_branch": "main",
+    "manyEmbed" : [{
+            "_type" : "EmbeddedTest4Index",
+            "_oid" : "EmbeddedTest4IndexOID1",
+            "name" : ["Hello", "World", "CMS"],
+            "number" : 1,
+            "label" : "1"
+        }, {
+            "_type" : "EmbeddedTest4Index",
+            "_oid" : "EmbeddedTest4IndexOID2",
+            "name" : ["Hello", "World", "CMS"],
+            "number" : 2,
+            "label" : "2"
+        }, {
+            "_type" : "EmbeddedTest4Index",
+            "_oid" : "EmbeddedTest4IndexOID3",
+            "name" : ["Hello", "World", "CMS"],
+            "number" : 3,
+            "label" : "3"
+        }
+    ]
+}]}

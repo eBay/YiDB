@@ -1,0 +1,320 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Metadata Overview - CMS</title>
+    <link href="css/doc.css" media="screen" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="js/jquery-min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/highlight.js"></script>
+    <style>
+        input.submit{
+        clear: none;
+        display: block;
+        float: right;
+        padding: 6px 8px;
+        }
+        h2.menu{
+        font-family:"黑体"；
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+<div id='navbar'>
+    <a href="home.html"><img src="images/cms_logo.png" height="90pt"></img></a>
+    <ul>
+        <li>
+            <a href='home.html'>home</a> |
+        </li>
+        <li>
+            <a href='console.html'>console</a> |
+        </li>
+        <li>
+            <a href='doc.html'>docs</a>
+        </li>
+    </ul>
+</div>
+<div id="leftnav">
+    <h2 class="menu">Overview</h2>
+    <ul class="navul">
+        <li><a href="doc.html">About CMS</a></li>
+        <li><a href="metadataoverview.html">Metadata Overview</a></li>
+        <li><a href="persistenceoverview.html">Persistence Overview</a></li>
+        <li><a href="queryoverview.html">Query Overview</a></li>
+        <li><a href="auditoverview.html">Audit Overview</a></li>
+    </ul>
+    <h2 class="menu">Examples</h2>
+    <ul class="navul">
+        <li><a href="repository.html">Repository</a></li>
+        <li><a href="branch.html">Branch</a></li>
+        <li><a href="metadata.html">Metadata</a></li>
+        <li><a href="entity.html">Entity</a></li>
+        <li><a href="query.html">Query</a></li>
+        <li><a href="audit.html">Audit</a></li>
+        <li><a href="systemManagement.html">System Management</a></li>
+    </ul>
+	<h2 class="menu">User Guide</h2>
+    <ul class="navul">
+        <li><a href="evt.html">Event Dispatcher</a></li>
+    </ul>
+</div>
+<div id="content">
+<h1><span class="nh-number">1. </span>Overview</h1>
+
+<p>CMS is totally drievn by metadata model. The metadata model is based
+    on object-oriented paradigm that can support graph/tree data model.
+    The metadata can contain two types of field: attribute field define
+    payload of entity and relationship field define relationship between
+    entity. The metadata is extensible by inheritance: child metadata
+    can inherit fields from parent metadata. </p>
+
+<h1><span class="nh-number">2. </span>Metadata Data Model</h1>
+
+<h2><span class="nh-number">2.1. </span>Repository</h2>
+
+<p>Respository is a self-contained data collection under CMS management.
+    You can think it as database in mysql. CMS supports multiple data
+    repositories for desired data isolation.</p>
+
+<p>Each repository has it's own metadata. It means the scope of metadata
+    is repository. </p>
+
+<p>We won't support data reference across the repository. If user want
+    reference data across repository, he must implement it by himself.
+    For example, define 2 fields "xxx_repository" and "xxx_oid". </p>
+
+<p>Repository only have one "repositoryName" filed. </p>
+
+<h2><span class="nh-number">2.2. </span>MetaClass</h2>
+
+<p>MetaClass defines a type of entitie, each MetaClass has a name and it
+    is globally unique. MetaClass can have multiple MetaFields.</p>
+
+<div class="table-wrap">
+    <table border="1">
+        <tbody>
+        <tr>
+            <th>attribute</th>
+            <th>mongo datatype</th>
+            <th>default</th>
+            <th>comments</th>
+        </tr>
+        <tr>
+            <td>_id</td>
+            <td>string</td>
+            <td></td>
+            <td>mongoDB internal ObjectID</td>
+        </tr>
+        <tr>
+            <td>name</td>
+            <td>string</td>
+            <td></td>
+            <td>unique name</td>
+        </tr>
+        <tr>
+            <td>pluralName</td>
+            <td>string</td>
+            <td></td>
+            <td>unique plural name, plural name can be null</td>
+        </tr>
+        <tr>
+            <td>parent</td>
+            <td>string</td>
+            <td></td>
+            <td>the parent metaclass. Any meta class can have only one
+                parent. Fields in parent metaclasses will be inherit
+                into this metaclass.
+            </td>
+        </tr>
+        <tr>
+            <td>description</td>
+            <td>string</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>repository</td>
+            <td>string</td>
+            <td></td>
+            <td>repository name that it belong to</td>
+        </tr>
+        <tr>
+            <td>lastModified</td>
+            <td>date</td>
+            <td>$now</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>fields</td>
+            <td>Map</td>
+            <td></td>
+            <td>fields</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<h2><span class="nh-number">2.3. </span>MetaField</h2>
+
+<p>Field defines the attribute/relationship of a Class, Field name is
+    unique within a Class.</p>
+
+<h3><span class="nh-number">2.3.1. </span>Attribute Field</h2>
+    <div class="table-wrap">
+        <table border="1">
+            <tbody>
+            <tr>
+                <th>attribute</th>
+                <th>mongo datatype</th>
+                <th>default</th>
+                <th>mandatory</th>
+                <th>comments</th>
+            </tr>
+            <tr>
+                <td>name</td>
+                <td>string</td>
+                <td></td>
+                <td><p>yes</p></td>
+                <td>name of this field</td>
+            </tr>
+            <tr>
+                <td>description</td>
+                <td>string</td>
+                <td></td>
+                <td></td>
+                <td>description of this field</td>
+            </tr>
+            <tr>
+                <td><span>dataType</span></td>
+                <td>string</td>
+                <td>&quot;string&quot;</td>
+                <td>yes</td>
+                <td>possible value &quot;string&quot;,&quot;integer&quot;,&quot;long&quot;,&quot;double&quot;,&quot;boolean&quot;,&quot;date&quot;,&quot;enumeration&quot;,
+                    &quot;json&quot;, &quot;relationship&quot;</td>
+            </tr>
+            <tr>
+                <td>cardinality</td>
+                <td>string</td>
+                <td>&quot;one&quot;</td>
+                <td></td>
+                <td>&quot;one&quot;, &quot;many&quot;</td>
+            </tr>
+            <tr>
+                <td>defaultValue</td>
+                <td>as datatype</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>mandatory</td>
+                <td>boolean</td>
+                <td>false</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>enumValues</td>
+                <td>string[]</td>
+                <td></td>
+                <td></td>
+                <td>enum values</td>
+            </tr>
+            <tr>
+                <td>expression</td>
+                <td>string</td>
+                <td></td>
+                <td></td>
+                <td>js expression</td>
+            </tr>
+            <tr>
+                <td>validation</td>
+                <td>string</td>
+                <td></td>
+                <td></td>
+                <td>js to validate the field value</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h3><span class="nh-number">2.3.2. </span>Relationship Field</h2>
+        <div class="table-wrap">
+            <table border="1">
+                <tbody>
+                <tr>
+                    <th>attribute</th>
+                    <th>mongo datatype</th>
+                    <th>default</th>
+                    <th>mandatory</th>
+                    <th>comments</th>
+                </tr>
+                <tr>
+                    <td>name</td>
+                    <td>string</td>
+                    <td></td>
+                    <td>yes</td>
+                    <td>name of this field</td>
+                </tr>
+                <tr>
+                    <td>dataType</td>
+                    <td>string</td>
+                    <td></td>
+                    <td>yes</td>
+                    <td>must be reference</td>
+                </tr>
+                <tr>
+                    <td>cardinality</td>
+                    <td>string</td>
+                    <td>&quot;one&quot;</td>
+                    <td></td>
+                    <td>&quot;one&quot;, &quot;many&quot;</td>
+                </tr>
+                <tr>
+                    <td>refDataType</td>
+                    <td>string</td>
+                    <td></td>
+                    <td>yes</td>
+                    <td>referenced metaclass name</td>
+                </tr>
+                <tr>
+                    <td>relationType</td>
+                    <td>string</td>
+                    <td>&quot;Reference&quot;</td>
+                    <td></td>
+                    <td><p>&quot;Reference&quot;,&quot;Embedded&quot;
+                        (The embedded relationship will stored the
+                        target object in the source object. For example,
+                        Interface is embedded in
+                        NodeServer.interafces), &quot;CrossRepository&quot;, &quot;Inner&quot;</p></td>
+                </tr>
+                <tr>
+                    <td>consistencyType</td>
+                    <td>string</td>
+                    <td>Weak</td>
+                    <td>yes</td>
+                    <td>Weak or String reference (If a reference is
+                        Strong reference, CMS server will do data
+                        integrity check while creating/updating or
+                        deleting runtime data. Not for Weak Reference
+                        relationship.)
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+</div>
+<div class="footer">
+    <div id="footer">
+        <p>&copy;2012 eBay CMS System Foundation</p>
+    </div>
+</div>
+</div>
+<script type="text/javascript">
+    SyntaxHighlighter.all();
+</script>
+</body>
+</html>

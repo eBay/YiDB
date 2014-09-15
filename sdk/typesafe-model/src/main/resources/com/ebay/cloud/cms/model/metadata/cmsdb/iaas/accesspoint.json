@@ -1,0 +1,48 @@
+{
+	"description":"A stratus resource representing a load balancer access point",
+	"name" : "AccessPoint",
+	"pluralName":"AccessPoints",
+	"parent": "Resource",        
+	"fields" : {
+		"vip":{
+			"description":"The LB virtualIP",
+			"mandatory":false,
+			"refDataType": "LBVirtualIP",
+			"relationType": "Reference",
+			"dataType": "relationship",
+			"cardinality": "One"
+		},
+		"vcsvip":{
+			"description":"The VCS virtualIP",
+			"mandatory":false,
+			"refDataType": "VCSVirtualIP",
+			"relationType": "Reference",
+			"dataType": "relationship",
+			"cardinality": "One"
+		},
+		"fqdns":{
+			"description":"An alternative name for this AccessPoint",
+			"mandatory":false,
+			"refDataType": "FQDN",
+			"relationType": "Reference",
+			"dataType": "relationship",
+			"cardinality": "Many"
+	    	},
+		"dependOn":{
+			"description":"the accesspoint this accesspoint depends on",
+			"refDataType": "AccessPoint",
+			"relationType": "Reference",
+			"dataType": "relationship",
+			"cardinality": "Many"
+	    	},
+            	"protocol": {
+			"description": "socket protocol",
+			"dataType": "enumeration",
+			"enumValues": ["ANY","SMTP","TCP","DNS","UDP","FTP","RADIUS","HTTP","RTSP","SIP_UDP","SSL","SSL_TCP"],
+			"cardinality": "One",
+			"mandatory": true
+		}
+        
+    }
+}
+

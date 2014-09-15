@@ -1,0 +1,31 @@
+{
+	"description":"A policy based mapping of vip to pools based on incoming traffic",
+	"name" : "LBPoolMap",
+	"pluralName":"LBPoolMaps",
+	"parent": "Resource",
+	"inner" : true,
+	"fields":{
+		"pool":{
+			"description":"the LB pool this map to",
+			"mandatory":true,
+			"refDataType": "LBPool",
+			"relationType": "Reference",
+			"dataType": "relationship",
+			"cardinality": "One"
+		},
+		"policy":{
+			"description":"the LB policy directing this mapping (optional)",
+			"mandatory":false,
+			"refDataType": "LBPolicy",
+			"relationType": "Reference",
+			"dataType": "relationship",
+			"cardinality": "One"
+		},
+		"priority":{
+			"description":"Used to provide policy ordering",
+			"mandatory":false,
+			"dataType":"integer",
+			"cardinality":"One"
+		}
+	}
+}

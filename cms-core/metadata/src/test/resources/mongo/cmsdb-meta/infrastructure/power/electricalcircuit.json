@@ -1,0 +1,68 @@
+{ 
+	"name": "ElectricalCircuit",
+	"pluralName": "ElectricalCircuits",
+	"description": "The ElectricalCircuit",
+	"parent": "Resource",
+	"fields": {
+		"model":{
+			"description":"model",
+			"mandatory":false,
+			"dataType":"string"
+		},
+		"maxPowerCapacity":{
+			"description":"maxpowercapacity",
+			"mandatory":false,
+			"dataType":"string"
+		},
+		"alarmLevelPowerCapacity":{
+			"description":"alarmlevelpowercapacity",
+			"mandatory":false,
+			"dataType":"string"
+		},
+		"polePosition":{
+			"description":"poleposition",
+			"mandatory":false,
+			"dataType":"string"
+		},
+		"receptacleType":{
+			"description":"receptacletype",
+			"mandatory":false,
+			"dataType":"string"
+		},
+		"redundancyZone":{
+			"description":"redundancyzone",
+			"mandatory":false,
+			"dataType":"string"
+		},
+		"poleCount":{
+			"description":"polecount",
+			"mandatory":false,
+			"dataType":"string"
+		},
+		"voltage":{
+			"description":"voltage",
+			"mandatory":false,
+			"dataType":"string"
+		},
+		"conversionToWatts":{
+			"description":"conversiontowatts",
+			"mandatory":false,
+			"dataType":"string"
+		},
+		"owner":{
+			"description":"owner",
+			"mandatory":false,
+			"dataType":"string"
+		}
+	},
+        "options": {
+                "indexes": {
+                        "modelIndex":{
+                                "indexName": "modelIndex",
+                                "keyList": ["model"]
+                        }
+                }
+        }
+
+
+}

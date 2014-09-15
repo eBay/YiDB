@@ -1,0 +1,53 @@
+{
+	"name": "Resource",
+	"pluralName": "Resources",
+	"parent": "Base",
+	"description": "A stratus managed resource",
+	"fields": {
+		"healthState": {
+			"mandatory": true,
+			"description": "health of this resource",
+			"dataType": "enumeration",
+			"enumValues": [ "healthy", "error", "probation", "maintenance", "unknown" ],
+			"defaultValue" : "unknown"
+		},
+		"domain": {
+			"description": "The domain of the namespace",
+			"dataType": "string",
+			"mandatory": true,
+			"defaultValue" : "ebay.com"
+		},
+		"env": {
+			"description": "The env of the namespace",
+			"dataType": "string",
+			"mandatory": true,
+			"defaultValue" : ""
+		},
+		"resourceId": {
+			"description": "The name id of this resource",
+			"dataType": "string",
+			"mandatory": true
+		},
+		"managedBy": {
+			"description": "The platform or app managing this resource",
+			"dataType": "string"
+		},
+		"userData": {
+			"description": "arbitrary user data, ignored by startus",
+			"dataType": "json"
+		}
+	},
+	"options": {
+		"indexes": {
+		        "namespaceIndex":{
+				"indexName": "namespaceIndex",
+				"keyList": ["resourceId", "domain", "env"],
+				"indexOptions": ["unique"]
+		        },
+		        "resourceIdIndex":{
+				"indexName": "resourceIdIndex",
+				"keyList": ["resourceId"]
+		        }
+	        }
+        }
+}

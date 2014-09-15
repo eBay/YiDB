@@ -1,0 +1,14 @@
+{
+  "_oid":"MetaVersionTestChild-4",
+  "_pversion":0,
+  "_branch": "main",
+  "_type": "MetaVersionTestChild",
+  "_version": 0,
+  "_lastmodified": 1337667919424,
+  "rootId": "rootId-00004",
+  "parentId": "parentId-00004",
+  "name": "MetaVersionTestName-4",
+  "name1": "MetaVersionTestChildName1-4",
+  "name2": "MetaVersionTestChildName2-4",
+  "_status": "active"
+}

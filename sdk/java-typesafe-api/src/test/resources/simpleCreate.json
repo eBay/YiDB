@@ -1,0 +1,13 @@
+{
+	"_type":"ApplicationService",
+	"_branch":"main",
+	"archTier":"app",
+	"nugget":"srp",
+	"name":"srp-app:Raptor-10",
+	"activeManifestDiff":true,
+	"label":"srp-app-10",
+	"activeManifestRef":[
+		"manifest-2.0"
+	],
+	"activeManifestCur":"manifest-1.0"
+}

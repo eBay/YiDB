@@ -1,0 +1,72 @@
+{
+	"description":"a network interface",
+	"name" : "NetworkInterface",
+	"pluralName":"NetworkInterfaces",
+        "embed":true,
+	"parent": "Base",
+	"fields":{
+                "resourceId": {
+                        "description": "The name id of this resource",
+                        "dataType": "string",
+                        "mandatory": true
+                },
+                "allocatedIP":{
+                        "description":"demonstrate which IP allocated from this interface ",
+                        "mandatory":false,
+                        "dataType":"string",
+                        "cardinality":"One"
+                },
+		"ifIndex":{
+			"description":"nic index number",
+			"mandatory":false,
+			"dataType":"long",
+			"cardinality":"One"
+		},
+		"type":{
+			"description":"The type of the networkcontroller",
+			"mandatory":true,
+			"enumValues": ["physical","virtual"],
+			"defaultValue" : "physical",
+			"dataType":"enumeration",
+			"cardinality":"One"
+		},
+                "ifSpeed":{
+                        "description":"nic speed",
+                        "mandatory":false,
+                        "dataType":"string",
+                        "cardinality":"One"
+                },
+                "ifdescr" : {
+                        "description": "description ",
+                        "mandatory":false,
+                        "dataType":"string",
+                        "cardinality":"One"
+                },
+                "ifVersion":{
+                        "description":"nic version",
+                        "mandatory":false,
+                        "dataType":"string",
+                        "cardinality":"One"
+                },
+                "ifLink" : {
+                        "description":"is it a link",
+                        "mandatory":false,
+                        "dataType":"boolean",
+                        "cardinality":"One"
+                },
+		"macAddress":{
+			"description":"IEEE 802 address",
+			"mandatory":true,
+			"dataType":"string",
+			"cardinality":"One"
+		}
+	},
+	"options": {
+		   "indexes": {
+   	              	 "resourceIdIndex":{
+				"indexName": "resourceIdIndex",
+                                "keyList": ["resourceId"]
+			 }
+		   }
+	}
+}

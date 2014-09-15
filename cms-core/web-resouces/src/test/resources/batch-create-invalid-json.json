@@ -1,0 +1,39 @@
+[{
+  "_pversion":0,
+  "_branch": "main",
+  "_type": "Compute",
+  "_version": 0,
+  "_lastmodified": 1337667919417,
+  "location": null,
+  "name": "compute-00021",
+  "label": "compute-00021",
+  "fqdn": "compute-00021.lvs.ebay.com",
+  "_status": "active",
+  "assetStatus": "normal"
+},
+{
+  "_pversion":0,
+  "_branch": "main",
+  "_version": 0,
+  "_lastmodified": 1337667919417,
+  "location": null,
+  "name": "compute-00022",
+  "label": "compute-00022",
+  "fqdn": "compute-00022.lvs.ebay.com",
+  "_status": "active",
+  "assetStatus": "normal"
+},
+{
+  "_pversion":0,
+  "_branch": "main",
+  "_type": "Compute",
+  "_version": 0,
+  "_lastmodified": 1337667919417,
+  "location": null,
+  "name": "compute-00023",
+  "label": "compute-00023",
+  "fqdn": "compute-00023.lvs.ebay.com",
+  "_status": "active",
+  "assetStatus": "normal"
+}
+]

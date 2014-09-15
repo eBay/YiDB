@@ -1,0 +1,4 @@
+# cms config property for ci test
+
+mongo.connection=${mongo.connection}
+server.name=${server.name}

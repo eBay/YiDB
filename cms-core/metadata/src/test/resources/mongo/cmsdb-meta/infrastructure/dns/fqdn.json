@@ -1,0 +1,21 @@
+{ 
+	"name": "FQDN",
+	"pluralName": "FQDNs",
+	"parent": "Resource",
+	"fields": {
+	    "fqdn":{
+                "description":"The fully qualified object",
+                "mandatory":true,
+                "dataType":"string",
+                "cardinality":"One"
+            }
+	},
+        "options": {
+                "indexes": {
+                        "fqdnIndex":{
+                                "indexName": "fqdnIndex",
+                                "keyList": ["fqdn"]
+                        }
+                }
+		}
+}

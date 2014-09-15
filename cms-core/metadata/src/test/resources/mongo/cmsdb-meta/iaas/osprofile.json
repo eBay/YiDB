@@ -1,0 +1,29 @@
+{ 
+	"name": "OsProfile",
+	"description": "The os profile used for OS",
+	"pluralName": "OsProfiles",
+	"parent": "Resource",
+	"fields": {
+		"profileversion":{
+			"description":"a version of os profile",
+			"mandatory":true,
+			"dataType":"string"
+		},
+		"os":{
+			"description":"operation system name",
+			"mandatory":true,
+			"dataType":"string"
+		},
+		"osversion":{
+			"description":"operation system version",
+			"mandatory":true,
+			"dataType":"string"
+		},
+		"osfamily":{
+			"description":"operation system family",
+			"mandatory":true,
+			"dataType":"enumeration",
+			"enumValues": ["LINUX","WINDOWS","SOLARIS","NETSCALER","BIGIP"]
+		}
+	}
+}

@@ -1,0 +1,17 @@
+{
+	"name": "ClassOfService",
+	"pluralName": "ClassesOfServices",
+	"parent": "Resource",
+	"description": "object representing a class of service, defined by different sets of policies",
+	"fields": {
+		"definedByPolicyGroup": {
+			"description": "the policy group for this class of service, this is a parent policyGroup that enforced contraints for all derived policy groups this class of service supports",
+			"dataType": "relationship",
+			"relationType": "Reference",
+			"refDataType": "PolicyGroup",
+			"consistencyType" : "Strong",
+			"mandatory": false,
+			"cardinality": "One"
+		}
+	}
+}

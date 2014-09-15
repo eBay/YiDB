@@ -1,0 +1,38 @@
+{
+	"description":"A VCS Virtual IP",
+	"name" : "VCSVirtualIP",
+	"pluralName":"VCSVirtualIPs",
+	"parent": "Resource",
+	"fields" : {
+		"vcsService":{
+			"description":"The VCS service for this group",
+			"mandatory":true,
+			"refDataType": "VCSService",
+			"relationType": "Reference",
+			"dataType": "relationship",
+			"cardinality": "One"
+		},
+		"networkAddress":{
+			"description":"The IP address object corresponding to virtual IP",
+			"refDataType": "NetworkAddress",
+			"relationType": "Reference",
+			"dataType": "relationship",
+			"cardinality": "One"
+		},
+		"opsState":{
+			"description":"States used to drive provisioning and remediation transitions",
+			"mandatory":false,
+			"enumValues":["partial","online","unknown","faulted","offline"],
+			"dataType":"enumeration",
+			"cardinality":"One"
+		},
+		"vcsResourceGroups":{
+			"description":"a group of VCS resources",
+			"mandatory":false,
+			"refDataType": "VCSResourceGroup",
+			"relationType": "Reference",
+			"dataType": "relationship",
+			"cardinality": "Many"
+		}
+	}
+}

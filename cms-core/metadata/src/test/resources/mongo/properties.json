@@ -1,0 +1,14 @@
+
+{	
+	"RepositoryCacheSize": 5000,
+	"RepositoryCacheExpireSeconds": 3600,
+
+	"MongoConnectionPoolNum" : 1,
+	"MongoConnectionsPerHost" : 50,
+	
+	"MetadataLockType" : "MongoLock",
+	"MetadataLockName" : "MetadataLock",
+	"MongoLockExpiredTime" : 3000,
+	"MongoLockRenewPeriod" : 1500
+	
+}

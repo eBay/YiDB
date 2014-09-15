@@ -1,0 +1,65 @@
+{
+    "name": "Resource",
+    "description": "A stratus managed resource",
+    "repository": "raptor-paas",
+    "parent": "Base",
+    "allowFullTableScan": false,
+    "fields": {
+        "healthState": {
+            "name": "healthState",
+            "dataType": "enumeration",
+            "cardinality": "One",
+            "mandatory": true,
+            "constant": false,
+            "defaultValue": "unknown",
+            "enumValues": [
+                "healthy",
+                "error",
+                "probation",
+                "maintenance",
+                "unknown"
+            ]
+        },
+        "userData": {
+            "name": "userData",
+            "description": "arbitrary user data, ignored by startus",
+            "dataType": "json",
+            "cardinality": "One",
+            "mandatory": false,
+            "constant": false,
+            "enumValues": []
+        },
+        "managedBy": {
+            "name": "managedBy",
+            "description": "The platform or app managing this resource",
+            "dataType": "string",
+            "cardinality": "One",
+            "mandatory": false,
+            "constant": false,
+            "enumValues": []
+        },
+        "resourceId": {
+            "name": "resourceId",
+            "description": "The id of this resource",
+            "dataType": "string",
+            "cardinality": "One",
+            "mandatory": true,
+            "constant": false,
+            "enumValues": []
+        }
+    },
+    "options": {
+        "indexes": {
+            "resourceIdIndex": {
+                "indexName": "resourceIdIndex",
+                "keyList": [
+                    "resourceId"
+                ],
+                "indexOptions": [
+                    "unique"
+                ]
+            }
+        },
+        "primaryKeys": []
+    }
+}

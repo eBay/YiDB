@@ -1,0 +1,49 @@
+{ 
+	"name": "Manifest",
+	"pluralName": "Manifests",
+	"parent": "Resource",
+	"description": "deployable unit of software consisting of packages",
+	"fields": {
+		"owner": {
+			"description": "identity of the owner of this manifest",
+			"dataType": "string"
+		},
+		"softwareVersion": {
+			"description": "version of this manifest",
+			"dataType": "string",
+			"mandatory": true			
+		},		
+		"releaseType": {
+			"description": "release type",
+			"dataType": "string",
+			"mandatory": false			
+		},		
+		"notes": {
+			"description": "notes of this release",
+			"dataType": "string",
+			"mandatory": false
+		},		
+		"approvals": {
+			"description": "list of approvals for this manifest",
+			"dataType": "relationship",
+			"refDataType": "ManifestApproval",
+			"relationType": "Embedded",
+			"cardinality": "Many"
+		},
+		"packages": {
+			"description": "list of packages that comprise this manifest",
+			"dataType": "relationship",
+			"refDataType": "Package",
+			"relationType": "Reference",
+			"cardinality": "Many"
+		}
+	},
+	"options":{
+		"indexes": {
+		        "ownerIndex":{
+					"indexName": "ownerIndex",
+					"keyList": ["owner"]
+		        }
+	     }
+	}
+}

@@ -1,0 +1,92 @@
+{
+  "lastModifiedTime": 1337830606368,
+  "versions": [
+    {
+      "_branch": "main",
+      "_type": "ManifestVersion",
+      "approvals": [
+        {
+          "_lastmodified": 1337830606418,
+          "manifestCreatedBy": "Dummy manifestCreatedBy--1790614450",
+          "appId": "Dummy appId--1790614450",
+          "manifestCreatedTime": 1337830606378,
+          "createdTime": 1337830606378,
+          "name": "Dummy Approval Bundle-0-0001",
+          "_type": "Approval",
+          "_branch": "main",
+          "_version": 0,
+          "_id": "4fbdaccec681643199735a5b-versions-4fbdaccec681643199735a5c-approvals-4fbdaccec681643199735a5d",
+          "createdBy": "Dummy createdBy--1790614450",
+          "classOfService": "Dummy classOfService--1790614450",
+          "_status": "active"
+        }
+      ],
+      "_version": 0,
+      "_lastmodified": 1337830606418,
+      "packages": [
+        {
+          "_ref": "4fbdaccec681643199735a60"
+        },
+        {
+          "_ref": "4fbdaccec681643199735a62"
+        },
+        {
+          "_ref": "4fbdaccec681643199735a64"
+        }
+      ],
+      "createdBy": "Dummy createdBy--1790614450",
+      "_id": "4fbdaccec681643199735a5b-versions-4fbdaccec681643199735a5c",
+      "createdTime": 1337830606378,
+      "description": "Dummy description--1790614450",
+      "name": "Dummy ManifestVersion Bundle-0-0001",
+      "_status": "active"
+    },
+    {
+      "_branch": "main",
+      "_type": "ManifestVersion",
+      "approvals": [
+        {
+          "_lastmodified": 1337830606418,
+          "manifestCreatedBy": "Dummy manifestCreatedBy--1783688970",
+          "appId": "Dummy appId--1783688970",
+          "manifestCreatedTime": 1337830606388,
+          "createdTime": 1337830606388,
+          "name": "Dummy Approval Bundle-0-0002",
+          "_type": "Approval",
+          "_branch": "main",
+          "_version": 0,
+          "_id": "4fbdaccec681643199735a5b-versions-4fbdaccec681643199735a5e-approvals-4fbdaccec681643199735a5f",
+          "createdBy": "Dummy createdBy--1783688970",
+          "classOfService": "Dummy classOfService--1783688970",
+          "_status": "active"
+        }
+      ],
+      "_version": 0,
+      "_lastmodified": 1337830606418,
+      "packages": [
+        {
+          "_ref": "4fbdaccec681643199735a66"
+        },
+        {
+          "_ref": "4fbdaccec681643199735a68"
+        },
+        {
+          "_ref": "4fbdaccec681643199735a6a"
+        }
+      ],
+      "createdBy": "Dummy createdBy--1783688970",
+      "_id": "4fbdaccec681643199735a5b-versions-4fbdaccec681643199735a5e",
+      "createdTime": 1337830606388,
+      "description": "Dummy description--1783688970",
+      "name": "Dummy ManifestVersion Bundle-0-0002",
+      "_status": "active"
+    }
+  ],
+  "_branch": "main",
+  "_type": "Manifest",
+  "_version": 0,
+  "_lastmodified": 1337830606418,
+  "_id": "4fbdaccec681643199735a5b",
+  "name": "Dummy Manifest Bundle-0-0001",
+  "_status": "active"
+}

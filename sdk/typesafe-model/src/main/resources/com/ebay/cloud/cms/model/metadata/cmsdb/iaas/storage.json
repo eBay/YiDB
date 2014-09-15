@@ -1,0 +1,16 @@
+{ 
+	"name": "Storage",
+	"pluralName": "Storages",
+	"parent": "Resource",	
+	"description": "Storage class for logical layer",
+	"fields": {
+		"volume": {
+			"description": "The storage volume",
+			"refDataType": "Volume",
+			"relationType": "Reference",
+			"dataType": "relationship",
+			"cardinality": "One"
+		}
+	}
+
+}

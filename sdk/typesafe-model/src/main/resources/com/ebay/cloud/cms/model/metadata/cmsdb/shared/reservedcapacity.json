@@ -1,0 +1,38 @@
+{
+	"name": "ReservedCapacity",
+	"pluralName": "ReservedCapacities",
+	"parent": "Resource",
+	"description": "Quota for resource allocation",
+	"fields": {
+		"resourceCapacities": {
+                        "description": "The quota defined for resoruces",
+			"dataType": "relationship",
+			"refDataType": "ResourceCapacity",
+			"relationType": "Embedded",
+			"cardinality": "Many",
+			"mandatory": true
+		},
+                "account": {
+                        "description": "the Account that owns reservedCapacity",
+                        "dataType": "relationship",
+                        "consistencyType" : "Strong",
+                        "relationType": "Reference",
+                        "refDataType": "Account",
+			"cardinality": "One",
+                        "mandatory": false
+                },
+		"reservedResources" : {
+		        "description": "the Account that owns reservedCapacity",
+                        "dataType": "relationship",
+                        "consistencyType" : "Strong",
+                        "relationType": "Reference",
+                        "refDataType": "ReservedResources",
+			"cardinality": "One",
+                        "mandatory": false
+		},
+		"requester": {
+			"description": "The distributor that made the original request",
+			"dataType": "string"
+		}
+	}
+}

@@ -1,0 +1,89 @@
+{
+	"name": "Escalation",
+	"pluralName": "Escalations",
+	"parent": "Resource",
+	"description": "escalation from AR team",
+	"fields": {
+		"teamDL": {
+			"description": "Optional DL that can be provided by team",
+			"dataType": "string"
+		},
+		"teamSiteURL": {
+			"description": "Optional DL of team support page",
+			"dataType": "string"
+		},
+		"contact": {
+			"description": "Person that should be contacted first for a problem",
+	       		"dataType": "string",
+			"mandatory": false
+	        },		
+		"contactNumber": {
+			"description": "The phone number for the contact",
+	       		"dataType": "string",
+			"mandatory": false
+	        },		
+		"escalation": {
+			"description": "Person that should be contacted if primary is not responding",
+	       		"dataType": "string",
+			"mandatory": false
+	        },
+		"escalationNumber": {
+			"description": "The phone number for the escalation contact",
+	       		"dataType": "string",
+			"mandatory": false
+	        },
+		"primaryHours": {
+			"description": "Hours primary escaltion should be expected to respond",
+			"dataType": "string",
+			"mandatory": false
+		},
+		"offHours": {
+			"description": "Hours the off hours contact and esclation should be expected to respond",
+			"dataType": "string",
+			"mandatory": false
+		},
+		"offHoursContact": {
+			"description": "off hour contact",
+	       		"dataType": "string",
+			"mandatory": false
+	        },		
+		"offHoursContactNumber": {
+			"description": "off hour contact phone number",
+	       		"dataType": "string",
+			"mandatory": false
+	        },		
+		"offHoursEscalation": {
+			"description": "off hours escalation",
+	       		"dataType": "string",
+			"mandatory": false
+	        },
+		"offHoursEscalationNumber": {
+			"description": "off hours escalation phone number",
+	       		"dataType": "string",
+			"mandatory": false
+	        },
+		"moreInfo": {
+			"description": "Free form text field that can be used to provide special escalation instructions",
+			"dataType": "string"
+		},
+		"lifeCycleState": {
+			"description": "Two states - active or retired.  Active is when the userid is a valid user in LDAP, retired are records were user has left company",
+			"dataType": "enumeration",
+			"defaultValue" : "active",
+			"enumValues": [ "active", "retired"]
+ 	        },
+		"dedicatedTeam": {
+			"description": "This value is looked up from ProductMaster based on the based on the userid value",
+			"dataType": "string"
+		},
+		"dedicatedTeamLeadDL": {
+			"description": "This value is looked up from ProductMaster based on the userid value",
+			"dataType": "string"
+		},
+		"dedicatedTeamId": {
+			"description": "This value is looked up from Product Master based on the userid value. It is the unique identifier in Product Master for the Dedicated Team.",
+			"dataType": "string"
+		}
+	}
+
+}

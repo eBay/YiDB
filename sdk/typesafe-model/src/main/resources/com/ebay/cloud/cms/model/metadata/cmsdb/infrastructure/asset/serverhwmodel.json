@@ -1,0 +1,72 @@
+{
+	"description":"Server HWModel",
+	"name" : "ServerHWModel",
+	"pluralName":"ServerHWModels",
+	"parent": "Resource",
+	"fields" : {
+		"manufacturer":{
+			"description":"manufacturer",
+			"mandatory":false,
+			"dataType":"string",
+			"cardinality":"One"
+		},
+		"productName":{
+			"description":"productName",
+			"mandatory":false,
+			"dataType":"string",
+			"cardinality":"One"
+		},
+		"nicSpeed":{
+			"description":"nic speed",
+			"mandatory":false,
+			"dataType":"json",
+			"cardinality":"One"
+		},
+		"raidCtrlCount":{
+			"description":"Raid control count",
+			"mandatory":false,
+			"dataType":"integer",
+			"cardinality":"One"
+		},
+		"raidCtrlDevice":{
+			"description":"Raid Control Device",
+			"mandatory":false,
+			"dataType":"string",
+			"cardinality":"One"
+		},
+		"metaDiskCount":{
+			"description":"Meta Disk Count",
+			"mandatory":false,
+			"dataType":"integer",
+			"cardinality":"One"
+		},
+		"logicalDiskCount":{
+			"description":"Logical disk count",
+			"mandatory":false,
+			"dataType":"integer",
+			"cardinality":"One"
+		},
+		"processor":{
+			"description":"Processor",
+			"mandatory":false,
+			"dataType":"string",
+			"cardinality":"One"
+		},
+		"supports":{
+			"description":"ServerSku",
+			"refDataType": "ServerSku",
+			"relationType": "Reference",
+			"dataType": "relationship",
+			"cardinality": "Many"
+		}
+	},
+	"options": {
+		"indexes": {
+		        "productNameIndex":{
+				"indexName": "productNameIndex",
+				"keyList": ["productName"]
+		        }
+	        }
+        }
+
+}
