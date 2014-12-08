@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>com.ebay.cloud.cms</groupId>
-    <artifactId>cms-core</artifactId>
+    <artifactId>yidb-core</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   <artifactId>cms-dal-api</artifactId>
