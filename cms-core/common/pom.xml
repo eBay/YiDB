@@ -4,7 +4,7 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <artifactId>cms-core</artifactId>
+        <artifactId>yidb-core</artifactId>
         <groupId>com.ebay.cloud.cms</groupId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
