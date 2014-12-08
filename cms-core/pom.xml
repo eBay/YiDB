@@ -4,7 +4,7 @@
     <groupId>com.ebay.cloud.cms</groupId>
     <artifactId>cms-core</artifactId>
     <packaging>pom</packaging>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0</version>
     <name>PlatformSystems:Automation:CMSCore</name>
 
     <modules>
@@ -23,7 +23,7 @@
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <cmsVersion>0.0.1-SNAPSHOT</cmsVersion>
+        <cmsVersion>1.0</cmsVersion>
         <javaVersion>1.6</javaVersion>
         <slf4jVersion>1.6.6</slf4jVersion>
         <jacksonVersion>1.9.2</jacksonVersion>
