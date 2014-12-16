@@ -17,6 +17,5 @@ ebay.log
 *dependency-reduced-pom.xml
 *generated*
 *__Test*
-*.py
 *.log
 */.buildpath
