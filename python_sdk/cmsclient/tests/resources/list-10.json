@@ -1,0 +1,564 @@
+{"status": {
+    "code": "200",
+    "msg": "ok",
+    "stackTrace": null
+}, "dbTimeCost": 1, "totalTimeCost": 3, "hasmore": true, "count": 10, "result": [
+    {
+        "_lastmodified": 1371233828589,
+        "healthState": "healthy",
+        "_creator": "_NETDBSYNC_READWRITE",
+        "_oid": "51bb5e24e4b016fb3386cb5e",
+        "_pversion": -1,
+        "_createtime": 1371233828589,
+        "sourceId": "57",
+        "_branch": "main",
+        "_type": "NetworkBubble",
+        "_version": 0,
+        "productionLevel": "production",
+        "resourceId": "slc5b1",
+        "description": "slc5b1",
+        "_modifier": "_NETDBSYNC_READWRITE",
+        "_comment": "cms@slc4b01c-8ea5:cms_User - cms synch : netdb - bubbles",
+        "_user": "_NETDBSYNC_READWRITE",
+        "_status": "active"
+    },
+    {
+        "_lastmodified": 1374124249146,
+        "healthState": "healthy",
+        "_creator": "_NETDBSYNC_READWRITE",
+        "_oid": "51e778d9e4b05862cbcd660f",
+        "_pversion": -1,
+        "_createtime": 1374124249146,
+        "sourceId": "57",
+        "_branch": "main",
+        "_type": "NetworkBubble",
+        "_version": 1,
+        "productionLevel": "production",
+        "resourceId": "slc5b01",
+        "description": "slc5b01",
+        "_modifier": "_NETDBSYNC_READWRITE",
+        "_comment": "cms@slc4b01c-89e4:cms_User - cms synch : netdb - bubbles",
+        "_user": "_NETDBSYNC_READWRITE",
+        "_status": "active"
+    },
+    {
+        "_lastmodified": 1368924356208,
+        "healthState": "healthy",
+        "_creator": "_NETDBSYNC_READWRITE",
+        "_oid": "51981bade4b01fc1877dc6ec",
+        "_pversion": -1,
+        "_createtime": 1368923053208,
+        "sourceId": "25",
+        "_branch": "main",
+        "_type": "NetworkBubble",
+        "_version": 13,
+        "productionLevel": "production",
+        "resourceId": "slc1b03",
+        "description": "third bubble in slc1. VLAN based. Secure Network.",
+        "_modifier": null,
+        "_comment": "cms@slc4b01c-8ea5:cms_User - cms synch : netdb - devices",
+        "_user": "cms@slc4b01c-8ea5:cms_User - cms synch : netdb - devices",
+        "_status": "active",
+        "networkDevices": [
+            {
+                "_oid": "5197fab0e4b01fc1877c5498",
+                "_type": "NetworkDevice"
+            },
+            {
+                "_oid": "5197fab0e4b01fc1877c54ae",
+                "_type": "NetworkDevice"
+            },
+            {
+                "_oid": "5197fab0e4b01fc1877c54be",
+                "_type": "NetworkDevice"
+            },
+            {
+                "_oid": "5197fab1e4b01fc1877c54ca",
+                "_type": "NetworkDevice"
+            },
+            {
+                "_oid": "5197fab1e4b01fc1877c54ec",
+                "_type": "NetworkDevice"
+            },
+            {
+                "_oid": "5197fa9ce4b05e0dd3e46278",
+                "_type": "NetworkDevice"
+            },
+            {
+                "_oid": "5197fab0e4b05e0dd3e467e8",
+                "_type": "NetworkDevice"
+            },
+            {
+                "_oid": "5197fab0e4b04449cb984a2d",
+                "_type": "NetworkDevice"
+            },
+            {
+                "_oid": "5197fab1e4b05e0dd3e46838",
+                "_type": "NetworkDevice"
+            },
+            {
+                "_oid": "5197fab1e4b04449cb984a61",
+                "_type": "NetworkDevice"
+            },
+            {
+                "_oid": "5197fab0e4b05e0dd3e46804",
+                "_type": "NetworkDevice"
+            },
+            {
+                "_oid": "5197fab0e4b04449cb984a4b",
+                "_type": "NetworkDevice"
+            },
+            {
+                "_oid": "5197fae5e4b01fc1877c5fa8",
+                "_type": "NetworkDevice"
+            }
+        ]
+    },
+    {
+        "_lastmodified": 1368924003971,
+        "healthState": "healthy",
+        "_creator": "_NETDBSYNC_READWRITE",
+        "_oid": "51981f62e4b04449cb9a7850",
+        "_pversion": -1,
+        "_createtime": 1368924002448,
+        "sourceId": "40",
+        "_branch": "main",
+        "_type": "NetworkBubble",
+        "_version": 2,
+        "productionLevel": "production",
+        "resourceId": "slc4b04",
+        "description": "slc4 bubble 4 storage bubble",
+        "_modifier": null,
+        "_comment": "cms@slc4b01c-8ea5:cms_User - cms synch : netdb - devices",
+        "_user": "cms@slc4b01c-8ea5:cms_User - cms synch : netdb - devices",
+        "_status": "active",
+        "networkDevices": [
+            {
+                "_oid": "5197facee4b04449cb98522d",
+                "_type": "NetworkDevice"
+            },
+            {
+                "_oid": "5197facee4b05e0dd3e46f14",
+                "_type": "NetworkDevice"
+            }
+        ]
+    },
+    {
+        "_lastmodified": 1369149770796,
+        "healthState": "healthy",
+        "_creator": "_NETDBSYNC_READWRITE",
+        "_oid": "51980fc2e4b03c78413dcd17",
+        "_pversion": -1,
+        "_createtime": 1368920002133,
+        "sourceId": "28",
+        "_branch": "main",
+        "_type": "NetworkBubble",
+        "_version": 3,
+        "productionLevel": "production",
+        "resourceId": "phx7b04",
+        "description": "Phx7 B4 Storage Bubble",
+        "_modifier": null,
+        "_comment": "cms@slc4b01c-b983:cms_User - cms synch : netdb - devices",
+        "_user": "_NETDBSYNC_READWRITE",
+        "_status": "active",
+        "networkDevices": [
+            {
+                "_oid": "5197fa69e4b04449cb9839c1",
+                "_type": "NetworkDevice"
+            },
+            {
+                "_oid": "5197fa69e4b05e0dd3e45890",
+                "_type": "NetworkDevice"
+            },
+            {
+                "_oid": "519b914ae4b0f6b5ed9c50c5",
+                "_type": "NetworkDevice"
+            }
+        ]
+    },
+    {
+        "_lastmodified": 1369237511311,
+        "healthState": "healthy",
+        "_creator": "_NETDBSYNC_READWRITE",
+        "_oid": "5197faa6e4b013af0d65685d",
+        "_pversion": -1,
+        "_createtime": 1368914598663,
+        "sourceId": "52",
+        "_branch": "main",
+        "_type": "NetworkBubble",
+        "_version": 20,
+        "productionLevel": "production",
+        "resourceId": "chd1b02",
+        "description": "routed bubble chd1",
+        "_modifier": null,
+        "_comment": "cms@slc4b01c-b983:cms_User - cms synch : netdb - devices",
+        "_user": "_NETDBSYNC_READWRITE",
+        "_status": "active",
+        "networkDevices": [
+            {
+                "_oid": "5197faa6e4b087d5ff8c0ba6",
+                "_type": "NetworkDevice"
+            },
+            {
+                "_oid": "5197faa6e4b087d5ff8c0baa",
+                "_type": "NetworkDevice"
+            },
+            {
+                "_oid": "5197fab0e4b013af0d656a15",
+                "_type": "NetworkDevice"
+            },
+            {
+                "_oid": "5197f9f5e4b05e0dd3e43e76",
+                "_type": "NetworkDevice"
+            },
+            {
+                "_oid": "5197f9f6e4b05e0dd3e43e96",
+                "_type": "NetworkDevice"
+            },
+            {
+                "_oid": "5197f9f6e4b01fc1877c2b3c",
+                "_type": "NetworkDevice"
+            },
+            {
+                "_oid": "5197f9f6e4b05e0dd3e43e9c",
+                "_type": "NetworkDevice"
+            },
+            {
+                "_oid": "519b16f8e4b0b07c832961e6",
+                "_type": "NetworkDevice"
+            },
+            {
+                "_oid": "5197f9f5e4b05e0dd3e43e68",
+                "_type": "NetworkDevice"
+            },
+            {
+                "_oid": "5197f9f6e4b04449cb981e95",
+                "_type": "NetworkDevice"
+            },
+            {
+                "_oid": "5197f9f6e4b01fc1877c2b38",
+                "_type": "NetworkDevice"
+            },
+            {
+                "_oid": "5197f9f6e4b04449cb981e99",
+                "_type": "NetworkDevice"
+            },
+            {
+                "_oid": "519b8a34e4b0b07c83301909",
+                "_type": "NetworkDevice"
+            },
+            {
+                "_oid": "519b8a34e4b0f6b5ed9c42df",
+                "_type": "NetworkDevice"
+            },
+            {
+                "_oid": "519bf04ee4b0b18f7816e314",
+                "_type": "NetworkDevice"
+            },
+            {
+                "_oid": "519bf04de4b0f6b5ed9cafbd",
+                "_type": "NetworkDevice"
+            },
+            {
+                "_oid": "519bf261e4b0ed0df79d1911",
+                "_type": "NetworkDevice"
+            },
+            {
+                "_oid": "519bf261e4b0ed0df79d1919",
+                "_type": "NetworkDevice"
+            },
+            {
+                "_oid": "519ce737e4b095401cd4f020",
+                "_type": "NetworkDevice"
+            },
+            {
+                "_oid": "519ce738e4b0b18f7817c869",
+                "_type": "NetworkDevice"
+            }
+        ]
+    },
+    {
+        "_lastmodified": 1370399553816,
+        "healthState": "healthy",
+        "_creator": "_NETDBSYNC_READWRITE",
+        "_oid": "51aea113e4b016fb33826d24",
+        "_pversion": -1,
+        "_createtime": 1370398995291,
+        "sourceId": "56",
+        "_branch": "main",
+        "_type": "NetworkBubble",
+        "_version": 2,
+        "productionLevel": "production",
+        "resourceId": "chd1b04",
+        "description": "CHD1 B04 Storage bubble",
+        "_modifier": null,
+        "_comment": "cms@slc4b01c-8ea5:cms_User - cms synch : netdb - devices",
+        "_user": "_NETDBSYNC_READWRITE",
+        "_status": "active",
+        "networkDevices": [
+            {
+                "_oid": "51aea15ae4b016fb33826d2c",
+                "_type": "NetworkDevice"
+            },
+            {
+                "_oid": "51aea15ae4b0d85e411b7206",
+                "_type": "NetworkDevice"
+            }
+        ]
+    },
+    {
+        "_lastmodified": 1370482302803,
+        "healthState": "healthy",
+        "_creator": "_NETDBSYNC_READWRITE",
+        "_oid": "51981d36e4b01fc1877e0ec5",
+        "_pversion": -1,
+        "_createtime": 1368923446147,
+        "sourceId": "55",
+        "_branch": "main",
+        "_type": "NetworkBubble",
+        "_version": 15,
+        "productionLevel": "production",
+        "resourceId": "slc11b01",
+        "description": "bms",
+        "_modifier": null,
+        "_comment": "cms@slc4b01c-8ea5:cms_User - cms synch : netdb - devices",
+        "_user": "_NETDBSYNC_READWRITE",
+        "_status": "active",
+        "networkDevices": [
+            {
+                "_oid": "5197fab0e4b05e0dd3e4680e",
+                "_type": "NetworkDevice"
+            },
+            {
+                "_oid": "5197fab0e4b04449cb984a3f",
+                "_type": "NetworkDevice"
+            },
+            {
+                "_oid": "5197fab0e4b04449cb984a53",
+                "_type": "NetworkDevice"
+            },
+            {
+                "_oid": "5197fab1e4b05e0dd3e46828",
+                "_type": "NetworkDevice"
+            },
+            {
+                "_oid": "5197fab1e4b05e0dd3e4683c",
+                "_type": "NetworkDevice"
+            },
+            {
+                "_oid": "5197bd70e4b0f3cf2726123b",
+                "_type": "NetworkDevice"
+            },
+            {
+                "_oid": "5197fab1e4b00f841fb99b4b",
+                "_type": "NetworkDevice"
+            },
+            {
+                "_oid": "5197fab1e4b04449cb984a9f",
+                "_type": "NetworkDevice"
+            },
+            {
+                "_oid": "5197fab0e4b05e0dd3e467f6",
+                "_type": "NetworkDevice"
+            },
+            {
+                "_oid": "5197fab0e4b01fc1877c5486",
+                "_type": "NetworkDevice"
+            },
+            {
+                "_oid": "5197fab0e4b01fc1877c549e",
+                "_type": "NetworkDevice"
+            },
+            {
+                "_oid": "5197fab1e4b01fc1877c54e2",
+                "_type": "NetworkDevice"
+            },
+            {
+                "_oid": "5197fab1e4b04449cb984a81",
+                "_type": "NetworkDevice"
+            },
+            {
+                "_oid": "5197fab1e4b04449cb984a8f",
+                "_type": "NetworkDevice"
+            },
+            {
+                "_oid": "51afe67ee4b062b1dafece74",
+                "_type": "NetworkDevice"
+            }
+        ]
+    },
+    {
+        "_lastmodified": 1371852943674,
+        "healthState": "healthy",
+        "_creator": "_NETDBSYNC_READWRITE",
+        "_oid": "51980120e4b05e0dd3e4b2e8",
+        "_pversion": -1,
+        "_createtime": 1368916256398,
+        "sourceId": "23",
+        "_branch": "main",
+        "_type": "NetworkBubble",
+        "_version": 4,
+        "productionLevel": "production",
+        "resourceId": "lvs1b01",
+        "description": "lvs1 cisco distribution switches",
+        "_modifier": null,
+        "_comment": "cms@slc4b01c-8ea5:cms_User - cms synch : netdb - devices",
+        "_user": "_NETDBSYNC_READWRITE",
+        "_status": "active",
+        "networkDevices": [
+            {
+                "_oid": "5197fa0de4b04449cb9823db",
+                "_type": "NetworkDevice"
+            },
+            {
+                "_oid": "5197fa0de4b05e0dd3e4440a",
+                "_type": "NetworkDevice"
+            },
+            {
+                "_oid": "51c4cf37e4b0d85e412036b4",
+                "_type": "NetworkDevice"
+            },
+            {
+                "_oid": "51c4cf83e4b016fb338745a2",
+                "_type": "NetworkDevice"
+            }
+        ]
+    },
+    {
+        "_lastmodified": 1369123602052,
+        "healthState": "healthy",
+        "_creator": "_NETDBSYNC_READWRITE",
+        "_oid": "51981dd2e4b03c78413edbcf",
+        "_pversion": -1,
+        "_createtime": 1368923602785,
+        "sourceId": "41",
+        "_branch": "main",
+        "_type": "NetworkBubble",
+        "_version": 28,
+        "productionLevel": "production",
+        "resourceId": "slc2b02",
+        "description": "SLC2 second vlan bubble",
+        "_modifier": null,
+        "_comment": "cms@slc4b01c-8ea5:cms_User - cms synch : netdb - devices",
+        "_user": "_NETDBSYNC_READWRITE",
+        "_status": "active",
+        "networkDevices": [
+            {
+                "_oid": "5197fab1e4b01fc1877c54f8",
+                "_type": "NetworkDevice"
+            },
+            {
+                "_oid": "5197fab1e4b05e0dd3e4685c",
+                "_type": "NetworkDevice"
+            },
+            {
+                "_oid": "5197fab1e4b04449cb984aa3",
+                "_type": "NetworkDevice"
+            },
+            {
+                "_oid": "5197fab1e4b05e0dd3e4686a",
+                "_type": "NetworkDevice"
+            },
+            {
+                "_oid": "5197fab1e4b04449cb984ab5",
+                "_type": "NetworkDevice"
+            },
+            {
+                "_oid": "5197fab2e4b05e0dd3e46878",
+                "_type": "NetworkDevice"
+            },
+            {
+                "_oid": "5197fab2e4b04449cb984ac9",
+                "_type": "NetworkDevice"
+            },
+            {
+                "_oid": "5197fab2e4b05e0dd3e46882",
+                "_type": "NetworkDevice"
+            },
+            {
+                "_oid": "5197fab2e4b04449cb984ae5",
+                "_type": "NetworkDevice"
+            },
+            {
+                "_oid": "5197fab2e4b05e0dd3e4688e",
+                "_type": "NetworkDevice"
+            },
+            {
+                "_oid": "5197fab2e4b04449cb984af5",
+                "_type": "NetworkDevice"
+            },
+            {
+                "_oid": "5197fab2e4b01fc1877c554c",
+                "_type": "NetworkDevice"
+            },
+            {
+                "_oid": "5197fab2e4b01fc1877c5550",
+                "_type": "NetworkDevice"
+            },
+            {
+                "_oid": "5197fab3e4b01fc1877c5560",
+                "_type": "NetworkDevice"
+            },
+            {
+                "_oid": "5197fab3e4b01fc1877c556a",
+                "_type": "NetworkDevice"
+            },
+            {
+                "_oid": "5197fab3e4b04449cb984b29",
+                "_type": "NetworkDevice"
+            },
+            {
+                "_oid": "5197fab3e4b01fc1877c557c",
+                "_type": "NetworkDevice"
+            },
+            {
+                "_oid": "51981debe4b00f841fbbd452",
+                "_type": "NetworkDevice"
+            },
+            {
+                "_oid": "5197fab3e4b04449cb984b35",
+                "_type": "NetworkDevice"
+            },
+            {
+                "_oid": "5197fab0e4b01fc1877c54a8",
+                "_type": "NetworkDevice"
+            },
+            {
+                "_oid": "5197fab0e4b05e0dd3e46822",
+                "_type": "NetworkDevice"
+            },
+            {
+                "_oid": "5197fab1e4b05e0dd3e46832",
+                "_type": "NetworkDevice"
+            },
+            {
+                "_oid": "5197fab1e4b04449cb984a67",
+                "_type": "NetworkDevice"
+            },
+            {
+                "_oid": "5197fab1e4b05e0dd3e4684e",
+                "_type": "NetworkDevice"
+            },
+            {
+                "_oid": "5197fab2e4b01fc1877c5520",
+                "_type": "NetworkDevice"
+            },
+            {
+                "_oid": "5197fab3e4b01fc1877c5572",
+                "_type": "NetworkDevice"
+            },
+            {
+                "_oid": "51981defe4b013af0d699084",
+                "_type": "NetworkDevice"
+            },
+            {
+                "_oid": "5197fab1e4b04449cb984a5b",
+                "_type": "NetworkDevice"
+            }
+        ]
+    }
+], "pagination": {
+    "skip": [10],
+    "limit": [10000],
+    "hint": 0
+}}

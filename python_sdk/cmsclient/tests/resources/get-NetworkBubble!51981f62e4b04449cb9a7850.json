@@ -1,0 +1,35 @@
+{"status": {
+    "code": "200",
+    "msg": "ok",
+    "stackTrace": null
+}, "dbTimeCost": 1, "totalTimeCost": 1, "result": [
+    {
+        "description": "slc4 bubble 4 storage bubble",
+        "sourceId": "40",
+        "productionLevel": "production",
+        "healthState": "healthy",
+        "resourceId": "slc4b04",
+        "_branch": "main",
+        "_createtime": 1368924002448,
+        "_comment": "cms@slc4b01c-8ea5:cms_User - cms synch : netdb - devices",
+        "_oid": "51981f62e4b04449cb9a7850",
+        "_lastmodified": 1368924003971,
+        "_modifier": null,
+        "_creator": "_NETDBSYNC_READWRITE",
+        "_pversion": -1,
+        "_status": "active",
+        "_type": "NetworkBubble",
+        "_user": "cms@slc4b01c-8ea5:cms_User - cms synch : netdb - devices",
+        "_version": 2,
+        "networkDevices": [
+            {
+                "_oid": "5197facee4b04449cb98522d",
+                "_type": "NetworkDevice"
+            },
+            {
+                "_oid": "5197facee4b05e0dd3e46f14",
+                "_type": "NetworkDevice"
+            }
+        ]
+    }
+]}

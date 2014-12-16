@@ -1,0 +1,25 @@
+{"status": {
+    "code": "200",
+    "msg": "ok",
+    "stackTrace": null
+}, "dbTimeCost": 1, "totalTimeCost": 1, "result": [
+    {
+        "_type": "NetworkBubble",
+        "_creator": "_NETDBSYNC_READWRITE",
+        "sourceId": "57",
+        "_branch": "main",
+        "productionLevel": "production",
+        "resourceId": "slc5b1",
+        "description": "slc5b1",
+        "_modifier": "_NETDBSYNC_READWRITE",
+        "_comment": "cms@slc4b01c-8ea5:cms_User - cms synch : netdb - bubbles",
+        "_user": "_NETDBSYNC_READWRITE",
+        "healthState": "healthy",
+        "_lastmodified": 1371233828589,
+        "_oid": "51bb5e24e4b016fb3386cb5e",
+        "_pversion": -1,
+        "_createtime": 1371233828589,
+        "_version": 0,
+        "_status": "active"
+    }
+]}

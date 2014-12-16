@@ -1,0 +1,34 @@
+{"status": {
+    "code": "200",
+    "msg": "ok",
+    "stackTrace": null
+}, "dbTimeCost": 1, "totalTimeCost": 1, "hasmore": false, "count": 1, "result": [
+    {
+        "_lastmodified": 1369200402556,
+        "_creator": "_TMASYNC_READWRITE",
+        "_oid": "519c5712e4b0b07c83311e5b",
+        "allocated": "NO",
+        "_branch": "main",
+        "_type": "Asset",
+        "resourceId": "ASSET00264492",
+        "assetId": "697636",
+        "assetType": "Network Equipment",
+        "costcenter": "1109099438",
+        "_modifier": "_TMASYNC_READWRITE",
+        "traceRatedPower": "5000",
+        "_comment": "cms@slc4b01c-8ea5:cms_User - cms synch : tma - mainasset",
+        "disposition": "None",
+        "_status": "active",
+        "healthState": "healthy",
+        "condition": "None",
+        "_pversion": -1,
+        "_createtime": 1369200402556,
+        "assetStatus": "IN SERVICE",
+        "locationCode": "SLC01-02-003-N506",
+        "_version": 1,
+        "subType": "Other",
+        "manufacturer": "ARISTA",
+        "serial": "JSH12060128",
+        "_user": "_TMASYNC_READWRITE"
+    }
+]}
