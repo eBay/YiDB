@@ -49,7 +49,7 @@ If using 64-bit linux, you can do folowing to install and run Mongo DB.
 
 YiDB is implemented in java and managed by maven. It's easy for user to build and try on a normal computer.
 
-But for users who just want to try without installing anything, we provid an online console to try. 
+But for users who just want to try without installing anything, we provide an online console to try. 
 
 **Online Console**
 
@@ -72,7 +72,7 @@ to build the project.
 
 First start mongo db on localhost:27017.
 
-Then you can either put the builed war file into a Servlet container to run or run the following:
+Then you can either put the built war file into a Servlet container to run or run the following:
 
 		$ cd yidb/bin
 		$ ./build.sh
