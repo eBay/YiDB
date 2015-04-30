@@ -1,0 +1,7 @@
+machine:
+  environment:
+    JAVA_OPTS: -XX:+UseConcMarkSweepGC -XX:+CMSPermGenSweepingEnabled -XX:+CMSClassUnloadingEnabled
+test:
+  pre:
+    - cd cms-core && mvn clean install -DskipTests
+    - cd cms-core/web && mvn war:war
