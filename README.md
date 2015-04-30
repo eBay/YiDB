@@ -1,5 +1,7 @@
 #Introduction#
 
+[![Circle CI](https://circleci.com/gh/wcandillon/YiDB.svg?style=svg)](https://circleci.com/gh/wcandillon/YiDB)
+
 **YiDB is a metadata-driven persistence and query service for configuration data**
 
 YiDB (Configuration Management Database) is a high performance metadata-driven persistence and query service for configuration data with supporting of RESTful API and client lib (Java, Python). YiDB is a generic system that be used for cloud configuration, as well other software needs for configuration. Moreover, YiDB supports multiple data repositories for desired data isolation.
